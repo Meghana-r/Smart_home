@@ -26,7 +26,7 @@ Turn the light off?")
 		End If
 
 	End Sub
-
+	'the value of the slider is shown in the label
 	Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
 		brightness1.Text = brighttrack2.Value.ToString
 		If brighttrack2.Value = 10 Then
