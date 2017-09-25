@@ -29,46 +29,51 @@ Partial Class RoomA
 		Me.brightness2 = New System.Windows.Forms.Label()
 		Me.lit2on = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.lit2off = New MaterialSkin.Controls.MaterialRadioButton()
-		Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+		Me.brighttrack3 = New System.Windows.Forms.TrackBar()
 		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
 		Me.lit1on = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.lit1off = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.brightness1 = New System.Windows.Forms.Label()
-		Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+		Me.brighttrack2 = New System.Windows.Forms.TrackBar()
 		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
 		Me.lighton = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.brightness = New System.Windows.Forms.Label()
 		Me.lightoff = New MaterialSkin.Controls.MaterialRadioButton()
-		Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-		Me.brighttrack3 = New System.Windows.Forms.TrackBar()
-		Me.brighttrack2 = New System.Windows.Forms.TrackBar()
 		Me.brighttrack = New System.Windows.Forms.TrackBar()
-		Me.temptab = New System.Windows.Forms.TabPage()
 		Me.apptab = New System.Windows.Forms.TabPage()
 		Me.vidtab = New System.Windows.Forms.TabPage()
 		Me.Stattab = New System.Windows.Forms.TabPage()
 		Me.Tabselect = New MaterialSkin.Controls.MaterialTabSelector()
+		Me.temptab = New System.Windows.Forms.TabPage()
+		Me.labtemop = New System.Windows.Forms.Label()
+		Me.Label1 = New System.Windows.Forms.Label()
 		Me.Button1 = New System.Windows.Forms.Button()
 		Me.PictureBox5 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox4 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox3 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+		Me.bulb = New System.Windows.Forms.PictureBox()
+		Me.mediumhot = New System.Windows.Forms.PictureBox()
+		Me.coldimage = New System.Windows.Forms.PictureBox()
+		Me.sunimage = New System.Windows.Forms.PictureBox()
 		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
 		Me.control.SuspendLayout()
 		Me.Lighttab.SuspendLayout()
 		Me.GroupBox3.SuspendLayout()
-		CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.GroupBox2.SuspendLayout()
-		CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.GroupBox1.SuspendLayout()
-		CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.brighttrack3, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.GroupBox2.SuspendLayout()
 		CType(Me.brighttrack2, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.GroupBox1.SuspendLayout()
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.temptab.SuspendLayout()
 		CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.bulb, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
@@ -107,9 +112,8 @@ Partial Class RoomA
 		Me.GroupBox3.Controls.Add(Me.lit2on)
 		Me.GroupBox3.Controls.Add(Me.lit2off)
 		Me.GroupBox3.Controls.Add(Me.brighttrack3)
-		Me.GroupBox3.Controls.Add(Me.PictureBox8)
-		Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Left
-		Me.GroupBox3.Location = New System.Drawing.Point(363, 3)
+		Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Right
+		Me.GroupBox3.Location = New System.Drawing.Point(563, 3)
 		Me.GroupBox3.Name = "GroupBox3"
 		Me.GroupBox3.Size = New System.Drawing.Size(180, 412)
 		Me.GroupBox3.TabIndex = 20
@@ -158,15 +162,18 @@ Partial Class RoomA
 		Me.lit2off.Text = "OFF"
 		Me.lit2off.UseVisualStyleBackColor = True
 		'
-		'PictureBox8
+		'brighttrack3
 		'
-		Me.PictureBox8.Image = Global.homematic.My.Resources.Resources.teal
-		Me.PictureBox8.Location = New System.Drawing.Point(6, 81)
-		Me.PictureBox8.Name = "PictureBox8"
-		Me.PictureBox8.Size = New System.Drawing.Size(115, 115)
-		Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-		Me.PictureBox8.TabIndex = 13
-		Me.PictureBox8.TabStop = False
+		Me.brighttrack3.Location = New System.Drawing.Point(127, 81)
+		Me.brighttrack3.Maximum = 100
+		Me.brighttrack3.Minimum = 10
+		Me.brighttrack3.Name = "brighttrack3"
+		Me.brighttrack3.Orientation = System.Windows.Forms.Orientation.Vertical
+		Me.brighttrack3.Size = New System.Drawing.Size(45, 325)
+		Me.brighttrack3.TabIndex = 8
+		Me.brighttrack3.TabStop = False
+		Me.brighttrack3.TickStyle = System.Windows.Forms.TickStyle.None
+		Me.brighttrack3.Value = 100
 		'
 		'GroupBox2
 		'
@@ -174,9 +181,7 @@ Partial Class RoomA
 		Me.GroupBox2.Controls.Add(Me.lit1off)
 		Me.GroupBox2.Controls.Add(Me.brightness1)
 		Me.GroupBox2.Controls.Add(Me.brighttrack2)
-		Me.GroupBox2.Controls.Add(Me.PictureBox6)
-		Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Left
-		Me.GroupBox2.Location = New System.Drawing.Point(183, 3)
+		Me.GroupBox2.Location = New System.Drawing.Point(288, 3)
 		Me.GroupBox2.Name = "GroupBox2"
 		Me.GroupBox2.Size = New System.Drawing.Size(180, 412)
 		Me.GroupBox2.TabIndex = 20
@@ -225,15 +230,18 @@ Partial Class RoomA
 		Me.brightness1.TabIndex = 17
 		Me.brightness1.Text = "100"
 		'
-		'PictureBox6
+		'brighttrack2
 		'
-		Me.PictureBox6.Image = Global.homematic.My.Resources.Resources.teal
-		Me.PictureBox6.Location = New System.Drawing.Point(6, 81)
-		Me.PictureBox6.Name = "PictureBox6"
-		Me.PictureBox6.Size = New System.Drawing.Size(115, 115)
-		Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-		Me.PictureBox6.TabIndex = 11
-		Me.PictureBox6.TabStop = False
+		Me.brighttrack2.Location = New System.Drawing.Point(129, 81)
+		Me.brighttrack2.Maximum = 100
+		Me.brighttrack2.Minimum = 10
+		Me.brighttrack2.Name = "brighttrack2"
+		Me.brighttrack2.Orientation = System.Windows.Forms.Orientation.Vertical
+		Me.brighttrack2.Size = New System.Drawing.Size(45, 325)
+		Me.brighttrack2.TabIndex = 5
+		Me.brighttrack2.TabStop = False
+		Me.brighttrack2.TickStyle = System.Windows.Forms.TickStyle.None
+		Me.brighttrack2.Value = 100
 		'
 		'GroupBox1
 		'
@@ -241,7 +249,6 @@ Partial Class RoomA
 		Me.GroupBox1.Controls.Add(Me.brightness)
 		Me.GroupBox1.Controls.Add(Me.lightoff)
 		Me.GroupBox1.Controls.Add(Me.brighttrack)
-		Me.GroupBox1.Controls.Add(Me.PictureBox7)
 		Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Left
 		Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
 		Me.GroupBox1.Name = "GroupBox1"
@@ -271,7 +278,7 @@ Partial Class RoomA
 		'
 		Me.brightness.BackColor = System.Drawing.Color.Transparent
 		Me.brightness.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-		Me.brightness.Location = New System.Drawing.Point(81, 167)
+		Me.brightness.Location = New System.Drawing.Point(89, 167)
 		Me.brightness.Name = "brightness"
 		Me.brightness.Size = New System.Drawing.Size(30, 20)
 		Me.brightness.TabIndex = 18
@@ -292,43 +299,6 @@ Partial Class RoomA
 		Me.lightoff.Text = "OFF"
 		Me.lightoff.UseVisualStyleBackColor = True
 		'
-		'PictureBox7
-		'
-		Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
-		Me.PictureBox7.Image = Global.homematic.My.Resources.Resources.teal
-		Me.PictureBox7.Location = New System.Drawing.Point(4, 81)
-		Me.PictureBox7.Name = "PictureBox7"
-		Me.PictureBox7.Size = New System.Drawing.Size(115, 115)
-		Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-		Me.PictureBox7.TabIndex = 12
-		Me.PictureBox7.TabStop = False
-		'
-		'brighttrack3
-		'
-		Me.brighttrack3.Location = New System.Drawing.Point(127, 81)
-		Me.brighttrack3.Maximum = 100
-		Me.brighttrack3.Minimum = 10
-		Me.brighttrack3.Name = "brighttrack3"
-		Me.brighttrack3.Orientation = System.Windows.Forms.Orientation.Vertical
-		Me.brighttrack3.Size = New System.Drawing.Size(45, 325)
-		Me.brighttrack3.TabIndex = 8
-		Me.brighttrack3.TabStop = False
-		Me.brighttrack3.TickStyle = System.Windows.Forms.TickStyle.None
-		Me.brighttrack3.Value = 100
-		'
-		'brighttrack2
-		'
-		Me.brighttrack2.Location = New System.Drawing.Point(129, 81)
-		Me.brighttrack2.Maximum = 100
-		Me.brighttrack2.Minimum = 10
-		Me.brighttrack2.Name = "brighttrack2"
-		Me.brighttrack2.Orientation = System.Windows.Forms.Orientation.Vertical
-		Me.brighttrack2.Size = New System.Drawing.Size(45, 325)
-		Me.brighttrack2.TabIndex = 5
-		Me.brighttrack2.TabStop = False
-		Me.brighttrack2.TickStyle = System.Windows.Forms.TickStyle.None
-		Me.brighttrack2.Value = 100
-		'
 		'brighttrack
 		'
 		Me.brighttrack.Location = New System.Drawing.Point(125, 81)
@@ -341,16 +311,6 @@ Partial Class RoomA
 		Me.brighttrack.TabStop = False
 		Me.brighttrack.TickStyle = System.Windows.Forms.TickStyle.None
 		Me.brighttrack.Value = 100
-		'
-		'temptab
-		'
-		Me.temptab.BackColor = System.Drawing.Color.White
-		Me.temptab.Location = New System.Drawing.Point(4, 22)
-		Me.temptab.Name = "temptab"
-		Me.temptab.Padding = New System.Windows.Forms.Padding(3)
-		Me.temptab.Size = New System.Drawing.Size(746, 418)
-		Me.temptab.TabIndex = 1
-		Me.temptab.Text = "Temperature"
 		'
 		'apptab
 		'
@@ -394,6 +354,46 @@ Partial Class RoomA
 		Me.Tabselect.Size = New System.Drawing.Size(754, 46)
 		Me.Tabselect.TabIndex = 1
 		Me.Tabselect.Text = "Tabselect"
+		'
+		'temptab
+		'
+		Me.temptab.BackColor = System.Drawing.Color.White
+		Me.temptab.Controls.Add(Me.mediumhot)
+		Me.temptab.Controls.Add(Me.coldimage)
+		Me.temptab.Controls.Add(Me.sunimage)
+		Me.temptab.Controls.Add(Me.Label1)
+		Me.temptab.Controls.Add(Me.labtemop)
+		Me.temptab.Controls.Add(Me.PictureBox1)
+		Me.temptab.Location = New System.Drawing.Point(4, 22)
+		Me.temptab.Name = "temptab"
+		Me.temptab.Padding = New System.Windows.Forms.Padding(3)
+		Me.temptab.Size = New System.Drawing.Size(746, 418)
+		Me.temptab.TabIndex = 1
+		Me.temptab.Text = "Temperature"
+		'
+		'labtemop
+		'
+		Me.labtemop.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
+		Me.labtemop.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.labtemop.ForeColor = System.Drawing.Color.White
+		Me.labtemop.Location = New System.Drawing.Point(332, 164)
+		Me.labtemop.Name = "labtemop"
+		Me.labtemop.Size = New System.Drawing.Size(86, 71)
+		Me.labtemop.TabIndex = 1
+		Me.labtemop.Text = "100"
+		Me.labtemop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		'
+		'Label1
+		'
+		Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
+		Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label1.ForeColor = System.Drawing.Color.White
+		Me.Label1.Location = New System.Drawing.Point(363, 73)
+		Me.Label1.Name = "Label1"
+		Me.Label1.Size = New System.Drawing.Size(40, 41)
+		Me.Label1.TabIndex = 2
+		Me.Label1.Text = "100"
+		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'Button1
 		'
@@ -460,17 +460,60 @@ Partial Class RoomA
 		Me.PictureBox2.TabIndex = 3
 		Me.PictureBox2.TabStop = False
 		'
+		'bulb
+		'
+		Me.bulb.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.bulb.BackColor = System.Drawing.Color.Transparent
+		Me.bulb.Image = Global.homematic.My.Resources.Resources.icons8_Light_Automation_50__1_
+		Me.bulb.Location = New System.Drawing.Point(42, 33)
+		Me.bulb.Name = "bulb"
+		Me.bulb.Size = New System.Drawing.Size(35, 30)
+		Me.bulb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.bulb.TabIndex = 2
+		Me.bulb.TabStop = False
+		'
+		'mediumhot
+		'
+		Me.mediumhot.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
+		Me.mediumhot.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50__1_
+		Me.mediumhot.Location = New System.Drawing.Point(326, 82)
+		Me.mediumhot.Name = "mediumhot"
+		Me.mediumhot.Size = New System.Drawing.Size(34, 32)
+		Me.mediumhot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.mediumhot.TabIndex = 5
+		Me.mediumhot.TabStop = False
+		'
+		'coldimage
+		'
+		Me.coldimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
+		Me.coldimage.Image = Global.homematic.My.Resources.Resources.icons8_Snowflake_48
+		Me.coldimage.Location = New System.Drawing.Point(326, 82)
+		Me.coldimage.Name = "coldimage"
+		Me.coldimage.Size = New System.Drawing.Size(34, 32)
+		Me.coldimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.coldimage.TabIndex = 4
+		Me.coldimage.TabStop = False
+		'
+		'sunimage
+		'
+		Me.sunimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
+		Me.sunimage.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50
+		Me.sunimage.Location = New System.Drawing.Point(326, 82)
+		Me.sunimage.Name = "sunimage"
+		Me.sunimage.Size = New System.Drawing.Size(34, 32)
+		Me.sunimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.sunimage.TabIndex = 3
+		Me.sunimage.TabStop = False
+		'
 		'PictureBox1
 		'
-		Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-		Me.PictureBox1.Image = Global.homematic.My.Resources.Resources.icons8_Light_Automation_50__1_
-		Me.PictureBox1.Location = New System.Drawing.Point(42, 33)
+		Me.PictureBox1.Image = Global.homematic.My.Resources.Resources.bitmap
+		Me.PictureBox1.Location = New System.Drawing.Point(171, 0)
 		Me.PictureBox1.Name = "PictureBox1"
-		Me.PictureBox1.Size = New System.Drawing.Size(35, 30)
+		Me.PictureBox1.Size = New System.Drawing.Size(418, 418)
 		Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.PictureBox1.TabIndex = 2
+		Me.PictureBox1.TabIndex = 0
 		Me.PictureBox1.TabStop = False
 		'
 		'RoomA
@@ -484,7 +527,7 @@ Partial Class RoomA
 		Me.Controls.Add(Me.PictureBox4)
 		Me.Controls.Add(Me.PictureBox3)
 		Me.Controls.Add(Me.PictureBox2)
-		Me.Controls.Add(Me.PictureBox1)
+		Me.Controls.Add(Me.bulb)
 		Me.Controls.Add(Me.Tabselect)
 		Me.Controls.Add(Me.control)
 		Me.Name = "RoomA"
@@ -492,20 +535,22 @@ Partial Class RoomA
 		Me.Lighttab.ResumeLayout(False)
 		Me.GroupBox3.ResumeLayout(False)
 		Me.GroupBox3.PerformLayout()
-		CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.brighttrack3, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.GroupBox2.ResumeLayout(False)
 		Me.GroupBox2.PerformLayout()
-		CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.brighttrack2, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.GroupBox1.ResumeLayout(False)
 		Me.GroupBox1.PerformLayout()
-		CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.brighttrack3, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.brighttrack2, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.temptab.ResumeLayout(False)
 		CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.bulb, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 
@@ -513,12 +558,11 @@ Partial Class RoomA
 
 	Friend WithEvents control As MaterialSkin.Controls.MaterialTabControl
 	Friend WithEvents Lighttab As TabPage
-	Friend WithEvents temptab As TabPage
 	Friend WithEvents apptab As TabPage
 	Friend WithEvents vidtab As TabPage
 	Friend WithEvents Stattab As TabPage
 	Friend WithEvents Tabselect As MaterialSkin.Controls.MaterialTabSelector
-	Friend WithEvents PictureBox1 As PictureBox
+	Friend WithEvents bulb As PictureBox
 	Friend WithEvents PictureBox2 As PictureBox
 	Friend WithEvents PictureBox3 As PictureBox
 	Friend WithEvents PictureBox4 As PictureBox
@@ -528,9 +572,6 @@ Partial Class RoomA
 	Friend WithEvents brighttrack As TrackBar
 	Friend WithEvents brighttrack2 As TrackBar
 	Friend WithEvents brighttrack3 As TrackBar
-	Friend WithEvents PictureBox8 As PictureBox
-	Friend WithEvents PictureBox7 As PictureBox
-	Friend WithEvents PictureBox6 As PictureBox
 	Friend WithEvents brightness As Label
 	Friend WithEvents brightness1 As Label
 	Friend WithEvents lightoff As MaterialSkin.Controls.MaterialRadioButton
@@ -542,4 +583,11 @@ Partial Class RoomA
 	Friend WithEvents lit2on As MaterialSkin.Controls.MaterialRadioButton
 	Friend WithEvents lit2off As MaterialSkin.Controls.MaterialRadioButton
 	Friend WithEvents brightness2 As Label
+	Friend WithEvents temptab As TabPage
+	Friend WithEvents PictureBox1 As PictureBox
+	Friend WithEvents sunimage As PictureBox
+	Friend WithEvents Label1 As Label
+	Friend WithEvents labtemop As Label
+	Friend WithEvents coldimage As PictureBox
+	Friend WithEvents mediumhot As PictureBox
 End Class
