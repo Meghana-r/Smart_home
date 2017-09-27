@@ -164,5 +164,29 @@
   <ItemGroup>
     <None Include="Resources\icons8-Partly Cloudy Day-50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\path845.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect835.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tempcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect8351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tempcon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tempcon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tempcon5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tempcontrol.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

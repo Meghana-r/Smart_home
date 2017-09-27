@@ -8,9 +8,10 @@ Public Class RoomA
 		SkinManager.AddFormToManage(Me)
 		SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
 		SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
-		'If Me.WindowState = FormWindowState.Maximized Then
-		'	bulb.Location = Location(42, 33) As point
-		'End If
+		'sunimage.Hide()
+		'coldimage.Hide()
+		'mediumhot.Hide()
+
 	End Sub
 	Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.Scroll
 		brightness.Text = String.Format("{0} %", arg0:=brighttrack.Value)
@@ -51,6 +52,66 @@ Turn the light off?")
 			End If
 		End If
 
+	End Sub
+
+	Private Sub increasebtn_Click(sender As Object, e As EventArgs) Handles Increasebtn.Click
+		Dim n As Integer
+		n = Integer.Parse(templabel.Text)
+		n = n + 1
+		templabel.Text = n.ToString
+		templabel2.Text = n.ToString
+		If (n >= 50) Then
+			sunimage.Show()
+			coldimage.Hide()
+			mediumhot.Hide()
+
+		ElseIf (n <= 20) Then
+			coldimage.Show()
+			sunimage.Hide()
+			mediumhot.Hide()
+
+		Else
+			mediumhot.Show()
+			sunimage.Hide()
+			coldimage.Hide()
+
+
+		End If
+	End Sub
+
+	Private Sub Decreasebtn_Click(sender As Object, e As EventArgs) Handles Decreasebtn.Click
+		Dim m As Integer
+
+		m = Integer.Parse(templabel.Text)
+		m = m - 1
+		If (m <= 20) Then
+			coldimage.Show()
+
+			sunimage.Hide()
+			mediumhot.Hide()
+
+		ElseIf (m >= 50) Then
+			sunimage.Show()
+			mediumhot.Hide()
+			coldimage.Hide()
+
+		Else
+			mediumhot.Show()
+			sunimage.Hide()
+			coldimage.Hide()
+		End If
+		templabel.Text = m.ToString
+		templabel2.Text = m.ToString
+	End Sub
+
+
+	Private Sub resetbtn_Click(sender As Object, e As EventArgs) Handles resetbtn.Click
+		Dim m As Integer
+
+		m = Integer.Parse(templabel.Text)
+		m = 50
+		templabel.Text = m.ToString
+		templabel2.Text = m.ToString
 	End Sub
 
 	Private Sub mediumhot_Click(sender As Object, e As EventArgs) Handles mediumhot.Click
