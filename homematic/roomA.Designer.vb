@@ -23,6 +23,7 @@ Partial Class RoomA
 	'Do not modify it using the code editor.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
+		Me.components = New System.ComponentModel.Container()
 		Me.control = New MaterialSkin.Controls.MaterialTabControl()
 		Me.Lighttab = New System.Windows.Forms.TabPage()
 		Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -40,23 +41,28 @@ Partial Class RoomA
 		Me.brightness = New System.Windows.Forms.Label()
 		Me.lightoff = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.brighttrack = New System.Windows.Forms.TrackBar()
+		Me.temptab = New System.Windows.Forms.TabPage()
+		Me.Button2 = New System.Windows.Forms.Button()
+		Me.mediumhot = New System.Windows.Forms.PictureBox()
+		Me.coldimage = New System.Windows.Forms.PictureBox()
+		Me.sunimage = New System.Windows.Forms.PictureBox()
+		Me.Label1 = New System.Windows.Forms.Label()
+		Me.labtemop = New System.Windows.Forms.Label()
+		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
 		Me.apptab = New System.Windows.Forms.TabPage()
 		Me.vidtab = New System.Windows.Forms.TabPage()
 		Me.Stattab = New System.Windows.Forms.TabPage()
 		Me.Tabselect = New MaterialSkin.Controls.MaterialTabSelector()
-		Me.temptab = New System.Windows.Forms.TabPage()
-		Me.labtemop = New System.Windows.Forms.Label()
-		Me.Label1 = New System.Windows.Forms.Label()
 		Me.Button1 = New System.Windows.Forms.Button()
 		Me.PictureBox5 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox4 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox3 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox2 = New System.Windows.Forms.PictureBox()
 		Me.bulb = New System.Windows.Forms.PictureBox()
-		Me.mediumhot = New System.Windows.Forms.PictureBox()
-		Me.coldimage = New System.Windows.Forms.PictureBox()
-		Me.sunimage = New System.Windows.Forms.PictureBox()
-		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+		Me.Button3 = New System.Windows.Forms.Button()
+		Me.Button4 = New System.Windows.Forms.Button()
+		Me.Button5 = New System.Windows.Forms.Button()
+		Me.humidtip = New System.Windows.Forms.ToolTip(Me.components)
 		Me.control.SuspendLayout()
 		Me.Lighttab.SuspendLayout()
 		Me.GroupBox3.SuspendLayout()
@@ -66,15 +72,15 @@ Partial Class RoomA
 		Me.GroupBox1.SuspendLayout()
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.temptab.SuspendLayout()
+		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.bulb, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'control
@@ -312,6 +318,108 @@ Partial Class RoomA
 		Me.brighttrack.TickStyle = System.Windows.Forms.TickStyle.None
 		Me.brighttrack.Value = 100
 		'
+		'temptab
+		'
+		Me.temptab.BackColor = System.Drawing.Color.White
+		Me.temptab.Controls.Add(Me.Button5)
+		Me.temptab.Controls.Add(Me.Button4)
+		Me.temptab.Controls.Add(Me.Button3)
+		Me.temptab.Controls.Add(Me.Button2)
+		Me.temptab.Controls.Add(Me.mediumhot)
+		Me.temptab.Controls.Add(Me.coldimage)
+		Me.temptab.Controls.Add(Me.sunimage)
+		Me.temptab.Controls.Add(Me.Label1)
+		Me.temptab.Controls.Add(Me.labtemop)
+		Me.temptab.Controls.Add(Me.PictureBox1)
+		Me.temptab.Location = New System.Drawing.Point(4, 22)
+		Me.temptab.Name = "temptab"
+		Me.temptab.Padding = New System.Windows.Forms.Padding(3)
+		Me.temptab.Size = New System.Drawing.Size(746, 418)
+		Me.temptab.TabIndex = 1
+		Me.temptab.Text = "Temperature"
+		'
+		'Button2
+		'
+		Me.Button2.BackColor = System.Drawing.Color.Transparent
+		Me.Button2.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Partly_Cloudy_Day_50
+		Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Button2.FlatAppearance.BorderSize = 0
+		Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button2.Location = New System.Drawing.Point(220, 182)
+		Me.Button2.Name = "Button2"
+		Me.Button2.Size = New System.Drawing.Size(36, 31)
+		Me.Button2.TabIndex = 6
+		Me.humidtip.SetToolTip(Me.Button2, "Click ti view humidity levels")
+		Me.Button2.UseVisualStyleBackColor = False
+		'
+		'mediumhot
+		'
+		Me.mediumhot.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+		Me.mediumhot.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50__1_
+		Me.mediumhot.Location = New System.Drawing.Point(323, 73)
+		Me.mediumhot.Name = "mediumhot"
+		Me.mediumhot.Size = New System.Drawing.Size(34, 32)
+		Me.mediumhot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.mediumhot.TabIndex = 5
+		Me.mediumhot.TabStop = False
+		'
+		'coldimage
+		'
+		Me.coldimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+		Me.coldimage.Image = Global.homematic.My.Resources.Resources.icons8_Snowflake_48
+		Me.coldimage.Location = New System.Drawing.Point(323, 73)
+		Me.coldimage.Name = "coldimage"
+		Me.coldimage.Size = New System.Drawing.Size(34, 32)
+		Me.coldimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.coldimage.TabIndex = 4
+		Me.coldimage.TabStop = False
+		'
+		'sunimage
+		'
+		Me.sunimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+		Me.sunimage.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50
+		Me.sunimage.Location = New System.Drawing.Point(323, 73)
+		Me.sunimage.Name = "sunimage"
+		Me.sunimage.Size = New System.Drawing.Size(34, 32)
+		Me.sunimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.sunimage.TabIndex = 3
+		Me.sunimage.TabStop = False
+		'
+		'Label1
+		'
+		Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+		Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.Label1.ForeColor = System.Drawing.Color.White
+		Me.Label1.Location = New System.Drawing.Point(362, 66)
+		Me.Label1.Name = "Label1"
+		Me.Label1.Size = New System.Drawing.Size(40, 41)
+		Me.Label1.TabIndex = 2
+		Me.Label1.Text = "100"
+		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		'
+		'labtemop
+		'
+		Me.labtemop.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+		Me.labtemop.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.labtemop.ForeColor = System.Drawing.Color.White
+		Me.labtemop.Location = New System.Drawing.Point(325, 156)
+		Me.labtemop.Name = "labtemop"
+		Me.labtemop.Size = New System.Drawing.Size(86, 71)
+		Me.labtemop.TabIndex = 1
+		Me.labtemop.Text = "100"
+		Me.labtemop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		'
+		'PictureBox1
+		'
+		Me.PictureBox1.Image = Global.homematic.My.Resources.Resources.tempco1
+		Me.PictureBox1.Location = New System.Drawing.Point(171, 0)
+		Me.PictureBox1.Name = "PictureBox1"
+		Me.PictureBox1.Size = New System.Drawing.Size(418, 418)
+		Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PictureBox1.TabIndex = 0
+		Me.PictureBox1.TabStop = False
+		'
 		'apptab
 		'
 		Me.apptab.BackColor = System.Drawing.Color.White
@@ -354,46 +462,6 @@ Partial Class RoomA
 		Me.Tabselect.Size = New System.Drawing.Size(754, 46)
 		Me.Tabselect.TabIndex = 1
 		Me.Tabselect.Text = "Tabselect"
-		'
-		'temptab
-		'
-		Me.temptab.BackColor = System.Drawing.Color.White
-		Me.temptab.Controls.Add(Me.mediumhot)
-		Me.temptab.Controls.Add(Me.coldimage)
-		Me.temptab.Controls.Add(Me.sunimage)
-		Me.temptab.Controls.Add(Me.Label1)
-		Me.temptab.Controls.Add(Me.labtemop)
-		Me.temptab.Controls.Add(Me.PictureBox1)
-		Me.temptab.Location = New System.Drawing.Point(4, 22)
-		Me.temptab.Name = "temptab"
-		Me.temptab.Padding = New System.Windows.Forms.Padding(3)
-		Me.temptab.Size = New System.Drawing.Size(746, 418)
-		Me.temptab.TabIndex = 1
-		Me.temptab.Text = "Temperature"
-		'
-		'labtemop
-		'
-		Me.labtemop.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
-		Me.labtemop.Font = New System.Drawing.Font("Roboto", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.labtemop.ForeColor = System.Drawing.Color.White
-		Me.labtemop.Location = New System.Drawing.Point(332, 164)
-		Me.labtemop.Name = "labtemop"
-		Me.labtemop.Size = New System.Drawing.Size(86, 71)
-		Me.labtemop.TabIndex = 1
-		Me.labtemop.Text = "100"
-		Me.labtemop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-		'
-		'Label1
-		'
-		Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
-		Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label1.ForeColor = System.Drawing.Color.White
-		Me.Label1.Location = New System.Drawing.Point(363, 73)
-		Me.Label1.Name = "Label1"
-		Me.Label1.Size = New System.Drawing.Size(40, 41)
-		Me.Label1.TabIndex = 2
-		Me.Label1.Text = "100"
-		Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'Button1
 		'
@@ -473,48 +541,51 @@ Partial Class RoomA
 		Me.bulb.TabIndex = 2
 		Me.bulb.TabStop = False
 		'
-		'mediumhot
+		'Button3
 		'
-		Me.mediumhot.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
-		Me.mediumhot.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50__1_
-		Me.mediumhot.Location = New System.Drawing.Point(326, 82)
-		Me.mediumhot.Name = "mediumhot"
-		Me.mediumhot.Size = New System.Drawing.Size(34, 32)
-		Me.mediumhot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.mediumhot.TabIndex = 5
-		Me.mediumhot.TabStop = False
+		Me.Button3.BackColor = System.Drawing.Color.Transparent
+		Me.Button3.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Reset_50
+		Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Button3.FlatAppearance.BorderSize = 0
+		Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button3.Location = New System.Drawing.Point(475, 182)
+		Me.Button3.Name = "Button3"
+		Me.Button3.Size = New System.Drawing.Size(36, 31)
+		Me.Button3.TabIndex = 7
+		Me.Button3.UseVisualStyleBackColor = False
 		'
-		'coldimage
+		'Button4
 		'
-		Me.coldimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
-		Me.coldimage.Image = Global.homematic.My.Resources.Resources.icons8_Snowflake_48
-		Me.coldimage.Location = New System.Drawing.Point(326, 82)
-		Me.coldimage.Name = "coldimage"
-		Me.coldimage.Size = New System.Drawing.Size(34, 32)
-		Me.coldimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.coldimage.TabIndex = 4
-		Me.coldimage.TabStop = False
+		Me.Button4.BackColor = System.Drawing.Color.Transparent
+		Me.Button4.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Down_Button_Filled_50
+		Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Button4.FlatAppearance.BorderSize = 0
+		Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button4.Location = New System.Drawing.Point(62, 223)
+		Me.Button4.Name = "Button4"
+		Me.Button4.Size = New System.Drawing.Size(36, 31)
+		Me.Button4.TabIndex = 8
+		Me.Button4.UseVisualStyleBackColor = False
 		'
-		'sunimage
+		'Button5
 		'
-		Me.sunimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(122, Byte), Integer))
-		Me.sunimage.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50
-		Me.sunimage.Location = New System.Drawing.Point(326, 82)
-		Me.sunimage.Name = "sunimage"
-		Me.sunimage.Size = New System.Drawing.Size(34, 32)
-		Me.sunimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.sunimage.TabIndex = 3
-		Me.sunimage.TabStop = False
+		Me.Button5.BackColor = System.Drawing.Color.Transparent
+		Me.Button5.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Slide_Up_Filled_50
+		Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Button5.FlatAppearance.BorderSize = 0
+		Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button5.Location = New System.Drawing.Point(62, 100)
+		Me.Button5.Name = "Button5"
+		Me.Button5.Size = New System.Drawing.Size(36, 31)
+		Me.Button5.TabIndex = 9
+		Me.Button5.UseVisualStyleBackColor = False
 		'
-		'PictureBox1
+		'humidtip
 		'
-		Me.PictureBox1.Image = Global.homematic.My.Resources.Resources.bitmap
-		Me.PictureBox1.Location = New System.Drawing.Point(171, 0)
-		Me.PictureBox1.Name = "PictureBox1"
-		Me.PictureBox1.Size = New System.Drawing.Size(418, 418)
-		Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.PictureBox1.TabIndex = 0
-		Me.PictureBox1.TabStop = False
+		Me.humidtip.ToolTipTitle = "Humidity"
 		'
 		'RoomA
 		'
@@ -543,15 +614,15 @@ Partial Class RoomA
 		Me.GroupBox1.PerformLayout()
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.temptab.ResumeLayout(False)
+		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.bulb, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 
 	End Sub
@@ -590,4 +661,9 @@ Partial Class RoomA
 	Friend WithEvents labtemop As Label
 	Friend WithEvents coldimage As PictureBox
 	Friend WithEvents mediumhot As PictureBox
+	Friend WithEvents Button2 As Button
+	Friend WithEvents Button5 As Button
+	Friend WithEvents Button4 As Button
+	Friend WithEvents Button3 As Button
+	Friend WithEvents humidtip As ToolTip
 End Class

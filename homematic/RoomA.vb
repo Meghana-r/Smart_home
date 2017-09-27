@@ -2,7 +2,6 @@
 Imports MaterialSkin
 
 Public Class RoomA
-	'A material skin form is imported
 
 	Private Sub RoomA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
@@ -54,7 +53,8 @@ Turn the light off?")
 
 	End Sub
 
+	Private Sub mediumhot_Click(sender As Object, e As EventArgs) Handles mediumhot.Click
 
-
+	End Sub
 End Class
 

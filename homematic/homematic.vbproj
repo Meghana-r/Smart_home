@@ -161,5 +161,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-Sun Filled-50 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Partly Cloudy Day-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
