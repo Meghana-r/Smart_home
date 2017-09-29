@@ -1,13 +1,13 @@
 # Homematic
 Home automation System
 
-## What is Hoomematic?
+## What is Homematic?
 Homematic is a home automation system that allows the user to integrate their home electronic systems seamlessly with the Homematic control interface.
 
 ## Features
 - Uses arduino in the background to interface with the electronics. This ensures a minimal modification of the existing electrical system including installation of new wiring systems and new electrical fittings.
 - Intuitive control interface which ensures a very user-friendly user experience and a small learning curve while learning to use the control interface.
-- With arduino add-on packages the user can add additional fnctionalitites to the main system (like monitoring temperature, humidity, etc) with almost no significant effort.
+- With arduino add-on packages the user can add additional functionalities to the main system (like monitoring temperature, humidity, etc) with almost no significant effort.
 
 
 ## How to build it ?
