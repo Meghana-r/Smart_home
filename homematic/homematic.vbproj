@@ -188,5 +188,23 @@
   <ItemGroup>
     <None Include="Resources\tempcontrol.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect8352.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\path8451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitmap1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\path1053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect8353.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20142-NSNJPQ.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

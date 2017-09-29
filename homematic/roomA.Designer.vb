@@ -42,9 +42,21 @@ Partial Class RoomA
 		Me.lightoff = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.brighttrack = New System.Windows.Forms.TrackBar()
 		Me.temptab = New System.Windows.Forms.TabPage()
+		Me.Increasebtn = New System.Windows.Forms.Button()
+		Me.Decreasebtn = New System.Windows.Forms.Button()
+		Me.resetbtn = New System.Windows.Forms.Button()
+		Me.humidbtn = New System.Windows.Forms.Button()
+		Me.mediumhot = New System.Windows.Forms.PictureBox()
+		Me.coldimage = New System.Windows.Forms.PictureBox()
+		Me.sunimage = New System.Windows.Forms.PictureBox()
 		Me.templabel = New System.Windows.Forms.Label()
 		Me.templabel2 = New System.Windows.Forms.Label()
+		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
 		Me.apptab = New System.Windows.Forms.TabPage()
+		Me.Socket1 = New System.Windows.Forms.GroupBox()
+		Me.S1switchoff = New System.Windows.Forms.Button()
+		Me.S1switchon = New System.Windows.Forms.Button()
+		Me.PictureBox6 = New System.Windows.Forms.PictureBox()
 		Me.vidtab = New System.Windows.Forms.TabPage()
 		Me.Stattab = New System.Windows.Forms.TabPage()
 		Me.Tabselect = New MaterialSkin.Controls.MaterialTabSelector()
@@ -55,14 +67,18 @@ Partial Class RoomA
 		Me.PictureBox3 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox2 = New System.Windows.Forms.PictureBox()
 		Me.bulb = New System.Windows.Forms.PictureBox()
-		Me.Increasebtn = New System.Windows.Forms.Button()
-		Me.Decreasebtn = New System.Windows.Forms.Button()
-		Me.resetbtn = New System.Windows.Forms.Button()
-		Me.humidbtn = New System.Windows.Forms.Button()
-		Me.mediumhot = New System.Windows.Forms.PictureBox()
-		Me.coldimage = New System.Windows.Forms.PictureBox()
-		Me.sunimage = New System.Windows.Forms.PictureBox()
-		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+		Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+		Me.s2switchoff = New System.Windows.Forms.Button()
+		Me.s2switchon = New System.Windows.Forms.Button()
+		Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+		Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+		Me.s3switchoff = New System.Windows.Forms.Button()
+		Me.s3switchon = New System.Windows.Forms.Button()
+		Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+		Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+		Me.s4switchoff = New System.Windows.Forms.Button()
+		Me.s4switchon = New System.Windows.Forms.Button()
+		Me.PictureBox9 = New System.Windows.Forms.PictureBox()
 		Me.control.SuspendLayout()
 		Me.Lighttab.SuspendLayout()
 		Me.GroupBox3.SuspendLayout()
@@ -72,15 +88,24 @@ Partial Class RoomA
 		Me.GroupBox1.SuspendLayout()
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.temptab.SuspendLayout()
+		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).BeginInit()
+		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.apptab.SuspendLayout()
+		Me.Socket1.SuspendLayout()
+		CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.bulb, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).BeginInit()
-		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.GroupBox4.SuspendLayout()
+		CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.GroupBox5.SuspendLayout()
+		CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.GroupBox6.SuspendLayout()
+		CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'control
@@ -350,6 +375,96 @@ Partial Class RoomA
 		Me.temptab.TabIndex = 1
 		Me.temptab.Text = "Temperature"
 		'
+		'Increasebtn
+		'
+		Me.Increasebtn.BackColor = System.Drawing.Color.Transparent
+		Me.Increasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Slide_Up_Filled_50
+		Me.Increasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Increasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Increasebtn.FlatAppearance.BorderSize = 0
+		Me.Increasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Increasebtn.Location = New System.Drawing.Point(120, 112)
+		Me.Increasebtn.Name = "Increasebtn"
+		Me.Increasebtn.Size = New System.Drawing.Size(36, 31)
+		Me.Increasebtn.TabIndex = 9
+		Me.Increasebtn.UseVisualStyleBackColor = False
+		'
+		'Decreasebtn
+		'
+		Me.Decreasebtn.BackColor = System.Drawing.Color.Transparent
+		Me.Decreasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Down_Button_Filled_50
+		Me.Decreasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Decreasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Decreasebtn.FlatAppearance.BorderSize = 0
+		Me.Decreasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Decreasebtn.Location = New System.Drawing.Point(120, 237)
+		Me.Decreasebtn.Name = "Decreasebtn"
+		Me.Decreasebtn.Size = New System.Drawing.Size(36, 31)
+		Me.Decreasebtn.TabIndex = 8
+		Me.Decreasebtn.UseVisualStyleBackColor = False
+		'
+		'resetbtn
+		'
+		Me.resetbtn.BackColor = System.Drawing.Color.Transparent
+		Me.resetbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Reset_50
+		Me.resetbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.resetbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.resetbtn.FlatAppearance.BorderSize = 0
+		Me.resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.resetbtn.Location = New System.Drawing.Point(475, 182)
+		Me.resetbtn.Name = "resetbtn"
+		Me.resetbtn.Size = New System.Drawing.Size(36, 31)
+		Me.resetbtn.TabIndex = 7
+		Me.resetbtn.UseVisualStyleBackColor = False
+		'
+		'humidbtn
+		'
+		Me.humidbtn.BackColor = System.Drawing.Color.Transparent
+		Me.humidbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Partly_Cloudy_Day_50
+		Me.humidbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.humidbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.humidbtn.FlatAppearance.BorderSize = 0
+		Me.humidbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.humidbtn.Location = New System.Drawing.Point(220, 182)
+		Me.humidbtn.Name = "humidbtn"
+		Me.humidbtn.Size = New System.Drawing.Size(36, 31)
+		Me.humidbtn.TabIndex = 6
+		Me.humidtip.SetToolTip(Me.humidbtn, "Click to view humidity levels")
+		Me.humidbtn.UseVisualStyleBackColor = False
+		'
+		'mediumhot
+		'
+		Me.mediumhot.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+		Me.mediumhot.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50__1_
+		Me.mediumhot.Location = New System.Drawing.Point(376, 105)
+		Me.mediumhot.Name = "mediumhot"
+		Me.mediumhot.Size = New System.Drawing.Size(30, 30)
+		Me.mediumhot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.mediumhot.TabIndex = 5
+		Me.mediumhot.TabStop = False
+		'
+		'coldimage
+		'
+		Me.coldimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+		Me.coldimage.Image = Global.homematic.My.Resources.Resources.icons8_Snowflake_48
+		Me.coldimage.Location = New System.Drawing.Point(376, 105)
+		Me.coldimage.Name = "coldimage"
+		Me.coldimage.Size = New System.Drawing.Size(30, 30)
+		Me.coldimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.coldimage.TabIndex = 4
+		Me.coldimage.TabStop = False
+		'
+		'sunimage
+		'
+		Me.sunimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+		Me.sunimage.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50
+		Me.sunimage.Location = New System.Drawing.Point(376, 105)
+		Me.sunimage.Name = "sunimage"
+		Me.sunimage.Size = New System.Drawing.Size(30, 30)
+		Me.sunimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.sunimage.TabIndex = 3
+		Me.sunimage.TabStop = False
+		'
 		'templabel
 		'
 		Me.templabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
@@ -369,20 +484,82 @@ Partial Class RoomA
 		Me.templabel2.ForeColor = System.Drawing.Color.White
 		Me.templabel2.Location = New System.Drawing.Point(325, 168)
 		Me.templabel2.Name = "templabel2"
-		Me.templabel2.Size = New System.Drawing.Size(86, 71)
+		Me.templabel2.Size = New System.Drawing.Size(100, 59)
 		Me.templabel2.TabIndex = 1
 		Me.templabel2.Text = "50"
 		Me.templabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
+		'PictureBox1
+		'
+		Me.PictureBox1.Image = Global.homematic.My.Resources.Resources.tempcontrol
+		Me.PictureBox1.Location = New System.Drawing.Point(171, 0)
+		Me.PictureBox1.Name = "PictureBox1"
+		Me.PictureBox1.Size = New System.Drawing.Size(418, 418)
+		Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PictureBox1.TabIndex = 0
+		Me.PictureBox1.TabStop = False
+		'
 		'apptab
 		'
 		Me.apptab.BackColor = System.Drawing.Color.White
+		Me.apptab.Controls.Add(Me.GroupBox6)
+		Me.apptab.Controls.Add(Me.GroupBox5)
+		Me.apptab.Controls.Add(Me.GroupBox4)
+		Me.apptab.Controls.Add(Me.Socket1)
 		Me.apptab.Location = New System.Drawing.Point(4, 22)
 		Me.apptab.Name = "apptab"
 		Me.apptab.Size = New System.Drawing.Size(746, 418)
 		Me.apptab.TabIndex = 2
 		Me.apptab.Text = "Appliances"
 		Me.apptab.UseVisualStyleBackColor = True
+		'
+		'Socket1
+		'
+		Me.Socket1.Controls.Add(Me.S1switchoff)
+		Me.Socket1.Controls.Add(Me.S1switchon)
+		Me.Socket1.Controls.Add(Me.PictureBox6)
+		Me.Socket1.Location = New System.Drawing.Point(8, 9)
+		Me.Socket1.Name = "Socket1"
+		Me.Socket1.Size = New System.Drawing.Size(341, 197)
+		Me.Socket1.TabIndex = 0
+		Me.Socket1.TabStop = False
+		Me.Socket1.Text = "Socket1"
+		'
+		'S1switchoff
+		'
+		Me.S1switchoff.BackColor = System.Drawing.Color.Transparent
+		Me.S1switchoff.BackgroundImage = Global.homematic.My.Resources.Resources.rect8353
+		Me.S1switchoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.S1switchoff.FlatAppearance.BorderSize = 0
+		Me.S1switchoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.S1switchoff.Location = New System.Drawing.Point(284, 35)
+		Me.S1switchoff.Name = "S1switchoff"
+		Me.S1switchoff.Size = New System.Drawing.Size(37, 60)
+		Me.S1switchoff.TabIndex = 4
+		Me.S1switchoff.UseVisualStyleBackColor = False
+		'
+		'S1switchon
+		'
+		Me.S1switchon.BackColor = System.Drawing.Color.Transparent
+		Me.S1switchon.BackgroundImage = Global.homematic.My.Resources.Resources._20142_NSNJPQ
+		Me.S1switchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.S1switchon.FlatAppearance.BorderSize = 0
+		Me.S1switchon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.S1switchon.Location = New System.Drawing.Point(284, 35)
+		Me.S1switchon.Name = "S1switchon"
+		Me.S1switchon.Size = New System.Drawing.Size(37, 60)
+		Me.S1switchon.TabIndex = 3
+		Me.S1switchon.UseVisualStyleBackColor = False
+		'
+		'PictureBox6
+		'
+		Me.PictureBox6.Image = Global.homematic.My.Resources.Resources.bitmap1
+		Me.PictureBox6.Location = New System.Drawing.Point(6, 19)
+		Me.PictureBox6.Name = "PictureBox6"
+		Me.PictureBox6.Size = New System.Drawing.Size(255, 150)
+		Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PictureBox6.TabIndex = 0
+		Me.PictureBox6.TabStop = False
 		'
 		'vidtab
 		'
@@ -499,105 +676,149 @@ Partial Class RoomA
 		Me.bulb.TabIndex = 2
 		Me.bulb.TabStop = False
 		'
-		'Increasebtn
+		'GroupBox4
 		'
-		Me.Increasebtn.BackColor = System.Drawing.Color.Transparent
-		Me.Increasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Slide_Up_Filled_50
-		Me.Increasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.Increasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-		Me.Increasebtn.FlatAppearance.BorderSize = 0
-		Me.Increasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Increasebtn.Location = New System.Drawing.Point(120, 112)
-		Me.Increasebtn.Name = "Increasebtn"
-		Me.Increasebtn.Size = New System.Drawing.Size(36, 31)
-		Me.Increasebtn.TabIndex = 9
-		Me.Increasebtn.UseVisualStyleBackColor = False
+		Me.GroupBox4.Controls.Add(Me.s2switchoff)
+		Me.GroupBox4.Controls.Add(Me.s2switchon)
+		Me.GroupBox4.Controls.Add(Me.PictureBox7)
+		Me.GroupBox4.Location = New System.Drawing.Point(397, 9)
+		Me.GroupBox4.Name = "GroupBox4"
+		Me.GroupBox4.Size = New System.Drawing.Size(341, 197)
+		Me.GroupBox4.TabIndex = 5
+		Me.GroupBox4.TabStop = False
+		Me.GroupBox4.Text = "Socket2"
 		'
-		'Decreasebtn
+		's2switchoff
 		'
-		Me.Decreasebtn.BackColor = System.Drawing.Color.Transparent
-		Me.Decreasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Down_Button_Filled_50
-		Me.Decreasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.Decreasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-		Me.Decreasebtn.FlatAppearance.BorderSize = 0
-		Me.Decreasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Decreasebtn.Location = New System.Drawing.Point(120, 237)
-		Me.Decreasebtn.Name = "Decreasebtn"
-		Me.Decreasebtn.Size = New System.Drawing.Size(36, 31)
-		Me.Decreasebtn.TabIndex = 8
-		Me.Decreasebtn.UseVisualStyleBackColor = False
+		Me.s2switchoff.BackColor = System.Drawing.Color.Transparent
+		Me.s2switchoff.BackgroundImage = Global.homematic.My.Resources.Resources.rect8353
+		Me.s2switchoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.s2switchoff.FlatAppearance.BorderSize = 0
+		Me.s2switchoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.s2switchoff.Location = New System.Drawing.Point(284, 35)
+		Me.s2switchoff.Name = "s2switchoff"
+		Me.s2switchoff.Size = New System.Drawing.Size(37, 60)
+		Me.s2switchoff.TabIndex = 4
+		Me.s2switchoff.UseVisualStyleBackColor = False
 		'
-		'resetbtn
+		's2switchon
 		'
-		Me.resetbtn.BackColor = System.Drawing.Color.Transparent
-		Me.resetbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Reset_50
-		Me.resetbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.resetbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-		Me.resetbtn.FlatAppearance.BorderSize = 0
-		Me.resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.resetbtn.Location = New System.Drawing.Point(475, 182)
-		Me.resetbtn.Name = "resetbtn"
-		Me.resetbtn.Size = New System.Drawing.Size(36, 31)
-		Me.resetbtn.TabIndex = 7
-		Me.resetbtn.UseVisualStyleBackColor = False
+		Me.s2switchon.BackColor = System.Drawing.Color.Transparent
+		Me.s2switchon.BackgroundImage = Global.homematic.My.Resources.Resources._20142_NSNJPQ
+		Me.s2switchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.s2switchon.FlatAppearance.BorderSize = 0
+		Me.s2switchon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.s2switchon.Location = New System.Drawing.Point(284, 35)
+		Me.s2switchon.Name = "s2switchon"
+		Me.s2switchon.Size = New System.Drawing.Size(37, 60)
+		Me.s2switchon.TabIndex = 3
+		Me.s2switchon.UseVisualStyleBackColor = False
 		'
-		'humidbtn
+		'PictureBox7
 		'
-		Me.humidbtn.BackColor = System.Drawing.Color.Transparent
-		Me.humidbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Partly_Cloudy_Day_50
-		Me.humidbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.humidbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-		Me.humidbtn.FlatAppearance.BorderSize = 0
-		Me.humidbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.humidbtn.Location = New System.Drawing.Point(220, 182)
-		Me.humidbtn.Name = "humidbtn"
-		Me.humidbtn.Size = New System.Drawing.Size(36, 31)
-		Me.humidbtn.TabIndex = 6
-		Me.humidtip.SetToolTip(Me.humidbtn, "Click to view humidity levels")
-		Me.humidbtn.UseVisualStyleBackColor = False
+		Me.PictureBox7.Image = Global.homematic.My.Resources.Resources.bitmap1
+		Me.PictureBox7.Location = New System.Drawing.Point(6, 19)
+		Me.PictureBox7.Name = "PictureBox7"
+		Me.PictureBox7.Size = New System.Drawing.Size(255, 150)
+		Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PictureBox7.TabIndex = 0
+		Me.PictureBox7.TabStop = False
 		'
-		'mediumhot
+		'GroupBox5
 		'
-		Me.mediumhot.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-		Me.mediumhot.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50__1_
-		Me.mediumhot.Location = New System.Drawing.Point(376, 105)
-		Me.mediumhot.Name = "mediumhot"
-		Me.mediumhot.Size = New System.Drawing.Size(30, 30)
-		Me.mediumhot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.mediumhot.TabIndex = 5
-		Me.mediumhot.TabStop = False
+		Me.GroupBox5.Controls.Add(Me.s3switchoff)
+		Me.GroupBox5.Controls.Add(Me.s3switchon)
+		Me.GroupBox5.Controls.Add(Me.PictureBox8)
+		Me.GroupBox5.Location = New System.Drawing.Point(8, 213)
+		Me.GroupBox5.Name = "GroupBox5"
+		Me.GroupBox5.Size = New System.Drawing.Size(341, 197)
+		Me.GroupBox5.TabIndex = 5
+		Me.GroupBox5.TabStop = False
+		Me.GroupBox5.Text = "socket3"
 		'
-		'coldimage
+		's3switchoff
 		'
-		Me.coldimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-		Me.coldimage.Image = Global.homematic.My.Resources.Resources.icons8_Snowflake_48
-		Me.coldimage.Location = New System.Drawing.Point(376, 105)
-		Me.coldimage.Name = "coldimage"
-		Me.coldimage.Size = New System.Drawing.Size(30, 30)
-		Me.coldimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.coldimage.TabIndex = 4
-		Me.coldimage.TabStop = False
+		Me.s3switchoff.BackColor = System.Drawing.Color.Transparent
+		Me.s3switchoff.BackgroundImage = Global.homematic.My.Resources.Resources.rect8353
+		Me.s3switchoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.s3switchoff.FlatAppearance.BorderSize = 0
+		Me.s3switchoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.s3switchoff.Location = New System.Drawing.Point(284, 35)
+		Me.s3switchoff.Name = "s3switchoff"
+		Me.s3switchoff.Size = New System.Drawing.Size(37, 60)
+		Me.s3switchoff.TabIndex = 4
+		Me.s3switchoff.UseVisualStyleBackColor = False
 		'
-		'sunimage
+		's3switchon
 		'
-		Me.sunimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-		Me.sunimage.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50
-		Me.sunimage.Location = New System.Drawing.Point(376, 105)
-		Me.sunimage.Name = "sunimage"
-		Me.sunimage.Size = New System.Drawing.Size(30, 30)
-		Me.sunimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.sunimage.TabIndex = 3
-		Me.sunimage.TabStop = False
+		Me.s3switchon.BackColor = System.Drawing.Color.Transparent
+		Me.s3switchon.BackgroundImage = Global.homematic.My.Resources.Resources._20142_NSNJPQ
+		Me.s3switchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.s3switchon.FlatAppearance.BorderSize = 0
+		Me.s3switchon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.s3switchon.Location = New System.Drawing.Point(284, 35)
+		Me.s3switchon.Name = "s3switchon"
+		Me.s3switchon.Size = New System.Drawing.Size(37, 60)
+		Me.s3switchon.TabIndex = 3
+		Me.s3switchon.UseVisualStyleBackColor = False
 		'
-		'PictureBox1
+		'PictureBox8
 		'
-		Me.PictureBox1.Image = Global.homematic.My.Resources.Resources.tempcontrol
-		Me.PictureBox1.Location = New System.Drawing.Point(171, 0)
-		Me.PictureBox1.Name = "PictureBox1"
-		Me.PictureBox1.Size = New System.Drawing.Size(418, 418)
-		Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.PictureBox1.TabIndex = 0
-		Me.PictureBox1.TabStop = False
+		Me.PictureBox8.Image = Global.homematic.My.Resources.Resources.bitmap1
+		Me.PictureBox8.Location = New System.Drawing.Point(6, 19)
+		Me.PictureBox8.Name = "PictureBox8"
+		Me.PictureBox8.Size = New System.Drawing.Size(255, 150)
+		Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PictureBox8.TabIndex = 0
+		Me.PictureBox8.TabStop = False
+		'
+		'GroupBox6
+		'
+		Me.GroupBox6.Controls.Add(Me.s4switchoff)
+		Me.GroupBox6.Controls.Add(Me.s4switchon)
+		Me.GroupBox6.Controls.Add(Me.PictureBox9)
+		Me.GroupBox6.Location = New System.Drawing.Point(397, 213)
+		Me.GroupBox6.Name = "GroupBox6"
+		Me.GroupBox6.Size = New System.Drawing.Size(341, 197)
+		Me.GroupBox6.TabIndex = 5
+		Me.GroupBox6.TabStop = False
+		Me.GroupBox6.Text = "socket4"
+		'
+		's4switchoff
+		'
+		Me.s4switchoff.BackColor = System.Drawing.Color.Transparent
+		Me.s4switchoff.BackgroundImage = Global.homematic.My.Resources.Resources.rect8353
+		Me.s4switchoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.s4switchoff.FlatAppearance.BorderSize = 0
+		Me.s4switchoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.s4switchoff.Location = New System.Drawing.Point(284, 35)
+		Me.s4switchoff.Name = "s4switchoff"
+		Me.s4switchoff.Size = New System.Drawing.Size(37, 60)
+		Me.s4switchoff.TabIndex = 4
+		Me.s4switchoff.UseVisualStyleBackColor = False
+		'
+		's4switchon
+		'
+		Me.s4switchon.BackColor = System.Drawing.Color.Transparent
+		Me.s4switchon.BackgroundImage = Global.homematic.My.Resources.Resources._20142_NSNJPQ
+		Me.s4switchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.s4switchon.FlatAppearance.BorderSize = 0
+		Me.s4switchon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.s4switchon.Location = New System.Drawing.Point(284, 35)
+		Me.s4switchon.Name = "s4switchon"
+		Me.s4switchon.Size = New System.Drawing.Size(37, 60)
+		Me.s4switchon.TabIndex = 3
+		Me.s4switchon.UseVisualStyleBackColor = False
+		'
+		'PictureBox9
+		'
+		Me.PictureBox9.Image = Global.homematic.My.Resources.Resources.bitmap1
+		Me.PictureBox9.Location = New System.Drawing.Point(6, 19)
+		Me.PictureBox9.Name = "PictureBox9"
+		Me.PictureBox9.Size = New System.Drawing.Size(255, 150)
+		Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PictureBox9.TabIndex = 0
+		Me.PictureBox9.TabStop = False
 		'
 		'RoomA
 		'
@@ -626,15 +847,24 @@ Partial Class RoomA
 		Me.GroupBox1.PerformLayout()
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.temptab.ResumeLayout(False)
+		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).EndInit()
+		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.apptab.ResumeLayout(False)
+		Me.Socket1.ResumeLayout(False)
+		CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.bulb, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).EndInit()
-		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.GroupBox4.ResumeLayout(False)
+		CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.GroupBox5.ResumeLayout(False)
+		CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.GroupBox6.ResumeLayout(False)
+		CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 
 	End Sub
@@ -678,4 +908,20 @@ Partial Class RoomA
 	Friend WithEvents Decreasebtn As Button
 	Friend WithEvents resetbtn As Button
 	Friend WithEvents humidtip As ToolTip
+	Friend WithEvents Socket1 As GroupBox
+	Friend WithEvents PictureBox6 As PictureBox
+	Friend WithEvents S1switchoff As Button
+	Friend WithEvents S1switchon As Button
+	Friend WithEvents GroupBox6 As GroupBox
+	Friend WithEvents s4switchoff As Button
+	Friend WithEvents s4switchon As Button
+	Friend WithEvents PictureBox9 As PictureBox
+	Friend WithEvents GroupBox5 As GroupBox
+	Friend WithEvents s3switchoff As Button
+	Friend WithEvents s3switchon As Button
+	Friend WithEvents PictureBox8 As PictureBox
+	Friend WithEvents GroupBox4 As GroupBox
+	Friend WithEvents s2switchoff As Button
+	Friend WithEvents s2switchon As Button
+	Friend WithEvents PictureBox7 As PictureBox
 End Class

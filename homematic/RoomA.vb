@@ -12,7 +12,9 @@ Public Class RoomA
 		'coldimage.Hide()
 		'mediumhot.Hide()
 
+
 	End Sub
+	'code for light settings start here
 	Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.Scroll
 		brightness.Text = String.Format("{0} %", arg0:=brighttrack.Value)
 		brightness.Text = brighttrack.Value.ToString
@@ -29,6 +31,7 @@ Turn the light off?")
 		End If
 
 	End Sub
+
 	'the value of the slider is shown in the label
 	Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
 		brightness1.Text = brighttrack2.Value.ToString
@@ -53,13 +56,15 @@ Turn the light off?")
 		End If
 
 	End Sub
-
+	'code for light settings end here
+	'code for Temperature settings start here
 	Private Sub increasebtn_Click(sender As Object, e As EventArgs) Handles Increasebtn.Click
 		Dim n As Integer
 		n = Integer.Parse(templabel.Text)
 		n = n + 1
 		templabel.Text = n.ToString
 		templabel2.Text = n.ToString
+
 		If (n >= 50) Then
 			sunimage.Show()
 			coldimage.Hide()
@@ -102,6 +107,7 @@ Turn the light off?")
 		End If
 		templabel.Text = m.ToString
 		templabel2.Text = m.ToString
+
 	End Sub
 
 
@@ -112,10 +118,58 @@ Turn the light off?")
 		m = 50
 		templabel.Text = m.ToString
 		templabel2.Text = m.ToString
-	End Sub
-
-	Private Sub mediumhot_Click(sender As Object, e As EventArgs) Handles mediumhot.Click
 
 	End Sub
+	'code for Temperature settings end here
+	'code for Appliances settings start here
+	Private Sub S1switchoff_Click(sender As Object, e As EventArgs) Handles S1switchoff.Click
+		S1switchon.Show()
+		S1switchoff.Hide()
+		MsgBox("The appliance is connected")
+
+	End Sub
+
+	Private Sub S1switchon_Click(sender As Object, e As EventArgs) Handles S1switchon.Click
+		S1switchon.Hide()
+		S1switchoff.Show()
+		MsgBox("The appliance is disconnected")
+	End Sub
+
+	Private Sub s2switchon_Click(sender As Object, e As EventArgs) Handles s2switchon.Click
+		s2switchon.Hide()
+		s2switchoff.Show()
+		MsgBox("The appliance is disconnected")
+	End Sub
+
+	Private Sub s2switchoff_Click(sender As Object, e As EventArgs) Handles s2switchoff.Click
+		s2switchon.Show()
+		s2switchoff.Hide()
+		MsgBox("The appliance is connected")
+	End Sub
+
+	Private Sub s4switchon_Click(sender As Object, e As EventArgs) Handles s4switchon.Click
+		s4switchon.Hide()
+		s4switchoff.Show()
+		MsgBox("The appliance is disconnected")
+	End Sub
+
+	Private Sub s4switchoff_Click(sender As Object, e As EventArgs) Handles s4switchoff.Click
+		s4switchon.Show()
+		s4switchoff.Hide()
+		MsgBox("The appliance is connected")
+	End Sub
+
+	Private Sub s3switchon_Click(sender As Object, e As EventArgs) Handles s3switchon.Click
+		s3switchon.Hide()
+		s3switchoff.Show()
+		MsgBox("The appliance is disconnected")
+	End Sub
+
+	Private Sub s3switchoff_Click(sender As Object, e As EventArgs) Handles s3switchoff.Click
+		s3switchon.Show()
+		s3switchoff.Hide()
+		MsgBox("The appliance is connected")
+	End Sub
+	'code for appliances settings end here
 End Class
 
