@@ -1,5 +1,7 @@
-﻿
-Imports MaterialSkin
+﻿Imports MaterialSkin
+Imports Emgu.CV
+Imports Emgu.CV.Structure
+Imports Emgu.CV.CvEnum
 
 Public Class RoomA
 
@@ -165,11 +167,30 @@ Turn the light off?")
 		MsgBox("The appliance is disconnected")
 	End Sub
 
-	Private Sub s3switchoff_Click(sender As Object, e As EventArgs) Handles s3switchoff.Click
-		s3switchon.Show()
-		s3switchoff.Hide()
-		MsgBox("The appliance is connected")
-	End Sub
-	'code for appliances settings end here
+    Private Sub s3switchoff_Click(sender As Object, e As EventArgs) Handles s3switchoff.Click
+        s3switchon.Show()
+        s3switchoff.Hide()
+        MsgBox("The appliance is connected")
+    End Sub
+    'code for appliances settings end here
+
+    Dim cameraCapture As VideoCapture
+    Dim imageFrame As Mat
+
+    Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
+        cameraCapture = New VideoCapture()
+        cameraCapture.Start() ' some reference is needed .. just accept the suggested solution
+        AddHandler Application.Idle, AddressOf processCapture ' call the function when the event is raised.
+    End Sub
+
+    Private Sub processCapture(sender As System.Object, e As System.EventArgs)
+        imageFrame = cameraCapture.QueryFrame
+        ImageBox.Image = imageFrame
+    End Sub
+
+    Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
+        cameraCapture.Stop()
+        cameraCapture.Dispose()
+    End Sub
 End Class
 
