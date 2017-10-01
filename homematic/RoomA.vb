@@ -176,6 +176,9 @@ Turn the light off?")
 
     Dim cameraCapture As VideoCapture
     Dim imageFrame As Mat
+    Dim imageGray As New Mat
+    Dim faceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
+
 
     Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
         cameraCapture = New VideoCapture()
@@ -184,7 +187,18 @@ Turn the light off?")
     End Sub
 
     Private Sub processCapture(sender As System.Object, e As System.EventArgs)
-        imageFrame = cameraCapture.QueryFrame
+        imageFrame = cameraCapture.QuerySmallFrame
+
+        CvInvoke.CvtColor(imageFrame, imageGray, CvEnum.ColorConversion.Bgr2Gray)
+        For Each face As Rectangle In faceDetector.DetectMultiScale(
+                         imageFrame,
+                         1.1,
+                         10,
+                         New Size(20, 20),
+                         Size.Empty)
+            CvInvoke.Rectangle(imageFrame, face, New MCvScalar(255, 255, 255))
+        Next
+
         ImageBox.Image = imageFrame
     End Sub
 
