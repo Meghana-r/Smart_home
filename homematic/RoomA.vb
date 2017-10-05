@@ -1,4 +1,5 @@
-﻿Imports MaterialSkin
+﻿
+Imports MaterialSkin
 Imports Emgu.CV
 Imports Emgu.CV.Structure
 Imports Emgu.CV.CvEnum
