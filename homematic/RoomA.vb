@@ -9,11 +9,8 @@ Public Class RoomA
     Private Sub RoomA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
-        SkinManager.Theme = MaterialSkinManager.Themes.DARK
+        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
-        'sunimage.Hide()
-        'coldimage.Hide()
-        'mediumhot.Hide()
 
 
     End Sub
@@ -182,12 +179,12 @@ Turn the light off?")
 
     Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
         cameraCapture = New VideoCapture()
-        cameraCapture.Start()
-        AddHandler Application.Idle, AddressOf processCapture 'calls the function to process the image frame
+        cameraCapture.Start() ' some reference is needed .. just accept the suggested solution
+        AddHandler Application.Idle, AddressOf processCapture ' call the function when the event is raised.
     End Sub
 
     Private Sub processCapture(sender As System.Object, e As System.EventArgs)
-        imageFrame = cameraCapture.QuerySmallFrame ' gets a small image fram from the thread
+        imageFrame = cameraCapture.QuerySmallFrame
 
         If imageFrame IsNot Nothing Then
             For Each face As Rectangle In faceDetector.DetectMultiScale(
@@ -204,9 +201,13 @@ Turn the light off?")
     End Sub
 
     Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
-        cameraCapture.Stop() ' stop the thread for capture
-        cameraCapture.Dispose() ' dispose the object
+        cameraCapture.Stop()
+        cameraCapture.Dispose()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dashboard.Show()
+
+    End Sub
 End Class
 
