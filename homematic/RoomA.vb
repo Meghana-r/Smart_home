@@ -9,11 +9,8 @@ Public Class RoomA
 	Private Sub RoomA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
 		SkinManager.AddFormToManage(Me)
-		SkinManager.Theme = MaterialSkinManager.Themes.DARK
+		SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
 		SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
-		'sunimage.Hide()
-		'coldimage.Hide()
-		'mediumhot.Hide()
 
 
 	End Sub
@@ -205,5 +202,10 @@ Turn the light off?")
         cameraCapture.Stop()
         cameraCapture.Dispose()
     End Sub
+
+	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+		Dashboard.Show()
+
+	End Sub
 End Class
 
