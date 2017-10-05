@@ -189,14 +189,16 @@ Turn the light off?")
     Private Sub processCapture(sender As System.Object, e As System.EventArgs)
         imageFrame = cameraCapture.QuerySmallFrame ' gets a small image fram from the thread
 
-        For Each face As Rectangle In faceDetector.DetectMultiScale(
+        If imageFrame IsNot Nothing Then
+            For Each face As Rectangle In faceDetector.DetectMultiScale(
                          imageFrame, 'the frame where it is suposed to detect
                          1.1,        'the relative size of scanning window for the next pass
                          10,      ' minimum neighbours to group as a single detected frame
                          New Size(20, 20), ' size of the window
                          Size.Empty)      'maximum size of the window
-            CvInvoke.Rectangle(imageFrame, face, New MCvScalar(255, 255, 255)) ' DRAW a rectangle around the detected area
-        Next
+                CvInvoke.Rectangle(imageFrame, face, New MCvScalar(255, 255, 255)) ' DRAW a rectangle around the detected area
+            Next
+        End If
 
         ImageBox.Image = imageFrame
     End Sub
