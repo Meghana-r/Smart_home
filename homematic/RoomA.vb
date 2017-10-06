@@ -44,6 +44,17 @@ Public Class RoomA
             brighttrack.Value = 2
             SerialPort1.Write(2)
         End If
+        brightness.Text = brighttrack.Value.ToString
+    End Sub
+    Private Sub lighton_CheckedChanged(sender As Object, e As EventArgs) Handles lighton.CheckedChanged
+        If lightoff.Checked = True Then
+            brighttrack.Value = 0
+            SerialPort1.Write(0)
+        ElseIf lighton.Checked = True Then
+            brighttrack.Value = 2
+            SerialPort1.Write(2)
+        End If
+        brightness.Text = brighttrack.Value.ToString
     End Sub
     'the value of the slider is shown in the label
     Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
