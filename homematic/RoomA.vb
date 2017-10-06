@@ -1,8 +1,11 @@
-﻿
-Imports MaterialSkin
+﻿Imports MaterialSkin
 Imports Emgu.CV
 Imports Emgu.CV.Structure
 Imports Emgu.CV.CvEnum
+Imports System.IO
+Imports System.IO.Ports
+Imports System.Threading
+
 
 Public Class RoomA
 
@@ -11,50 +14,48 @@ Public Class RoomA
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
-
-
+        SerialPort1.Close()
+        SerialPort1.PortName = "COM4"
+        SerialPort1.BaudRate = 9600
+        SerialPort1.DataBits = 8
+        SerialPort1.Parity = Parity.None
+        SerialPort1.StopBits = StopBits.One
+        SerialPort1.Handshake = Handshake.None
+        SerialPort1.Encoding = System.Text.Encoding.Default
     End Sub
+
     'code for light settings start here
     Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.Scroll
         brightness.Text = String.Format("{0} %", arg0:=brighttrack.Value)
         brightness.Text = brighttrack.Value.ToString
         If brighttrack.Value = 20 Then
-            MsgBox("Brightness lower than this turns the light off.
-Turn the light off?")
+            MsgBox("Brightness lower than this turns the light off. Turn the light off?")
             If MsgBoxResult.Ok = 1 Then
                 lightoff.Checked = True
             Else lighton.Checked = True
-                ' dummy comment
-
-
             End If
         End If
-
     End Sub
 
     'the value of the slider is shown in the label
     Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
         brightness1.Text = brighttrack2.Value.ToString
         If brighttrack2.Value = 20 Then
-            MsgBox("Brightness lower than this turns the light off.
-Turn the light off?")
+            MsgBox("Brightness lower than this turns the light off. Turn the light off?")
             If MsgBoxResult.Ok Then
                 lit1off.Checked = True
             End If
         End If
-
     End Sub
 
     Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles brighttrack3.Scroll
         brightness2.Text = brighttrack3.Value.ToString
         If brighttrack3.Value = 20 Then
-            MsgBox("Brightness lower than this turns the light off.
-Turn the light off?")
+            MsgBox("Brightness lower than this turns the light off. Turn the light off?")
             If MsgBoxResult.Ok Then
                 lit2off.Checked = True
             End If
         End If
-
     End Sub
     'code for light settings end here
     'code for Temperature settings start here
