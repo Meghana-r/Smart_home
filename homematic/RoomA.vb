@@ -24,7 +24,7 @@ Turn the light off?")
             If MsgBoxResult.Ok = 1 Then
                 lightoff.Checked = True
             Else lighton.Checked = True
-
+                ' dummy comment
 
 
             End If
