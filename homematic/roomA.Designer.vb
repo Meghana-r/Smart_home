@@ -698,7 +698,6 @@ Partial Class RoomA
         '
         'lighton
         '
-        Me.lighton.Checked = True
         Me.lighton.Depth = 0
         Me.lighton.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.lighton.Location = New System.Drawing.Point(113, 16)
@@ -709,7 +708,6 @@ Partial Class RoomA
         Me.lighton.Ripple = True
         Me.lighton.Size = New System.Drawing.Size(55, 30)
         Me.lighton.TabIndex = 0
-        Me.lighton.TabStop = True
         Me.lighton.Text = "ON"
         Me.lighton.UseVisualStyleBackColor = True
         '
@@ -723,7 +721,7 @@ Partial Class RoomA
         Me.brightness.Name = "brightness"
         Me.brightness.Size = New System.Drawing.Size(40, 30)
         Me.brightness.TabIndex = 18
-        Me.brightness.Text = "100"
+        Me.brightness.Text = "0"
         Me.brightness.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lightoff
