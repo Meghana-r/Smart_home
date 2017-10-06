@@ -743,15 +743,15 @@ Partial Class RoomA
         '
         'brighttrack
         '
+        Me.brighttrack.LargeChange = 1
         Me.brighttrack.Location = New System.Drawing.Point(229, 56)
-        Me.brighttrack.Maximum = 100
-        Me.brighttrack.Minimum = 10
+        Me.brighttrack.Maximum = 4
         Me.brighttrack.Name = "brighttrack"
         Me.brighttrack.Size = New System.Drawing.Size(325, 45)
-        Me.brighttrack.TabIndex = 2
+        Me.brighttrack.TabIndex = 1
         Me.brighttrack.TabStop = False
         Me.brighttrack.TickStyle = System.Windows.Forms.TickStyle.None
-        Me.brighttrack.Value = 100
+        Me.brighttrack.Value = 4
         '
         'control
         '

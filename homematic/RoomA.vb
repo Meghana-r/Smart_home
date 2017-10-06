@@ -15,28 +15,36 @@ Public Class RoomA
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
         SerialPort1.Close()
-        SerialPort1.PortName = "COM4"
+        SerialPort1.PortName = "COM3"
         SerialPort1.BaudRate = 9600
         SerialPort1.DataBits = 8
         SerialPort1.Parity = Parity.None
         SerialPort1.StopBits = StopBits.One
         SerialPort1.Handshake = Handshake.None
         SerialPort1.Encoding = System.Text.Encoding.Default
+        SerialPort1.Open()
     End Sub
 
     'code for light settings start here
     Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.Scroll
         brightness.Text = String.Format("{0} %", arg0:=brighttrack.Value)
         brightness.Text = brighttrack.Value.ToString
-        If brighttrack.Value = 20 Then
-            MsgBox("Brightness lower than this turns the light off. Turn the light off?")
-            If MsgBoxResult.Ok = 1 Then
-                lightoff.Checked = True
-            Else lighton.Checked = True
-            End If
+        SerialPort1.Write(brighttrack.Value)
+        If brighttrack.Value = 0 Then
+            lightoff.Checked = True
+        Else lighton.Checked = True
         End If
     End Sub
 
+    Private Sub lightoff_CheckedChanged(sender As Object, e As EventArgs) Handles lightoff.CheckedChanged
+        If lightoff.Checked = True Then
+            brighttrack.Value = 0
+            SerialPort1.Write(0)
+        ElseIf lighton.Checked = True Then
+            brighttrack.Value = 2
+            SerialPort1.Write(2)
+        End If
+    End Sub
     'the value of the slider is shown in the label
     Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
         brightness1.Text = brighttrack2.Value.ToString
@@ -210,5 +218,7 @@ Public Class RoomA
         Dashboard.Show()
 
     End Sub
+
+
 End Class
 
