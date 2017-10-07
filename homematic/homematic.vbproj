@@ -270,5 +270,9 @@
   <ItemGroup>
     <None Include="Resources\rect815.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\classifiers\haarcascade_eye.xml" />
+    <Content Include="Resources\classifiers\haarcascade_frontalface_default.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

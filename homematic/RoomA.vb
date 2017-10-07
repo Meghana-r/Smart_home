@@ -178,6 +178,7 @@ Turn the light off?")
 
 
     Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
+        ' make sure this is clicked only once
         cameraCapture = New VideoCapture()
         cameraCapture.Start() ' some reference is needed .. just accept the suggested solution
         AddHandler Application.Idle, AddressOf processCapture ' call the function when the event is raised.
@@ -201,7 +202,7 @@ Turn the light off?")
     End Sub
 
     Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
-        cameraCapture.Stop()
+        cameraCapture.Stop() ' null reference exception
         cameraCapture.Dispose()
     End Sub
 
