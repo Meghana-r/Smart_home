@@ -14,15 +14,16 @@ Public Class RoomA
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
-        SerialPort1.Close()
-        SerialPort1.PortName = "COM3"
-        SerialPort1.BaudRate = 9600
-        SerialPort1.DataBits = 8
-        SerialPort1.Parity = Parity.None
-        SerialPort1.StopBits = StopBits.One
-        SerialPort1.Handshake = Handshake.None
-        SerialPort1.Encoding = System.Text.Encoding.Default
-        SerialPort1.Open()
+        'serialport1.close()
+        'serialport1.portname = "com3"
+        'serialport1.baudrate = 9600
+        'serialport1.databits = 8
+        'serialport1.parity = parity.none
+        'serialport1.stopbits = stopbits.one
+        'serialport1.handshake = handshake.none
+        'serialport1.encoding = system.text.encoding.default
+        'serialport1.open()
+        BtnStop.Hide()
     End Sub
 
     'code for light settings start here
@@ -198,8 +199,16 @@ Public Class RoomA
 
 
     Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
+        startCam()
+        BtnStart.Hide()
+        BtnStop.Show()
+    End Sub
+
+    Private Sub startCam()
         cameraCapture = New VideoCapture()
-        cameraCapture.Start() ' some reference is needed .. just accept the suggested solution
+        If Not cameraCapture.IsOpened Then
+            MsgBox("camera not found!")
+        End If
         AddHandler Application.Idle, AddressOf processCapture ' call the function when the event is raised.
     End Sub
 
@@ -221,7 +230,8 @@ Public Class RoomA
     End Sub
 
     Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
-        cameraCapture.Stop()
+        BtnStop.Hide()
+        BtnStart.Show()
         cameraCapture.Dispose()
     End Sub
 
