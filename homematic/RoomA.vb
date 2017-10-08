@@ -20,7 +20,7 @@ Public Class RoomA
 
     Private Sub setupSerial()
         SerialPort1.Close()
-        SerialPort1.PortName = "com3"
+        SerialPort1.PortName = "com4"
         SerialPort1.BaudRate = 9600
         SerialPort1.DataBits = 8
         SerialPort1.Parity = Parity.None
@@ -31,6 +31,7 @@ Public Class RoomA
             SerialPort1.Open()
         Catch ex As IOException
             MsgBox("Port not opened. All controls are unavailable.")
+            ' call function to disable all controls if port is not present
         End Try
     End Sub
 
@@ -47,26 +48,16 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub lightoff_CheckedChanged(sender As Object, e As EventArgs) Handles lightoff.CheckedChanged
-        If lightoff.Checked = True Then
+    Private Sub checkBoxStatus() Handles lightoff.CheckedChanged, lighton.CheckedChanged
+        If lightoff.Checked = True And lighton.Checked = False Then
             brighttrack.Value = 0
-            SerialPort1.Write(0)
-        ElseIf lighton.Checked = True Then
+        ElseIf lightoff.Checked = False And lighton.Checked = True Then
             brighttrack.Value = 2
-            SerialPort1.Write(2)
         End If
+        SerialPort1.Write(brighttrack.Value)
         brightness.Text = brighttrack.Value.ToString
     End Sub
-    Private Sub lighton_CheckedChanged(sender As Object, e As EventArgs) Handles lighton.CheckedChanged
-        If lightoff.Checked = True Then
-            brighttrack.Value = 0
-            SerialPort1.Write(0)
-        ElseIf lighton.Checked = True Then
-            brighttrack.Value = 2
-            SerialPort1.Write(2)
-        End If
-        brightness.Text = brighttrack.Value.ToString
-    End Sub
+
     'the value of the slider is shown in the label
     Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
         brightness1.Text = brighttrack2.Value.ToString
