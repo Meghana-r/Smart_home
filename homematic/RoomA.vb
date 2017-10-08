@@ -14,17 +14,27 @@ Public Class RoomA
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
-        'serialport1.close()
-        'serialport1.portname = "com3"
-        'serialport1.baudrate = 9600
-        'serialport1.databits = 8
-        'serialport1.parity = parity.none
-        'serialport1.stopbits = stopbits.one
-        'serialport1.handshake = handshake.none
-        'serialport1.encoding = system.text.encoding.default
-        'serialport1.open()
+        setupSerial()
         BtnStop.Hide()
     End Sub
+
+    Private Sub setupSerial()
+        SerialPort1.Close()
+        SerialPort1.PortName = "com3"
+        SerialPort1.BaudRate = 9600
+        SerialPort1.DataBits = 8
+        SerialPort1.Parity = Parity.None
+        SerialPort1.StopBits = StopBits.One
+        SerialPort1.Handshake = Handshake.None
+        SerialPort1.Encoding = System.Text.Encoding.Default
+        Try
+            SerialPort1.Open()
+        Catch ex As IOException
+            MsgBox("Port not opened. All controls are unavailable.")
+        End Try
+    End Sub
+
+
 
     'code for light settings start here
     Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.Scroll
