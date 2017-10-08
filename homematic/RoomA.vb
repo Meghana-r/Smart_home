@@ -31,7 +31,7 @@ Public Class RoomA
             SerialPort1.Open()
         Catch ex As IOException
             MsgBox("Port not opened. All controls are unavailable.")
-            ' call function to disable all controls if port is not present
+            GroupBox1.Enabled = False
         End Try
     End Sub
 
@@ -201,14 +201,16 @@ Public Class RoomA
 
     Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
         startCam()
-        BtnStart.Hide()
-        BtnStop.Show()
+
     End Sub
 
     Private Sub startCam()
         cameraCapture = New VideoCapture()
         If Not cameraCapture.IsOpened Then
             MsgBox("camera not found!")
+        Else
+            BtnStart.Hide()
+            BtnStop.Show()
         End If
         AddHandler Application.Idle, AddressOf processCapture ' call the function when the event is raised.
     End Sub
