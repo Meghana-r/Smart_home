@@ -112,6 +112,11 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RoomA.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -123,11 +128,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -144,9 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -187,15 +187,6 @@
     <None Include="Resources\icons8-Chevron Left-26.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\teal.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect6214.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bitmap.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-Sun Filled-50.png" />
   </ItemGroup>
   <ItemGroup>
@@ -208,49 +199,7 @@
     <None Include="Resources\icons8-Partly Cloudy Day-50.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\path845.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect835.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tempcon2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect8351.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tempcon3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tempcon4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tempcon5.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tempcontrol.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect8352.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\path8451.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bitmap1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\path1053.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect8353.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\20142-NSNJPQ.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect62141.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -263,9 +212,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rect8354.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rect815.png" />
