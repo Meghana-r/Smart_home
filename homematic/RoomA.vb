@@ -142,59 +142,9 @@ Public Class RoomA
         templabel2.Text = m.ToString
 
     End Sub
-    'code for Temperature settings end here
-    'code for Appliances settings start here
-    Private Sub S1switchoff_Click(sender As Object, e As EventArgs) 
-        S1switchon.Show()
-        S1switchoff.Hide()
-        MsgBox("The appliance is connected")
+	'code for Temperature settings end here
 
-    End Sub
-
-    Private Sub S1switchon_Click(sender As Object, e As EventArgs) 
-        S1switchon.Hide()
-        S1switchoff.Show()
-        MsgBox("The appliance is disconnected")
-    End Sub
-
-    Private Sub s2switchon_Click(sender As Object, e As EventArgs) 
-        s2switchon.Hide()
-        s2switchoff.Show()
-        MsgBox("The appliance is disconnected")
-    End Sub
-
-    Private Sub s2switchoff_Click(sender As Object, e As EventArgs) 
-        s2switchon.Show()
-        s2switchoff.Hide()
-        MsgBox("The appliance is connected")
-    End Sub
-
-    Private Sub s4switchon_Click(sender As Object, e As EventArgs) 
-        s4switchon.Hide()
-        s4switchoff.Show()
-        MsgBox("The appliance is disconnected")
-    End Sub
-
-    Private Sub s4switchoff_Click(sender As Object, e As EventArgs) 
-        s4switchon.Show()
-        s4switchoff.Hide()
-        MsgBox("The appliance is connected")
-    End Sub
-
-    Private Sub s3switchon_Click(sender As Object, e As EventArgs) 
-        s3switchon.Hide()
-        s3switchoff.Show()
-        MsgBox("The appliance is disconnected")
-    End Sub
-
-    Private Sub s3switchoff_Click(sender As Object, e As EventArgs) 
-        s3switchon.Show()
-        s3switchoff.Hide()
-        MsgBox("The appliance is connected")
-    End Sub
-    'code for appliances settings end here
-
-    Dim cameraCapture As VideoCapture
+	Dim cameraCapture As VideoCapture
     Dim imageFrame As Mat
     Dim faceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
 
@@ -243,6 +193,8 @@ Public Class RoomA
 
     End Sub
 
+	Private Sub apptab_Click(sender As Object, e As EventArgs) Handles apptab.Click
 
+	End Sub
 End Class
 
