@@ -30,23 +30,6 @@ Partial Class RoomA
 		Me.BtnStop = New MaterialSkin.Controls.MaterialRaisedButton()
 		Me.BtnStart = New MaterialSkin.Controls.MaterialRaisedButton()
 		Me.ImageBox = New Emgu.CV.UI.ImageBox()
-		Me.apptab = New System.Windows.Forms.TabPage()
-		Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-		Me.s4switchoff = New System.Windows.Forms.Button()
-		Me.s4switchon = New System.Windows.Forms.Button()
-		Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-		Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-		Me.s3switchoff = New System.Windows.Forms.Button()
-		Me.s3switchon = New System.Windows.Forms.Button()
-		Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-		Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-		Me.s2switchoff = New System.Windows.Forms.Button()
-		Me.s2switchon = New System.Windows.Forms.Button()
-		Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-		Me.Socket1 = New System.Windows.Forms.GroupBox()
-		Me.S1switchoff = New System.Windows.Forms.Button()
-		Me.S1switchon = New System.Windows.Forms.Button()
-		Me.PictureBox6 = New System.Windows.Forms.PictureBox()
 		Me.temptab = New System.Windows.Forms.TabPage()
 		Me.Increasebtn = New System.Windows.Forms.Button()
 		Me.Decreasebtn = New System.Windows.Forms.Button()
@@ -82,17 +65,9 @@ Partial Class RoomA
 		Me.PictureBox4 = New System.Windows.Forms.PictureBox()
 		Me.Button1 = New System.Windows.Forms.Button()
 		Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+		Me.apptab = New System.Windows.Forms.TabPage()
 		Me.vidtab.SuspendLayout()
 		CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.apptab.SuspendLayout()
-		Me.GroupBox6.SuspendLayout()
-		CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.GroupBox5.SuspendLayout()
-		CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.GroupBox4.SuspendLayout()
-		CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.Socket1.SuspendLayout()
-		CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.temptab.SuspendLayout()
 		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,212 +160,6 @@ Partial Class RoomA
 		Me.ImageBox.Size = New System.Drawing.Size(663, 342)
 		Me.ImageBox.TabIndex = 2
 		Me.ImageBox.TabStop = False
-		'
-		'apptab
-		'
-		Me.apptab.BackColor = System.Drawing.Color.White
-		Me.apptab.Controls.Add(Me.GroupBox6)
-		Me.apptab.Controls.Add(Me.GroupBox5)
-		Me.apptab.Controls.Add(Me.GroupBox4)
-		Me.apptab.Controls.Add(Me.Socket1)
-		Me.apptab.Location = New System.Drawing.Point(4, 22)
-		Me.apptab.Name = "apptab"
-		Me.apptab.Size = New System.Drawing.Size(746, 418)
-		Me.apptab.TabIndex = 2
-		Me.apptab.Text = "Appliances"
-		Me.apptab.UseVisualStyleBackColor = True
-		'
-		'GroupBox6
-		'
-		Me.GroupBox6.Controls.Add(Me.s4switchoff)
-		Me.GroupBox6.Controls.Add(Me.s4switchon)
-		Me.GroupBox6.Controls.Add(Me.PictureBox9)
-		Me.GroupBox6.Location = New System.Drawing.Point(397, 213)
-		Me.GroupBox6.Name = "GroupBox6"
-		Me.GroupBox6.Size = New System.Drawing.Size(341, 197)
-		Me.GroupBox6.TabIndex = 5
-		Me.GroupBox6.TabStop = False
-		Me.GroupBox6.Text = "socket4"
-		'
-		's4switchoff
-		'
-		Me.s4switchoff.BackColor = System.Drawing.Color.Transparent
-		Me.s4switchoff.BackgroundImage = Global.homematic.My.Resources.Resources.rect8353
-		Me.s4switchoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.s4switchoff.FlatAppearance.BorderSize = 0
-		Me.s4switchoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.s4switchoff.Location = New System.Drawing.Point(284, 35)
-		Me.s4switchoff.Name = "s4switchoff"
-		Me.s4switchoff.Size = New System.Drawing.Size(37, 60)
-		Me.s4switchoff.TabIndex = 4
-		Me.s4switchoff.UseVisualStyleBackColor = False
-		'
-		's4switchon
-		'
-		Me.s4switchon.BackColor = System.Drawing.Color.Transparent
-		Me.s4switchon.BackgroundImage = Global.homematic.My.Resources.Resources._20142_NSNJPQ
-		Me.s4switchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.s4switchon.FlatAppearance.BorderSize = 0
-		Me.s4switchon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.s4switchon.Location = New System.Drawing.Point(284, 35)
-		Me.s4switchon.Name = "s4switchon"
-		Me.s4switchon.Size = New System.Drawing.Size(37, 60)
-		Me.s4switchon.TabIndex = 3
-		Me.s4switchon.UseVisualStyleBackColor = False
-		'
-		'PictureBox9
-		'
-		Me.PictureBox9.Image = Global.homematic.My.Resources.Resources.bitmap1
-		Me.PictureBox9.Location = New System.Drawing.Point(6, 19)
-		Me.PictureBox9.Name = "PictureBox9"
-		Me.PictureBox9.Size = New System.Drawing.Size(255, 150)
-		Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.PictureBox9.TabIndex = 0
-		Me.PictureBox9.TabStop = False
-		'
-		'GroupBox5
-		'
-		Me.GroupBox5.Controls.Add(Me.s3switchoff)
-		Me.GroupBox5.Controls.Add(Me.s3switchon)
-		Me.GroupBox5.Controls.Add(Me.PictureBox8)
-		Me.GroupBox5.Location = New System.Drawing.Point(8, 213)
-		Me.GroupBox5.Name = "GroupBox5"
-		Me.GroupBox5.Size = New System.Drawing.Size(341, 197)
-		Me.GroupBox5.TabIndex = 5
-		Me.GroupBox5.TabStop = False
-		Me.GroupBox5.Text = "socket3"
-		'
-		's3switchoff
-		'
-		Me.s3switchoff.BackColor = System.Drawing.Color.Transparent
-		Me.s3switchoff.BackgroundImage = Global.homematic.My.Resources.Resources.rect8353
-		Me.s3switchoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.s3switchoff.FlatAppearance.BorderSize = 0
-		Me.s3switchoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.s3switchoff.Location = New System.Drawing.Point(284, 35)
-		Me.s3switchoff.Name = "s3switchoff"
-		Me.s3switchoff.Size = New System.Drawing.Size(37, 60)
-		Me.s3switchoff.TabIndex = 4
-		Me.s3switchoff.UseVisualStyleBackColor = False
-		'
-		's3switchon
-		'
-		Me.s3switchon.BackColor = System.Drawing.Color.Transparent
-		Me.s3switchon.BackgroundImage = Global.homematic.My.Resources.Resources._20142_NSNJPQ
-		Me.s3switchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.s3switchon.FlatAppearance.BorderSize = 0
-		Me.s3switchon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.s3switchon.Location = New System.Drawing.Point(284, 35)
-		Me.s3switchon.Name = "s3switchon"
-		Me.s3switchon.Size = New System.Drawing.Size(37, 60)
-		Me.s3switchon.TabIndex = 3
-		Me.s3switchon.UseVisualStyleBackColor = False
-		'
-		'PictureBox8
-		'
-		Me.PictureBox8.Image = Global.homematic.My.Resources.Resources.bitmap1
-		Me.PictureBox8.Location = New System.Drawing.Point(6, 19)
-		Me.PictureBox8.Name = "PictureBox8"
-		Me.PictureBox8.Size = New System.Drawing.Size(255, 150)
-		Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.PictureBox8.TabIndex = 0
-		Me.PictureBox8.TabStop = False
-		'
-		'GroupBox4
-		'
-		Me.GroupBox4.Controls.Add(Me.s2switchoff)
-		Me.GroupBox4.Controls.Add(Me.s2switchon)
-		Me.GroupBox4.Controls.Add(Me.PictureBox7)
-		Me.GroupBox4.Location = New System.Drawing.Point(397, 9)
-		Me.GroupBox4.Name = "GroupBox4"
-		Me.GroupBox4.Size = New System.Drawing.Size(341, 197)
-		Me.GroupBox4.TabIndex = 5
-		Me.GroupBox4.TabStop = False
-		Me.GroupBox4.Text = "Socket2"
-		'
-		's2switchoff
-		'
-		Me.s2switchoff.BackColor = System.Drawing.Color.Transparent
-		Me.s2switchoff.BackgroundImage = Global.homematic.My.Resources.Resources.rect8353
-		Me.s2switchoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.s2switchoff.FlatAppearance.BorderSize = 0
-		Me.s2switchoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.s2switchoff.Location = New System.Drawing.Point(284, 35)
-		Me.s2switchoff.Name = "s2switchoff"
-		Me.s2switchoff.Size = New System.Drawing.Size(37, 60)
-		Me.s2switchoff.TabIndex = 4
-		Me.s2switchoff.UseVisualStyleBackColor = False
-		'
-		's2switchon
-		'
-		Me.s2switchon.BackColor = System.Drawing.Color.Transparent
-		Me.s2switchon.BackgroundImage = Global.homematic.My.Resources.Resources._20142_NSNJPQ
-		Me.s2switchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.s2switchon.FlatAppearance.BorderSize = 0
-		Me.s2switchon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.s2switchon.Location = New System.Drawing.Point(284, 35)
-		Me.s2switchon.Name = "s2switchon"
-		Me.s2switchon.Size = New System.Drawing.Size(37, 60)
-		Me.s2switchon.TabIndex = 3
-		Me.s2switchon.UseVisualStyleBackColor = False
-		'
-		'PictureBox7
-		'
-		Me.PictureBox7.Image = Global.homematic.My.Resources.Resources.bitmap1
-		Me.PictureBox7.Location = New System.Drawing.Point(6, 19)
-		Me.PictureBox7.Name = "PictureBox7"
-		Me.PictureBox7.Size = New System.Drawing.Size(255, 150)
-		Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.PictureBox7.TabIndex = 0
-		Me.PictureBox7.TabStop = False
-		'
-		'Socket1
-		'
-		Me.Socket1.Controls.Add(Me.S1switchoff)
-		Me.Socket1.Controls.Add(Me.S1switchon)
-		Me.Socket1.Controls.Add(Me.PictureBox6)
-		Me.Socket1.Location = New System.Drawing.Point(8, 9)
-		Me.Socket1.Name = "Socket1"
-		Me.Socket1.Size = New System.Drawing.Size(341, 197)
-		Me.Socket1.TabIndex = 0
-		Me.Socket1.TabStop = False
-		Me.Socket1.Text = "Socket1"
-		'
-		'S1switchoff
-		'
-		Me.S1switchoff.BackColor = System.Drawing.Color.Transparent
-		Me.S1switchoff.BackgroundImage = Global.homematic.My.Resources.Resources.rect8353
-		Me.S1switchoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.S1switchoff.FlatAppearance.BorderSize = 0
-		Me.S1switchoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.S1switchoff.Location = New System.Drawing.Point(284, 35)
-		Me.S1switchoff.Name = "S1switchoff"
-		Me.S1switchoff.Size = New System.Drawing.Size(37, 60)
-		Me.S1switchoff.TabIndex = 4
-		Me.S1switchoff.UseVisualStyleBackColor = False
-		'
-		'S1switchon
-		'
-		Me.S1switchon.BackColor = System.Drawing.Color.Transparent
-		Me.S1switchon.BackgroundImage = Global.homematic.My.Resources.Resources._20142_NSNJPQ
-		Me.S1switchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.S1switchon.FlatAppearance.BorderSize = 0
-		Me.S1switchon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.S1switchon.Location = New System.Drawing.Point(284, 35)
-		Me.S1switchon.Name = "S1switchon"
-		Me.S1switchon.Size = New System.Drawing.Size(37, 60)
-		Me.S1switchon.TabIndex = 3
-		Me.S1switchon.UseVisualStyleBackColor = False
-		'
-		'PictureBox6
-		'
-		Me.PictureBox6.Image = Global.homematic.My.Resources.Resources.bitmap1
-		Me.PictureBox6.Location = New System.Drawing.Point(6, 19)
-		Me.PictureBox6.Name = "PictureBox6"
-		Me.PictureBox6.Size = New System.Drawing.Size(255, 150)
-		Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.PictureBox6.TabIndex = 0
-		Me.PictureBox6.TabStop = False
 		'
 		'temptab
 		'
@@ -853,6 +622,16 @@ Partial Class RoomA
 		Me.Button1.TabIndex = 7
 		Me.Button1.UseVisualStyleBackColor = False
 		'
+		'apptab
+		'
+		Me.apptab.BackColor = System.Drawing.Color.White
+		Me.apptab.Location = New System.Drawing.Point(4, 22)
+		Me.apptab.Name = "apptab"
+		Me.apptab.Size = New System.Drawing.Size(746, 418)
+		Me.apptab.TabIndex = 2
+		Me.apptab.Text = "Appliances"
+		Me.apptab.UseVisualStyleBackColor = True
+		'
 		'RoomA
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -868,15 +647,6 @@ Partial Class RoomA
 		Me.vidtab.ResumeLayout(False)
 		Me.vidtab.PerformLayout()
 		CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.apptab.ResumeLayout(False)
-		Me.GroupBox6.ResumeLayout(False)
-		CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.GroupBox5.ResumeLayout(False)
-		CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.GroupBox4.ResumeLayout(False)
-		CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.Socket1.ResumeLayout(False)
-		CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.temptab.ResumeLayout(False)
 		CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.coldimage, System.ComponentModel.ISupportInitialize).EndInit()
@@ -911,23 +681,6 @@ Partial Class RoomA
 	Friend WithEvents BtnStop As MaterialSkin.Controls.MaterialRaisedButton
 	Friend WithEvents BtnStart As MaterialSkin.Controls.MaterialRaisedButton
 	Friend WithEvents ImageBox As Emgu.CV.UI.ImageBox
-	Friend WithEvents apptab As TabPage
-	Friend WithEvents GroupBox6 As GroupBox
-	Friend WithEvents s4switchoff As Button
-	Friend WithEvents s4switchon As Button
-	Friend WithEvents PictureBox9 As PictureBox
-	Friend WithEvents GroupBox5 As GroupBox
-	Friend WithEvents s3switchoff As Button
-	Friend WithEvents s3switchon As Button
-	Friend WithEvents PictureBox8 As PictureBox
-	Friend WithEvents GroupBox4 As GroupBox
-	Friend WithEvents s2switchoff As Button
-	Friend WithEvents s2switchon As Button
-	Friend WithEvents PictureBox7 As PictureBox
-	Friend WithEvents Socket1 As GroupBox
-	Friend WithEvents S1switchoff As Button
-	Friend WithEvents S1switchon As Button
-	Friend WithEvents PictureBox6 As PictureBox
 	Friend WithEvents temptab As TabPage
 	Friend WithEvents Increasebtn As Button
 	Friend WithEvents Decreasebtn As Button
@@ -958,5 +711,6 @@ Partial Class RoomA
 	Friend WithEvents control As MaterialSkin.Controls.MaterialTabControl
 	Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
 	Friend WithEvents Panel1 As Panel
-    Friend WithEvents SerialPort1 As IO.Ports.SerialPort
+	Friend WithEvents SerialPort1 As IO.Ports.SerialPort
+	Friend WithEvents apptab As TabPage
 End Class

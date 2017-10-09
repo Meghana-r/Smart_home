@@ -144,50 +144,50 @@ Public Class RoomA
     End Sub
     'code for Temperature settings end here
     'code for Appliances settings start here
-    Private Sub S1switchoff_Click(sender As Object, e As EventArgs) Handles S1switchoff.Click
+    Private Sub S1switchoff_Click(sender As Object, e As EventArgs) 
         S1switchon.Show()
         S1switchoff.Hide()
         MsgBox("The appliance is connected")
 
     End Sub
 
-    Private Sub S1switchon_Click(sender As Object, e As EventArgs) Handles S1switchon.Click
+    Private Sub S1switchon_Click(sender As Object, e As EventArgs) 
         S1switchon.Hide()
         S1switchoff.Show()
         MsgBox("The appliance is disconnected")
     End Sub
 
-    Private Sub s2switchon_Click(sender As Object, e As EventArgs) Handles s2switchon.Click
+    Private Sub s2switchon_Click(sender As Object, e As EventArgs) 
         s2switchon.Hide()
         s2switchoff.Show()
         MsgBox("The appliance is disconnected")
     End Sub
 
-    Private Sub s2switchoff_Click(sender As Object, e As EventArgs) Handles s2switchoff.Click
+    Private Sub s2switchoff_Click(sender As Object, e As EventArgs) 
         s2switchon.Show()
         s2switchoff.Hide()
         MsgBox("The appliance is connected")
     End Sub
 
-    Private Sub s4switchon_Click(sender As Object, e As EventArgs) Handles s4switchon.Click
+    Private Sub s4switchon_Click(sender As Object, e As EventArgs) 
         s4switchon.Hide()
         s4switchoff.Show()
         MsgBox("The appliance is disconnected")
     End Sub
 
-    Private Sub s4switchoff_Click(sender As Object, e As EventArgs) Handles s4switchoff.Click
+    Private Sub s4switchoff_Click(sender As Object, e As EventArgs) 
         s4switchon.Show()
         s4switchoff.Hide()
         MsgBox("The appliance is connected")
     End Sub
 
-    Private Sub s3switchon_Click(sender As Object, e As EventArgs) Handles s3switchon.Click
+    Private Sub s3switchon_Click(sender As Object, e As EventArgs) 
         s3switchon.Hide()
         s3switchoff.Show()
         MsgBox("The appliance is disconnected")
     End Sub
 
-    Private Sub s3switchoff_Click(sender As Object, e As EventArgs) Handles s3switchoff.Click
+    Private Sub s3switchoff_Click(sender As Object, e As EventArgs) 
         s3switchon.Show()
         s3switchoff.Hide()
         MsgBox("The appliance is connected")
