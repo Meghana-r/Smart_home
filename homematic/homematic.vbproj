@@ -273,6 +273,13 @@
   <ItemGroup>
     <Content Include="Resources\classifiers\haarcascade_eye.xml" />
     <Content Include="Resources\classifiers\haarcascade_frontalface_default.xml" />
+    <None Include="Resources\poweroff %282%29.png" />
+    <None Include="Resources\poweron.png" />
+    <None Include="Resources\pweron.png" />
+    <None Include="Resources\fridgeon.png" />
+    <None Include="Resources\fridgeoff.png" />
+    <None Include="Resources\tvon.png" />
+    <None Include="Resources\tvoff.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

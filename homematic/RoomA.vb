@@ -15,8 +15,9 @@ Public Class RoomA
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
         setupSerial()
-        BtnStop.Hide()
-    End Sub
+		BtnStop.Hide()
+
+	End Sub
 
     Private Sub setupSerial()
         SerialPort1.Close()
@@ -31,8 +32,10 @@ Public Class RoomA
             SerialPort1.Open()
         Catch ex As IOException
             MsgBox("Port not opened. All controls are unavailable.")
-            GroupBox1.Enabled = False
-        End Try
+			Light1.Enabled = False
+			Appgrp.Enabled = False
+
+		End Try
     End Sub
 
 
@@ -188,13 +191,61 @@ Public Class RoomA
         cameraCapture.Dispose()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dashboard.Show()
+	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+		Dashboard.Show()
 
-    End Sub
+	End Sub
+
+
+
+	Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
+		tvon.Show()
+		tvoff.Hide()
+
+	End Sub
+
+	Private Sub tvon_Click(sender As Object, e As EventArgs) Handles tvon.Click
+		tvoff.Show()
+		tvon.Hide()
+
+	End Sub
+
+	Private Sub poweroff_Click(sender As Object, e As EventArgs) Handles poweroff.Click
+		poweron.Show()
+		poweroff.Hide()
+
+	End Sub
+
+	Private Sub poweron_Click(sender As Object, e As EventArgs) Handles poweron.Click
+		poweroff.Show()
+		poweron.Hide()
+	End Sub
+
+	Private Sub power3off_Click(sender As Object, e As EventArgs) Handles power3off.Click
+		power3on.Show()
+		power3off.Hide()
+
+	End Sub
 
 	Private Sub apptab_Click(sender As Object, e As EventArgs) Handles apptab.Click
+		If Appgrp.Enabled = False Then
+			MsgBox("Ports not available")
+		End If
+	End Sub
 
+	Private Sub power2off_Click_1(sender As Object, e As EventArgs) Handles power2off.Click
+		power2off.Hide()
+		power2on.Show()
+	End Sub
+
+	Private Sub power2on_Click(sender As Object, e As EventArgs) Handles power2on.Click
+		power2on.Hide()
+		power2off.Show()
+	End Sub
+
+	Private Sub power3on_Click(sender As Object, e As EventArgs) Handles power3on.Click
+		power3on.Hide()
+		power3off.Show()
 	End Sub
 End Class
 

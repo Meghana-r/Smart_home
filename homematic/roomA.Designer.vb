@@ -41,31 +41,41 @@ Partial Class RoomA
 		Me.templabel2 = New System.Windows.Forms.Label()
 		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
 		Me.Lighttab = New System.Windows.Forms.TabPage()
-		Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+		Me.light3 = New System.Windows.Forms.GroupBox()
 		Me.brightness2 = New System.Windows.Forms.Label()
 		Me.lit2on = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.lit2off = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.brighttrack3 = New System.Windows.Forms.TrackBar()
-		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+		Me.Light2 = New System.Windows.Forms.GroupBox()
 		Me.lit1on = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.lit1off = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.brightness1 = New System.Windows.Forms.Label()
 		Me.brighttrack2 = New System.Windows.Forms.TrackBar()
-		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+		Me.Light1 = New System.Windows.Forms.GroupBox()
 		Me.lighton = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.brightness = New System.Windows.Forms.Label()
 		Me.lightoff = New MaterialSkin.Controls.MaterialRadioButton()
 		Me.brighttrack = New System.Windows.Forms.TrackBar()
 		Me.control = New MaterialSkin.Controls.MaterialTabControl()
+		Me.apptab = New System.Windows.Forms.TabPage()
+		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+		Me.power3off = New System.Windows.Forms.Button()
+		Me.power3on = New System.Windows.Forms.Button()
+		Me.power2off = New System.Windows.Forms.Button()
+		Me.power2on = New System.Windows.Forms.Button()
+		Me.Appgrp = New System.Windows.Forms.GroupBox()
+		Me.tvoff = New System.Windows.Forms.Button()
+		Me.poweron = New System.Windows.Forms.Button()
+		Me.tvon = New System.Windows.Forms.Button()
+		Me.poweroff = New System.Windows.Forms.Button()
 		Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
 		Me.Panel1 = New System.Windows.Forms.Panel()
 		Me.bulb = New System.Windows.Forms.PictureBox()
 		Me.PictureBox2 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox3 = New System.Windows.Forms.PictureBox()
 		Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-		Me.Button1 = New System.Windows.Forms.Button()
 		Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
-		Me.apptab = New System.Windows.Forms.TabPage()
+		Me.Button1 = New System.Windows.Forms.Button()
 		Me.vidtab.SuspendLayout()
 		CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.temptab.SuspendLayout()
@@ -74,13 +84,16 @@ Partial Class RoomA
 		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.Lighttab.SuspendLayout()
-		Me.GroupBox3.SuspendLayout()
+		Me.light3.SuspendLayout()
 		CType(Me.brighttrack3, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.GroupBox2.SuspendLayout()
+		Me.Light2.SuspendLayout()
 		CType(Me.brighttrack2, System.ComponentModel.ISupportInitialize).BeginInit()
-		Me.GroupBox1.SuspendLayout()
+		Me.Light1.SuspendLayout()
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.control.SuspendLayout()
+		Me.apptab.SuspendLayout()
+		Me.GroupBox1.SuspendLayout()
+		Me.Appgrp.SuspendLayout()
 		Me.Panel1.SuspendLayout()
 		CType(Me.bulb, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,7 +113,7 @@ Partial Class RoomA
 		Me.humidbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.humidbtn.FlatAppearance.BorderSize = 0
 		Me.humidbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.humidbtn.Location = New System.Drawing.Point(220, 182)
+		Me.humidbtn.Location = New System.Drawing.Point(215, 182)
 		Me.humidbtn.Name = "humidbtn"
 		Me.humidbtn.Size = New System.Drawing.Size(36, 31)
 		Me.humidbtn.TabIndex = 6
@@ -189,7 +202,7 @@ Partial Class RoomA
 		Me.Increasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Increasebtn.FlatAppearance.BorderSize = 0
 		Me.Increasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Increasebtn.Location = New System.Drawing.Point(120, 112)
+		Me.Increasebtn.Location = New System.Drawing.Point(115, 112)
 		Me.Increasebtn.Name = "Increasebtn"
 		Me.Increasebtn.Size = New System.Drawing.Size(36, 31)
 		Me.Increasebtn.TabIndex = 9
@@ -203,7 +216,7 @@ Partial Class RoomA
 		Me.Decreasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Decreasebtn.FlatAppearance.BorderSize = 0
 		Me.Decreasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Decreasebtn.Location = New System.Drawing.Point(120, 237)
+		Me.Decreasebtn.Location = New System.Drawing.Point(115, 237)
 		Me.Decreasebtn.Name = "Decreasebtn"
 		Me.Decreasebtn.Size = New System.Drawing.Size(36, 31)
 		Me.Decreasebtn.TabIndex = 8
@@ -217,7 +230,7 @@ Partial Class RoomA
 		Me.resetbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.resetbtn.FlatAppearance.BorderSize = 0
 		Me.resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.resetbtn.Location = New System.Drawing.Point(475, 182)
+		Me.resetbtn.Location = New System.Drawing.Point(470, 182)
 		Me.resetbtn.Name = "resetbtn"
 		Me.resetbtn.Size = New System.Drawing.Size(36, 31)
 		Me.resetbtn.TabIndex = 7
@@ -227,7 +240,7 @@ Partial Class RoomA
 		'
 		Me.mediumhot.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
 		Me.mediumhot.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50__1_
-		Me.mediumhot.Location = New System.Drawing.Point(376, 105)
+		Me.mediumhot.Location = New System.Drawing.Point(371, 105)
 		Me.mediumhot.Name = "mediumhot"
 		Me.mediumhot.Size = New System.Drawing.Size(30, 30)
 		Me.mediumhot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -238,7 +251,7 @@ Partial Class RoomA
 		'
 		Me.coldimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
 		Me.coldimage.Image = Global.homematic.My.Resources.Resources.icons8_Snowflake_48
-		Me.coldimage.Location = New System.Drawing.Point(376, 105)
+		Me.coldimage.Location = New System.Drawing.Point(371, 105)
 		Me.coldimage.Name = "coldimage"
 		Me.coldimage.Size = New System.Drawing.Size(30, 30)
 		Me.coldimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -249,7 +262,7 @@ Partial Class RoomA
 		'
 		Me.sunimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
 		Me.sunimage.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50
-		Me.sunimage.Location = New System.Drawing.Point(376, 105)
+		Me.sunimage.Location = New System.Drawing.Point(371, 105)
 		Me.sunimage.Name = "sunimage"
 		Me.sunimage.Size = New System.Drawing.Size(30, 30)
 		Me.sunimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -261,7 +274,7 @@ Partial Class RoomA
 		Me.templabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
 		Me.templabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.templabel.ForeColor = System.Drawing.Color.White
-		Me.templabel.Location = New System.Drawing.Point(335, 105)
+		Me.templabel.Location = New System.Drawing.Point(330, 105)
 		Me.templabel.Name = "templabel"
 		Me.templabel.Size = New System.Drawing.Size(40, 38)
 		Me.templabel.TabIndex = 2
@@ -273,7 +286,7 @@ Partial Class RoomA
 		Me.templabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
 		Me.templabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.templabel2.ForeColor = System.Drawing.Color.White
-		Me.templabel2.Location = New System.Drawing.Point(325, 168)
+		Me.templabel2.Location = New System.Drawing.Point(320, 168)
 		Me.templabel2.Name = "templabel2"
 		Me.templabel2.Size = New System.Drawing.Size(100, 59)
 		Me.templabel2.TabIndex = 1
@@ -283,7 +296,7 @@ Partial Class RoomA
 		'PictureBox1
 		'
 		Me.PictureBox1.Image = Global.homematic.My.Resources.Resources.tempcontrol
-		Me.PictureBox1.Location = New System.Drawing.Point(171, 0)
+		Me.PictureBox1.Location = New System.Drawing.Point(166, 0)
 		Me.PictureBox1.Name = "PictureBox1"
 		Me.PictureBox1.Size = New System.Drawing.Size(418, 418)
 		Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -293,9 +306,9 @@ Partial Class RoomA
 		'Lighttab
 		'
 		Me.Lighttab.BackColor = System.Drawing.Color.White
-		Me.Lighttab.Controls.Add(Me.GroupBox3)
-		Me.Lighttab.Controls.Add(Me.GroupBox2)
-		Me.Lighttab.Controls.Add(Me.GroupBox1)
+		Me.Lighttab.Controls.Add(Me.light3)
+		Me.Lighttab.Controls.Add(Me.Light2)
+		Me.Lighttab.Controls.Add(Me.Light1)
 		Me.Lighttab.Location = New System.Drawing.Point(4, 22)
 		Me.Lighttab.Name = "Lighttab"
 		Me.Lighttab.Padding = New System.Windows.Forms.Padding(3)
@@ -303,21 +316,21 @@ Partial Class RoomA
 		Me.Lighttab.TabIndex = 0
 		Me.Lighttab.Text = "Lights"
 		'
-		'GroupBox3
+		'light3
 		'
-		Me.GroupBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+		Me.light3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.GroupBox3.Controls.Add(Me.brightness2)
-		Me.GroupBox3.Controls.Add(Me.lit2on)
-		Me.GroupBox3.Controls.Add(Me.lit2off)
-		Me.GroupBox3.Controls.Add(Me.brighttrack3)
-		Me.GroupBox3.Location = New System.Drawing.Point(3, 295)
-		Me.GroupBox3.Name = "GroupBox3"
-		Me.GroupBox3.Size = New System.Drawing.Size(740, 120)
-		Me.GroupBox3.TabIndex = 20
-		Me.GroupBox3.TabStop = False
-		Me.GroupBox3.Text = "light3"
+		Me.light3.Controls.Add(Me.brightness2)
+		Me.light3.Controls.Add(Me.lit2on)
+		Me.light3.Controls.Add(Me.lit2off)
+		Me.light3.Controls.Add(Me.brighttrack3)
+		Me.light3.Location = New System.Drawing.Point(3, 295)
+		Me.light3.Name = "light3"
+		Me.light3.Size = New System.Drawing.Size(740, 120)
+		Me.light3.TabIndex = 20
+		Me.light3.TabStop = False
+		Me.light3.Text = "light3"
 		'
 		'brightness2
 		'
@@ -376,21 +389,21 @@ Partial Class RoomA
 		Me.brighttrack3.TickStyle = System.Windows.Forms.TickStyle.None
 		Me.brighttrack3.Value = 100
 		'
-		'GroupBox2
+		'Light2
 		'
-		Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+		Me.Light2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.GroupBox2.Controls.Add(Me.lit1on)
-		Me.GroupBox2.Controls.Add(Me.lit1off)
-		Me.GroupBox2.Controls.Add(Me.brightness1)
-		Me.GroupBox2.Controls.Add(Me.brighttrack2)
-		Me.GroupBox2.Location = New System.Drawing.Point(3, 153)
-		Me.GroupBox2.Name = "GroupBox2"
-		Me.GroupBox2.Size = New System.Drawing.Size(740, 120)
-		Me.GroupBox2.TabIndex = 20
-		Me.GroupBox2.TabStop = False
-		Me.GroupBox2.Text = "light2"
+		Me.Light2.Controls.Add(Me.lit1on)
+		Me.Light2.Controls.Add(Me.lit1off)
+		Me.Light2.Controls.Add(Me.brightness1)
+		Me.Light2.Controls.Add(Me.brighttrack2)
+		Me.Light2.Location = New System.Drawing.Point(3, 153)
+		Me.Light2.Name = "Light2"
+		Me.Light2.Size = New System.Drawing.Size(740, 120)
+		Me.Light2.TabIndex = 20
+		Me.Light2.TabStop = False
+		Me.Light2.Text = "light2"
 		'
 		'lit1on
 		'
@@ -449,21 +462,21 @@ Partial Class RoomA
 		Me.brighttrack2.TickStyle = System.Windows.Forms.TickStyle.None
 		Me.brighttrack2.Value = 100
 		'
-		'GroupBox1
+		'Light1
 		'
-		Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+		Me.Light1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.GroupBox1.Controls.Add(Me.lighton)
-		Me.GroupBox1.Controls.Add(Me.brightness)
-		Me.GroupBox1.Controls.Add(Me.lightoff)
-		Me.GroupBox1.Controls.Add(Me.brighttrack)
-		Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
-		Me.GroupBox1.Name = "GroupBox1"
-		Me.GroupBox1.Size = New System.Drawing.Size(740, 120)
-		Me.GroupBox1.TabIndex = 19
-		Me.GroupBox1.TabStop = False
-		Me.GroupBox1.Text = "light1"
+		Me.Light1.Controls.Add(Me.lighton)
+		Me.Light1.Controls.Add(Me.brightness)
+		Me.Light1.Controls.Add(Me.lightoff)
+		Me.Light1.Controls.Add(Me.brighttrack)
+		Me.Light1.Location = New System.Drawing.Point(3, 3)
+		Me.Light1.Name = "Light1"
+		Me.Light1.Size = New System.Drawing.Size(740, 120)
+		Me.Light1.TabIndex = 19
+		Me.Light1.TabStop = False
+		Me.Light1.Text = "light1"
 		'
 		'lighton
 		'
@@ -533,6 +546,149 @@ Partial Class RoomA
 		Me.control.SelectedIndex = 0
 		Me.control.Size = New System.Drawing.Size(754, 444)
 		Me.control.TabIndex = 0
+		'
+		'apptab
+		'
+		Me.apptab.BackColor = System.Drawing.Color.White
+		Me.apptab.Controls.Add(Me.GroupBox1)
+		Me.apptab.Controls.Add(Me.Appgrp)
+		Me.apptab.Location = New System.Drawing.Point(4, 22)
+		Me.apptab.Name = "apptab"
+		Me.apptab.Size = New System.Drawing.Size(746, 418)
+		Me.apptab.TabIndex = 2
+		Me.apptab.Text = "Appliances"
+		Me.apptab.UseVisualStyleBackColor = True
+		'
+		'GroupBox1
+		'
+		Me.GroupBox1.Controls.Add(Me.power3off)
+		Me.GroupBox1.Controls.Add(Me.power3on)
+		Me.GroupBox1.Controls.Add(Me.power2off)
+		Me.GroupBox1.Controls.Add(Me.power2on)
+		Me.GroupBox1.Location = New System.Drawing.Point(326, 0)
+		Me.GroupBox1.Name = "GroupBox1"
+		Me.GroupBox1.Size = New System.Drawing.Size(178, 408)
+		Me.GroupBox1.TabIndex = 7
+		Me.GroupBox1.TabStop = False
+		Me.GroupBox1.Text = "Connections"
+		'
+		'power3off
+		'
+		Me.power3off.BackColor = System.Drawing.Color.Transparent
+		Me.power3off.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff__2_
+		Me.power3off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.power3off.FlatAppearance.BorderSize = 0
+		Me.power3off.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.power3off.Location = New System.Drawing.Point(72, 43)
+		Me.power3off.Name = "power3off"
+		Me.power3off.Size = New System.Drawing.Size(40, 40)
+		Me.power3off.TabIndex = 7
+		Me.power3off.UseVisualStyleBackColor = False
+		'
+		'power3on
+		'
+		Me.power3on.BackColor = System.Drawing.Color.Transparent
+		Me.power3on.BackgroundImage = Global.homematic.My.Resources.Resources.poweron
+		Me.power3on.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.power3on.FlatAppearance.BorderSize = 0
+		Me.power3on.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.power3on.Location = New System.Drawing.Point(72, 43)
+		Me.power3on.Name = "power3on"
+		Me.power3on.Size = New System.Drawing.Size(40, 40)
+		Me.power3on.TabIndex = 6
+		Me.power3on.UseVisualStyleBackColor = False
+		'
+		'power2off
+		'
+		Me.power2off.BackColor = System.Drawing.Color.Transparent
+		Me.power2off.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff__2_
+		Me.power2off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.power2off.FlatAppearance.BorderSize = 0
+		Me.power2off.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.power2off.Location = New System.Drawing.Point(72, 184)
+		Me.power2off.Name = "power2off"
+		Me.power2off.Size = New System.Drawing.Size(40, 40)
+		Me.power2off.TabIndex = 4
+		Me.power2off.UseVisualStyleBackColor = False
+		'
+		'power2on
+		'
+		Me.power2on.BackColor = System.Drawing.Color.Transparent
+		Me.power2on.BackgroundImage = Global.homematic.My.Resources.Resources.poweron
+		Me.power2on.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.power2on.FlatAppearance.BorderSize = 0
+		Me.power2on.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.power2on.Location = New System.Drawing.Point(72, 184)
+		Me.power2on.Name = "power2on"
+		Me.power2on.Size = New System.Drawing.Size(40, 40)
+		Me.power2on.TabIndex = 5
+		Me.power2on.UseVisualStyleBackColor = False
+		'
+		'Appgrp
+		'
+		Me.Appgrp.Controls.Add(Me.tvoff)
+		Me.Appgrp.Controls.Add(Me.poweron)
+		Me.Appgrp.Controls.Add(Me.tvon)
+		Me.Appgrp.Controls.Add(Me.poweroff)
+		Me.Appgrp.Location = New System.Drawing.Point(28, 3)
+		Me.Appgrp.Name = "Appgrp"
+		Me.Appgrp.Size = New System.Drawing.Size(178, 408)
+		Me.Appgrp.TabIndex = 6
+		Me.Appgrp.TabStop = False
+		Me.Appgrp.Text = "Appliances"
+		'
+		'tvoff
+		'
+		Me.tvoff.BackColor = System.Drawing.Color.Transparent
+		Me.tvoff.BackgroundImage = Global.homematic.My.Resources.Resources.tvoff
+		Me.tvoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.tvoff.FlatAppearance.BorderSize = 0
+		Me.tvoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.tvoff.Location = New System.Drawing.Point(72, 40)
+		Me.tvoff.Name = "tvoff"
+		Me.tvoff.Size = New System.Drawing.Size(40, 40)
+		Me.tvoff.TabIndex = 3
+		Me.tvoff.UseVisualStyleBackColor = False
+		'
+		'poweron
+		'
+		Me.poweron.BackColor = System.Drawing.Color.Transparent
+		Me.poweron.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff__2_
+		Me.poweron.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.poweron.FlatAppearance.BorderSize = 0
+		Me.poweron.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.poweron.Location = New System.Drawing.Point(58, 181)
+		Me.poweron.Name = "poweron"
+		Me.poweron.Size = New System.Drawing.Size(40, 40)
+		Me.poweron.TabIndex = 4
+		Me.poweron.UseVisualStyleBackColor = False
+		'
+		'tvon
+		'
+		Me.tvon.BackColor = System.Drawing.Color.Transparent
+		Me.tvon.BackgroundImage = Global.homematic.My.Resources.Resources.tvon
+		Me.tvon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.tvon.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.tvon.FlatAppearance.BorderSize = 0
+		Me.tvon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.tvon.Location = New System.Drawing.Point(72, 40)
+		Me.tvon.Name = "tvon"
+		Me.tvon.Size = New System.Drawing.Size(40, 40)
+		Me.tvon.TabIndex = 0
+		Me.tvon.UseVisualStyleBackColor = False
+		'
+		'poweroff
+		'
+		Me.poweroff.BackColor = System.Drawing.Color.Transparent
+		Me.poweroff.BackgroundImage = Global.homematic.My.Resources.Resources.poweron
+		Me.poweroff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.poweroff.FlatAppearance.BorderSize = 0
+		Me.poweroff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.poweroff.Location = New System.Drawing.Point(58, 181)
+		Me.poweroff.Name = "poweroff"
+		Me.poweroff.Size = New System.Drawing.Size(40, 40)
+		Me.poweroff.TabIndex = 5
+		Me.poweroff.UseVisualStyleBackColor = False
 		'
 		'MaterialTabSelector1
 		'
@@ -622,16 +778,6 @@ Partial Class RoomA
 		Me.Button1.TabIndex = 7
 		Me.Button1.UseVisualStyleBackColor = False
 		'
-		'apptab
-		'
-		Me.apptab.BackColor = System.Drawing.Color.White
-		Me.apptab.Location = New System.Drawing.Point(4, 22)
-		Me.apptab.Name = "apptab"
-		Me.apptab.Size = New System.Drawing.Size(746, 418)
-		Me.apptab.TabIndex = 2
-		Me.apptab.Text = "Appliances"
-		Me.apptab.UseVisualStyleBackColor = True
-		'
 		'RoomA
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -653,16 +799,19 @@ Partial Class RoomA
 		CType(Me.sunimage, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.Lighttab.ResumeLayout(False)
-		Me.GroupBox3.ResumeLayout(False)
-		Me.GroupBox3.PerformLayout()
+		Me.light3.ResumeLayout(False)
+		Me.light3.PerformLayout()
 		CType(Me.brighttrack3, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.GroupBox2.ResumeLayout(False)
-		Me.GroupBox2.PerformLayout()
+		Me.Light2.ResumeLayout(False)
+		Me.Light2.PerformLayout()
 		CType(Me.brighttrack2, System.ComponentModel.ISupportInitialize).EndInit()
-		Me.GroupBox1.ResumeLayout(False)
-		Me.GroupBox1.PerformLayout()
+		Me.Light1.ResumeLayout(False)
+		Me.Light1.PerformLayout()
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.control.ResumeLayout(False)
+		Me.apptab.ResumeLayout(False)
+		Me.GroupBox1.ResumeLayout(False)
+		Me.Appgrp.ResumeLayout(False)
 		Me.Panel1.ResumeLayout(False)
 		CType(Me.bulb, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -693,17 +842,17 @@ Partial Class RoomA
 	Friend WithEvents templabel2 As Label
 	Friend WithEvents PictureBox1 As PictureBox
 	Friend WithEvents Lighttab As TabPage
-	Friend WithEvents GroupBox3 As GroupBox
+	Friend WithEvents light3 As GroupBox
 	Friend WithEvents brightness2 As Label
 	Friend WithEvents lit2on As MaterialSkin.Controls.MaterialRadioButton
 	Friend WithEvents lit2off As MaterialSkin.Controls.MaterialRadioButton
 	Friend WithEvents brighttrack3 As TrackBar
-	Friend WithEvents GroupBox2 As GroupBox
+	Friend WithEvents Light2 As GroupBox
 	Friend WithEvents lit1on As MaterialSkin.Controls.MaterialRadioButton
 	Friend WithEvents lit1off As MaterialSkin.Controls.MaterialRadioButton
 	Friend WithEvents brightness1 As Label
 	Friend WithEvents brighttrack2 As TrackBar
-	Friend WithEvents GroupBox1 As GroupBox
+	Friend WithEvents Light1 As GroupBox
 	Friend WithEvents lighton As MaterialSkin.Controls.MaterialRadioButton
 	Friend WithEvents brightness As Label
 	Friend WithEvents lightoff As MaterialSkin.Controls.MaterialRadioButton
@@ -713,4 +862,14 @@ Partial Class RoomA
 	Friend WithEvents Panel1 As Panel
 	Friend WithEvents SerialPort1 As IO.Ports.SerialPort
 	Friend WithEvents apptab As TabPage
+	Friend WithEvents tvoff As Button
+	Friend WithEvents poweron As Button
+	Friend WithEvents tvon As Button
+	Friend WithEvents poweroff As Button
+	Friend WithEvents Appgrp As GroupBox
+	Friend WithEvents GroupBox1 As GroupBox
+	Friend WithEvents power3off As Button
+	Friend WithEvents power3on As Button
+	Friend WithEvents power2off As Button
+	Friend WithEvents power2on As Button
 End Class
