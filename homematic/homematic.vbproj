@@ -187,12 +187,6 @@
     <None Include="Resources\icons8-Video Call-50 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-Statistics-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-Left-48.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-Chevron Left-26.png" />
   </ItemGroup>
   <ItemGroup>
@@ -234,11 +228,6 @@
     <None Include="Resources\kitchenicon.png" />
     <None Include="Resources\kitchenbtn.png" />
     <None Include="Resources\icons8-Delete-26 %281%29.png" />
-    <None Include="Resources\blueprint.png" />
-    <None Include="Resources\blueprint1.png" />
-    <None Include="Resources\Blueprint2.png" />
-    <None Include="Resources\Blueprint21.png" />
-    <None Include="Resources\Blueprintnew.png" />
     <None Include="Resources\Blueprintnew1.png" />
     <Content Include="Resources\classifiers\haarcascade_eye.xml" />
     <Content Include="Resources\classifiers\haarcascade_frontalface_default.xml" />

@@ -109,7 +109,7 @@ Partial Class RoomA
 		'humidbtn
 		'
 		Me.humidbtn.BackColor = System.Drawing.Color.Transparent
-		Me.humidbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Partly_Cloudy_Day_50
+		Me.humidbtn.BackgroundImage = Global.homematic.My.Resources.Resources.Humidity
 		Me.humidbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.humidbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.humidbtn.FlatAppearance.BorderSize = 0
@@ -198,7 +198,7 @@ Partial Class RoomA
 		'Increasebtn
 		'
 		Me.Increasebtn.BackColor = System.Drawing.Color.Transparent
-		Me.Increasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Slide_Up_Filled_50
+		Me.Increasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.TempIncrease
 		Me.Increasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Increasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Increasebtn.FlatAppearance.BorderSize = 0
@@ -212,7 +212,7 @@ Partial Class RoomA
 		'Decreasebtn
 		'
 		Me.Decreasebtn.BackColor = System.Drawing.Color.Transparent
-		Me.Decreasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Down_Button_Filled_50
+		Me.Decreasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.TempDecrease
 		Me.Decreasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Decreasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Decreasebtn.FlatAppearance.BorderSize = 0
@@ -226,7 +226,7 @@ Partial Class RoomA
 		'resetbtn
 		'
 		Me.resetbtn.BackColor = System.Drawing.Color.Transparent
-		Me.resetbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Reset_50
+		Me.resetbtn.BackgroundImage = Global.homematic.My.Resources.Resources.Reset
 		Me.resetbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.resetbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.resetbtn.FlatAppearance.BorderSize = 0
@@ -240,7 +240,7 @@ Partial Class RoomA
 		'mediumhot
 		'
 		Me.mediumhot.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-		Me.mediumhot.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50__1_
+		Me.mediumhot.Image = Global.homematic.My.Resources.Resources.RoomTemp
 		Me.mediumhot.Location = New System.Drawing.Point(371, 105)
 		Me.mediumhot.Name = "mediumhot"
 		Me.mediumhot.Size = New System.Drawing.Size(30, 30)
@@ -251,7 +251,7 @@ Partial Class RoomA
 		'coldimage
 		'
 		Me.coldimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-		Me.coldimage.Image = Global.homematic.My.Resources.Resources.icons8_Snowflake_48
+		Me.coldimage.Image = Global.homematic.My.Resources.Resources.Cold
 		Me.coldimage.Location = New System.Drawing.Point(371, 105)
 		Me.coldimage.Name = "coldimage"
 		Me.coldimage.Size = New System.Drawing.Size(30, 30)
@@ -262,7 +262,7 @@ Partial Class RoomA
 		'sunimage
 		'
 		Me.sunimage.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-		Me.sunimage.Image = Global.homematic.My.Resources.Resources.icons8_Sun_Filled_50
+		Me.sunimage.Image = Global.homematic.My.Resources.Resources.Hot
 		Me.sunimage.Location = New System.Drawing.Point(371, 105)
 		Me.sunimage.Name = "sunimage"
 		Me.sunimage.Size = New System.Drawing.Size(30, 30)
@@ -585,7 +585,7 @@ Partial Class RoomA
 		'power3off
 		'
 		Me.power3off.BackColor = System.Drawing.Color.Transparent
-		Me.power3off.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff__2_
+		Me.power3off.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
 		Me.power3off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.power3off.FlatAppearance.BorderSize = 0
 		Me.power3off.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -611,7 +611,7 @@ Partial Class RoomA
 		'power2off
 		'
 		Me.power2off.BackColor = System.Drawing.Color.Transparent
-		Me.power2off.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff__2_
+		Me.power2off.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
 		Me.power2off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.power2off.FlatAppearance.BorderSize = 0
 		Me.power2off.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -663,7 +663,7 @@ Partial Class RoomA
 		'poweron
 		'
 		Me.poweron.BackColor = System.Drawing.Color.Transparent
-		Me.poweron.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff__2_
+		Me.poweron.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
 		Me.poweron.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.poweron.FlatAppearance.BorderSize = 0
 		Me.poweron.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -730,7 +730,7 @@ Partial Class RoomA
 		Me.bulb.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.bulb.BackColor = System.Drawing.Color.Transparent
-		Me.bulb.Image = Global.homematic.My.Resources.Resources.icons8_Light_Automation_50__1_
+		Me.bulb.Image = Global.homematic.My.Resources.Resources.LightIcon
 		Me.bulb.Location = New System.Drawing.Point(3, 7)
 		Me.bulb.Name = "bulb"
 		Me.bulb.Size = New System.Drawing.Size(35, 30)
@@ -743,7 +743,7 @@ Partial Class RoomA
 		Me.PictureBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-		Me.PictureBox2.Image = Global.homematic.My.Resources.Resources.icons8_Temperature_50__1_
+		Me.PictureBox2.Image = Global.homematic.My.Resources.Resources.TempIcon
 		Me.PictureBox2.Location = New System.Drawing.Point(126, 7)
 		Me.PictureBox2.Name = "PictureBox2"
 		Me.PictureBox2.Size = New System.Drawing.Size(35, 30)
@@ -756,7 +756,7 @@ Partial Class RoomA
 		Me.PictureBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-		Me.PictureBox3.Image = Global.homematic.My.Resources.Resources.icons8_Electrical_50
+		Me.PictureBox3.Image = Global.homematic.My.Resources.Resources.ApplianceIcon
 		Me.PictureBox3.Location = New System.Drawing.Point(244, 7)
 		Me.PictureBox3.Name = "PictureBox3"
 		Me.PictureBox3.Size = New System.Drawing.Size(35, 30)
@@ -767,7 +767,7 @@ Partial Class RoomA
 		'PictureBox4
 		'
 		Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-		Me.PictureBox4.Image = Global.homematic.My.Resources.Resources.icons8_Video_Call_50__1_
+		Me.PictureBox4.Image = Global.homematic.My.Resources.Resources.VideoIcon
 		Me.PictureBox4.Location = New System.Drawing.Point(353, 7)
 		Me.PictureBox4.Name = "PictureBox4"
 		Me.PictureBox4.Size = New System.Drawing.Size(35, 30)
@@ -778,7 +778,7 @@ Partial Class RoomA
 		'Button1
 		'
 		Me.Button1.BackColor = System.Drawing.Color.Transparent
-		Me.Button1.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Chevron_Left_26
+		Me.Button1.BackgroundImage = Global.homematic.My.Resources.Resources.BackButton
 		Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Button1.FlatAppearance.BorderSize = 0
 		Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat

@@ -91,7 +91,7 @@ Partial Class Form1
 		'
 		'Button1
 		'
-		Me.Button1.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Menu_Filled_50
+		Me.Button1.BackgroundImage = Global.homematic.My.Resources.Resources.Menu
 		Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Button1.FlatAppearance.BorderSize = 0
 		Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -103,7 +103,7 @@ Partial Class Form1
 		'
 		'Button2
 		'
-		Me.Button2.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Menu_Filled_50
+		Me.Button2.BackgroundImage = Global.homematic.My.Resources.Resources.Menu
 		Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Button2.FlatAppearance.BorderSize = 0
 		Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -116,7 +116,7 @@ Partial Class Form1
 		'Masterroombtn
 		'
 		Me.Masterroombtn.BackColor = System.Drawing.Color.Transparent
-		Me.Masterroombtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Bed_Filled_50
+		Me.Masterroombtn.BackgroundImage = Global.homematic.My.Resources.Resources.RoomIcon
 		Me.Masterroombtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Masterroombtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Masterroombtn.FlatAppearance.BorderSize = 0
@@ -133,7 +133,7 @@ Partial Class Form1
 		'Livingbtn
 		'
 		Me.Livingbtn.BackColor = System.Drawing.Color.Transparent
-		Me.Livingbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Living_Room_Filled_50
+		Me.Livingbtn.BackgroundImage = Global.homematic.My.Resources.Resources.LivingRoomIcon
 		Me.Livingbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Livingbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Livingbtn.FlatAppearance.BorderSize = 0
@@ -149,7 +149,7 @@ Partial Class Form1
 		'Room2btn
 		'
 		Me.Room2btn.BackColor = System.Drawing.Color.Transparent
-		Me.Room2btn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Bed_Filled_50
+		Me.Room2btn.BackgroundImage = Global.homematic.My.Resources.Resources.RoomIcon
 		Me.Room2btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Room2btn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Room2btn.FlatAppearance.BorderSize = 0
@@ -165,7 +165,7 @@ Partial Class Form1
 		'Room1btn
 		'
 		Me.Room1btn.BackColor = System.Drawing.Color.Transparent
-		Me.Room1btn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Bed_Filled_50
+		Me.Room1btn.BackgroundImage = Global.homematic.My.Resources.Resources.RoomIcon
 		Me.Room1btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Room1btn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Room1btn.FlatAppearance.BorderSize = 0
@@ -181,7 +181,7 @@ Partial Class Form1
 		'Bathroombtn
 		'
 		Me.Bathroombtn.BackColor = System.Drawing.Color.Transparent
-		Me.Bathroombtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Shower_and_Tub_Filled_50
+		Me.Bathroombtn.BackgroundImage = Global.homematic.My.Resources.Resources.BathRoomIcon
 		Me.Bathroombtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Bathroombtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Bathroombtn.FlatAppearance.BorderSize = 0
@@ -197,7 +197,7 @@ Partial Class Form1
 		'Kitchenbtn
 		'
 		Me.Kitchenbtn.BackColor = System.Drawing.Color.Transparent
-		Me.Kitchenbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Tableware_Filled_50
+		Me.Kitchenbtn.BackgroundImage = Global.homematic.My.Resources.Resources.Kitchen
 		Me.Kitchenbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Kitchenbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Kitchenbtn.FlatAppearance.BorderSize = 0
@@ -215,7 +215,7 @@ Partial Class Form1
 		Me.Blueprintimage.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.Blueprintimage.BackgroundImage = Global.homematic.My.Resources.Resources.Blueprintnew1
+		Me.Blueprintimage.BackgroundImage = Global.homematic.My.Resources.Resources.BlueprintFinal
 		Me.Blueprintimage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 		Me.Blueprintimage.Location = New System.Drawing.Point(2, 63)
 		Me.Blueprintimage.Name = "Blueprintimage"
