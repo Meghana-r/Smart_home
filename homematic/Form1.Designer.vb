@@ -23,113 +23,30 @@ Partial Class Form1
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Me.components = New System.ComponentModel.Container()
-		Me.Blueprintimage = New System.Windows.Forms.PictureBox()
 		Me.kitchentool = New System.Windows.Forms.ToolTip(Me.components)
-		Me.Bthtool = New System.Windows.Forms.ToolTip(Me.components)
-		Me.Room1tool = New System.Windows.Forms.ToolTip(Me.components)
-		Me.Room2tip = New System.Windows.Forms.ToolTip(Me.components)
-		Me.Masterroomtip = New System.Windows.Forms.ToolTip(Me.components)
-		Me.Livingroomtip = New System.Windows.Forms.ToolTip(Me.components)
-		Me.Panel1 = New System.Windows.Forms.Panel()
-		Me.Livingbtn = New System.Windows.Forms.Button()
-		Me.Room2btn = New System.Windows.Forms.Button()
 		Me.Kitchenbtn = New System.Windows.Forms.Button()
-		Me.Room1btn = New System.Windows.Forms.Button()
+		Me.Bthtool = New System.Windows.Forms.ToolTip(Me.components)
 		Me.Bathroombtn = New System.Windows.Forms.Button()
+		Me.Room1tool = New System.Windows.Forms.ToolTip(Me.components)
+		Me.Room1btn = New System.Windows.Forms.Button()
+		Me.Room2tip = New System.Windows.Forms.ToolTip(Me.components)
+		Me.Room2btn = New System.Windows.Forms.Button()
+		Me.Masterroomtip = New System.Windows.Forms.ToolTip(Me.components)
 		Me.Masterroombtn = New System.Windows.Forms.Button()
-		CType(Me.Blueprintimage, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.Livingroomtip = New System.Windows.Forms.ToolTip(Me.components)
+		Me.Livingbtn = New System.Windows.Forms.Button()
+		Me.Panel1 = New System.Windows.Forms.Panel()
+		Me.Button1 = New System.Windows.Forms.Button()
+		Me.Button2 = New System.Windows.Forms.Button()
+		Me.Blueprintimage = New System.Windows.Forms.PictureBox()
 		Me.Panel1.SuspendLayout()
+		CType(Me.Blueprintimage, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
-		'
-		'Blueprintimage
-		'
-		Me.Blueprintimage.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-			Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.Blueprintimage.BackgroundImage = Global.homematic.My.Resources.Resources.Blueprintnew
-		Me.Blueprintimage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Blueprintimage.Location = New System.Drawing.Point(2, 66)
-		Me.Blueprintimage.Name = "Blueprintimage"
-		Me.Blueprintimage.Size = New System.Drawing.Size(779, 492)
-		Me.Blueprintimage.TabIndex = 0
-		Me.Blueprintimage.TabStop = False
 		'
 		'kitchentool
 		'
 		Me.kitchentool.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
 		Me.kitchentool.ToolTipTitle = "KITCHEN"
-		'
-		'Bthtool
-		'
-		Me.Bthtool.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-		Me.Bthtool.ToolTipTitle = "BATHROOM"
-		'
-		'Room1tool
-		'
-		Me.Room1tool.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-		Me.Room1tool.ToolTipTitle = "ROOM1"
-		'
-		'Room2tip
-		'
-		Me.Room2tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-		Me.Room2tip.ToolTipTitle = "ROOM2"
-		'
-		'Masterroomtip
-		'
-		Me.Masterroomtip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-		Me.Masterroomtip.ToolTipTitle = "MASTER ROOM"
-		'
-		'Livingroomtip
-		'
-		Me.Livingroomtip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-		Me.Livingroomtip.ToolTipTitle = "LIVING ROOM"
-		'
-		'Panel1
-		'
-		Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.Panel1.BackColor = System.Drawing.Color.Transparent
-		Me.Panel1.Controls.Add(Me.Masterroombtn)
-		Me.Panel1.Controls.Add(Me.Livingbtn)
-		Me.Panel1.Controls.Add(Me.Room2btn)
-		Me.Panel1.Controls.Add(Me.Room1btn)
-		Me.Panel1.Controls.Add(Me.Bathroombtn)
-		Me.Panel1.Controls.Add(Me.Kitchenbtn)
-		Me.Panel1.Location = New System.Drawing.Point(424, 26)
-		Me.Panel1.Name = "Panel1"
-		Me.Panel1.Size = New System.Drawing.Size(347, 34)
-		Me.Panel1.TabIndex = 11
-		'
-		'Livingbtn
-		'
-		Me.Livingbtn.BackColor = System.Drawing.Color.Transparent
-		Me.Livingbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Living_Room_Filled_50
-		Me.Livingbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.Livingbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-		Me.Livingbtn.FlatAppearance.BorderSize = 0
-		Me.Livingbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-		Me.Livingbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Livingbtn.Location = New System.Drawing.Point(64, 6)
-		Me.Livingbtn.Name = "Livingbtn"
-		Me.Livingbtn.Size = New System.Drawing.Size(40, 25)
-		Me.Livingbtn.TabIndex = 4
-		Me.Livingroomtip.SetToolTip(Me.Livingbtn, "Click to view Living Room")
-		Me.Livingbtn.UseVisualStyleBackColor = False
-		'
-		'Room2btn
-		'
-		Me.Room2btn.BackColor = System.Drawing.Color.Transparent
-		Me.Room2btn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Bed_Filled_50
-		Me.Room2btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.Room2btn.FlatAppearance.BorderColor = System.Drawing.Color.White
-		Me.Room2btn.FlatAppearance.BorderSize = 0
-		Me.Room2btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-		Me.Room2btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Room2btn.Location = New System.Drawing.Point(110, 6)
-		Me.Room2btn.Name = "Room2btn"
-		Me.Room2btn.Size = New System.Drawing.Size(40, 25)
-		Me.Room2btn.TabIndex = 9
-		Me.Room2tip.SetToolTip(Me.Room2btn, "Click to view Room2")
-		Me.Room2btn.UseVisualStyleBackColor = False
 		'
 		'Kitchenbtn
 		'
@@ -147,21 +64,10 @@ Partial Class Form1
 		Me.kitchentool.SetToolTip(Me.Kitchenbtn, "Click to view Kitchen")
 		Me.Kitchenbtn.UseVisualStyleBackColor = False
 		'
-		'Room1btn
+		'Bthtool
 		'
-		Me.Room1btn.BackColor = System.Drawing.Color.Transparent
-		Me.Room1btn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Bed_Filled_50
-		Me.Room1btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.Room1btn.FlatAppearance.BorderColor = System.Drawing.Color.White
-		Me.Room1btn.FlatAppearance.BorderSize = 0
-		Me.Room1btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-		Me.Room1btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Room1btn.Location = New System.Drawing.Point(206, 6)
-		Me.Room1btn.Name = "Room1btn"
-		Me.Room1btn.Size = New System.Drawing.Size(40, 25)
-		Me.Room1btn.TabIndex = 10
-		Me.Room1tool.SetToolTip(Me.Room1btn, "Click to view Room1")
-		Me.Room1btn.UseVisualStyleBackColor = False
+		Me.Bthtool.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+		Me.Bthtool.ToolTipTitle = "BATHROOM"
 		'
 		'Bathroombtn
 		'
@@ -178,6 +84,53 @@ Partial Class Form1
 		Me.Bathroombtn.TabIndex = 8
 		Me.Bthtool.SetToolTip(Me.Bathroombtn, "Click to view Bathroom")
 		Me.Bathroombtn.UseVisualStyleBackColor = False
+		'
+		'Room1tool
+		'
+		Me.Room1tool.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+		Me.Room1tool.ToolTipTitle = "ROOM1"
+		'
+		'Room1btn
+		'
+		Me.Room1btn.BackColor = System.Drawing.Color.Transparent
+		Me.Room1btn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Bed_Filled_50
+		Me.Room1btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Room1btn.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Room1btn.FlatAppearance.BorderSize = 0
+		Me.Room1btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+		Me.Room1btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Room1btn.Location = New System.Drawing.Point(206, 6)
+		Me.Room1btn.Name = "Room1btn"
+		Me.Room1btn.Size = New System.Drawing.Size(40, 25)
+		Me.Room1btn.TabIndex = 10
+		Me.Room1tool.SetToolTip(Me.Room1btn, "Click to view Room1")
+		Me.Room1btn.UseVisualStyleBackColor = False
+		'
+		'Room2tip
+		'
+		Me.Room2tip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+		Me.Room2tip.ToolTipTitle = "ROOM2"
+		'
+		'Room2btn
+		'
+		Me.Room2btn.BackColor = System.Drawing.Color.Transparent
+		Me.Room2btn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Bed_Filled_50
+		Me.Room2btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Room2btn.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Room2btn.FlatAppearance.BorderSize = 0
+		Me.Room2btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+		Me.Room2btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Room2btn.Location = New System.Drawing.Point(110, 6)
+		Me.Room2btn.Name = "Room2btn"
+		Me.Room2btn.Size = New System.Drawing.Size(40, 25)
+		Me.Room2btn.TabIndex = 9
+		Me.Room2tip.SetToolTip(Me.Room2btn, "Click to view Room2")
+		Me.Room2btn.UseVisualStyleBackColor = False
+		'
+		'Masterroomtip
+		'
+		Me.Masterroomtip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+		Me.Masterroomtip.ToolTipTitle = "MASTER ROOM"
 		'
 		'Masterroombtn
 		'
@@ -196,6 +149,80 @@ Partial Class Form1
 		Me.Masterroomtip.SetToolTip(Me.Masterroombtn, "Click to view Master Bedroom")
 		Me.Masterroombtn.UseVisualStyleBackColor = False
 		'
+		'Livingroomtip
+		'
+		Me.Livingroomtip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+		Me.Livingroomtip.ToolTipTitle = "LIVING ROOM"
+		'
+		'Livingbtn
+		'
+		Me.Livingbtn.BackColor = System.Drawing.Color.Transparent
+		Me.Livingbtn.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Living_Room_Filled_50
+		Me.Livingbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Livingbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+		Me.Livingbtn.FlatAppearance.BorderSize = 0
+		Me.Livingbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+		Me.Livingbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Livingbtn.Location = New System.Drawing.Point(64, 6)
+		Me.Livingbtn.Name = "Livingbtn"
+		Me.Livingbtn.Size = New System.Drawing.Size(40, 25)
+		Me.Livingbtn.TabIndex = 4
+		Me.Livingroomtip.SetToolTip(Me.Livingbtn, "Click to view Living Room")
+		Me.Livingbtn.UseVisualStyleBackColor = False
+		'
+		'Panel1
+		'
+		Me.Panel1.BackColor = System.Drawing.Color.Transparent
+		Me.Panel1.Controls.Add(Me.Button1)
+		Me.Panel1.Controls.Add(Me.Button2)
+		Me.Panel1.Controls.Add(Me.Masterroombtn)
+		Me.Panel1.Controls.Add(Me.Livingbtn)
+		Me.Panel1.Controls.Add(Me.Room2btn)
+		Me.Panel1.Controls.Add(Me.Room1btn)
+		Me.Panel1.Controls.Add(Me.Bathroombtn)
+		Me.Panel1.Controls.Add(Me.Kitchenbtn)
+		Me.Panel1.Location = New System.Drawing.Point(2, 26)
+		Me.Panel1.Name = "Panel1"
+		Me.Panel1.Size = New System.Drawing.Size(440, 34)
+		Me.Panel1.TabIndex = 11
+		'
+		'Button1
+		'
+		Me.Button1.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Menu_Filled_50
+		Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Button1.FlatAppearance.BorderSize = 0
+		Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button1.Location = New System.Drawing.Point(364, 6)
+		Me.Button1.Name = "Button1"
+		Me.Button1.Size = New System.Drawing.Size(20, 20)
+		Me.Button1.TabIndex = 12
+		Me.Button1.UseVisualStyleBackColor = True
+		'
+		'Button2
+		'
+		Me.Button2.BackgroundImage = Global.homematic.My.Resources.Resources.icons8_Menu_Filled_50
+		Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Button2.FlatAppearance.BorderSize = 0
+		Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button2.Location = New System.Drawing.Point(3, 6)
+		Me.Button2.Name = "Button2"
+		Me.Button2.Size = New System.Drawing.Size(20, 20)
+		Me.Button2.TabIndex = 11
+		Me.Button2.UseVisualStyleBackColor = True
+		'
+		'Blueprintimage
+		'
+		Me.Blueprintimage.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+			Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.Blueprintimage.BackgroundImage = Global.homematic.My.Resources.Resources.Blueprintnew
+		Me.Blueprintimage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.Blueprintimage.Location = New System.Drawing.Point(2, 66)
+		Me.Blueprintimage.Name = "Blueprintimage"
+		Me.Blueprintimage.Size = New System.Drawing.Size(779, 492)
+		Me.Blueprintimage.TabIndex = 0
+		Me.Blueprintimage.TabStop = False
+		'
 		'Form1
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -206,8 +233,8 @@ Partial Class Form1
 		Me.Controls.Add(Me.Panel1)
 		Me.Controls.Add(Me.Blueprintimage)
 		Me.Name = "Form1"
-		CType(Me.Blueprintimage, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.Panel1.ResumeLayout(False)
+		CType(Me.Blueprintimage, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 
 	End Sub
@@ -225,4 +252,6 @@ Partial Class Form1
 	Friend WithEvents Room1btn As Button
 	Friend WithEvents Bathroombtn As Button
 	Friend WithEvents Kitchenbtn As Button
+	Friend WithEvents Button2 As Button
+	Friend WithEvents Button1 As Button
 End Class
