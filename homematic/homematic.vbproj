@@ -239,6 +239,7 @@
     <None Include="Resources\Blueprint2.png" />
     <None Include="Resources\Blueprint21.png" />
     <None Include="Resources\Blueprintnew.png" />
+    <None Include="Resources\Blueprintnew1.png" />
     <Content Include="Resources\classifiers\haarcascade_eye.xml" />
     <Content Include="Resources\classifiers\haarcascade_frontalface_default.xml" />
     <None Include="Resources\poweroff %282%29.png" />
