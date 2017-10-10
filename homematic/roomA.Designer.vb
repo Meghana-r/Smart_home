@@ -58,6 +58,7 @@ Partial Class RoomA
 		Me.brighttrack = New System.Windows.Forms.TrackBar()
 		Me.control = New MaterialSkin.Controls.MaterialTabControl()
 		Me.apptab = New System.Windows.Forms.TabPage()
+		Me.Label1 = New System.Windows.Forms.Label()
 		Me.GroupBox1 = New System.Windows.Forms.GroupBox()
 		Me.power3off = New System.Windows.Forms.Button()
 		Me.power3on = New System.Windows.Forms.Button()
@@ -550,6 +551,7 @@ Partial Class RoomA
 		'apptab
 		'
 		Me.apptab.BackColor = System.Drawing.Color.White
+		Me.apptab.Controls.Add(Me.Label1)
 		Me.apptab.Controls.Add(Me.GroupBox1)
 		Me.apptab.Controls.Add(Me.Appgrp)
 		Me.apptab.Location = New System.Drawing.Point(4, 22)
@@ -558,6 +560,14 @@ Partial Class RoomA
 		Me.apptab.TabIndex = 2
 		Me.apptab.Text = "Appliances"
 		Me.apptab.UseVisualStyleBackColor = True
+		'
+		'Label1
+		'
+		Me.Label1.AutoSize = True
+		Me.Label1.Location = New System.Drawing.Point(529, 101)
+		Me.Label1.Name = "Label1"
+		Me.Label1.Size = New System.Drawing.Size(0, 13)
+		Me.Label1.TabIndex = 8
 		'
 		'GroupBox1
 		'
@@ -810,6 +820,7 @@ Partial Class RoomA
 		CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.control.ResumeLayout(False)
 		Me.apptab.ResumeLayout(False)
+		Me.apptab.PerformLayout()
 		Me.GroupBox1.ResumeLayout(False)
 		Me.Appgrp.ResumeLayout(False)
 		Me.Panel1.ResumeLayout(False)
@@ -872,4 +883,5 @@ Partial Class RoomA
 	Friend WithEvents power3on As Button
 	Friend WithEvents power2off As Button
 	Friend WithEvents power2on As Button
+	Friend WithEvents Label1 As Label
 End Class

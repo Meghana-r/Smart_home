@@ -241,11 +241,14 @@ Public Class RoomA
 	Private Sub power2on_Click(sender As Object, e As EventArgs) Handles power2on.Click
 		power2on.Hide()
 		power2off.Show()
+
 	End Sub
 
 	Private Sub power3on_Click(sender As Object, e As EventArgs) Handles power3on.Click
 		power3on.Hide()
 		power3off.Show()
 	End Sub
+
+
 End Class
 

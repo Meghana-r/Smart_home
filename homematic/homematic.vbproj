@@ -226,12 +226,18 @@
     <None Include="Resources\rect815.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-Tableware Filled-50.png" />
+    <None Include="Resources\icons8-Bed Filled-502.png" />
+    <None Include="Resources\icons8-Living Room Filled-501.png" />
+    <None Include="Resources\icons8-Shower and Tub Filled-501.png" />
+    <None Include="Resources\kitchenicon.png" />
     <None Include="Resources\kitchenbtn.png" />
     <None Include="Resources\icons8-Delete-26 %281%29.png" />
     <None Include="Resources\blueprint.png" />
     <None Include="Resources\blueprint1.png" />
     <None Include="Resources\Blueprint2.png" />
     <None Include="Resources\Blueprint21.png" />
+    <None Include="Resources\Blueprintnew.png" />
     <Content Include="Resources\classifiers\haarcascade_eye.xml" />
     <Content Include="Resources\classifiers\haarcascade_frontalface_default.xml" />
     <None Include="Resources\poweroff %282%29.png" />

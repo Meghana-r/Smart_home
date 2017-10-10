@@ -50,7 +50,7 @@ Partial Class Dashboard
 		'R3btn
 		'
 		Me.R3btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-		Me.R3btn.BackgroundImage = Global.homematic.My.Resources.Resources.rect815
+
 		Me.R3btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.R3btn.Dock = System.Windows.Forms.DockStyle.Left
 		Me.R3btn.FlatAppearance.BorderSize = 0
@@ -67,7 +67,7 @@ Partial Class Dashboard
 		'R2btn
 		'
 		Me.R2btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-		Me.R2btn.BackgroundImage = Global.homematic.My.Resources.Resources.rect815
+
 		Me.R2btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.R2btn.Dock = System.Windows.Forms.DockStyle.Left
 		Me.R2btn.FlatAppearance.BorderSize = 0
@@ -84,7 +84,7 @@ Partial Class Dashboard
 		'Bathbtn
 		'
 		Me.Bathbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-		Me.Bathbtn.BackgroundImage = Global.homematic.My.Resources.Resources.rect815
+
 		Me.Bathbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Bathbtn.Dock = System.Windows.Forms.DockStyle.Left
 		Me.Bathbtn.FlatAppearance.BorderSize = 0
@@ -101,7 +101,7 @@ Partial Class Dashboard
 		'Kitchbtn
 		'
 		Me.Kitchbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-		Me.Kitchbtn.BackgroundImage = Global.homematic.My.Resources.Resources.rect815
+
 		Me.Kitchbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Kitchbtn.Dock = System.Windows.Forms.DockStyle.Left
 		Me.Kitchbtn.FlatAppearance.BorderSize = 0
@@ -118,7 +118,7 @@ Partial Class Dashboard
 		'MasterBTN
 		'
 		Me.MasterBTN.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-		Me.MasterBTN.BackgroundImage = Global.homematic.My.Resources.Resources.rect815
+
 		Me.MasterBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.MasterBTN.Dock = System.Windows.Forms.DockStyle.Left
 		Me.MasterBTN.FlatAppearance.BorderSize = 0
