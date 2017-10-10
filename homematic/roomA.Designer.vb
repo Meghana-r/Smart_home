@@ -130,7 +130,7 @@ Partial Class RoomA
 		Me.vidtab.Name = "vidtab"
 		Me.vidtab.Size = New System.Drawing.Size(746, 418)
 		Me.vidtab.TabIndex = 3
-		Me.vidtab.Text = "Video"
+		Me.vidtab.Text = "Surveillance"
 		Me.vidtab.UseVisualStyleBackColor = True
 		'
 		'BtnStop
