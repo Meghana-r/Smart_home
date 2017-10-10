@@ -226,8 +226,12 @@
     <None Include="Resources\rect815.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\kitchenbtn.png" />
+    <None Include="Resources\icons8-Delete-26 %281%29.png" />
     <None Include="Resources\blueprint.png" />
     <None Include="Resources\blueprint1.png" />
+    <None Include="Resources\Blueprint2.png" />
+    <None Include="Resources\Blueprint21.png" />
     <Content Include="Resources\classifiers\haarcascade_eye.xml" />
     <Content Include="Resources\classifiers\haarcascade_frontalface_default.xml" />
     <None Include="Resources\poweroff %282%29.png" />
