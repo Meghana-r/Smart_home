@@ -13,11 +13,10 @@ Public Class RoomA
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
-		SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
-		setupSerial()
-		BtnStop.Hide()
-
-	End Sub
+        SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
+        setupSerial()
+        BtnStop.Hide()
+    End Sub
 
     Private Sub setupSerial()
         SerialPort1.Close()
@@ -33,9 +32,10 @@ Public Class RoomA
         Catch ex As IOException
             MsgBox("Port not opened. All controls are unavailable.")
 			Light1.Enabled = False
-			Appgrp.Enabled = False
-
-		End Try
+            Appgrp.Enabled = False
+            Light2.Enabled = False
+            light3.Enabled = False
+        End Try
     End Sub
 
 
@@ -51,7 +51,27 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub checkBoxStatus() Handles lightoff.CheckedChanged, lighton.CheckedChanged
+    Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
+        brightness1.Text = String.Format("{0} %", arg0:=brighttrack2.Value)
+        brightness1.Text = brighttrack2.Value.ToString
+        SerialPort1.Write(brighttrack2.Value)
+        If brighttrack2.Value = 0 Then
+            lit1off.Checked = True
+        Else lit1on.Checked = True
+        End If
+    End Sub
+
+    Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles brighttrack3.Scroll
+        brightness2.Text = String.Format("{0} %", arg0:=brighttrack3.Value)
+        brightness2.Text = brighttrack3.Value.ToString
+        SerialPort1.Write(brighttrack3.Value)
+        If brighttrack3.Value = 0 Then
+            lit2off.Checked = True
+        Else lit2on.Checked = True
+        End If
+    End Sub
+
+    Private Sub checkBox1Status() Handles lightoff.CheckedChanged, lighton.CheckedChanged
         If lightoff.Checked = True And lighton.Checked = False Then
             brighttrack.Value = 0
         ElseIf lightoff.Checked = False And lighton.Checked = True Then
@@ -61,32 +81,46 @@ Public Class RoomA
         brightness.Text = brighttrack.Value.ToString
     End Sub
 
-    'the value of the slider is shown in the label
-    Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
-        brightness1.Text = brighttrack2.Value.ToString
-        If brighttrack2.Value = 20 Then
-            MsgBox("Brightness lower than this turns the light off. Turn the light off?")
-            If MsgBoxResult.Ok Then
-                lit1off.Checked = True
-            End If
+    Private Sub checkBox2Status() Handles lit1off.CheckedChanged, lit1on.CheckedChanged
+        If lit1off.Checked = True And lit1on.Checked = False Then
+            brighttrack2.Value = 0
+        ElseIf lit1off.Checked = False And lit1on.Checked = True Then
+            brighttrack2.Value = 2
         End If
+        SerialPort1.Write(brighttrack2.Value)
+        brightness1.Text = brighttrack2.Value.ToString
     End Sub
 
-    Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles brighttrack3.Scroll
-        brightness2.Text = brighttrack3.Value.ToString
-        If brighttrack3.Value = 20 Then
-            MsgBox("Brightness lower than this turns the light off. Turn the light off?")
-            If MsgBoxResult.Ok Then
-                lit2off.Checked = True
-            End If
+    Private Sub checkBox3Status() Handles lit2off.CheckedChanged, lit2on.CheckedChanged
+        If lit2off.Checked = True And lit2on.Checked = False Then
+            brighttrack3.Value = 0
+        ElseIf lit2off.Checked = False And lit2on.Checked = True Then
+            brighttrack3.Value = 2
         End If
+        SerialPort1.Write(brighttrack3.Value)
+        brightness2.Text = brighttrack3.Value.ToString
     End Sub
     'code for light settings end here
+
+
     'code for Temperature settings start here
-    Private Sub increasebtn_Click(sender As Object, e As EventArgs) Handles Increasebtn.Click
+    Private Sub Increasebtn_Click(sender As Object, e As EventArgs) Handles Increasebtn.Click
+        climateBtnClick(1)
+    End Sub
+
+    Private Sub Decreasebtn_Click(sender As Object, e As EventArgs) Handles Decreasebtn.Click
+        climateBtnClick(0)
+    End Sub
+
+    Private Sub climateBtnClick(ByVal index As Int64)
         Dim n As Integer
         n = Integer.Parse(templabel.Text)
-        n = n + 1
+        If index = 1 Then
+            n = n + 1
+        ElseIf index = 0 Then
+            n = n - 1
+        End If
+
         templabel.Text = n.ToString
         templabel2.Text = n.ToString
 
@@ -94,67 +128,34 @@ Public Class RoomA
             sunimage.Show()
             coldimage.Hide()
             mediumhot.Hide()
-
         ElseIf (n <= 20) Then
             coldimage.Show()
             sunimage.Hide()
             mediumhot.Hide()
-
-        Else
-            mediumhot.Show()
-            sunimage.Hide()
-            coldimage.Hide()
-
-
-        End If
-    End Sub
-
-    Private Sub Decreasebtn_Click(sender As Object, e As EventArgs) Handles Decreasebtn.Click
-        Dim m As Integer
-
-        m = Integer.Parse(templabel.Text)
-        m = m - 1
-        If (m <= 20) Then
-            coldimage.Show()
-
-            sunimage.Hide()
-            mediumhot.Hide()
-
-        ElseIf (m >= 50) Then
-            sunimage.Show()
-            mediumhot.Hide()
-            coldimage.Hide()
-
         Else
             mediumhot.Show()
             sunimage.Hide()
             coldimage.Hide()
         End If
-        templabel.Text = m.ToString
-        templabel2.Text = m.ToString
-
     End Sub
 
 
     Private Sub resetbtn_Click(sender As Object, e As EventArgs) Handles resetbtn.Click
         Dim m As Integer
-
         m = Integer.Parse(templabel.Text)
         m = 50
         templabel.Text = m.ToString
         templabel2.Text = m.ToString
-
     End Sub
-	'code for Temperature settings end here
+    'code for Temperature settings end here
 
-	Dim cameraCapture As VideoCapture
+    Dim cameraCapture As VideoCapture
     Dim imageFrame As Mat
     Dim faceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
 
 
     Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
         startCam()
-
     End Sub
 
     Private Sub startCam()
@@ -192,29 +193,25 @@ Public Class RoomA
     End Sub
 
 	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-		Dashboard.Show()
-
-	End Sub
+        Dashboard.Show()
+    End Sub
 
 
 
 	Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
 		tvon.Show()
-		tvoff.Hide()
-
-	End Sub
+        tvoff.Hide()
+    End Sub
 
 	Private Sub tvon_Click(sender As Object, e As EventArgs) Handles tvon.Click
 		tvoff.Show()
-		tvon.Hide()
-
-	End Sub
+        tvon.Hide()
+    End Sub
 
 	Private Sub poweroff_Click(sender As Object, e As EventArgs) Handles poweroff.Click
 		poweron.Show()
-		poweroff.Hide()
-
-	End Sub
+        poweroff.Hide()
+    End Sub
 
 	Private Sub poweron_Click(sender As Object, e As EventArgs) Handles poweron.Click
 		poweroff.Show()
@@ -223,9 +220,8 @@ Public Class RoomA
 
 	Private Sub power3off_Click(sender As Object, e As EventArgs) Handles power3off.Click
 		power3on.Show()
-		power3off.Hide()
-
-	End Sub
+        power3off.Hide()
+    End Sub
 
 	Private Sub apptab_Click(sender As Object, e As EventArgs) Handles apptab.Click
 		If Appgrp.Enabled = False Then
@@ -240,15 +236,13 @@ Public Class RoomA
 
 	Private Sub power2on_Click(sender As Object, e As EventArgs) Handles power2on.Click
 		power2on.Hide()
-		power2off.Show()
-
-	End Sub
+        power2off.Show()
+    End Sub
 
 	Private Sub power3on_Click(sender As Object, e As EventArgs) Handles power3on.Click
 		power3on.Hide()
 		power3off.Show()
 	End Sub
-
 
 End Class
 
