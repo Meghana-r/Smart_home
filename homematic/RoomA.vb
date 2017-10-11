@@ -51,7 +51,27 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub checkBoxStatus() Handles lightoff.CheckedChanged, lighton.CheckedChanged
+    Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
+        brightness1.Text = String.Format("{0} %", arg0:=brighttrack2.Value)
+        brightness1.Text = brighttrack2.Value.ToString
+        SerialPort1.Write(brighttrack2.Value)
+        If brighttrack2.Value = 0 Then
+            lit1off.Checked = True
+        Else lit1on.Checked = True
+        End If
+    End Sub
+
+    Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles brighttrack3.Scroll
+        brightness2.Text = String.Format("{0} %", arg0:=brighttrack3.Value)
+        brightness2.Text = brighttrack3.Value.ToString
+        SerialPort1.Write(brighttrack3.Value)
+        If brighttrack3.Value = 0 Then
+            lit2off.Checked = True
+        Else lit2on.Checked = True
+        End If
+    End Sub
+
+    Private Sub checkBox1Status() Handles lightoff.CheckedChanged, lighton.CheckedChanged
         If lightoff.Checked = True And lighton.Checked = False Then
             brighttrack.Value = 0
         ElseIf lightoff.Checked = False And lighton.Checked = True Then
@@ -61,26 +81,27 @@ Public Class RoomA
         brightness.Text = brighttrack.Value.ToString
     End Sub
 
-    'the value of the slider is shown in the label
-    Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
-        brightness1.Text = brighttrack2.Value.ToString
-        If brighttrack2.Value = 20 Then
-            MsgBox("Brightness lower than this turns the light off. Turn the light off?")
-            If MsgBoxResult.Ok Then
-                lit1off.Checked = True
-            End If
+    Private Sub checkBox2Status() Handles lit1off.CheckedChanged, lit1on.CheckedChanged
+        If lit1off.Checked = True And lit1on.Checked = False Then
+            brighttrack2.Value = 0
+        ElseIf lit1off.Checked = False And lit1on.Checked = True Then
+            brighttrack2.Value = 2
         End If
+        SerialPort1.Write(brighttrack2.Value)
+        brightness1.Text = brighttrack2.Value.ToString
     End Sub
 
-    Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles brighttrack3.Scroll
-        brightness2.Text = brighttrack3.Value.ToString
-        If brighttrack3.Value = 20 Then
-            MsgBox("Brightness lower than this turns the light off. Turn the light off?")
-            If MsgBoxResult.Ok Then
-                lit2off.Checked = True
-            End If
+    Private Sub checkBox3Status() Handles lit2off.CheckedChanged, lit2on.CheckedChanged
+        If lit2off.Checked = True And lit2on.Checked = False Then
+            brighttrack3.Value = 0
+        ElseIf lit2off.Checked = False And lit2on.Checked = True Then
+            brighttrack3.Value = 2
         End If
+        SerialPort1.Write(brighttrack3.Value)
+        brightness2.Text = brighttrack3.Value.ToString
     End Sub
+
+
     'code for light settings end here
     'code for Temperature settings start here
     Private Sub increasebtn_Click(sender As Object, e As EventArgs) Handles Increasebtn.Click

@@ -343,12 +343,11 @@ Partial Class RoomA
         Me.brightness2.Name = "brightness2"
         Me.brightness2.Size = New System.Drawing.Size(40, 30)
         Me.brightness2.TabIndex = 18
-        Me.brightness2.Text = "100"
+        Me.brightness2.Text = "0"
         Me.brightness2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lit2on
         '
-        Me.lit2on.Checked = True
         Me.lit2on.Depth = 0
         Me.lit2on.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.lit2on.Location = New System.Drawing.Point(113, 33)
@@ -359,7 +358,6 @@ Partial Class RoomA
         Me.lit2on.Ripple = True
         Me.lit2on.Size = New System.Drawing.Size(55, 30)
         Me.lit2on.TabIndex = 0
-        Me.lit2on.TabStop = True
         Me.lit2on.Text = "ON"
         Me.lit2on.UseVisualStyleBackColor = True
         '
@@ -380,15 +378,15 @@ Partial Class RoomA
         '
         'brighttrack3
         '
+        Me.brighttrack3.LargeChange = 1
         Me.brighttrack3.Location = New System.Drawing.Point(229, 69)
-        Me.brighttrack3.Maximum = 100
-        Me.brighttrack3.Minimum = 10
+        Me.brighttrack3.Maximum = 4
         Me.brighttrack3.Name = "brighttrack3"
         Me.brighttrack3.Size = New System.Drawing.Size(325, 45)
-        Me.brighttrack3.TabIndex = 8
+        Me.brighttrack3.TabIndex = 1
         Me.brighttrack3.TabStop = False
         Me.brighttrack3.TickStyle = System.Windows.Forms.TickStyle.None
-        Me.brighttrack3.Value = 100
+        Me.brighttrack3.Value = 4
         '
         'Light2
         '
@@ -408,7 +406,6 @@ Partial Class RoomA
         '
         'lit1on
         '
-        Me.lit1on.Checked = True
         Me.lit1on.Depth = 0
         Me.lit1on.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.lit1on.Location = New System.Drawing.Point(113, 29)
@@ -419,7 +416,6 @@ Partial Class RoomA
         Me.lit1on.Ripple = True
         Me.lit1on.Size = New System.Drawing.Size(55, 30)
         Me.lit1on.TabIndex = 0
-        Me.lit1on.TabStop = True
         Me.lit1on.Text = "ON"
         Me.lit1on.UseVisualStyleBackColor = True
         '
@@ -448,20 +444,20 @@ Partial Class RoomA
         Me.brightness1.Name = "brightness1"
         Me.brightness1.Size = New System.Drawing.Size(40, 30)
         Me.brightness1.TabIndex = 17
-        Me.brightness1.Text = "100"
+        Me.brightness1.Text = "0"
         Me.brightness1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'brighttrack2
         '
+        Me.brighttrack2.LargeChange = 1
         Me.brighttrack2.Location = New System.Drawing.Point(229, 69)
-        Me.brighttrack2.Maximum = 100
-        Me.brighttrack2.Minimum = 10
+        Me.brighttrack2.Maximum = 4
         Me.brighttrack2.Name = "brighttrack2"
         Me.brighttrack2.Size = New System.Drawing.Size(325, 45)
-        Me.brighttrack2.TabIndex = 5
+        Me.brighttrack2.TabIndex = 1
         Me.brighttrack2.TabStop = False
         Me.brighttrack2.TickStyle = System.Windows.Forms.TickStyle.None
-        Me.brighttrack2.Value = 100
+        Me.brighttrack2.Value = 4
         '
         'Light1
         '
