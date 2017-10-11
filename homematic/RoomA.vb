@@ -100,14 +100,27 @@ Public Class RoomA
         SerialPort1.Write(brighttrack3.Value)
         brightness2.Text = brighttrack3.Value.ToString
     End Sub
-
-
     'code for light settings end here
+
+
     'code for Temperature settings start here
-    Private Sub increasebtn_Click(sender As Object, e As EventArgs) Handles Increasebtn.Click
+    Private Sub Increasebtn_Click(sender As Object, e As EventArgs) Handles Increasebtn.Click
+        climateBtnClick(1)
+    End Sub
+
+    Private Sub Decreasebtn_Click(sender As Object, e As EventArgs) Handles Decreasebtn.Click
+        climateBtnClick(0)
+    End Sub
+
+    Private Sub climateBtnClick(ByVal index As Int64)
         Dim n As Integer
         n = Integer.Parse(templabel.Text)
-        n = n + 1
+        If index = 1 Then
+            n = n + 1
+        ElseIf index = 0 Then
+            n = n - 1
+        End If
+
         templabel.Text = n.ToString
         templabel2.Text = n.ToString
 
@@ -128,32 +141,6 @@ Public Class RoomA
 
 
         End If
-    End Sub
-
-    Private Sub Decreasebtn_Click(sender As Object, e As EventArgs) Handles Decreasebtn.Click
-        Dim m As Integer
-
-        m = Integer.Parse(templabel.Text)
-        m = m - 1
-        If (m <= 20) Then
-            coldimage.Show()
-
-            sunimage.Hide()
-            mediumhot.Hide()
-
-        ElseIf (m >= 50) Then
-            sunimage.Show()
-            mediumhot.Hide()
-            coldimage.Hide()
-
-        Else
-            mediumhot.Show()
-            sunimage.Hide()
-            coldimage.Hide()
-        End If
-        templabel.Text = m.ToString
-        templabel2.Text = m.ToString
-
     End Sub
 
 
@@ -269,7 +256,6 @@ Public Class RoomA
 		power3on.Hide()
 		power3off.Show()
 	End Sub
-
 
 End Class
 
