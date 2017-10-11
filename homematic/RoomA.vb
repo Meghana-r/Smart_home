@@ -13,8 +13,8 @@ Public Class RoomA
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
-        SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
-        setupSerial()
+		SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
+		setupSerial()
         BtnStop.Hide()
     End Sub
 
@@ -186,18 +186,11 @@ Public Class RoomA
         ImageBox.Image = imageFrame
     End Sub
 
-    Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
-        BtnStop.Hide()
-        BtnStart.Show()
-        cameraCapture.Dispose()
-    End Sub
-
-	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dashboard.Show()
-    End Sub
-
-
-
+	Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
+		BtnStop.Hide()
+		BtnStart.Show()
+		cameraCapture.Dispose()
+	End Sub
 	Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
 		tvon.Show()
         tvoff.Hide()
@@ -244,5 +237,15 @@ Public Class RoomA
 		power3off.Show()
 	End Sub
 
+	Private Sub MasterBack_Click(sender As Object, e As EventArgs) Handles MasterBack.Click
+		Form1.Show()
+		Me.Hide()
+	End Sub
+
+	Private Sub MasterToDashboard_Click(sender As Object, e As EventArgs) Handles MasterToDashboard.Click
+		Dashboard.Show()
+		Me.Hide()
+
+	End Sub
 End Class
 

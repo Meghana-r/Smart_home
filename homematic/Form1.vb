@@ -10,18 +10,6 @@ Public Class Form1
 		Panel1.Width = 50
 	End Sub
 
-	Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs)
-
-	End Sub
-
-	Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs)
-
-	End Sub
-
-	Private Sub Menu_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs)
-
-	End Sub
-
 	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 		Do While Panel1.Width > 50
 			Panel1.Width = Panel1.Width - 1
@@ -37,6 +25,13 @@ Public Class Form1
 	End Sub
 
     Private Sub Masterroombtn_Click(sender As Object, e As EventArgs) Handles Masterroombtn.Click
-        RoomA.Show()
-    End Sub
+		RoomA.Show()
+		Me.Hide()
+
+	End Sub
+
+	Private Sub ToDashboard_Click(sender As Object, e As EventArgs) Handles ToDashboard.Click
+		Dashboard.Show()
+		Me.Hide()
+	End Sub
 End Class
