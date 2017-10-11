@@ -33,6 +33,8 @@ Public Class RoomA
             MsgBox("Port not opened. All controls are unavailable.")
 			Light1.Enabled = False
             Appgrp.Enabled = False
+            Light2.Enabled = False
+            light3.Enabled = False
         End Try
     End Sub
 
