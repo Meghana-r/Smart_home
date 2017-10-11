@@ -35,4 +35,8 @@ Public Class Form1
 			Button2.Hide()
 		Loop
 	End Sub
+
+    Private Sub Masterroombtn_Click(sender As Object, e As EventArgs) Handles Masterroombtn.Click
+        RoomA.Show()
+    End Sub
 End Class
