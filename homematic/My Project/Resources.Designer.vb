@@ -223,6 +223,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property MasterRoom() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("MasterRoom", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Menu() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Menu", resourceCulture)
@@ -263,6 +273,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Room2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Room2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property RoomIcon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RoomIcon", resourceCulture)
@@ -276,6 +296,16 @@ Namespace My.Resources
         Friend ReadOnly Property RoomTemp() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("RoomTemp", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Singlebed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Singlebed", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

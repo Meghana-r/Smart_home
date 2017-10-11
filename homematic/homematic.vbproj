@@ -220,6 +220,9 @@
     <None Include="Resources\rect815.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Room2.png" />
+    <None Include="Resources\Singlebed.png" />
+    <None Include="Resources\MasterRoom.png" />
     <None Include="Resources\icons8-Menu Filled-501.png" />
     <None Include="Resources\icons8-Tableware Filled-50.png" />
     <None Include="Resources\icons8-Bed Filled-502.png" />

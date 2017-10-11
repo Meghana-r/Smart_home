@@ -30,7 +30,6 @@ Partial Class Form1
 		Me.Masterroomtip = New System.Windows.Forms.ToolTip(Me.components)
 		Me.Livingroomtip = New System.Windows.Forms.ToolTip(Me.components)
 		Me.Panel1 = New System.Windows.Forms.Panel()
-		Me.Button1 = New System.Windows.Forms.Button()
 		Me.Button2 = New System.Windows.Forms.Button()
 		Me.Masterroombtn = New System.Windows.Forms.Button()
 		Me.Livingbtn = New System.Windows.Forms.Button()
@@ -38,6 +37,7 @@ Partial Class Form1
 		Me.Room1btn = New System.Windows.Forms.Button()
 		Me.Bathroombtn = New System.Windows.Forms.Button()
 		Me.Kitchenbtn = New System.Windows.Forms.Button()
+		Me.Button1 = New System.Windows.Forms.Button()
 		Me.Blueprintimage = New System.Windows.Forms.PictureBox()
 		Me.Panel1.SuspendLayout()
 		CType(Me.Blueprintimage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +76,6 @@ Partial Class Form1
 		'Panel1
 		'
 		Me.Panel1.BackColor = System.Drawing.Color.Transparent
-		Me.Panel1.Controls.Add(Me.Button1)
 		Me.Panel1.Controls.Add(Me.Button2)
 		Me.Panel1.Controls.Add(Me.Masterroombtn)
 		Me.Panel1.Controls.Add(Me.Livingbtn)
@@ -84,22 +83,11 @@ Partial Class Form1
 		Me.Panel1.Controls.Add(Me.Room1btn)
 		Me.Panel1.Controls.Add(Me.Bathroombtn)
 		Me.Panel1.Controls.Add(Me.Kitchenbtn)
+		Me.Panel1.Controls.Add(Me.Button1)
 		Me.Panel1.Location = New System.Drawing.Point(2, 26)
 		Me.Panel1.Name = "Panel1"
 		Me.Panel1.Size = New System.Drawing.Size(440, 34)
 		Me.Panel1.TabIndex = 11
-		'
-		'Button1
-		'
-		Me.Button1.BackgroundImage = Global.homematic.My.Resources.Resources.Menu
-		Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.Button1.FlatAppearance.BorderSize = 0
-		Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button1.Location = New System.Drawing.Point(397, 6)
-		Me.Button1.Name = "Button1"
-		Me.Button1.Size = New System.Drawing.Size(20, 20)
-		Me.Button1.TabIndex = 12
-		Me.Button1.UseVisualStyleBackColor = True
 		'
 		'Button2
 		'
@@ -149,7 +137,7 @@ Partial Class Form1
 		'Room2btn
 		'
 		Me.Room2btn.BackColor = System.Drawing.Color.Transparent
-		Me.Room2btn.BackgroundImage = Global.homematic.My.Resources.Resources.RoomIcon
+		Me.Room2btn.BackgroundImage = Global.homematic.My.Resources.Resources.Room2
 		Me.Room2btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Room2btn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Room2btn.FlatAppearance.BorderSize = 0
@@ -165,7 +153,7 @@ Partial Class Form1
 		'Room1btn
 		'
 		Me.Room1btn.BackColor = System.Drawing.Color.Transparent
-		Me.Room1btn.BackgroundImage = Global.homematic.My.Resources.Resources.RoomIcon
+		Me.Room1btn.BackgroundImage = Global.homematic.My.Resources.Resources.Singlebed
 		Me.Room1btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
 		Me.Room1btn.FlatAppearance.BorderColor = System.Drawing.Color.White
 		Me.Room1btn.FlatAppearance.BorderSize = 0
@@ -209,6 +197,18 @@ Partial Class Form1
 		Me.Kitchenbtn.TabIndex = 3
 		Me.kitchentool.SetToolTip(Me.Kitchenbtn, "Click to view Kitchen")
 		Me.Kitchenbtn.UseVisualStyleBackColor = False
+		'
+		'Button1
+		'
+		Me.Button1.BackgroundImage = Global.homematic.My.Resources.Resources.Menu
+		Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+		Me.Button1.FlatAppearance.BorderSize = 0
+		Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button1.Location = New System.Drawing.Point(3, 8)
+		Me.Button1.Name = "Button1"
+		Me.Button1.Size = New System.Drawing.Size(20, 20)
+		Me.Button1.TabIndex = 12
+		Me.Button1.UseVisualStyleBackColor = True
 		'
 		'Blueprintimage
 		'
