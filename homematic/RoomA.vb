@@ -13,8 +13,8 @@ Public Class RoomA
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
-        SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
-        setupSerial()
+		SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
+		setupSerial()
 		BtnStop.Hide()
 
 	End Sub

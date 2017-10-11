@@ -112,10 +112,10 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="StartupPage.Designer.vb">
+      <DependentUpon>StartupPage.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="StartupPage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -145,8 +145,8 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="StartupPage.resx">
+      <DependentUpon>StartupPage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomA.resx">
       <DependentUpon>RoomA.vb</DependentUpon>
@@ -220,6 +220,13 @@
     <None Include="Resources\rect815.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\menudashboard.png" />
+    <None Include="Resources\dashboardmenu.png" />
+    <None Include="Resources\homelogo.png" />
+    <None Include="Resources\Panelnew.png" />
+    <None Include="Resources\Panel1.png" />
+    <None Include="Resources\Panel.png" />
+    <None Include="Resources\panelbackground.png" />
     <None Include="Resources\Room2.png" />
     <None Include="Resources\Singlebed.png" />
     <None Include="Resources\MasterRoom.png" />
@@ -232,6 +239,7 @@
     <None Include="Resources\kitchenbtn.png" />
     <None Include="Resources\icons8-Delete-26 %281%29.png" />
     <None Include="Resources\Blueprintnew1.png" />
+    <None Include="Resources\Cards.png" />
     <Content Include="Resources\classifiers\haarcascade_eye.xml" />
     <Content Include="Resources\classifiers\haarcascade_frontalface_default.xml" />
     <None Include="Resources\poweroff %282%29.png" />
