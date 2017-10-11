@@ -15,9 +15,8 @@ Public Class RoomA
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Pink400, Primary.Pink700, Primary.Pink500, Accent.Teal200, TextShade.WHITE)
         setupSerial()
-		BtnStop.Hide()
-
-	End Sub
+        BtnStop.Hide()
+    End Sub
 
     Private Sub setupSerial()
         SerialPort1.Close()
@@ -33,9 +32,8 @@ Public Class RoomA
         Catch ex As IOException
             MsgBox("Port not opened. All controls are unavailable.")
 			Light1.Enabled = False
-			Appgrp.Enabled = False
-
-		End Try
+            Appgrp.Enabled = False
+        End Try
     End Sub
 
 
@@ -128,41 +126,34 @@ Public Class RoomA
             sunimage.Show()
             coldimage.Hide()
             mediumhot.Hide()
-
         ElseIf (n <= 20) Then
             coldimage.Show()
             sunimage.Hide()
             mediumhot.Hide()
-
         Else
             mediumhot.Show()
             sunimage.Hide()
             coldimage.Hide()
-
-
         End If
     End Sub
 
 
     Private Sub resetbtn_Click(sender As Object, e As EventArgs) Handles resetbtn.Click
         Dim m As Integer
-
         m = Integer.Parse(templabel.Text)
         m = 50
         templabel.Text = m.ToString
         templabel2.Text = m.ToString
-
     End Sub
-	'code for Temperature settings end here
+    'code for Temperature settings end here
 
-	Dim cameraCapture As VideoCapture
+    Dim cameraCapture As VideoCapture
     Dim imageFrame As Mat
     Dim faceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
 
 
     Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
         startCam()
-
     End Sub
 
     Private Sub startCam()
@@ -200,29 +191,25 @@ Public Class RoomA
     End Sub
 
 	Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-		Dashboard.Show()
-
-	End Sub
+        Dashboard.Show()
+    End Sub
 
 
 
 	Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
 		tvon.Show()
-		tvoff.Hide()
-
-	End Sub
+        tvoff.Hide()
+    End Sub
 
 	Private Sub tvon_Click(sender As Object, e As EventArgs) Handles tvon.Click
 		tvoff.Show()
-		tvon.Hide()
-
-	End Sub
+        tvon.Hide()
+    End Sub
 
 	Private Sub poweroff_Click(sender As Object, e As EventArgs) Handles poweroff.Click
 		poweron.Show()
-		poweroff.Hide()
-
-	End Sub
+        poweroff.Hide()
+    End Sub
 
 	Private Sub poweron_Click(sender As Object, e As EventArgs) Handles poweron.Click
 		poweroff.Show()
@@ -231,9 +218,8 @@ Public Class RoomA
 
 	Private Sub power3off_Click(sender As Object, e As EventArgs) Handles power3off.Click
 		power3on.Show()
-		power3off.Hide()
-
-	End Sub
+        power3off.Hide()
+    End Sub
 
 	Private Sub apptab_Click(sender As Object, e As EventArgs) Handles apptab.Click
 		If Appgrp.Enabled = False Then
@@ -248,9 +234,8 @@ Public Class RoomA
 
 	Private Sub power2on_Click(sender As Object, e As EventArgs) Handles power2on.Click
 		power2on.Hide()
-		power2off.Show()
-
-	End Sub
+        power2off.Show()
+    End Sub
 
 	Private Sub power3on_Click(sender As Object, e As EventArgs) Handles power3on.Click
 		power3on.Hide()
