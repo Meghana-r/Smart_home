@@ -5,6 +5,7 @@ Imports Emgu.CV.CvEnum
 Imports System.IO
 Imports System.IO.Ports
 Imports System.Threading
+Imports System.Diagnostics
 
 
 Public Class RoomA
@@ -14,7 +15,8 @@ Public Class RoomA
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
 		SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
-		setupSerial()
+        ' disable for debugging purposes only
+        'setupSerial()
         BtnStop.Hide()
     End Sub
 
@@ -41,23 +43,25 @@ Public Class RoomA
 
 
     'code for light settings start here
+    Dim sw As New Stopwatch
     Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.ValueChanged
         brightness.Text = String.Format("{0} %", arg0:=brighttrack.Value)
         brightness.Text = brighttrack.Value.ToString
-        SerialPort1.Write(brighttrack.Value)
+        'SerialPort1.Write(brighttrack.Value)
         If brighttrack.Value = 0 Then
             lightoff.Checked = True
-            TimerLight1.Stop()
+            sw.Stop()
+            UpdateTimeInfo()
         Else
             lighton.Checked = True
-            TimerLight1.Start()
+            sw.Start()
         End If
     End Sub
 
     Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.ValueChanged
         brightness1.Text = String.Format("{0} %", arg0:=brighttrack2.Value)
         brightness1.Text = brighttrack2.Value.ToString
-        SerialPort1.Write(brighttrack2.Value)
+        'SerialPort1.Write(brighttrack2.Value)
         If brighttrack2.Value = 0 Then
             lit1off.Checked = True
             Timerlight2.Stop()
@@ -70,7 +74,7 @@ Public Class RoomA
     Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles brighttrack3.ValueChanged
         brightness2.Text = String.Format("{0} %", arg0:=brighttrack3.Value)
         brightness2.Text = brighttrack3.Value.ToString
-        SerialPort1.Write(brighttrack3.Value)
+        'SerialPort1.Write(brighttrack3.Value)
         If brighttrack3.Value = 0 Then
             lit2off.Checked = True
             TimerLight3.Stop()
@@ -102,6 +106,13 @@ Public Class RoomA
         ElseIf lit2off.Checked = False And lit2on.Checked = True Then
             brighttrack3.Value = 2
         End If
+    End Sub
+
+    Private Sub UpdateTimeInfo()
+
+        Dim ts As TimeSpan = sw.Elapsed
+        timerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+
     End Sub
     'code for light settings end here
 

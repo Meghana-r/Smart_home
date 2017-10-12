@@ -84,6 +84,7 @@ Partial Class RoomA
         Me.TimerLight1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timerlight2 = New System.Windows.Forms.Timer(Me.components)
         Me.TimerLight3 = New System.Windows.Forms.Timer(Me.components)
+        Me.timerLabel = New MaterialSkin.Controls.MaterialLabel()
         Me.vidtab.SuspendLayout()
         CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.temptab.SuspendLayout()
@@ -500,6 +501,7 @@ Partial Class RoomA
         Me.Light1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Light1.Controls.Add(Me.timerLabel)
         Me.Light1.Controls.Add(Me.lighton)
         Me.Light1.Controls.Add(Me.brightness)
         Me.Light1.Controls.Add(Me.lightoff)
@@ -848,6 +850,19 @@ Partial Class RoomA
         Me.DashButtonPanel.Size = New System.Drawing.Size(110, 40)
         Me.DashButtonPanel.TabIndex = 11
         '
+        'timerLabel
+        '
+        Me.timerLabel.AutoSize = True
+        Me.timerLabel.Depth = 0
+        Me.timerLabel.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.timerLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.timerLabel.Location = New System.Drawing.Point(6, 105)
+        Me.timerLabel.MouseState = MaterialSkin.MouseState.HOVER
+        Me.timerLabel.Name = "timerLabel"
+        Me.timerLabel.Size = New System.Drawing.Size(39, 19)
+        Me.timerLabel.TabIndex = 18
+        Me.timerLabel.Text = "time"
+        '
         'RoomA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -860,7 +875,6 @@ Partial Class RoomA
         Me.Controls.Add(Me.control)
         Me.Controls.Add(Me.DashButtonPanel)
         Me.Name = "RoomA"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.vidtab.ResumeLayout(False)
         Me.vidtab.PerformLayout()
         CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -954,4 +968,5 @@ Partial Class RoomA
     Friend WithEvents TimerLight1 As Timer
     Friend WithEvents Timerlight2 As Timer
     Friend WithEvents TimerLight3 As Timer
+    Friend WithEvents timerLabel As MaterialSkin.Controls.MaterialLabel
 End Class
