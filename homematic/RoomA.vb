@@ -103,7 +103,7 @@ Public Class RoomA
     'code for light settings end here
 
 
-    'code for Temperature settings start here
+    'code for Climate settings start here
     Private Sub Increasebtn_Click(sender As Object, e As EventArgs) Handles Increasebtn.Click
         climateBtnClick(1)
     End Sub
@@ -147,8 +147,25 @@ Public Class RoomA
         templabel.Text = m.ToString
         templabel2.Text = m.ToString
     End Sub
-    'code for Temperature settings end here
 
+    Private Delegate Sub UpdateLabelDelegate(ByVal myText As String)
+
+    Private Sub DataReceived() Handles SerialPort1.DataReceived
+        Dim reading As String = SerialPort1.ReadLine
+        updateLabel(reading)
+    End Sub
+
+    Private Sub updateLabel(ByVal text As String)
+        If Me.dhtTemp.InvokeRequired Then
+            Dim d As New UpdateLabelDelegate(AddressOf updateLabel)
+            Me.dhtTemp.Invoke(d, New Object() {text})
+        Else
+            dhtTemp.Text = text
+        End If
+    End Sub
+    'code for Climate settings end here
+
+    'code for camera starts here
     Dim cameraCapture As VideoCapture
     Dim imageFrame As Mat
     Dim faceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
@@ -186,12 +203,14 @@ Public Class RoomA
         ImageBox.Image = imageFrame
     End Sub
 
-	Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
-		BtnStop.Hide()
-		BtnStart.Show()
-		cameraCapture.Dispose()
-	End Sub
-	Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
+    Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles BtnStop.Click
+        BtnStop.Hide()
+        BtnStart.Show()
+        cameraCapture.Dispose()
+    End Sub
+    'code for Video ends here
+
+    Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
 		tvon.Show()
         tvoff.Hide()
     End Sub
@@ -244,8 +263,8 @@ Public Class RoomA
 
 	Private Sub MasterToDashboard_Click(sender As Object, e As EventArgs) Handles MasterToDashboard.Click
 		Dashboard.Show()
-		Me.Hide()
+        Me.Hide()
+    End Sub
 
-	End Sub
 End Class
 
