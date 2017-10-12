@@ -54,7 +54,7 @@ Public Class RoomA
         If brighttrack.Value = 0 Then
             lightoff.Checked = True
             light1SW.Stop()
-            UpdateTimeInfo()
+            UpdateLight1Time()
         Else
             lighton.Checked = True
             light1SW.Reset()
@@ -69,7 +69,7 @@ Public Class RoomA
         If brighttrack2.Value = 0 Then
             lit1off.Checked = True
             light2SW.Stop()
-            UpdateTimeInfo2()
+            UpdateLight2Time()
         Else
             lit1on.Checked = True
             light2SW.Reset()
@@ -84,7 +84,7 @@ Public Class RoomA
         If brighttrack3.Value = 0 Then
             lit2off.Checked = True
             light3SW.Stop()
-            UpdateTimeInfo3
+            UpdateLight3Time()
         Else
             lit2on.Checked = True
             light3SW.Reset()
@@ -116,19 +116,19 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub UpdateTimeInfo()
+    Private Sub UpdateLight1Time()
         Dim ts As TimeSpan = light1SW.Elapsed
         timerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
 
-    Private Sub UpdateTimeInfo2()
+    Private Sub UpdateLight2Time()
         Dim ts As TimeSpan = light2SW.Elapsed
         timerLabel2.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
 
-    Private Sub UpdateTimeInfo3()
+    Private Sub UpdateLight3Time()
         Dim ts As TimeSpan = light3SW.Elapsed
-        timerLabel3.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        timerlabel3.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
     'code for light settings end here
 
@@ -241,54 +241,88 @@ Public Class RoomA
     'code for Camera ends here
 
     ' Appliances
+
     Dim tvTimer As New Stopwatch
+    Dim app1Timer As New Stopwatch
+    Dim app2Timer As New Stopwatch
+    Dim app3Timer As New Stopwatch
+
     Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
 		tvon.Show()
         tvoff.Hide()
+        tvTimer.Stop()
+        UpdateTvTimer()
     End Sub
 
 	Private Sub tvon_Click(sender As Object, e As EventArgs) Handles tvon.Click
 		tvoff.Show()
         tvon.Hide()
+        tvTimer.Reset()
+        tvTimer.Start()
     End Sub
 
 	Private Sub poweroff_Click(sender As Object, e As EventArgs) Handles poweroff.Click
 		poweron.Show()
         poweroff.Hide()
+        app1Timer.Stop()
+        UpdateApp1Timer()
     End Sub
 
 	Private Sub poweron_Click(sender As Object, e As EventArgs) Handles poweron.Click
 		poweroff.Show()
-		poweron.Hide()
-	End Sub
+        poweron.Hide()
+        app1Timer.Reset()
+        app1Timer.Start()
+    End Sub
 
 	Private Sub power3off_Click(sender As Object, e As EventArgs) Handles power3off.Click
 		power3on.Show()
         power3off.Hide()
+        app2Timer.Stop()
+        UpdateApp3Timer()
     End Sub
 
-	Private Sub apptab_Click(sender As Object, e As EventArgs) Handles apptab.Click
-		If Appgrp.Enabled = False Then
-			MsgBox("Ports not available")
-		End If
-	End Sub
+    Private Sub power3on_Click(sender As Object, e As EventArgs) Handles power3on.Click
+        power3on.Hide()
+        power3off.Show()
+        app3Timer.Start()
+    End Sub
 
-	Private Sub power2off_Click_1(sender As Object, e As EventArgs) Handles power2off.Click
-		power2off.Hide()
-		power2on.Show()
-	End Sub
+    Private Sub power2off_Click(sender As Object, e As EventArgs) Handles power2off.Click
+        power2off.Hide()
+        power2on.Show()
+        app2Timer.Stop()
+        UpdateApp2Timer()
+    End Sub
 
-	Private Sub power2on_Click(sender As Object, e As EventArgs) Handles power2on.Click
-		power2on.Hide()
+    Private Sub power2on_Click(sender As Object, e As EventArgs) Handles power2on.Click
+        power2on.Hide()
         power2off.Show()
+        app2Timer.Reset()
+        app2Timer.Start()
     End Sub
 
-	Private Sub power3on_Click(sender As Object, e As EventArgs) Handles power3on.Click
-		power3on.Hide()
-		power3off.Show()
-	End Sub
+    Private Sub UpdateApp1Timer()
+        Dim ts As TimeSpan = app1Timer.Elapsed
+        app1TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
 
-	Private Sub MasterBack_Click(sender As Object, e As EventArgs) Handles MasterBack.Click
+    Private Sub UpdateApp2Timer()
+        Dim ts As TimeSpan = app2Timer.Elapsed
+        app2Timerlbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
+
+    Private Sub UpdateApp3Timer()
+        Dim ts As TimeSpan = app3Timer.Elapsed
+        app3Timerlbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
+
+    Private Sub UpdateTvTimer()
+        Dim ts As TimeSpan = tvTimer.Elapsed
+        tvTimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
+
+    Private Sub MasterBack_Click(sender As Object, e As EventArgs) Handles MasterBack.Click
 		Form1.Show()
 		Me.Hide()
 	End Sub

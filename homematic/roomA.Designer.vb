@@ -44,6 +44,7 @@ Partial Class RoomA
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Lighttab = New System.Windows.Forms.TabPage()
         Me.light3 = New System.Windows.Forms.GroupBox()
+        Me.timerlabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.brightness2 = New System.Windows.Forms.Label()
         Me.lit2on = New MaterialSkin.Controls.MaterialRadioButton()
         Me.lit2off = New MaterialSkin.Controls.MaterialRadioButton()
@@ -64,14 +65,18 @@ Partial Class RoomA
         Me.apptab = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.app2Timerlbl = New MaterialSkin.Controls.MaterialLabel()
+        Me.app3Timerlbl = New MaterialSkin.Controls.MaterialLabel()
         Me.power3off = New System.Windows.Forms.Button()
         Me.power3on = New System.Windows.Forms.Button()
         Me.power2off = New System.Windows.Forms.Button()
         Me.power2on = New System.Windows.Forms.Button()
         Me.Appgrp = New System.Windows.Forms.GroupBox()
+        Me.app1TimerLbl = New MaterialSkin.Controls.MaterialLabel()
         Me.tvoff = New System.Windows.Forms.Button()
         Me.poweron = New System.Windows.Forms.Button()
         Me.tvon = New System.Windows.Forms.Button()
+        Me.tvTimerLabel = New MaterialSkin.Controls.MaterialLabel()
         Me.poweroff = New System.Windows.Forms.Button()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -83,11 +88,6 @@ Partial Class RoomA
         Me.MasterBack = New System.Windows.Forms.Button()
         Me.MasterToDashboard = New System.Windows.Forms.Button()
         Me.DashButtonPanel = New System.Windows.Forms.Panel()
-        Me.timerlabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.tvTimerLabel = New MaterialSkin.Controls.MaterialLabel()
-        Me.app1TimerLbl = New MaterialSkin.Controls.MaterialLabel()
-        Me.app2Timerlbl = New MaterialSkin.Controls.MaterialLabel()
-        Me.app3Timerlbl = New MaterialSkin.Controls.MaterialLabel()
         Me.vidtab.SuspendLayout()
         CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.temptab.SuspendLayout()
@@ -374,6 +374,19 @@ Partial Class RoomA
         Me.light3.TabStop = False
         Me.light3.Text = "light3"
         '
+        'timerlabel3
+        '
+        Me.timerlabel3.AutoSize = True
+        Me.timerlabel3.Depth = 0
+        Me.timerlabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.timerlabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.timerlabel3.Location = New System.Drawing.Point(6, 75)
+        Me.timerlabel3.MouseState = MaterialSkin.MouseState.HOVER
+        Me.timerlabel3.Name = "timerlabel3"
+        Me.timerlabel3.Size = New System.Drawing.Size(39, 19)
+        Me.timerlabel3.TabIndex = 20
+        Me.timerlabel3.Text = "time"
+        '
         'brightness2
         '
         Me.brightness2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
@@ -649,6 +662,32 @@ Partial Class RoomA
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Connections"
         '
+        'app2Timerlbl
+        '
+        Me.app2Timerlbl.AutoSize = True
+        Me.app2Timerlbl.Depth = 0
+        Me.app2Timerlbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.app2Timerlbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.app2Timerlbl.Location = New System.Drawing.Point(38, 246)
+        Me.app2Timerlbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.app2Timerlbl.Name = "app2Timerlbl"
+        Me.app2Timerlbl.Size = New System.Drawing.Size(108, 19)
+        Me.app2Timerlbl.TabIndex = 11
+        Me.app2Timerlbl.Text = "MaterialLabel3"
+        '
+        'app3Timerlbl
+        '
+        Me.app3Timerlbl.AutoSize = True
+        Me.app3Timerlbl.Depth = 0
+        Me.app3Timerlbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.app3Timerlbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.app3Timerlbl.Location = New System.Drawing.Point(38, 95)
+        Me.app3Timerlbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.app3Timerlbl.Name = "app3Timerlbl"
+        Me.app3Timerlbl.Size = New System.Drawing.Size(108, 19)
+        Me.app3Timerlbl.TabIndex = 12
+        Me.app3Timerlbl.Text = "MaterialLabel4"
+        '
         'power3off
         '
         Me.power3off.BackColor = System.Drawing.Color.Transparent
@@ -716,6 +755,19 @@ Partial Class RoomA
         Me.Appgrp.TabStop = False
         Me.Appgrp.Text = "Appliances"
         '
+        'app1TimerLbl
+        '
+        Me.app1TimerLbl.AutoSize = True
+        Me.app1TimerLbl.Depth = 0
+        Me.app1TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.app1TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.app1TimerLbl.Location = New System.Drawing.Point(35, 243)
+        Me.app1TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.app1TimerLbl.Name = "app1TimerLbl"
+        Me.app1TimerLbl.Size = New System.Drawing.Size(108, 19)
+        Me.app1TimerLbl.TabIndex = 10
+        Me.app1TimerLbl.Text = "MaterialLabel2"
+        '
         'tvoff
         '
         Me.tvoff.BackColor = System.Drawing.Color.Transparent
@@ -755,6 +807,19 @@ Partial Class RoomA
         Me.tvon.Size = New System.Drawing.Size(40, 40)
         Me.tvon.TabIndex = 0
         Me.tvon.UseVisualStyleBackColor = False
+        '
+        'tvTimerLabel
+        '
+        Me.tvTimerLabel.AutoSize = True
+        Me.tvTimerLabel.Depth = 0
+        Me.tvTimerLabel.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.tvTimerLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.tvTimerLabel.Location = New System.Drawing.Point(35, 92)
+        Me.tvTimerLabel.MouseState = MaterialSkin.MouseState.HOVER
+        Me.tvTimerLabel.Name = "tvTimerLabel"
+        Me.tvTimerLabel.Size = New System.Drawing.Size(108, 19)
+        Me.tvTimerLabel.TabIndex = 9
+        Me.tvTimerLabel.Text = "MaterialLabel1"
         '
         'poweroff
         '
@@ -884,71 +949,6 @@ Partial Class RoomA
         Me.DashButtonPanel.Name = "DashButtonPanel"
         Me.DashButtonPanel.Size = New System.Drawing.Size(110, 40)
         Me.DashButtonPanel.TabIndex = 11
-        '
-        'timerlabel3
-        '
-        Me.timerlabel3.AutoSize = True
-        Me.timerlabel3.Depth = 0
-        Me.timerlabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.timerlabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.timerlabel3.Location = New System.Drawing.Point(6, 75)
-        Me.timerlabel3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.timerlabel3.Name = "timerlabel3"
-        Me.timerlabel3.Size = New System.Drawing.Size(36, 18)
-        Me.timerlabel3.TabIndex = 20
-        Me.timerlabel3.Text = "time"
-        '
-        'tvTimerLabel
-        '
-        Me.tvTimerLabel.AutoSize = True
-        Me.tvTimerLabel.Depth = 0
-        Me.tvTimerLabel.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.tvTimerLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.tvTimerLabel.Location = New System.Drawing.Point(35, 92)
-        Me.tvTimerLabel.MouseState = MaterialSkin.MouseState.HOVER
-        Me.tvTimerLabel.Name = "tvTimerLabel"
-        Me.tvTimerLabel.Size = New System.Drawing.Size(108, 19)
-        Me.tvTimerLabel.TabIndex = 9
-        Me.tvTimerLabel.Text = "MaterialLabel1"
-        '
-        'app1TimerLbl
-        '
-        Me.app1TimerLbl.AutoSize = True
-        Me.app1TimerLbl.Depth = 0
-        Me.app1TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.app1TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.app1TimerLbl.Location = New System.Drawing.Point(35, 243)
-        Me.app1TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.app1TimerLbl.Name = "app1TimerLbl"
-        Me.app1TimerLbl.Size = New System.Drawing.Size(108, 19)
-        Me.app1TimerLbl.TabIndex = 10
-        Me.app1TimerLbl.Text = "MaterialLabel2"
-        '
-        'app2Timerlbl
-        '
-        Me.app2Timerlbl.AutoSize = True
-        Me.app2Timerlbl.Depth = 0
-        Me.app2Timerlbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.app2Timerlbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.app2Timerlbl.Location = New System.Drawing.Point(38, 95)
-        Me.app2Timerlbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.app2Timerlbl.Name = "app2Timerlbl"
-        Me.app2Timerlbl.Size = New System.Drawing.Size(108, 19)
-        Me.app2Timerlbl.TabIndex = 11
-        Me.app2Timerlbl.Text = "MaterialLabel3"
-        '
-        'app3Timerlbl
-        '
-        Me.app3Timerlbl.AutoSize = True
-        Me.app3Timerlbl.Depth = 0
-        Me.app3Timerlbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.app3Timerlbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.app3Timerlbl.Location = New System.Drawing.Point(38, 246)
-        Me.app3Timerlbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.app3Timerlbl.Name = "app3Timerlbl"
-        Me.app3Timerlbl.Size = New System.Drawing.Size(108, 19)
-        Me.app3Timerlbl.TabIndex = 12
-        Me.app3Timerlbl.Text = "MaterialLabel4"
         '
         'RoomA
         '
