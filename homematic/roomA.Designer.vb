@@ -65,18 +65,15 @@ Partial Class RoomA
         Me.apptab = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.app2Timerlbl = New MaterialSkin.Controls.MaterialLabel()
-        Me.app3Timerlbl = New MaterialSkin.Controls.MaterialLabel()
-        Me.power3off = New System.Windows.Forms.Button()
-        Me.power3on = New System.Windows.Forms.Button()
-        Me.power2off = New System.Windows.Forms.Button()
-        Me.power2on = New System.Windows.Forms.Button()
+        Me.Room1Pw3Lbl = New MaterialSkin.Controls.MaterialLabel()
+        Me.Room1Pw2Lbl = New MaterialSkin.Controls.MaterialLabel()
+        Me.Room1Pw2Btn = New System.Windows.Forms.Button()
+        Me.Room1Pw3Btn = New System.Windows.Forms.Button()
         Me.Appgrp = New System.Windows.Forms.GroupBox()
-        Me.app1TimerLbl = New MaterialSkin.Controls.MaterialLabel()
-        Me.tvoff = New System.Windows.Forms.Button()
-        Me.poweron = New System.Windows.Forms.Button()
-        Me.tvon = New System.Windows.Forms.Button()
-        Me.tvTimerLabel = New MaterialSkin.Controls.MaterialLabel()
+        Me.Room1Pw1Lbl = New MaterialSkin.Controls.MaterialLabel()
+        Me.tvBtn = New System.Windows.Forms.Button()
+        Me.Room1Pw1Btn = New System.Windows.Forms.Button()
+        Me.tvLbl = New MaterialSkin.Controls.MaterialLabel()
         Me.poweroff = New System.Windows.Forms.Button()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -649,12 +646,10 @@ Partial Class RoomA
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.app2Timerlbl)
-        Me.GroupBox1.Controls.Add(Me.app3Timerlbl)
-        Me.GroupBox1.Controls.Add(Me.power3off)
-        Me.GroupBox1.Controls.Add(Me.power3on)
-        Me.GroupBox1.Controls.Add(Me.power2off)
-        Me.GroupBox1.Controls.Add(Me.power2on)
+        Me.GroupBox1.Controls.Add(Me.Room1Pw3Lbl)
+        Me.GroupBox1.Controls.Add(Me.Room1Pw2Lbl)
+        Me.GroupBox1.Controls.Add(Me.Room1Pw2Btn)
+        Me.GroupBox1.Controls.Add(Me.Room1Pw3Btn)
         Me.GroupBox1.Location = New System.Drawing.Point(326, 0)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(178, 408)
@@ -662,91 +657,64 @@ Partial Class RoomA
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Connections"
         '
-        'app2Timerlbl
+        'Room1Pw3Lbl
         '
-        Me.app2Timerlbl.AutoSize = True
-        Me.app2Timerlbl.Depth = 0
-        Me.app2Timerlbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.app2Timerlbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.app2Timerlbl.Location = New System.Drawing.Point(38, 246)
-        Me.app2Timerlbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.app2Timerlbl.Name = "app2Timerlbl"
-        Me.app2Timerlbl.Size = New System.Drawing.Size(108, 19)
-        Me.app2Timerlbl.TabIndex = 11
-        Me.app2Timerlbl.Text = "MaterialLabel3"
+        Me.Room1Pw3Lbl.AutoSize = True
+        Me.Room1Pw3Lbl.Depth = 0
+        Me.Room1Pw3Lbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Room1Pw3Lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Room1Pw3Lbl.Location = New System.Drawing.Point(38, 246)
+        Me.Room1Pw3Lbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Pw3Lbl.Name = "Room1Pw3Lbl"
+        Me.Room1Pw3Lbl.Size = New System.Drawing.Size(39, 19)
+        Me.Room1Pw3Lbl.TabIndex = 11
+        Me.Room1Pw3Lbl.Text = "time"
         '
-        'app3Timerlbl
+        'Room1Pw2Lbl
         '
-        Me.app3Timerlbl.AutoSize = True
-        Me.app3Timerlbl.Depth = 0
-        Me.app3Timerlbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.app3Timerlbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.app3Timerlbl.Location = New System.Drawing.Point(38, 95)
-        Me.app3Timerlbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.app3Timerlbl.Name = "app3Timerlbl"
-        Me.app3Timerlbl.Size = New System.Drawing.Size(108, 19)
-        Me.app3Timerlbl.TabIndex = 12
-        Me.app3Timerlbl.Text = "MaterialLabel4"
+        Me.Room1Pw2Lbl.AutoSize = True
+        Me.Room1Pw2Lbl.Depth = 0
+        Me.Room1Pw2Lbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Room1Pw2Lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Room1Pw2Lbl.Location = New System.Drawing.Point(38, 95)
+        Me.Room1Pw2Lbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Pw2Lbl.Name = "Room1Pw2Lbl"
+        Me.Room1Pw2Lbl.Size = New System.Drawing.Size(39, 19)
+        Me.Room1Pw2Lbl.TabIndex = 12
+        Me.Room1Pw2Lbl.Text = "time"
         '
-        'power3off
+        'Room1Pw2Btn
         '
-        Me.power3off.BackColor = System.Drawing.Color.Transparent
-        Me.power3off.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
-        Me.power3off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.power3off.FlatAppearance.BorderSize = 0
-        Me.power3off.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.power3off.Location = New System.Drawing.Point(72, 43)
-        Me.power3off.Name = "power3off"
-        Me.power3off.Size = New System.Drawing.Size(40, 40)
-        Me.power3off.TabIndex = 7
-        Me.power3off.UseVisualStyleBackColor = False
+        Me.Room1Pw2Btn.BackColor = System.Drawing.Color.Transparent
+        Me.Room1Pw2Btn.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
+        Me.Room1Pw2Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Room1Pw2Btn.FlatAppearance.BorderSize = 0
+        Me.Room1Pw2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Room1Pw2Btn.Location = New System.Drawing.Point(72, 52)
+        Me.Room1Pw2Btn.Name = "Room1Pw2Btn"
+        Me.Room1Pw2Btn.Size = New System.Drawing.Size(40, 40)
+        Me.Room1Pw2Btn.TabIndex = 7
+        Me.Room1Pw2Btn.UseVisualStyleBackColor = False
         '
-        'power3on
+        'Room1Pw3Btn
         '
-        Me.power3on.BackColor = System.Drawing.Color.Transparent
-        Me.power3on.BackgroundImage = Global.homematic.My.Resources.Resources.poweron
-        Me.power3on.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.power3on.FlatAppearance.BorderSize = 0
-        Me.power3on.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.power3on.Location = New System.Drawing.Point(72, 43)
-        Me.power3on.Name = "power3on"
-        Me.power3on.Size = New System.Drawing.Size(40, 40)
-        Me.power3on.TabIndex = 6
-        Me.power3on.UseVisualStyleBackColor = False
-        '
-        'power2off
-        '
-        Me.power2off.BackColor = System.Drawing.Color.Transparent
-        Me.power2off.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
-        Me.power2off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.power2off.FlatAppearance.BorderSize = 0
-        Me.power2off.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.power2off.Location = New System.Drawing.Point(72, 184)
-        Me.power2off.Name = "power2off"
-        Me.power2off.Size = New System.Drawing.Size(40, 40)
-        Me.power2off.TabIndex = 4
-        Me.power2off.UseVisualStyleBackColor = False
-        '
-        'power2on
-        '
-        Me.power2on.BackColor = System.Drawing.Color.Transparent
-        Me.power2on.BackgroundImage = Global.homematic.My.Resources.Resources.poweron
-        Me.power2on.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.power2on.FlatAppearance.BorderSize = 0
-        Me.power2on.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.power2on.Location = New System.Drawing.Point(72, 184)
-        Me.power2on.Name = "power2on"
-        Me.power2on.Size = New System.Drawing.Size(40, 40)
-        Me.power2on.TabIndex = 5
-        Me.power2on.UseVisualStyleBackColor = False
+        Me.Room1Pw3Btn.BackColor = System.Drawing.Color.Transparent
+        Me.Room1Pw3Btn.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
+        Me.Room1Pw3Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Room1Pw3Btn.FlatAppearance.BorderSize = 0
+        Me.Room1Pw3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Room1Pw3Btn.Location = New System.Drawing.Point(72, 184)
+        Me.Room1Pw3Btn.Name = "Room1Pw3Btn"
+        Me.Room1Pw3Btn.Size = New System.Drawing.Size(40, 40)
+        Me.Room1Pw3Btn.TabIndex = 4
+        Me.Room1Pw3Btn.UseVisualStyleBackColor = False
         '
         'Appgrp
         '
-        Me.Appgrp.Controls.Add(Me.app1TimerLbl)
-        Me.Appgrp.Controls.Add(Me.tvoff)
-        Me.Appgrp.Controls.Add(Me.poweron)
-        Me.Appgrp.Controls.Add(Me.tvon)
-        Me.Appgrp.Controls.Add(Me.tvTimerLabel)
+        Me.Appgrp.Controls.Add(Me.Room1Pw1Lbl)
+        Me.Appgrp.Controls.Add(Me.tvBtn)
+        Me.Appgrp.Controls.Add(Me.Room1Pw1Btn)
+        Me.Appgrp.Controls.Add(Me.tvLbl)
         Me.Appgrp.Controls.Add(Me.poweroff)
         Me.Appgrp.Location = New System.Drawing.Point(28, 3)
         Me.Appgrp.Name = "Appgrp"
@@ -755,71 +723,57 @@ Partial Class RoomA
         Me.Appgrp.TabStop = False
         Me.Appgrp.Text = "Appliances"
         '
-        'app1TimerLbl
+        'Room1Pw1Lbl
         '
-        Me.app1TimerLbl.AutoSize = True
-        Me.app1TimerLbl.Depth = 0
-        Me.app1TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.app1TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.app1TimerLbl.Location = New System.Drawing.Point(35, 243)
-        Me.app1TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.app1TimerLbl.Name = "app1TimerLbl"
-        Me.app1TimerLbl.Size = New System.Drawing.Size(108, 19)
-        Me.app1TimerLbl.TabIndex = 10
-        Me.app1TimerLbl.Text = "MaterialLabel2"
+        Me.Room1Pw1Lbl.AutoSize = True
+        Me.Room1Pw1Lbl.Depth = 0
+        Me.Room1Pw1Lbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Room1Pw1Lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Room1Pw1Lbl.Location = New System.Drawing.Point(35, 243)
+        Me.Room1Pw1Lbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Pw1Lbl.Name = "Room1Pw1Lbl"
+        Me.Room1Pw1Lbl.Size = New System.Drawing.Size(39, 19)
+        Me.Room1Pw1Lbl.TabIndex = 10
+        Me.Room1Pw1Lbl.Text = "time"
         '
-        'tvoff
+        'tvBtn
         '
-        Me.tvoff.BackColor = System.Drawing.Color.Transparent
-        Me.tvoff.BackgroundImage = Global.homematic.My.Resources.Resources.tvoff
-        Me.tvoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.tvoff.FlatAppearance.BorderSize = 0
-        Me.tvoff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.tvoff.Location = New System.Drawing.Point(72, 40)
-        Me.tvoff.Name = "tvoff"
-        Me.tvoff.Size = New System.Drawing.Size(40, 40)
-        Me.tvoff.TabIndex = 3
-        Me.tvoff.UseVisualStyleBackColor = False
+        Me.tvBtn.BackColor = System.Drawing.Color.Transparent
+        Me.tvBtn.BackgroundImage = Global.homematic.My.Resources.Resources.tvoff
+        Me.tvBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.tvBtn.FlatAppearance.BorderSize = 0
+        Me.tvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.tvBtn.Location = New System.Drawing.Point(67, 49)
+        Me.tvBtn.Name = "tvBtn"
+        Me.tvBtn.Size = New System.Drawing.Size(40, 40)
+        Me.tvBtn.TabIndex = 3
+        Me.tvBtn.UseVisualStyleBackColor = False
         '
-        'poweron
+        'Room1Pw1Btn
         '
-        Me.poweron.BackColor = System.Drawing.Color.Transparent
-        Me.poweron.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
-        Me.poweron.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.poweron.FlatAppearance.BorderSize = 0
-        Me.poweron.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.poweron.Location = New System.Drawing.Point(58, 181)
-        Me.poweron.Name = "poweron"
-        Me.poweron.Size = New System.Drawing.Size(40, 40)
-        Me.poweron.TabIndex = 4
-        Me.poweron.UseVisualStyleBackColor = False
+        Me.Room1Pw1Btn.BackColor = System.Drawing.Color.Transparent
+        Me.Room1Pw1Btn.BackgroundImage = Global.homematic.My.Resources.Resources.poweroff
+        Me.Room1Pw1Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Room1Pw1Btn.FlatAppearance.BorderSize = 0
+        Me.Room1Pw1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Room1Pw1Btn.Location = New System.Drawing.Point(58, 181)
+        Me.Room1Pw1Btn.Name = "Room1Pw1Btn"
+        Me.Room1Pw1Btn.Size = New System.Drawing.Size(40, 40)
+        Me.Room1Pw1Btn.TabIndex = 4
+        Me.Room1Pw1Btn.UseVisualStyleBackColor = False
         '
-        'tvon
+        'tvLbl
         '
-        Me.tvon.BackColor = System.Drawing.Color.Transparent
-        Me.tvon.BackgroundImage = Global.homematic.My.Resources.Resources.tvon
-        Me.tvon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.tvon.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.tvon.FlatAppearance.BorderSize = 0
-        Me.tvon.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.tvon.Location = New System.Drawing.Point(72, 40)
-        Me.tvon.Name = "tvon"
-        Me.tvon.Size = New System.Drawing.Size(40, 40)
-        Me.tvon.TabIndex = 0
-        Me.tvon.UseVisualStyleBackColor = False
-        '
-        'tvTimerLabel
-        '
-        Me.tvTimerLabel.AutoSize = True
-        Me.tvTimerLabel.Depth = 0
-        Me.tvTimerLabel.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.tvTimerLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.tvTimerLabel.Location = New System.Drawing.Point(35, 92)
-        Me.tvTimerLabel.MouseState = MaterialSkin.MouseState.HOVER
-        Me.tvTimerLabel.Name = "tvTimerLabel"
-        Me.tvTimerLabel.Size = New System.Drawing.Size(108, 19)
-        Me.tvTimerLabel.TabIndex = 9
-        Me.tvTimerLabel.Text = "MaterialLabel1"
+        Me.tvLbl.AutoSize = True
+        Me.tvLbl.Depth = 0
+        Me.tvLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.tvLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.tvLbl.Location = New System.Drawing.Point(35, 92)
+        Me.tvLbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.tvLbl.Name = "tvLbl"
+        Me.tvLbl.Size = New System.Drawing.Size(39, 19)
+        Me.tvLbl.TabIndex = 9
+        Me.tvLbl.Text = "time"
         '
         'poweroff
         '
@@ -1039,26 +993,23 @@ Partial Class RoomA
 	Friend WithEvents Panel1 As Panel
 	Friend WithEvents SerialPort1 As IO.Ports.SerialPort
 	Friend WithEvents apptab As TabPage
-	Friend WithEvents tvoff As Button
-	Friend WithEvents poweron As Button
-	Friend WithEvents tvon As Button
-	Friend WithEvents poweroff As Button
-	Friend WithEvents Appgrp As GroupBox
+	Friend WithEvents tvBtn As Button
+	Friend WithEvents Room1Pw1Btn As Button
+    Friend WithEvents poweroff As Button
+    Friend WithEvents Appgrp As GroupBox
 	Friend WithEvents GroupBox1 As GroupBox
-	Friend WithEvents power3off As Button
-	Friend WithEvents power3on As Button
-	Friend WithEvents power2off As Button
-	Friend WithEvents power2on As Button
-	Friend WithEvents Label1 As Label
-	Friend WithEvents MasterToDashboard As Button
+	Friend WithEvents Room1Pw2Btn As Button
+    Friend WithEvents Room1Pw3Btn As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents MasterToDashboard As Button
 	Friend WithEvents DashButtonPanel As Panel
     Friend WithEvents dhtTemp As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents ambientTemp As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents timerLabel As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents timerLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents timerlabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents app2Timerlbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents app3Timerlbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents app1TimerLbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents tvTimerLabel As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Room1Pw3Lbl As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Room1Pw2Lbl As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Room1Pw1Lbl As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents tvLbl As MaterialSkin.Controls.MaterialLabel
 End Class
