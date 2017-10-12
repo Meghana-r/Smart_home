@@ -77,8 +77,6 @@ Public Class RoomA
         ElseIf lightoff.Checked = False And lighton.Checked = True Then
             brighttrack.Value = 2
         End If
-        SerialPort1.Write(brighttrack.Value)
-        brightness.Text = brighttrack.Value.ToString
     End Sub
 
     Private Sub checkBox2Status() Handles lit1off.CheckedChanged, lit1on.CheckedChanged
@@ -87,8 +85,6 @@ Public Class RoomA
         ElseIf lit1off.Checked = False And lit1on.Checked = True Then
             brighttrack2.Value = 2
         End If
-        SerialPort1.Write(brighttrack2.Value)
-        brightness1.Text = brighttrack2.Value.ToString
     End Sub
 
     Private Sub checkBox3Status() Handles lit2off.CheckedChanged, lit2on.CheckedChanged
@@ -97,8 +93,6 @@ Public Class RoomA
         ElseIf lit2off.Checked = False And lit2on.Checked = True Then
             brighttrack3.Value = 2
         End If
-        SerialPort1.Write(brighttrack3.Value)
-        brightness2.Text = brighttrack3.Value.ToString
     End Sub
     'code for light settings end here
 
