@@ -47,7 +47,10 @@ Public Class RoomA
         SerialPort1.Write(brighttrack.Value)
         If brighttrack.Value = 0 Then
             lightoff.Checked = True
-        Else lighton.Checked = True
+            TimerLight1.Stop()
+        Else
+            lighton.Checked = True
+            TimerLight1.Start()
         End If
     End Sub
 
@@ -57,7 +60,10 @@ Public Class RoomA
         SerialPort1.Write(brighttrack2.Value)
         If brighttrack2.Value = 0 Then
             lit1off.Checked = True
-        Else lit1on.Checked = True
+            Timerlight2.Stop()
+        Else
+            lit1on.Checked = True
+            Timerlight2.Start()
         End If
     End Sub
 
@@ -67,7 +73,10 @@ Public Class RoomA
         SerialPort1.Write(brighttrack3.Value)
         If brighttrack3.Value = 0 Then
             lit2off.Checked = True
-        Else lit2on.Checked = True
+            TimerLight3.Stop()
+        Else
+            lit2on.Checked = True
+            TimerLight3.Start()
         End If
     End Sub
 
@@ -202,7 +211,7 @@ Public Class RoomA
         BtnStart.Show()
         cameraCapture.Dispose()
     End Sub
-    'code for Video ends here
+    'code for Camera ends here
 
     Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
 		tvon.Show()
