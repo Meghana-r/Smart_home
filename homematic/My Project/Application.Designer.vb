@@ -34,5 +34,10 @@ Namespace My
         Protected Overrides Sub OnCreateMainForm()
 			Me.MainForm = Global.homematic.Form1
 		End Sub
-    End Class
+
+		<Global.System.Diagnostics.DebuggerStepThroughAttribute()>
+		Protected Overrides Sub OnCreateSplashScreen()
+			Me.SplashScreen = Global.homematic.SplahScreen
+		End Sub
+	End Class
 End Namespace

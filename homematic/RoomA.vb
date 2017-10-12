@@ -9,8 +9,8 @@ Imports System.Diagnostics
 
 
 Public Class RoomA
-
-    Private Sub RoomA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+	'Public Property Tab As New TabPage
+	Private Sub RoomA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
@@ -295,8 +295,12 @@ Public Class RoomA
 
 	Private Sub MasterToDashboard_Click(sender As Object, e As EventArgs) Handles MasterToDashboard.Click
 		Dashboard.Show()
-        Me.Hide()
-    End Sub
+		Me.Hide()
+	End Sub
+
+	Public Sub TabSelection(ByVal tabIndex As Integer)
+		MasterTabControl.SelectedTab = MasterTabControl.TabPages(tabIndex)
+	End Sub
 
 End Class
 

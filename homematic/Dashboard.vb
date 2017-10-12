@@ -1,5 +1,6 @@
 ﻿Imports MaterialSkin
 Public Class Dashboard
+
 	Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
 		SkinManager.AddFormToManage(Me)
@@ -36,4 +37,13 @@ Public Class Dashboard
 		ControlPanel.Show()
 
 	End Sub
+
+	'Private Sub DashboardLightsBtn_Click(sender As Object, e As EventArgs) Handles DashboardLightsBtn.Click
+	'	Dim obj As New RoomA
+	'	obj.MasterTabControl.SelectedIndex = 0
+	'	obj.Show()
+	'	obj.MasterTabControl.SelectedTab = Me.TabControl1.Add()
+
+
+	'End Sub
 End Class
