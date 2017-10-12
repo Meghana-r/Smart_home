@@ -41,7 +41,7 @@ Public Class RoomA
 
 
     'code for light settings start here
-    Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.Scroll
+    Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.ValueChanged
         brightness.Text = String.Format("{0} %", arg0:=brighttrack.Value)
         brightness.Text = brighttrack.Value.ToString
         SerialPort1.Write(brighttrack.Value)
@@ -51,7 +51,7 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.Scroll
+    Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles brighttrack2.ValueChanged
         brightness1.Text = String.Format("{0} %", arg0:=brighttrack2.Value)
         brightness1.Text = brighttrack2.Value.ToString
         SerialPort1.Write(brighttrack2.Value)
@@ -61,7 +61,7 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles brighttrack3.Scroll
+    Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles brighttrack3.ValueChanged
         brightness2.Text = String.Format("{0} %", arg0:=brighttrack3.Value)
         brightness2.Text = brighttrack3.Value.ToString
         SerialPort1.Write(brighttrack3.Value)
