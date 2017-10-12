@@ -43,18 +43,22 @@ Public Class RoomA
 
 
     'code for light settings start here
-    Dim sw As New Stopwatch
+    Dim light1SW As New Stopwatch
+    Dim light2SW As New Stopwatch
+    Dim light3SW As New Stopwatch
+
     Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles brighttrack.ValueChanged
         brightness.Text = String.Format("{0} %", arg0:=brighttrack.Value)
         brightness.Text = brighttrack.Value.ToString
-        'SerialPort1.Write(brighttrack.Value)
+        'SerialPort1.Write(brighttrack.Value) 
         If brighttrack.Value = 0 Then
             lightoff.Checked = True
-            sw.Stop()
+            light1SW.Stop()
             UpdateTimeInfo()
         Else
             lighton.Checked = True
-            sw.Start()
+            light1SW.Reset()
+            light1SW.Start()
         End If
     End Sub
 
@@ -64,8 +68,12 @@ Public Class RoomA
         'SerialPort1.Write(brighttrack2.Value)
         If brighttrack2.Value = 0 Then
             lit1off.Checked = True
+            light2SW.Stop()
+            UpdateTimeInfo2()
         Else
             lit1on.Checked = True
+            light2SW.Reset()
+            light2SW.Start()
         End If
     End Sub
 
@@ -75,8 +83,12 @@ Public Class RoomA
         'SerialPort1.Write(brighttrack3.Value)
         If brighttrack3.Value = 0 Then
             lit2off.Checked = True
+            light3SW.Stop()
+            UpdateTimeInfo3
         Else
             lit2on.Checked = True
+            light3SW.Reset()
+            light3SW.Start()
         End If
     End Sub
 
@@ -105,10 +117,18 @@ Public Class RoomA
     End Sub
 
     Private Sub UpdateTimeInfo()
-
-        Dim ts As TimeSpan = sw.Elapsed
+        Dim ts As TimeSpan = light1SW.Elapsed
         timerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
 
+    Private Sub UpdateTimeInfo2()
+        Dim ts As TimeSpan = light2SW.Elapsed
+        timerLabel2.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
+
+    Private Sub UpdateTimeInfo3()
+        Dim ts As TimeSpan = light3SW.Elapsed
+        timerLabel3.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
     'code for light settings end here
 
@@ -220,6 +240,8 @@ Public Class RoomA
     End Sub
     'code for Camera ends here
 
+    ' Appliances
+    Dim tvTimer As New Stopwatch
     Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
 		tvon.Show()
         tvoff.Hide()
