@@ -81,9 +81,6 @@ Partial Class RoomA
         Me.MasterBack = New System.Windows.Forms.Button()
         Me.MasterToDashboard = New System.Windows.Forms.Button()
         Me.DashButtonPanel = New System.Windows.Forms.Panel()
-        Me.TimerLight1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timerlight2 = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerLight3 = New System.Windows.Forms.Timer(Me.components)
         Me.timerLabel = New MaterialSkin.Controls.MaterialLabel()
         Me.vidtab.SuspendLayout()
         CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -965,8 +962,5 @@ Partial Class RoomA
 	Friend WithEvents DashButtonPanel As Panel
     Friend WithEvents dhtTemp As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents ambientTemp As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TimerLight1 As Timer
-    Friend WithEvents Timerlight2 As Timer
-    Friend WithEvents TimerLight3 As Timer
     Friend WithEvents timerLabel As MaterialSkin.Controls.MaterialLabel
 End Class

@@ -64,10 +64,8 @@ Public Class RoomA
         'SerialPort1.Write(brighttrack2.Value)
         If brighttrack2.Value = 0 Then
             lit1off.Checked = True
-            Timerlight2.Stop()
         Else
             lit1on.Checked = True
-            Timerlight2.Start()
         End If
     End Sub
 
@@ -77,10 +75,8 @@ Public Class RoomA
         'SerialPort1.Write(brighttrack3.Value)
         If brighttrack3.Value = 0 Then
             lit2off.Checked = True
-            TimerLight3.Stop()
         Else
             lit2on.Checked = True
-            TimerLight3.Start()
         End If
     End Sub
 
