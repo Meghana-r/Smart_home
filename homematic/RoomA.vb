@@ -201,13 +201,14 @@ Public Class RoomA
     Dim Room1CameraCapture As VideoCapture
     Dim Room1ImageFrame As Mat
     Dim Room1FaceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
+	Public Property VidStat As Boolean
 
+	Public Sub Room1VidStart_Click(sender As Object, e As EventArgs) Handles Room1VidStart.Click
+		Room1StartCam()
+		VidStat = True
+	End Sub
 
-    Private Sub Room1VidStart_Click(sender As Object, e As EventArgs) Handles Room1VidStart.Click
-        Room1StartCam()
-    End Sub
-
-    Private Sub Room1StartCam()
+	Private Sub Room1StartCam()
         Room1CameraCapture = New VideoCapture()
         If Not Room1CameraCapture.IsOpened Then
             MsgBox("camera not found!")
@@ -235,26 +236,27 @@ Public Class RoomA
         ImageBox.Image = Room1ImageFrame
     End Sub
 
-    Private Sub Room1VidStop_Click(sender As Object, e As EventArgs) Handles Room1VidStop.Click
-        Room1VidStop.Hide()
-        Room1VidStart.Show()
-        Room1CameraCapture.Dispose()
-    End Sub
-    'code for Camera ends here
+	Public Sub Room1VidStop_Click(sender As Object, e As EventArgs) Handles Room1VidStop.Click
+		Room1VidStop.Hide()
+		Room1VidStart.Show()
+		Room1CameraCapture.Dispose()
+		VidStat = False
+	End Sub
+	'code for Camera ends here
 
-    ' Appliances
-    Dim tvTimer As New Stopwatch
+	' Appliances
+	Dim tvTimer As New Stopwatch
     Dim Room1Pw1Timer As New Stopwatch
     Dim Room1Pw2Timer As New Stopwatch
     Dim Room1Pw3Timer As New Stopwatch
 
-    ' for on/off. on = true off = false
-    Dim Room1Pw1Status As Boolean
-    Dim Room1Pw2Status As Boolean
-    Dim Room1Pw3Status As Boolean
-    Dim tvStatus As Boolean
+	' for on/off. on = true off = false
+	Public Property Room1Pw1Status As Boolean
+	Public Property Room1Pw2Status As Boolean
+	Public Property Room1Pw3Status As Boolean
+	Public Property tvStatus As Boolean
 
-    Private Sub Room1Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw1Btn.Click
+	Private Sub Room1Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw1Btn.Click
         If Room1Pw1Status = True Then
             Room1Pw1Btn.BackgroundImage = My.Resources.poweroff
             Room1Pw1Timer.Stop()

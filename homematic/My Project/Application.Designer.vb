@@ -32,12 +32,12 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-			Me.MainForm = Global.homematic.Form1
-		End Sub
-
-		<Global.System.Diagnostics.DebuggerStepThroughAttribute()>
-		Protected Overrides Sub OnCreateSplashScreen()
-			Me.SplashScreen = Global.homematic.SplahScreen
-		End Sub
-	End Class
+            Me.MainForm = Global.homematic.Form1
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        Protected Overrides Sub OnCreateSplashScreen()
+            Me.SplashScreen = Global.homematic.SplahScreen
+        End Sub
+    End Class
 End Namespace
