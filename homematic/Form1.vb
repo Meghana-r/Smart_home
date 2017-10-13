@@ -44,4 +44,9 @@ Public Class Form1
         RoomC.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Livingbtn_Click(sender As Object, e As EventArgs) Handles Livingbtn.Click
+        RoomD.Show()
+        Me.Hide()
+    End Sub
 End Class
