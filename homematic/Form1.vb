@@ -34,4 +34,9 @@ Public Class Form1
 		Dashboard.Show()
 		Me.Hide()
 	End Sub
+
+    Private Sub Room1btn_Click(sender As Object, e As EventArgs) Handles Room1btn.Click
+        RoomB.Show()
+        Me.Hide()
+    End Sub
 End Class

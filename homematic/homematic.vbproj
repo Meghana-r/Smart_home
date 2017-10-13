@@ -146,6 +146,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="roomB.Designer.vb">
+      <DependentUpon>RoomB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RoomB.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
@@ -165,6 +171,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomB.resx">
+      <DependentUpon>RoomB.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
