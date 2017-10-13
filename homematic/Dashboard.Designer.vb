@@ -53,6 +53,7 @@ Partial Class Dashboard
 		Me.DashBoardVideoBtn = New System.Windows.Forms.Button()
 		Me.DashboardClimateBtn = New System.Windows.Forms.Button()
 		Me.ControlPanel = New System.Windows.Forms.Panel()
+		Me.ControlNameLbl = New System.Windows.Forms.Label()
 		Me.DashboardMenu.SuspendLayout()
 		CType(Me.LogoSmall, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.LogoBig, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -233,7 +234,11 @@ Partial Class Dashboard
 		'
 		'Panel1
 		'
-		Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
+		Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+			Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+		Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(66, Byte), Integer))
+		Me.Panel1.Controls.Add(Me.ControlNameLbl)
 		Me.Panel1.Controls.Add(Me.PanelBackBtn)
 		Me.Panel1.Controls.Add(Me.Label5)
 		Me.Panel1.Controls.Add(Me.Label4)
@@ -249,7 +254,7 @@ Partial Class Dashboard
 		Me.Panel1.ForeColor = System.Drawing.Color.White
 		Me.Panel1.Location = New System.Drawing.Point(236, 63)
 		Me.Panel1.Name = "Panel1"
-		Me.Panel1.Size = New System.Drawing.Size(531, 464)
+		Me.Panel1.Size = New System.Drawing.Size(534, 464)
 		Me.Panel1.TabIndex = 4
 		'
 		'PanelBackBtn
@@ -439,6 +444,13 @@ Partial Class Dashboard
 		Me.ControlPanel.Size = New System.Drawing.Size(534, 464)
 		Me.ControlPanel.TabIndex = 3
 		'
+		'ControlNameLbl
+		'
+		Me.ControlNameLbl.Location = New System.Drawing.Point(50, 20)
+		Me.ControlNameLbl.Name = "ControlNameLbl"
+		Me.ControlNameLbl.Size = New System.Drawing.Size(172, 21)
+		Me.ControlNameLbl.TabIndex = 11
+		'
 		'Dashboard
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -490,4 +502,5 @@ Partial Class Dashboard
 	Friend WithEvents DashboardClimateBtn As Button
 	Friend WithEvents ControlPanel As Panel
 	Friend WithEvents PanelBackBtn As Button
+	Friend WithEvents ControlNameLbl As Label
 End Class

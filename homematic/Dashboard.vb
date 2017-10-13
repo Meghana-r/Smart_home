@@ -40,6 +40,7 @@ Public Class Dashboard
 
 	End Sub
 	Private Sub DashboardLightsBtn_Click(sender As Object, e As EventArgs) Handles DashboardLightsBtn.Click
+		ControlNameLbl.Text = "Lights"
 		Panel1.Show()
 		ControlPanel.Hide()
 		For y As Integer = 3 To 4
@@ -72,6 +73,7 @@ Public Class Dashboard
 	End Sub
 
 	Private Sub DashboardAppBtn_Click(sender As Object, e As EventArgs) Handles DashboardAppBtn.Click
+		ControlNameLbl.Text = "Appliances"
 		Panel1.Show()
 		ControlPanel.Hide()
 
@@ -110,6 +112,7 @@ Public Class Dashboard
 	End Sub
 
 	Private Sub DashboardClimateBtn_Click(sender As Object, e As EventArgs) Handles DashboardClimateBtn.Click
+		ControlNameLbl.Text = "Climate"
 		Panel1.Show()
 		ControlPanel.Hide()
 
@@ -128,6 +131,7 @@ Public Class Dashboard
 	End Sub
 
 	Private Sub DashBoardVideoBtn_Click(sender As Object, e As EventArgs) Handles DashBoardVideoBtn.Click
+		ControlNameLbl.Text = "Surveillance"
 		Panel1.Show()
 		ControlPanel.Hide()
 		If RoomA.VidStat = True Then
