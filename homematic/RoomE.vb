@@ -197,50 +197,6 @@ Public Class RoomE
     End Sub
     'code for Climate settings end here
 
-    'code for camera starts here
-    Dim Room5CameraCapture As VideoCapture
-    Dim Room5ImageFrame As Mat
-    Dim Room5FaceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
-
-
-    Private Sub Room5VidStart_Click(sender As Object, e As EventArgs) Handles Room5VidStart.Click
-        Room5StartCam()
-    End Sub
-
-    Private Sub Room5StartCam()
-        Room5CameraCapture = New VideoCapture()
-        If Not Room5CameraCapture.IsOpened Then
-            MsgBox("camera not found!")
-        Else
-            Room5VidStart.Hide()
-            Room5VidStop.Show()
-        End If
-        AddHandler Application.Idle, AddressOf Room5ProcessCapture ' call the function when the event is raised.
-    End Sub
-
-    Private Sub Room5ProcessCapture(sender As System.Object, e As System.EventArgs)
-        Room5ImageFrame = Room5CameraCapture.QuerySmallFrame
-
-        If Room5ImageFrame IsNot Nothing Then
-            For Each face As Rectangle In Room5FaceDetector.DetectMultiScale(
-                         Room5ImageFrame, 'the frame where it is suposed to detect
-                         1.1,        'the relative size of scanning window for the next pass
-                         10,      ' minimum neighbours to group as a single detected frame
-                         New Size(20, 20), ' size of the window
-                         Size.Empty)      'maximum size of the window
-                CvInvoke.Rectangle(Room5ImageFrame, face, New MCvScalar(255, 255, 255)) ' DRAW a rectangle around the detected area
-            Next
-        End If
-
-        ImageBox.Image = Room5ImageFrame
-    End Sub
-
-    Private Sub Room5VidStop_Click(sender As Object, e As EventArgs) Handles Room5VidStop.Click
-        Room5VidStop.Hide()
-        Room5VidStart.Show()
-        Room5CameraCapture.Dispose()
-    End Sub
-    'code for Camera ends here
 
     ' Appliances
     Dim tvTimer As New Stopwatch
@@ -296,20 +252,6 @@ Public Class RoomE
         End If
     End Sub
 
-    Private Sub tvBtn_Click(sender As Object, e As EventArgs)
-        If tvStatus = True Then
-            tvBtn.BackgroundImage = My.Resources.tvoff
-            tvTimer.Stop()
-            UpdateTvTime()
-            tvStatus = False
-        ElseIf tvStatus = False Then
-            tvBtn.BackgroundImage = My.Resources.tvon
-            tvTimer.Reset()
-            tvTimer.Start()
-            tvStatus = True
-        End If
-    End Sub
-
     Private Sub UpdateRoom5Pw1Time()
         Dim ts As TimeSpan = Room5Pw1Timer.Elapsed
         Room5Pw1Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
@@ -325,10 +267,6 @@ Public Class RoomE
         Room5Pw3Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
 
-    Private Sub UpdateTvTime()
-        Dim ts As TimeSpan = tvTimer.Elapsed
-        tvLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
-    End Sub
 
     Private Sub Room5Back_Click(sender As Object, e As EventArgs) Handles Room5Back.Click
         Form1.Show()
