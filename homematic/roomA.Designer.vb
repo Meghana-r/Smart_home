@@ -80,7 +80,7 @@ Partial Class RoomA
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.Room1SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.MasterBack = New System.Windows.Forms.Button()
         Me.MasterToDashboard = New System.Windows.Forms.Button()
         Me.DashButtonPanel = New System.Windows.Forms.Panel()
@@ -848,7 +848,7 @@ Partial Class RoomA
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
-        'SerialPort1
+        'Room1SerialPort1
         '
         '
         'MasterBack
@@ -976,7 +976,7 @@ Partial Class RoomA
 	Friend WithEvents MasterTabControl As MaterialSkin.Controls.MaterialTabControl
 	Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
 	Friend WithEvents Panel1 As Panel
-	Friend WithEvents SerialPort1 As IO.Ports.SerialPort
+	Friend WithEvents Room1SerialPort1 As IO.Ports.SerialPort
 	Friend WithEvents apptab As TabPage
 	Friend WithEvents tvBtn As Button
 	Friend WithEvents Room1Pw1Btn As Button

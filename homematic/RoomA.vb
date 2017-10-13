@@ -21,16 +21,16 @@ Public Class RoomA
     End Sub
 
     Private Sub setupSerial()
-        SerialPort1.Close()
-        SerialPort1.PortName = "com4"
-        SerialPort1.BaudRate = 9600
-        SerialPort1.DataBits = 8
-        SerialPort1.Parity = Parity.None
-        SerialPort1.StopBits = StopBits.One
-        SerialPort1.Handshake = Handshake.None
-        SerialPort1.Encoding = System.Text.Encoding.Default
+        Room1SerialPort1.Close()
+        Room1SerialPort1.PortName = "com4"
+        Room1SerialPort1.BaudRate = 9600
+        Room1SerialPort1.DataBits = 8
+        Room1SerialPort1.Parity = Parity.None
+        Room1SerialPort1.StopBits = StopBits.One
+        Room1SerialPort1.Handshake = Handshake.None
+        Room1SerialPort1.Encoding = System.Text.Encoding.Default
         Try
-            SerialPort1.Open()
+            Room1SerialPort1.Open()
         Catch ex As IOException
             MsgBox("Port not opened. All controls are unavailable.")
             Light1.Enabled = False
@@ -180,8 +180,8 @@ Public Class RoomA
 
     Private Delegate Sub UpdateLabelDelegate(ByVal myText As String)
 
-    Private Sub DataReceived() Handles SerialPort1.DataReceived
-        Dim reading As String = SerialPort1.ReadLine
+    Private Sub DataReceived() Handles Room1SerialPort1.DataReceived
+        Dim reading As String = Room1SerialPort1.ReadLine
         updateLabel(reading)
     End Sub
 
