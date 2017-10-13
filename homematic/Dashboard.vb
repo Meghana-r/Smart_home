@@ -1,8 +1,13 @@
 ﻿Imports MaterialSkin
 Public Class Dashboard
-
+	'Dim MasterBtnChecked As Boolean
+	'Dim kitchenBtnChecked As Boolean
+	'Dim Room1BtnChecked As Boolean
+	'Dim Room2BtnChecked As Boolean
+	'Dim BthroomBtnChecked As Boolean
 	Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
+
 		SkinManager.AddFormToManage(Me)
 		SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
 		SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
@@ -37,8 +42,14 @@ Public Class Dashboard
 	Private Sub MasterBTN_Click(sender As Object, e As EventArgs) Handles MasterBTN.Click
 		ControlPanel.Show()
 		Panel1.Hide()
+		'MasterBtnChecked = True
+		'kitchenBtnChecked = False
+		'Room1BtnChecked = False
+		'Room2BtnChecked = False
+		'BthroomBtnChecked = False
 
 	End Sub
+
 	Private Sub DashboardLightsBtn_Click(sender As Object, e As EventArgs) Handles DashboardLightsBtn.Click
 		ControlNameLbl.Text = "Lights"
 		Panel1.Show()
@@ -50,22 +61,28 @@ Public Class Dashboard
 			presenttxt(i).Text = "Room1 light" & i + 1
 
 		Next
-
-		If RoomA.Room1Light2Bri.Value = 0 Then
-			mytext(0).Text = "OFF "
-		Else
-			mytext(0).Text = "ON"
-		End If
+		'Do While RoomA.Room1Light1Bri.Value >= 0
 		If RoomA.Room1Light1Bri.Value = 0 Then
-			mytext(1).Text = "OFF "
-		Else
-			mytext(1).Text = "ON"
-		End If
+				mytext(0).Text = "OFF "
+			Else
+				mytext(0).Text = "ON"
+			End If
+		'Loop
+		'Do While RoomA.Room1Light2Bri.Value >= 0
+		If RoomA.Room1Light2Bri.Value = 0 Then
+				mytext(1).Text = "OFF "
+			Else
+				mytext(1).Text = "ON"
+			End If
+		'Loop
+		'Do While RoomA.Room1Light3Bri.Value >= 0
 		If RoomA.Room1Light3Bri.Value = 0 Then
-			mytext(2).Text = "OFF "
-		Else
-			mytext(2).Text = "ON"
-		End If
+				mytext(2).Text = "OFF "
+			Else
+				mytext(2).Text = "ON"
+			End If
+		'Loop
+
 		For x As Integer = 3 To 4
 			mytext(x).Hide()
 
@@ -76,11 +93,11 @@ Public Class Dashboard
 		ControlNameLbl.Text = "Appliances"
 		Panel1.Show()
 		ControlPanel.Hide()
-
+		mytext(4).Hide()
 		presenttxt(4).Hide()
 
 		For i As Integer = 0 To 3
-			presenttxt(i).Text = "Appliance Status" & i + 1
+			presenttxt(i).Text = "Appliance" & i + 1
 
 		Next
 		If RoomA.tvStatus = True Then
@@ -103,7 +120,7 @@ Public Class Dashboard
 		Else
 			mytext(3).Text = "OFF"
 		End If
-		mytext(4).Hide()
+
 	End Sub
 
 	Private Sub PanelBackBtn_Click(sender As Object, e As EventArgs) Handles PanelBackBtn.Click
@@ -149,4 +166,10 @@ Public Class Dashboard
 		Next
 	End Sub
 
+	Private Sub DashboardRoom1BTN_Click(sender As Object, e As EventArgs) Handles DashboardRoom1BTN.Click
+		ControlPanel.Show()
+		Panel1.Hide()
+		'MasterBtnChecked = False
+
+	End Sub
 End Class

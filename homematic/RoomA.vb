@@ -339,8 +339,8 @@ Public Class RoomA
 
     Private Sub Room1ToDashboard_Click(sender As Object, e As EventArgs) Handles Room1ToDashboard.Click
         Dashboard.Show()
-        Me.Hide()
-    End Sub
+		'Me.Hide()
+	End Sub
 
 
 End Class

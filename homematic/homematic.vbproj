@@ -275,6 +275,18 @@
     <None Include="Resources\rect815.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\DashboardBathroomIcon1.png" />
+    <None Include="Resources\dashboardMasterIcon.png" />
+    <None Include="Resources\DashboardBathroomIcon.png" />
+    <None Include="Resources\DashboardSingleBedicon.png" />
+    <None Include="Resources\DashboardKitchenIcon.png" />
+    <None Include="Resources\DashboardRoom2Icon.png" />
+    <None Include="Resources\DasboardLivingRoom.png" />
+    <None Include="Resources\Living room.png" />
+    <None Include="Resources\Kitchen.png" />
+    <None Include="Resources\Room21.png" />
+    <None Include="Resources\Room1.png" />
+    <None Include="Resources\MasterRoom1.png" />
     <None Include="Resources\homelogo1.png" />
     <None Include="Resources\menudashboard.png" />
     <None Include="Resources\dashboardmenu.png" />
@@ -296,6 +308,9 @@
     <None Include="Resources\icons8-Delete-26 %281%29.png" />
     <None Include="Resources\Blueprintnew1.png" />
     <None Include="Resources\Cards.png" />
+    <None Include="Resources\Bathroom.png" />
+    <None Include="Resources\bathrrom2.png" />
+    <None Include="Resources\BathRoom2.png" />
     <Content Include="Resources\classifiers\haarcascade_eye.xml" />
     <Content Include="Resources\classifiers\haarcascade_frontalface_default.xml" />
     <None Include="Resources\poweroff %282%29.png" />
