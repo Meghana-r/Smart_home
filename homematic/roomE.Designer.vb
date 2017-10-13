@@ -26,10 +26,6 @@ Partial Class RoomE
         Me.components = New System.ComponentModel.Container()
         Me.humidtip = New System.Windows.Forms.ToolTip(Me.components)
         Me.humidbtn = New System.Windows.Forms.Button()
-        Me.vidtab = New System.Windows.Forms.TabPage()
-        Me.Room5VidStop = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.Room5VidStart = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.ImageBox = New Emgu.CV.UI.ImageBox()
         Me.temptab = New System.Windows.Forms.TabPage()
         Me.Room5dhtTemp = New MaterialSkin.Controls.MaterialLabel()
         Me.ambientTemp = New MaterialSkin.Controls.MaterialLabel()
@@ -75,15 +71,12 @@ Partial Class RoomE
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bulb = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Room5SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.Room5ToDashboard = New System.Windows.Forms.Button()
         Me.DashButtonPanel = New System.Windows.Forms.Panel()
         Me.Room5Back = New System.Windows.Forms.Button()
-        Me.vidtab.SuspendLayout()
-        CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.temptab.SuspendLayout()
         CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.coldimage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,7 +95,6 @@ Partial Class RoomE
         Me.Room5AppBrpBox.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.bulb, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DashButtonPanel.SuspendLayout()
@@ -126,60 +118,6 @@ Partial Class RoomE
         Me.humidbtn.TabIndex = 6
         Me.humidtip.SetToolTip(Me.humidbtn, "Click to view humidity levels")
         Me.humidbtn.UseVisualStyleBackColor = False
-        '
-        'vidtab
-        '
-        Me.vidtab.BackColor = System.Drawing.Color.White
-        Me.vidtab.Controls.Add(Me.Room5VidStop)
-        Me.vidtab.Controls.Add(Me.Room5VidStart)
-        Me.vidtab.Controls.Add(Me.ImageBox)
-        Me.vidtab.Location = New System.Drawing.Point(4, 22)
-        Me.vidtab.Name = "vidtab"
-        Me.vidtab.Size = New System.Drawing.Size(746, 438)
-        Me.vidtab.TabIndex = 3
-        Me.vidtab.Text = "Surveillance"
-        Me.vidtab.UseVisualStyleBackColor = True
-        '
-        'Room5VidStop
-        '
-        Me.Room5VidStop.AutoSize = True
-        Me.Room5VidStop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Room5VidStop.Depth = 0
-        Me.Room5VidStop.Icon = Nothing
-        Me.Room5VidStop.Location = New System.Drawing.Point(645, 12)
-        Me.Room5VidStop.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Room5VidStop.Name = "Room5VidStop"
-        Me.Room5VidStop.Primary = True
-        Me.Room5VidStop.Size = New System.Drawing.Size(56, 36)
-        Me.Room5VidStop.TabIndex = 4
-        Me.Room5VidStop.Text = "Stop"
-        Me.Room5VidStop.UseVisualStyleBackColor = True
-        '
-        'Room5VidStart
-        '
-        Me.Room5VidStart.AutoSize = True
-        Me.Room5VidStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Room5VidStart.Depth = 0
-        Me.Room5VidStart.Icon = Nothing
-        Me.Room5VidStart.Location = New System.Drawing.Point(38, 12)
-        Me.Room5VidStart.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Room5VidStart.Name = "Room5VidStart"
-        Me.Room5VidStart.Primary = True
-        Me.Room5VidStart.Size = New System.Drawing.Size(64, 36)
-        Me.Room5VidStart.TabIndex = 3
-        Me.Room5VidStart.Text = "Start"
-        Me.Room5VidStart.UseVisualStyleBackColor = True
-        '
-        'ImageBox
-        '
-        Me.ImageBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ImageBox.Location = New System.Drawing.Point(38, 54)
-        Me.ImageBox.Name = "ImageBox"
-        Me.ImageBox.Size = New System.Drawing.Size(663, 342)
-        Me.ImageBox.TabIndex = 2
-        Me.ImageBox.TabStop = False
         '
         'temptab
         '
@@ -611,7 +549,6 @@ Partial Class RoomE
         Me.MasterTabControl.Controls.Add(Me.Lighttab)
         Me.MasterTabControl.Controls.Add(Me.temptab)
         Me.MasterTabControl.Controls.Add(Me.apptab)
-        Me.MasterTabControl.Controls.Add(Me.vidtab)
         Me.MasterTabControl.Depth = 0
         Me.MasterTabControl.Location = New System.Drawing.Point(0, 95)
         Me.MasterTabControl.MouseState = MaterialSkin.MouseState.HOVER
@@ -760,7 +697,6 @@ Partial Class RoomE
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.bulb)
-        Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Location = New System.Drawing.Point(35, 24)
@@ -780,17 +716,6 @@ Partial Class RoomE
         Me.bulb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.bulb.TabIndex = 2
         Me.bulb.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = Global.homematic.My.Resources.Resources.VideoIcon
-        Me.PictureBox4.Location = New System.Drawing.Point(337, 10)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(35, 30)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 5
-        Me.PictureBox4.TabStop = False
         '
         'PictureBox3
         '
@@ -871,9 +796,6 @@ Partial Class RoomE
         Me.Controls.Add(Me.MasterTabControl)
         Me.Controls.Add(Me.DashButtonPanel)
         Me.Name = "RoomE"
-        Me.vidtab.ResumeLayout(False)
-        Me.vidtab.PerformLayout()
-        CType(Me.ImageBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.temptab.ResumeLayout(False)
         Me.temptab.PerformLayout()
         CType(Me.mediumhot, System.ComponentModel.ISupportInitialize).EndInit()
@@ -899,7 +821,6 @@ Partial Class RoomE
         Me.Room5AppBrpBox.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.bulb, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DashButtonPanel.ResumeLayout(False)
@@ -909,15 +830,10 @@ Partial Class RoomE
     Friend WithEvents bulb As PictureBox
 	Friend WithEvents PictureBox2 As PictureBox
 	Friend WithEvents PictureBox3 As PictureBox
-	Friend WithEvents PictureBox4 As PictureBox
-	Friend WithEvents Room5Back As Button
-	Friend WithEvents humidtip As ToolTip
-	Friend WithEvents vidtab As TabPage
-	Friend WithEvents Room5VidStop As MaterialSkin.Controls.MaterialRaisedButton
-	Friend WithEvents Room5VidStart As MaterialSkin.Controls.MaterialRaisedButton
-	Friend WithEvents ImageBox As Emgu.CV.UI.ImageBox
-	Friend WithEvents temptab As TabPage
-	Friend WithEvents Room5TempIncBtn As Button
+    Friend WithEvents Room5Back As Button
+    Friend WithEvents humidtip As ToolTip
+    Friend WithEvents temptab As TabPage
+    Friend WithEvents Room5TempIncBtn As Button
 	Friend WithEvents Room5TempDecBtn As Button
 	Friend WithEvents Room5TempResetBtn As Button
 	Friend WithEvents humidbtn As Button

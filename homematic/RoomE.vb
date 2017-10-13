@@ -17,7 +17,6 @@ Public Class RoomE
         SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
         ' disable for debugging purposes only
         'Room5SetupSerial()
-        Room5VidStop.Hide()
     End Sub
 
     Private Sub Room5SetupSerial()
