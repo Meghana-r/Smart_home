@@ -39,4 +39,9 @@ Public Class Form1
         RoomB.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Room2btn_Click(sender As Object, e As EventArgs) Handles Room2btn.Click
+        RoomC.Show()
+        Me.Hide()
+    End Sub
 End Class
