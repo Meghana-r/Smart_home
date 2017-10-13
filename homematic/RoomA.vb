@@ -241,66 +241,6 @@ Public Class RoomA
     'code for Camera ends here
 
     ' Appliances
-    Dim tvTimer As New Stopwatch
-    Private Sub tvoff_Click(sender As Object, e As EventArgs) Handles tvoff.Click
-		tvon.Show()
-        tvoff.Hide()
-    End Sub
-
-	Private Sub tvon_Click(sender As Object, e As EventArgs) Handles tvon.Click
-		tvoff.Show()
-        tvon.Hide()
-    End Sub
-
-	Private Sub poweroff_Click(sender As Object, e As EventArgs) Handles poweroff.Click
-		poweron.Show()
-        poweroff.Hide()
-    End Sub
-
-	Private Sub poweron_Click(sender As Object, e As EventArgs) Handles poweron.Click
-		poweroff.Show()
-		poweron.Hide()
-	End Sub
-
-	Private Sub power3off_Click(sender As Object, e As EventArgs) Handles power3off.Click
-		power3on.Show()
-        power3off.Hide()
-    End Sub
-
-	Private Sub apptab_Click(sender As Object, e As EventArgs) Handles apptab.Click
-		If Appgrp.Enabled = False Then
-			MsgBox("Ports not available")
-		End If
-	End Sub
-
-	Private Sub power2off_Click_1(sender As Object, e As EventArgs) Handles power2off.Click
-		power2off.Hide()
-		power2on.Show()
-	End Sub
-
-	Private Sub power2on_Click(sender As Object, e As EventArgs) Handles power2on.Click
-		power2on.Hide()
-        power2off.Show()
-    End Sub
-
-	Private Sub power3on_Click(sender As Object, e As EventArgs) Handles power3on.Click
-		power3on.Hide()
-		power3off.Show()
-	End Sub
-
-	Private Sub MasterBack_Click(sender As Object, e As EventArgs) Handles MasterBack.Click
-		Form1.Show()
-		Me.Hide()
-	End Sub
-
-	Private Sub MasterToDashboard_Click(sender As Object, e As EventArgs) Handles MasterToDashboard.Click
-		Dashboard.Show()
-		Me.Hide()
-	End Sub
-
-	Public Sub TabSelection(ByVal tabIndex As Integer)
-		MasterTabControl.SelectedTab = MasterTabControl.TabPages(tabIndex)
-	End Sub
 
 End Class
 
