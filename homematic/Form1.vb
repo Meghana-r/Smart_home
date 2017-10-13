@@ -54,4 +54,9 @@ Public Class Form1
         RoomE.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Kitchenbtn_Click(sender As Object, e As EventArgs) Handles Kitchenbtn.Click
+        RoomF.Show()
+        Me.Hide()
+    End Sub
 End Class

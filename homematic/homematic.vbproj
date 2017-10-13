@@ -170,6 +170,12 @@
     <Compile Include="RoomE.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="roomF.Designer.vb">
+      <DependentUpon>RoomF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RoomF.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="roomE.resx">
       <DependentUpon>RoomE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomF.resx">
+      <DependentUpon>RoomF.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
