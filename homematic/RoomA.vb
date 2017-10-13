@@ -16,11 +16,11 @@ Public Class RoomA
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
 		SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
         ' disable for debugging purposes only
-        'setupSerial()
-        Room1BtnStop.Hide()
+        'Room1SetupSerial()
+        Room1VidStop.Hide()
     End Sub
 
-    Private Sub setupSerial()
+    Private Sub Room1SetupSerial()
         Room1SerialPort1.Close()
         Room1SerialPort1.PortName = "com4"
         Room1SerialPort1.BaudRate = 9600
@@ -33,10 +33,10 @@ Public Class RoomA
             Room1SerialPort1.Open()
         Catch ex As IOException
             MsgBox("Port not opened. All controls are unavailable.")
-            Light1.Enabled = False
+            Room1Light1.Enabled = False
             Room1AppBrpBox.Enabled = False
-            Light2.Enabled = False
-            light3.Enabled = False
+            Room2Light2.Enabled = False
+            Room1light3.Enabled = False
         End Try
     End Sub
 
@@ -47,14 +47,14 @@ Public Class RoomA
     Dim Room1light2SW As New Stopwatch
     Dim Room1light3SW As New Stopwatch
 
-    Private Sub brighttrack_Scroll(sender As Object, e As EventArgs) Handles Room1Light1Bri.ValueChanged
+    Private Sub Room1Light1Bri_Scroll(sender As Object, e As EventArgs) Handles Room1Light1Bri.ValueChanged
         Room1Light1Lbl.Text = String.Format("{0} %", arg0:=Room1Light1Bri.Value)
         Room1Light1Lbl.Text = Room1Light1Bri.Value.ToString
         'SerialPort1.Write(brighttrack.Value) 
         If Room1Light1Bri.Value = 0 Then
             Room1Light1off.Checked = True
             Room1light1SW.Stop()
-            UpdateTimeInfo()
+            Room1UpdtLi1TimeInfo()
         Else
             Room1Light1on.Checked = True
             Room1light1SW.Reset()
@@ -62,14 +62,14 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub brighttrack2_Scroll(sender As Object, e As EventArgs) Handles Room1Light2Bri.ValueChanged
+    Private Sub Room1Light2Bri_Scroll(sender As Object, e As EventArgs) Handles Room1Light2Bri.ValueChanged
         Room1Light2Lbl.Text = String.Format("{0} %", arg0:=Room1Light2Bri.Value)
         Room1Light2Lbl.Text = Room1Light2Bri.Value.ToString
         'SerialPort1.Write(brighttrack2.Value)
         If Room1Light2Bri.Value = 0 Then
             Room1Light2off.Checked = True
             Room1light2SW.Stop()
-            UpdateTimeInfo2()
+            Room1UpdtLi2TimeInfo()
         Else
             Room1Light2on.Checked = True
             Room1light2SW.Reset()
@@ -77,14 +77,14 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub brighttrack3_Scroll(sender As Object, e As EventArgs) Handles Room1Light3Bri.ValueChanged
+    Private Sub Room1Light3Bri_Scroll(sender As Object, e As EventArgs) Handles Room1Light3Bri.ValueChanged
         Room1Light3Lbl.Text = String.Format("{0} %", arg0:=Room1Light3Bri.Value)
         Room1Light3Lbl.Text = Room1Light3Bri.Value.ToString
         'SerialPort1.Write(brighttrack3.Value)
         If Room1Light3Bri.Value = 0 Then
             Room1Light3off.Checked = True
             Room1light3SW.Stop()
-            UpdateTimeInfo3()
+            Room1UpdtLi3TimeInfo()
         Else
             Room1Light3on.Checked = True
             Room1light3SW.Reset()
@@ -92,7 +92,7 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub checkBox1Status() Handles Room1Light1off.CheckedChanged, Room1Light1on.CheckedChanged
+    Private Sub Room1Light1ChkStatus() Handles Room1Light1off.CheckedChanged, Room1Light1on.CheckedChanged
         If Room1Light1off.Checked = True And Room1Light1on.Checked = False Then
             Room1Light1Bri.Value = 0
         ElseIf Room1Light1off.Checked = False And Room1Light1on.Checked = True Then
@@ -100,7 +100,7 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub checkBox2Status() Handles Room1Light2off.CheckedChanged, Room1Light2on.CheckedChanged
+    Private Sub Room1Light2ChkStatus() Handles Room1Light2off.CheckedChanged, Room1Light2on.CheckedChanged
         If Room1Light2off.Checked = True And Room1Light2on.Checked = False Then
             Room1Light2Bri.Value = 0
         ElseIf Room1Light2off.Checked = False And Room1Light2on.Checked = True Then
@@ -108,7 +108,7 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub checkBox3Status() Handles Room1Light3off.CheckedChanged, Room1Light3on.CheckedChanged
+    Private Sub Room1Light3Status() Handles Room1Light3off.CheckedChanged, Room1Light3on.CheckedChanged
         If Room1Light3off.Checked = True And Room1Light3on.Checked = False Then
             Room1Light3Bri.Value = 0
         ElseIf Room1Light3off.Checked = False And Room1Light3on.Checked = True Then
@@ -116,17 +116,17 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub UpdateTimeInfo()
+    Private Sub Room1UpdtLi1TimeInfo()
         Dim ts As TimeSpan = Room1light1SW.Elapsed
         Room1Light1TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
 
-    Private Sub UpdateTimeInfo2()
+    Private Sub Room1UpdtLi2TimeInfo()
         Dim ts As TimeSpan = Room1light2SW.Elapsed
         Room1Light2TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
 
-    Private Sub UpdateTimeInfo3()
+    Private Sub Room1UpdtLi3TimeInfo()
         Dim ts As TimeSpan = Room1light3SW.Elapsed
         Room1Light3TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
@@ -134,15 +134,17 @@ Public Class RoomA
 
 
     'code for Climate settings start here
-    Private Sub Increasebtn_Click(sender As Object, e As EventArgs) Handles Room1TempIncBtn.Click
-        climateBtnClick(1)
+
+    Private Sub Room1TempIncBtn_Click(sender As Object, e As EventArgs) Handles Room1TempIncBtn.Click
+        Room1ClimateBtnClick(1)
     End Sub
 
-    Private Sub Decreasebtn_Click(sender As Object, e As EventArgs) Handles Room1TempDecBtn.Click
-        climateBtnClick(0)
+    Private Sub Room1TempDecBtn_Click(sender As Object, e As EventArgs) Handles Room1TempDecBtn.Click
+        Room1ClimateBtnClick(0)
     End Sub
 
-    Private Sub climateBtnClick(ByVal index As Int64)
+
+    Private Sub Room1ClimateBtnClick(ByVal index As Int64)
         Dim n As Integer
         n = Integer.Parse(Room1TempLbl.Text)
         If index = 1 Then
@@ -170,7 +172,7 @@ Public Class RoomA
     End Sub
 
 
-    Private Sub resetbtn_Click(sender As Object, e As EventArgs) Handles Room1TempResetBtn.Click
+    Private Sub Room1TempResetBtn_Click(sender As Object, e As EventArgs) Handles Room1TempResetBtn.Click
         Dim m As Integer
         m = Integer.Parse(Room1TempLbl.Text)
         m = 50
@@ -178,16 +180,16 @@ Public Class RoomA
         Room1TempLbl2.Text = m.ToString
     End Sub
 
-    Private Delegate Sub UpdateLabelDelegate(ByVal myText As String)
+    Private Delegate Sub Room1UpdateLabelDelegate(ByVal myText As String)
 
-    Private Sub DataReceived() Handles Room1SerialPort1.DataReceived
+    Private Sub Room1DataReceived() Handles Room1SerialPort1.DataReceived
         Dim reading As String = Room1SerialPort1.ReadLine
-        updateLabel(reading)
+        Room1UpdateLabel(reading)
     End Sub
 
-    Private Sub updateLabel(ByVal text As String)
+    Private Sub Room1UpdateLabel(ByVal text As String)
         If Me.Room1dhtTemp.InvokeRequired Then
-            Dim d As New UpdateLabelDelegate(AddressOf updateLabel)
+            Dim d As New Room1UpdateLabelDelegate(AddressOf Room1UpdateLabel)
             Me.Room1dhtTemp.Invoke(d, New Object() {text})
         Else
             Room1dhtTemp.Text = text
@@ -196,47 +198,47 @@ Public Class RoomA
     'code for Climate settings end here
 
     'code for camera starts here
-    Dim cameraCapture As VideoCapture
-    Dim imageFrame As Mat
-    Dim faceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
+    Dim Room1CameraCapture As VideoCapture
+    Dim Room1ImageFrame As Mat
+    Dim Room1FaceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
 
 
-    Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles Room1VidStart.Click
-        startCam()
+    Private Sub Room1VidStart_Click(sender As Object, e As EventArgs) Handles Room1VidStart.Click
+        Room1StartCam()
     End Sub
 
-    Private Sub startCam()
-        cameraCapture = New VideoCapture()
-        If Not cameraCapture.IsOpened Then
+    Private Sub Room1StartCam()
+        Room1CameraCapture = New VideoCapture()
+        If Not Room1CameraCapture.IsOpened Then
             MsgBox("camera not found!")
         Else
             Room1VidStart.Hide()
-            Room1BtnStop.Show()
+            Room1VidStop.Show()
         End If
-        AddHandler Application.Idle, AddressOf processCapture ' call the function when the event is raised.
+        AddHandler Application.Idle, AddressOf Room1ProcessCapture ' call the function when the event is raised.
     End Sub
 
-    Private Sub processCapture(sender As System.Object, e As System.EventArgs)
-        imageFrame = cameraCapture.QuerySmallFrame
+    Private Sub Room1ProcessCapture(sender As System.Object, e As System.EventArgs)
+        Room1ImageFrame = Room1CameraCapture.QuerySmallFrame
 
-        If imageFrame IsNot Nothing Then
-            For Each face As Rectangle In faceDetector.DetectMultiScale(
-                         imageFrame, 'the frame where it is suposed to detect
+        If Room1ImageFrame IsNot Nothing Then
+            For Each face As Rectangle In Room1FaceDetector.DetectMultiScale(
+                         Room1ImageFrame, 'the frame where it is suposed to detect
                          1.1,        'the relative size of scanning window for the next pass
                          10,      ' minimum neighbours to group as a single detected frame
                          New Size(20, 20), ' size of the window
                          Size.Empty)      'maximum size of the window
-                CvInvoke.Rectangle(imageFrame, face, New MCvScalar(255, 255, 255)) ' DRAW a rectangle around the detected area
+                CvInvoke.Rectangle(Room1ImageFrame, face, New MCvScalar(255, 255, 255)) ' DRAW a rectangle around the detected area
             Next
         End If
 
-        ImageBox.Image = imageFrame
+        ImageBox.Image = Room1ImageFrame
     End Sub
 
-    Private Sub BtnStop_Click(sender As Object, e As EventArgs) Handles Room1BtnStop.Click
-        Room1BtnStop.Hide()
+    Private Sub Room1VidStop_Click(sender As Object, e As EventArgs) Handles Room1VidStop.Click
+        Room1VidStop.Hide()
         Room1VidStart.Show()
-        cameraCapture.Dispose()
+        Room1CameraCapture.Dispose()
     End Sub
     'code for Camera ends here
 
@@ -328,14 +330,16 @@ Public Class RoomA
         tvLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
     End Sub
 
-    Private Sub MasterBack_Click(sender As Object, e As EventArgs) Handles MasterBack.Click
+    Private Sub Room1Back_Click(sender As Object, e As EventArgs) Handles Room1Back.Click
         Form1.Show()
         Me.Hide()
     End Sub
 
-    Private Sub MasterToDashboard_Click(sender As Object, e As EventArgs) Handles MasterToDashboard.Click
+    Private Sub Room1ToDashboard_Click(sender As Object, e As EventArgs) Handles Room1ToDashboard.Click
         Dashboard.Show()
         Me.Hide()
     End Sub
+
+
 End Class
 
