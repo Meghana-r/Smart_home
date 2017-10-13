@@ -27,49 +27,49 @@ Partial Class RoomA
         Me.humidtip = New System.Windows.Forms.ToolTip(Me.components)
         Me.humidbtn = New System.Windows.Forms.Button()
         Me.vidtab = New System.Windows.Forms.TabPage()
-        Me.BtnStop = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.BtnStart = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Room1BtnStop = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Room1VidStart = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.ImageBox = New Emgu.CV.UI.ImageBox()
         Me.temptab = New System.Windows.Forms.TabPage()
-        Me.dhtTemp = New MaterialSkin.Controls.MaterialLabel()
+        Me.Room1dhtTemp = New MaterialSkin.Controls.MaterialLabel()
         Me.ambientTemp = New MaterialSkin.Controls.MaterialLabel()
-        Me.Increasebtn = New System.Windows.Forms.Button()
-        Me.Decreasebtn = New System.Windows.Forms.Button()
-        Me.resetbtn = New System.Windows.Forms.Button()
+        Me.Room1TempIncBtn = New System.Windows.Forms.Button()
+        Me.Room1TempDecBtn = New System.Windows.Forms.Button()
+        Me.Room1TempResetBtn = New System.Windows.Forms.Button()
         Me.mediumhot = New System.Windows.Forms.PictureBox()
         Me.coldimage = New System.Windows.Forms.PictureBox()
         Me.sunimage = New System.Windows.Forms.PictureBox()
-        Me.templabel = New System.Windows.Forms.Label()
-        Me.templabel2 = New System.Windows.Forms.Label()
+        Me.Room1TempLbl = New System.Windows.Forms.Label()
+        Me.Room1TempLbl2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Lighttab = New System.Windows.Forms.TabPage()
         Me.light3 = New System.Windows.Forms.GroupBox()
-        Me.timerlabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.brightness2 = New System.Windows.Forms.Label()
-        Me.lit2on = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.lit2off = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.brighttrack3 = New System.Windows.Forms.TrackBar()
+        Me.Room1Light3TimerLbl = New MaterialSkin.Controls.MaterialLabel()
+        Me.Room1Light3Lbl = New System.Windows.Forms.Label()
+        Me.Room1Light3on = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Room1Light3off = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Room1Light3Bri = New System.Windows.Forms.TrackBar()
         Me.Light2 = New System.Windows.Forms.GroupBox()
-        Me.timerLabel2 = New MaterialSkin.Controls.MaterialLabel()
-        Me.lit1on = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.lit1off = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.brightness1 = New System.Windows.Forms.Label()
-        Me.brighttrack2 = New System.Windows.Forms.TrackBar()
+        Me.Room1Light2TimerLbl = New MaterialSkin.Controls.MaterialLabel()
+        Me.Room1Light2on = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Room1Light2off = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Room1Light2Lbl = New System.Windows.Forms.Label()
+        Me.Room1Light2Bri = New System.Windows.Forms.TrackBar()
         Me.Light1 = New System.Windows.Forms.GroupBox()
-        Me.timerLabel = New MaterialSkin.Controls.MaterialLabel()
-        Me.lighton = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.brightness = New System.Windows.Forms.Label()
-        Me.lightoff = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.brighttrack = New System.Windows.Forms.TrackBar()
+        Me.Room1Light1TimerLbl = New MaterialSkin.Controls.MaterialLabel()
+        Me.Room1Light1on = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Room1Light1Lbl = New System.Windows.Forms.Label()
+        Me.Room1Light1off = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Room1Light1Bri = New System.Windows.Forms.TrackBar()
         Me.MasterTabControl = New MaterialSkin.Controls.MaterialTabControl()
         Me.apptab = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Room1AppGrpBox2 = New System.Windows.Forms.GroupBox()
         Me.Room1Pw2Lbl = New MaterialSkin.Controls.MaterialLabel()
         Me.Room1Pw3Lbl = New MaterialSkin.Controls.MaterialLabel()
         Me.Room1Pw2Btn = New System.Windows.Forms.Button()
         Me.Room1Pw3Btn = New System.Windows.Forms.Button()
-        Me.Appgrp = New System.Windows.Forms.GroupBox()
+        Me.Room1AppBrpBox = New System.Windows.Forms.GroupBox()
         Me.Room1Pw1Lbl = New MaterialSkin.Controls.MaterialLabel()
         Me.tvBtn = New System.Windows.Forms.Button()
         Me.Room1Pw1Btn = New System.Windows.Forms.Button()
@@ -93,15 +93,15 @@ Partial Class RoomA
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Lighttab.SuspendLayout()
         Me.light3.SuspendLayout()
-        CType(Me.brighttrack3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Room1Light3Bri, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Light2.SuspendLayout()
-        CType(Me.brighttrack2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Room1Light2Bri, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Light1.SuspendLayout()
-        CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Room1Light1Bri, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MasterTabControl.SuspendLayout()
         Me.apptab.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.Appgrp.SuspendLayout()
+        Me.Room1AppGrpBox2.SuspendLayout()
+        Me.Room1AppBrpBox.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.bulb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -132,8 +132,8 @@ Partial Class RoomA
         'vidtab
         '
         Me.vidtab.BackColor = System.Drawing.Color.White
-        Me.vidtab.Controls.Add(Me.BtnStop)
-        Me.vidtab.Controls.Add(Me.BtnStart)
+        Me.vidtab.Controls.Add(Me.Room1BtnStop)
+        Me.vidtab.Controls.Add(Me.Room1VidStart)
         Me.vidtab.Controls.Add(Me.ImageBox)
         Me.vidtab.Location = New System.Drawing.Point(4, 22)
         Me.vidtab.Name = "vidtab"
@@ -142,35 +142,35 @@ Partial Class RoomA
         Me.vidtab.Text = "Surveillance"
         Me.vidtab.UseVisualStyleBackColor = True
         '
-        'BtnStop
+        'Room1BtnStop
         '
-        Me.BtnStop.AutoSize = True
-        Me.BtnStop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BtnStop.Depth = 0
-        Me.BtnStop.Icon = Nothing
-        Me.BtnStop.Location = New System.Drawing.Point(645, 12)
-        Me.BtnStop.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BtnStop.Name = "BtnStop"
-        Me.BtnStop.Primary = True
-        Me.BtnStop.Size = New System.Drawing.Size(56, 36)
-        Me.BtnStop.TabIndex = 4
-        Me.BtnStop.Text = "Stop"
-        Me.BtnStop.UseVisualStyleBackColor = True
+        Me.Room1BtnStop.AutoSize = True
+        Me.Room1BtnStop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Room1BtnStop.Depth = 0
+        Me.Room1BtnStop.Icon = Nothing
+        Me.Room1BtnStop.Location = New System.Drawing.Point(645, 12)
+        Me.Room1BtnStop.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1BtnStop.Name = "Room1BtnStop"
+        Me.Room1BtnStop.Primary = True
+        Me.Room1BtnStop.Size = New System.Drawing.Size(56, 36)
+        Me.Room1BtnStop.TabIndex = 4
+        Me.Room1BtnStop.Text = "Stop"
+        Me.Room1BtnStop.UseVisualStyleBackColor = True
         '
-        'BtnStart
+        'Room1VidStart
         '
-        Me.BtnStart.AutoSize = True
-        Me.BtnStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BtnStart.Depth = 0
-        Me.BtnStart.Icon = Nothing
-        Me.BtnStart.Location = New System.Drawing.Point(38, 12)
-        Me.BtnStart.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BtnStart.Name = "BtnStart"
-        Me.BtnStart.Primary = True
-        Me.BtnStart.Size = New System.Drawing.Size(64, 36)
-        Me.BtnStart.TabIndex = 3
-        Me.BtnStart.Text = "Start"
-        Me.BtnStart.UseVisualStyleBackColor = True
+        Me.Room1VidStart.AutoSize = True
+        Me.Room1VidStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Room1VidStart.Depth = 0
+        Me.Room1VidStart.Icon = Nothing
+        Me.Room1VidStart.Location = New System.Drawing.Point(38, 12)
+        Me.Room1VidStart.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1VidStart.Name = "Room1VidStart"
+        Me.Room1VidStart.Primary = True
+        Me.Room1VidStart.Size = New System.Drawing.Size(64, 36)
+        Me.Room1VidStart.TabIndex = 3
+        Me.Room1VidStart.Text = "Start"
+        Me.Room1VidStart.UseVisualStyleBackColor = True
         '
         'ImageBox
         '
@@ -186,17 +186,17 @@ Partial Class RoomA
         'temptab
         '
         Me.temptab.BackColor = System.Drawing.Color.White
-        Me.temptab.Controls.Add(Me.dhtTemp)
+        Me.temptab.Controls.Add(Me.Room1dhtTemp)
         Me.temptab.Controls.Add(Me.ambientTemp)
-        Me.temptab.Controls.Add(Me.Increasebtn)
-        Me.temptab.Controls.Add(Me.Decreasebtn)
-        Me.temptab.Controls.Add(Me.resetbtn)
+        Me.temptab.Controls.Add(Me.Room1TempIncBtn)
+        Me.temptab.Controls.Add(Me.Room1TempDecBtn)
+        Me.temptab.Controls.Add(Me.Room1TempResetBtn)
         Me.temptab.Controls.Add(Me.humidbtn)
         Me.temptab.Controls.Add(Me.mediumhot)
         Me.temptab.Controls.Add(Me.coldimage)
         Me.temptab.Controls.Add(Me.sunimage)
-        Me.temptab.Controls.Add(Me.templabel)
-        Me.temptab.Controls.Add(Me.templabel2)
+        Me.temptab.Controls.Add(Me.Room1TempLbl)
+        Me.temptab.Controls.Add(Me.Room1TempLbl2)
         Me.temptab.Controls.Add(Me.PictureBox1)
         Me.temptab.Location = New System.Drawing.Point(4, 22)
         Me.temptab.Name = "temptab"
@@ -205,18 +205,18 @@ Partial Class RoomA
         Me.temptab.TabIndex = 1
         Me.temptab.Text = "Climate"
         '
-        'dhtTemp
+        'Room1dhtTemp
         '
-        Me.dhtTemp.AutoSize = True
-        Me.dhtTemp.Depth = 0
-        Me.dhtTemp.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.dhtTemp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.dhtTemp.Location = New System.Drawing.Point(422, 22)
-        Me.dhtTemp.MouseState = MaterialSkin.MouseState.HOVER
-        Me.dhtTemp.Name = "dhtTemp"
-        Me.dhtTemp.Size = New System.Drawing.Size(17, 19)
-        Me.dhtTemp.TabIndex = 12
-        Me.dhtTemp.Text = "0"
+        Me.Room1dhtTemp.AutoSize = True
+        Me.Room1dhtTemp.Depth = 0
+        Me.Room1dhtTemp.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Room1dhtTemp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Room1dhtTemp.Location = New System.Drawing.Point(422, 22)
+        Me.Room1dhtTemp.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1dhtTemp.Name = "Room1dhtTemp"
+        Me.Room1dhtTemp.Size = New System.Drawing.Size(17, 19)
+        Me.Room1dhtTemp.TabIndex = 12
+        Me.Room1dhtTemp.Text = "0"
         '
         'ambientTemp
         '
@@ -231,47 +231,47 @@ Partial Class RoomA
         Me.ambientTemp.TabIndex = 11
         Me.ambientTemp.Text = "Temparature and Humidity"
         '
-        'Increasebtn
+        'Room1TempIncBtn
         '
-        Me.Increasebtn.BackColor = System.Drawing.Color.Transparent
-        Me.Increasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.TempIncrease
-        Me.Increasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Increasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Increasebtn.FlatAppearance.BorderSize = 0
-        Me.Increasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Increasebtn.Location = New System.Drawing.Point(115, 112)
-        Me.Increasebtn.Name = "Increasebtn"
-        Me.Increasebtn.Size = New System.Drawing.Size(36, 31)
-        Me.Increasebtn.TabIndex = 9
-        Me.Increasebtn.UseVisualStyleBackColor = False
+        Me.Room1TempIncBtn.BackColor = System.Drawing.Color.Transparent
+        Me.Room1TempIncBtn.BackgroundImage = Global.homematic.My.Resources.Resources.TempIncrease
+        Me.Room1TempIncBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Room1TempIncBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Room1TempIncBtn.FlatAppearance.BorderSize = 0
+        Me.Room1TempIncBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Room1TempIncBtn.Location = New System.Drawing.Point(115, 112)
+        Me.Room1TempIncBtn.Name = "Room1TempIncBtn"
+        Me.Room1TempIncBtn.Size = New System.Drawing.Size(36, 31)
+        Me.Room1TempIncBtn.TabIndex = 9
+        Me.Room1TempIncBtn.UseVisualStyleBackColor = False
         '
-        'Decreasebtn
+        'Room1TempDecBtn
         '
-        Me.Decreasebtn.BackColor = System.Drawing.Color.Transparent
-        Me.Decreasebtn.BackgroundImage = Global.homematic.My.Resources.Resources.TempDecrease
-        Me.Decreasebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Decreasebtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Decreasebtn.FlatAppearance.BorderSize = 0
-        Me.Decreasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Decreasebtn.Location = New System.Drawing.Point(115, 237)
-        Me.Decreasebtn.Name = "Decreasebtn"
-        Me.Decreasebtn.Size = New System.Drawing.Size(36, 31)
-        Me.Decreasebtn.TabIndex = 8
-        Me.Decreasebtn.UseVisualStyleBackColor = False
+        Me.Room1TempDecBtn.BackColor = System.Drawing.Color.Transparent
+        Me.Room1TempDecBtn.BackgroundImage = Global.homematic.My.Resources.Resources.TempDecrease
+        Me.Room1TempDecBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Room1TempDecBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Room1TempDecBtn.FlatAppearance.BorderSize = 0
+        Me.Room1TempDecBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Room1TempDecBtn.Location = New System.Drawing.Point(115, 237)
+        Me.Room1TempDecBtn.Name = "Room1TempDecBtn"
+        Me.Room1TempDecBtn.Size = New System.Drawing.Size(36, 31)
+        Me.Room1TempDecBtn.TabIndex = 8
+        Me.Room1TempDecBtn.UseVisualStyleBackColor = False
         '
-        'resetbtn
+        'Room1TempResetBtn
         '
-        Me.resetbtn.BackColor = System.Drawing.Color.Transparent
-        Me.resetbtn.BackgroundImage = Global.homematic.My.Resources.Resources.Reset
-        Me.resetbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.resetbtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.resetbtn.FlatAppearance.BorderSize = 0
-        Me.resetbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.resetbtn.Location = New System.Drawing.Point(470, 182)
-        Me.resetbtn.Name = "resetbtn"
-        Me.resetbtn.Size = New System.Drawing.Size(36, 31)
-        Me.resetbtn.TabIndex = 7
-        Me.resetbtn.UseVisualStyleBackColor = False
+        Me.Room1TempResetBtn.BackColor = System.Drawing.Color.Transparent
+        Me.Room1TempResetBtn.BackgroundImage = Global.homematic.My.Resources.Resources.Reset
+        Me.Room1TempResetBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Room1TempResetBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Room1TempResetBtn.FlatAppearance.BorderSize = 0
+        Me.Room1TempResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Room1TempResetBtn.Location = New System.Drawing.Point(470, 182)
+        Me.Room1TempResetBtn.Name = "Room1TempResetBtn"
+        Me.Room1TempResetBtn.Size = New System.Drawing.Size(36, 31)
+        Me.Room1TempResetBtn.TabIndex = 7
+        Me.Room1TempResetBtn.UseVisualStyleBackColor = False
         '
         'mediumhot
         '
@@ -306,29 +306,29 @@ Partial Class RoomA
         Me.sunimage.TabIndex = 3
         Me.sunimage.TabStop = False
         '
-        'templabel
+        'Room1TempLbl
         '
-        Me.templabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.templabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.templabel.ForeColor = System.Drawing.Color.White
-        Me.templabel.Location = New System.Drawing.Point(330, 105)
-        Me.templabel.Name = "templabel"
-        Me.templabel.Size = New System.Drawing.Size(40, 38)
-        Me.templabel.TabIndex = 2
-        Me.templabel.Text = "50"
-        Me.templabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Room1TempLbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.Room1TempLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Room1TempLbl.ForeColor = System.Drawing.Color.White
+        Me.Room1TempLbl.Location = New System.Drawing.Point(330, 105)
+        Me.Room1TempLbl.Name = "Room1TempLbl"
+        Me.Room1TempLbl.Size = New System.Drawing.Size(40, 38)
+        Me.Room1TempLbl.TabIndex = 2
+        Me.Room1TempLbl.Text = "50"
+        Me.Room1TempLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'templabel2
+        'Room1TempLbl2
         '
-        Me.templabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.templabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.templabel2.ForeColor = System.Drawing.Color.White
-        Me.templabel2.Location = New System.Drawing.Point(320, 168)
-        Me.templabel2.Name = "templabel2"
-        Me.templabel2.Size = New System.Drawing.Size(100, 59)
-        Me.templabel2.TabIndex = 1
-        Me.templabel2.Text = "50"
-        Me.templabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Room1TempLbl2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.Room1TempLbl2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Room1TempLbl2.ForeColor = System.Drawing.Color.White
+        Me.Room1TempLbl2.Location = New System.Drawing.Point(320, 168)
+        Me.Room1TempLbl2.Name = "Room1TempLbl2"
+        Me.Room1TempLbl2.Size = New System.Drawing.Size(100, 59)
+        Me.Room1TempLbl2.TabIndex = 1
+        Me.Room1TempLbl2.Text = "50"
+        Me.Room1TempLbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox1
         '
@@ -358,11 +358,11 @@ Partial Class RoomA
         Me.light3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.light3.Controls.Add(Me.timerlabel3)
-        Me.light3.Controls.Add(Me.brightness2)
-        Me.light3.Controls.Add(Me.lit2on)
-        Me.light3.Controls.Add(Me.lit2off)
-        Me.light3.Controls.Add(Me.brighttrack3)
+        Me.light3.Controls.Add(Me.Room1Light3TimerLbl)
+        Me.light3.Controls.Add(Me.Room1Light3Lbl)
+        Me.light3.Controls.Add(Me.Room1Light3on)
+        Me.light3.Controls.Add(Me.Room1Light3off)
+        Me.light3.Controls.Add(Me.Room1Light3Bri)
         Me.light3.Location = New System.Drawing.Point(3, 295)
         Me.light3.Name = "light3"
         Me.light3.Size = New System.Drawing.Size(740, 140)
@@ -370,84 +370,84 @@ Partial Class RoomA
         Me.light3.TabStop = False
         Me.light3.Text = "light3"
         '
-        'timerlabel3
+        'Room1Light3TimerLbl
         '
-        Me.timerlabel3.AutoSize = True
-        Me.timerlabel3.Depth = 0
-        Me.timerlabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.timerlabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.timerlabel3.Location = New System.Drawing.Point(6, 75)
-        Me.timerlabel3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.timerlabel3.Name = "timerlabel3"
-        Me.timerlabel3.Size = New System.Drawing.Size(39, 19)
-        Me.timerlabel3.TabIndex = 20
-        Me.timerlabel3.Text = "time"
+        Me.Room1Light3TimerLbl.AutoSize = True
+        Me.Room1Light3TimerLbl.Depth = 0
+        Me.Room1Light3TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Room1Light3TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Room1Light3TimerLbl.Location = New System.Drawing.Point(6, 75)
+        Me.Room1Light3TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light3TimerLbl.Name = "Room1Light3TimerLbl"
+        Me.Room1Light3TimerLbl.Size = New System.Drawing.Size(39, 19)
+        Me.Room1Light3TimerLbl.TabIndex = 20
+        Me.Room1Light3TimerLbl.Text = "time"
         '
-        'brightness2
+        'Room1Light3Lbl
         '
-        Me.brightness2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.brightness2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.brightness2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.brightness2.ForeColor = System.Drawing.Color.White
-        Me.brightness2.Location = New System.Drawing.Point(179, 75)
-        Me.brightness2.Name = "brightness2"
-        Me.brightness2.Size = New System.Drawing.Size(40, 30)
-        Me.brightness2.TabIndex = 18
-        Me.brightness2.Text = "0"
-        Me.brightness2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Room1Light3Lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.Room1Light3Lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Room1Light3Lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Room1Light3Lbl.ForeColor = System.Drawing.Color.White
+        Me.Room1Light3Lbl.Location = New System.Drawing.Point(179, 75)
+        Me.Room1Light3Lbl.Name = "Room1Light3Lbl"
+        Me.Room1Light3Lbl.Size = New System.Drawing.Size(40, 30)
+        Me.Room1Light3Lbl.TabIndex = 18
+        Me.Room1Light3Lbl.Text = "0"
+        Me.Room1Light3Lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lit2on
+        'Room1Light3on
         '
-        Me.lit2on.Depth = 0
-        Me.lit2on.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.lit2on.Location = New System.Drawing.Point(113, 33)
-        Me.lit2on.Margin = New System.Windows.Forms.Padding(0)
-        Me.lit2on.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.lit2on.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lit2on.Name = "lit2on"
-        Me.lit2on.Ripple = True
-        Me.lit2on.Size = New System.Drawing.Size(55, 30)
-        Me.lit2on.TabIndex = 0
-        Me.lit2on.Text = "ON"
-        Me.lit2on.UseVisualStyleBackColor = True
+        Me.Room1Light3on.Depth = 0
+        Me.Room1Light3on.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Room1Light3on.Location = New System.Drawing.Point(113, 33)
+        Me.Room1Light3on.Margin = New System.Windows.Forms.Padding(0)
+        Me.Room1Light3on.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Room1Light3on.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light3on.Name = "Room1Light3on"
+        Me.Room1Light3on.Ripple = True
+        Me.Room1Light3on.Size = New System.Drawing.Size(55, 30)
+        Me.Room1Light3on.TabIndex = 0
+        Me.Room1Light3on.Text = "ON"
+        Me.Room1Light3on.UseVisualStyleBackColor = True
         '
-        'lit2off
+        'Room1Light3off
         '
-        Me.lit2off.Depth = 0
-        Me.lit2off.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.lit2off.Location = New System.Drawing.Point(580, 16)
-        Me.lit2off.Margin = New System.Windows.Forms.Padding(0)
-        Me.lit2off.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.lit2off.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lit2off.Name = "lit2off"
-        Me.lit2off.Ripple = True
-        Me.lit2off.Size = New System.Drawing.Size(55, 30)
-        Me.lit2off.TabIndex = 1
-        Me.lit2off.Text = "OFF"
-        Me.lit2off.UseVisualStyleBackColor = True
+        Me.Room1Light3off.Depth = 0
+        Me.Room1Light3off.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Room1Light3off.Location = New System.Drawing.Point(580, 16)
+        Me.Room1Light3off.Margin = New System.Windows.Forms.Padding(0)
+        Me.Room1Light3off.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Room1Light3off.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light3off.Name = "Room1Light3off"
+        Me.Room1Light3off.Ripple = True
+        Me.Room1Light3off.Size = New System.Drawing.Size(55, 30)
+        Me.Room1Light3off.TabIndex = 1
+        Me.Room1Light3off.Text = "OFF"
+        Me.Room1Light3off.UseVisualStyleBackColor = True
         '
-        'brighttrack3
+        'Room1Light3Bri
         '
-        Me.brighttrack3.LargeChange = 1
-        Me.brighttrack3.Location = New System.Drawing.Point(229, 69)
-        Me.brighttrack3.Maximum = 4
-        Me.brighttrack3.Name = "brighttrack3"
-        Me.brighttrack3.Size = New System.Drawing.Size(325, 45)
-        Me.brighttrack3.TabIndex = 1
-        Me.brighttrack3.TabStop = False
-        Me.brighttrack3.TickStyle = System.Windows.Forms.TickStyle.None
-        Me.brighttrack3.Value = 4
+        Me.Room1Light3Bri.LargeChange = 1
+        Me.Room1Light3Bri.Location = New System.Drawing.Point(229, 69)
+        Me.Room1Light3Bri.Maximum = 4
+        Me.Room1Light3Bri.Name = "Room1Light3Bri"
+        Me.Room1Light3Bri.Size = New System.Drawing.Size(325, 45)
+        Me.Room1Light3Bri.TabIndex = 1
+        Me.Room1Light3Bri.TabStop = False
+        Me.Room1Light3Bri.TickStyle = System.Windows.Forms.TickStyle.None
+        Me.Room1Light3Bri.Value = 4
         '
         'Light2
         '
         Me.Light2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Light2.Controls.Add(Me.timerLabel2)
-        Me.Light2.Controls.Add(Me.lit1on)
-        Me.Light2.Controls.Add(Me.lit1off)
-        Me.Light2.Controls.Add(Me.brightness1)
-        Me.Light2.Controls.Add(Me.brighttrack2)
+        Me.Light2.Controls.Add(Me.Room1Light2TimerLbl)
+        Me.Light2.Controls.Add(Me.Room1Light2on)
+        Me.Light2.Controls.Add(Me.Room1Light2off)
+        Me.Light2.Controls.Add(Me.Room1Light2Lbl)
+        Me.Light2.Controls.Add(Me.Room1Light2Bri)
         Me.Light2.Location = New System.Drawing.Point(3, 153)
         Me.Light2.Name = "Light2"
         Me.Light2.Size = New System.Drawing.Size(740, 140)
@@ -455,84 +455,84 @@ Partial Class RoomA
         Me.Light2.TabStop = False
         Me.Light2.Text = "light2"
         '
-        'timerLabel2
+        'Room1Light2TimerLbl
         '
-        Me.timerLabel2.AutoSize = True
-        Me.timerLabel2.Depth = 0
-        Me.timerLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.timerLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.timerLabel2.Location = New System.Drawing.Point(6, 95)
-        Me.timerLabel2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.timerLabel2.Name = "timerLabel2"
-        Me.timerLabel2.Size = New System.Drawing.Size(39, 19)
-        Me.timerLabel2.TabIndex = 19
-        Me.timerLabel2.Text = "time"
+        Me.Room1Light2TimerLbl.AutoSize = True
+        Me.Room1Light2TimerLbl.Depth = 0
+        Me.Room1Light2TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Room1Light2TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Room1Light2TimerLbl.Location = New System.Drawing.Point(6, 95)
+        Me.Room1Light2TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light2TimerLbl.Name = "Room1Light2TimerLbl"
+        Me.Room1Light2TimerLbl.Size = New System.Drawing.Size(39, 19)
+        Me.Room1Light2TimerLbl.TabIndex = 19
+        Me.Room1Light2TimerLbl.Text = "time"
         '
-        'lit1on
+        'Room1Light2on
         '
-        Me.lit1on.Depth = 0
-        Me.lit1on.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.lit1on.Location = New System.Drawing.Point(113, 29)
-        Me.lit1on.Margin = New System.Windows.Forms.Padding(0)
-        Me.lit1on.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.lit1on.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lit1on.Name = "lit1on"
-        Me.lit1on.Ripple = True
-        Me.lit1on.Size = New System.Drawing.Size(55, 30)
-        Me.lit1on.TabIndex = 0
-        Me.lit1on.Text = "ON"
-        Me.lit1on.UseVisualStyleBackColor = True
+        Me.Room1Light2on.Depth = 0
+        Me.Room1Light2on.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Room1Light2on.Location = New System.Drawing.Point(113, 29)
+        Me.Room1Light2on.Margin = New System.Windows.Forms.Padding(0)
+        Me.Room1Light2on.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Room1Light2on.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light2on.Name = "Room1Light2on"
+        Me.Room1Light2on.Ripple = True
+        Me.Room1Light2on.Size = New System.Drawing.Size(55, 30)
+        Me.Room1Light2on.TabIndex = 0
+        Me.Room1Light2on.Text = "ON"
+        Me.Room1Light2on.UseVisualStyleBackColor = True
         '
-        'lit1off
+        'Room1Light2off
         '
-        Me.lit1off.Depth = 0
-        Me.lit1off.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.lit1off.Location = New System.Drawing.Point(580, 29)
-        Me.lit1off.Margin = New System.Windows.Forms.Padding(0)
-        Me.lit1off.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.lit1off.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lit1off.Name = "lit1off"
-        Me.lit1off.Ripple = True
-        Me.lit1off.Size = New System.Drawing.Size(55, 30)
-        Me.lit1off.TabIndex = 1
-        Me.lit1off.Text = "OFF"
-        Me.lit1off.UseVisualStyleBackColor = True
+        Me.Room1Light2off.Depth = 0
+        Me.Room1Light2off.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Room1Light2off.Location = New System.Drawing.Point(580, 29)
+        Me.Room1Light2off.Margin = New System.Windows.Forms.Padding(0)
+        Me.Room1Light2off.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Room1Light2off.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light2off.Name = "Room1Light2off"
+        Me.Room1Light2off.Ripple = True
+        Me.Room1Light2off.Size = New System.Drawing.Size(55, 30)
+        Me.Room1Light2off.TabIndex = 1
+        Me.Room1Light2off.Text = "OFF"
+        Me.Room1Light2off.UseVisualStyleBackColor = True
         '
-        'brightness1
+        'Room1Light2Lbl
         '
-        Me.brightness1.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.brightness1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.brightness1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.brightness1.ForeColor = System.Drawing.Color.White
-        Me.brightness1.Location = New System.Drawing.Point(179, 69)
-        Me.brightness1.Name = "brightness1"
-        Me.brightness1.Size = New System.Drawing.Size(40, 30)
-        Me.brightness1.TabIndex = 17
-        Me.brightness1.Text = "0"
-        Me.brightness1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Room1Light2Lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.Room1Light2Lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Room1Light2Lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Room1Light2Lbl.ForeColor = System.Drawing.Color.White
+        Me.Room1Light2Lbl.Location = New System.Drawing.Point(179, 69)
+        Me.Room1Light2Lbl.Name = "Room1Light2Lbl"
+        Me.Room1Light2Lbl.Size = New System.Drawing.Size(40, 30)
+        Me.Room1Light2Lbl.TabIndex = 17
+        Me.Room1Light2Lbl.Text = "0"
+        Me.Room1Light2Lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'brighttrack2
+        'Room1Light2Bri
         '
-        Me.brighttrack2.LargeChange = 1
-        Me.brighttrack2.Location = New System.Drawing.Point(229, 69)
-        Me.brighttrack2.Maximum = 4
-        Me.brighttrack2.Name = "brighttrack2"
-        Me.brighttrack2.Size = New System.Drawing.Size(325, 45)
-        Me.brighttrack2.TabIndex = 1
-        Me.brighttrack2.TabStop = False
-        Me.brighttrack2.TickStyle = System.Windows.Forms.TickStyle.None
-        Me.brighttrack2.Value = 4
+        Me.Room1Light2Bri.LargeChange = 1
+        Me.Room1Light2Bri.Location = New System.Drawing.Point(229, 69)
+        Me.Room1Light2Bri.Maximum = 4
+        Me.Room1Light2Bri.Name = "Room1Light2Bri"
+        Me.Room1Light2Bri.Size = New System.Drawing.Size(325, 45)
+        Me.Room1Light2Bri.TabIndex = 1
+        Me.Room1Light2Bri.TabStop = False
+        Me.Room1Light2Bri.TickStyle = System.Windows.Forms.TickStyle.None
+        Me.Room1Light2Bri.Value = 4
         '
         'Light1
         '
         Me.Light1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Light1.Controls.Add(Me.timerLabel)
-        Me.Light1.Controls.Add(Me.lighton)
-        Me.Light1.Controls.Add(Me.brightness)
-        Me.Light1.Controls.Add(Me.lightoff)
-        Me.Light1.Controls.Add(Me.brighttrack)
+        Me.Light1.Controls.Add(Me.Room1Light1TimerLbl)
+        Me.Light1.Controls.Add(Me.Room1Light1on)
+        Me.Light1.Controls.Add(Me.Room1Light1Lbl)
+        Me.Light1.Controls.Add(Me.Room1Light1off)
+        Me.Light1.Controls.Add(Me.Room1Light1Bri)
         Me.Light1.Location = New System.Drawing.Point(3, 3)
         Me.Light1.Name = "Light1"
         Me.Light1.Size = New System.Drawing.Size(740, 140)
@@ -540,73 +540,73 @@ Partial Class RoomA
         Me.Light1.TabStop = False
         Me.Light1.Text = "light1"
         '
-        'timerLabel
+        'Room1Light1TimerLbl
         '
-        Me.timerLabel.AutoSize = True
-        Me.timerLabel.Depth = 0
-        Me.timerLabel.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.timerLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.timerLabel.Location = New System.Drawing.Point(6, 105)
-        Me.timerLabel.MouseState = MaterialSkin.MouseState.HOVER
-        Me.timerLabel.Name = "timerLabel"
-        Me.timerLabel.Size = New System.Drawing.Size(39, 19)
-        Me.timerLabel.TabIndex = 18
-        Me.timerLabel.Text = "time"
+        Me.Room1Light1TimerLbl.AutoSize = True
+        Me.Room1Light1TimerLbl.Depth = 0
+        Me.Room1Light1TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Room1Light1TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Room1Light1TimerLbl.Location = New System.Drawing.Point(6, 105)
+        Me.Room1Light1TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light1TimerLbl.Name = "Room1Light1TimerLbl"
+        Me.Room1Light1TimerLbl.Size = New System.Drawing.Size(39, 19)
+        Me.Room1Light1TimerLbl.TabIndex = 18
+        Me.Room1Light1TimerLbl.Text = "time"
         '
-        'lighton
+        'Room1Light1on
         '
-        Me.lighton.Depth = 0
-        Me.lighton.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.lighton.Location = New System.Drawing.Point(113, 16)
-        Me.lighton.Margin = New System.Windows.Forms.Padding(0)
-        Me.lighton.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.lighton.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lighton.Name = "lighton"
-        Me.lighton.Ripple = True
-        Me.lighton.Size = New System.Drawing.Size(55, 30)
-        Me.lighton.TabIndex = 0
-        Me.lighton.Text = "ON"
-        Me.lighton.UseVisualStyleBackColor = True
+        Me.Room1Light1on.Depth = 0
+        Me.Room1Light1on.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Room1Light1on.Location = New System.Drawing.Point(113, 16)
+        Me.Room1Light1on.Margin = New System.Windows.Forms.Padding(0)
+        Me.Room1Light1on.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Room1Light1on.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light1on.Name = "Room1Light1on"
+        Me.Room1Light1on.Ripple = True
+        Me.Room1Light1on.Size = New System.Drawing.Size(55, 30)
+        Me.Room1Light1on.TabIndex = 0
+        Me.Room1Light1on.Text = "ON"
+        Me.Room1Light1on.UseVisualStyleBackColor = True
         '
-        'brightness
+        'Room1Light1Lbl
         '
-        Me.brightness.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
-        Me.brightness.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.brightness.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.brightness.ForeColor = System.Drawing.Color.White
-        Me.brightness.Location = New System.Drawing.Point(179, 56)
-        Me.brightness.Name = "brightness"
-        Me.brightness.Size = New System.Drawing.Size(40, 30)
-        Me.brightness.TabIndex = 18
-        Me.brightness.Text = "0"
-        Me.brightness.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Room1Light1Lbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(105, Byte), Integer))
+        Me.Room1Light1Lbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Room1Light1Lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Room1Light1Lbl.ForeColor = System.Drawing.Color.White
+        Me.Room1Light1Lbl.Location = New System.Drawing.Point(179, 56)
+        Me.Room1Light1Lbl.Name = "Room1Light1Lbl"
+        Me.Room1Light1Lbl.Size = New System.Drawing.Size(40, 30)
+        Me.Room1Light1Lbl.TabIndex = 18
+        Me.Room1Light1Lbl.Text = "0"
+        Me.Room1Light1Lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lightoff
+        'Room1Light1off
         '
-        Me.lightoff.Depth = 0
-        Me.lightoff.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.lightoff.Location = New System.Drawing.Point(580, 16)
-        Me.lightoff.Margin = New System.Windows.Forms.Padding(0)
-        Me.lightoff.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.lightoff.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lightoff.Name = "lightoff"
-        Me.lightoff.Ripple = True
-        Me.lightoff.Size = New System.Drawing.Size(55, 30)
-        Me.lightoff.TabIndex = 1
-        Me.lightoff.Text = "OFF"
-        Me.lightoff.UseVisualStyleBackColor = True
+        Me.Room1Light1off.Depth = 0
+        Me.Room1Light1off.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Room1Light1off.Location = New System.Drawing.Point(580, 16)
+        Me.Room1Light1off.Margin = New System.Windows.Forms.Padding(0)
+        Me.Room1Light1off.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Room1Light1off.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Room1Light1off.Name = "Room1Light1off"
+        Me.Room1Light1off.Ripple = True
+        Me.Room1Light1off.Size = New System.Drawing.Size(55, 30)
+        Me.Room1Light1off.TabIndex = 1
+        Me.Room1Light1off.Text = "OFF"
+        Me.Room1Light1off.UseVisualStyleBackColor = True
         '
-        'brighttrack
+        'Room1Light1Bri
         '
-        Me.brighttrack.LargeChange = 1
-        Me.brighttrack.Location = New System.Drawing.Point(229, 56)
-        Me.brighttrack.Maximum = 4
-        Me.brighttrack.Name = "brighttrack"
-        Me.brighttrack.Size = New System.Drawing.Size(325, 45)
-        Me.brighttrack.TabIndex = 1
-        Me.brighttrack.TabStop = False
-        Me.brighttrack.TickStyle = System.Windows.Forms.TickStyle.None
-        Me.brighttrack.Value = 4
+        Me.Room1Light1Bri.LargeChange = 1
+        Me.Room1Light1Bri.Location = New System.Drawing.Point(229, 56)
+        Me.Room1Light1Bri.Maximum = 4
+        Me.Room1Light1Bri.Name = "Room1Light1Bri"
+        Me.Room1Light1Bri.Size = New System.Drawing.Size(325, 45)
+        Me.Room1Light1Bri.TabIndex = 1
+        Me.Room1Light1Bri.TabStop = False
+        Me.Room1Light1Bri.TickStyle = System.Windows.Forms.TickStyle.None
+        Me.Room1Light1Bri.Value = 4
         '
         'MasterTabControl
         '
@@ -626,8 +626,8 @@ Partial Class RoomA
         '
         Me.apptab.BackColor = System.Drawing.Color.White
         Me.apptab.Controls.Add(Me.Label1)
-        Me.apptab.Controls.Add(Me.GroupBox1)
-        Me.apptab.Controls.Add(Me.Appgrp)
+        Me.apptab.Controls.Add(Me.Room1AppGrpBox2)
+        Me.apptab.Controls.Add(Me.Room1AppBrpBox)
         Me.apptab.Location = New System.Drawing.Point(4, 22)
         Me.apptab.Name = "apptab"
         Me.apptab.Size = New System.Drawing.Size(746, 438)
@@ -643,18 +643,18 @@ Partial Class RoomA
         Me.Label1.Size = New System.Drawing.Size(0, 13)
         Me.Label1.TabIndex = 8
         '
-        'GroupBox1
+        'Room1AppGrpBox2
         '
-        Me.GroupBox1.Controls.Add(Me.Room1Pw2Lbl)
-        Me.GroupBox1.Controls.Add(Me.Room1Pw3Lbl)
-        Me.GroupBox1.Controls.Add(Me.Room1Pw2Btn)
-        Me.GroupBox1.Controls.Add(Me.Room1Pw3Btn)
-        Me.GroupBox1.Location = New System.Drawing.Point(326, 0)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(178, 408)
-        Me.GroupBox1.TabIndex = 7
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Connections"
+        Me.Room1AppGrpBox2.Controls.Add(Me.Room1Pw2Lbl)
+        Me.Room1AppGrpBox2.Controls.Add(Me.Room1Pw3Lbl)
+        Me.Room1AppGrpBox2.Controls.Add(Me.Room1Pw2Btn)
+        Me.Room1AppGrpBox2.Controls.Add(Me.Room1Pw3Btn)
+        Me.Room1AppGrpBox2.Location = New System.Drawing.Point(326, 0)
+        Me.Room1AppGrpBox2.Name = "Room1AppGrpBox2"
+        Me.Room1AppGrpBox2.Size = New System.Drawing.Size(178, 408)
+        Me.Room1AppGrpBox2.TabIndex = 7
+        Me.Room1AppGrpBox2.TabStop = False
+        Me.Room1AppGrpBox2.Text = "Connections"
         '
         'Room1Pw2Lbl
         '
@@ -708,18 +708,18 @@ Partial Class RoomA
         Me.Room1Pw3Btn.TabIndex = 4
         Me.Room1Pw3Btn.UseVisualStyleBackColor = False
         '
-        'Appgrp
+        'Room1AppBrpBox
         '
-        Me.Appgrp.Controls.Add(Me.Room1Pw1Lbl)
-        Me.Appgrp.Controls.Add(Me.tvBtn)
-        Me.Appgrp.Controls.Add(Me.Room1Pw1Btn)
-        Me.Appgrp.Controls.Add(Me.tvLbl)
-        Me.Appgrp.Location = New System.Drawing.Point(28, 3)
-        Me.Appgrp.Name = "Appgrp"
-        Me.Appgrp.Size = New System.Drawing.Size(178, 408)
-        Me.Appgrp.TabIndex = 6
-        Me.Appgrp.TabStop = False
-        Me.Appgrp.Text = "Appliances"
+        Me.Room1AppBrpBox.Controls.Add(Me.Room1Pw1Lbl)
+        Me.Room1AppBrpBox.Controls.Add(Me.tvBtn)
+        Me.Room1AppBrpBox.Controls.Add(Me.Room1Pw1Btn)
+        Me.Room1AppBrpBox.Controls.Add(Me.tvLbl)
+        Me.Room1AppBrpBox.Location = New System.Drawing.Point(28, 3)
+        Me.Room1AppBrpBox.Name = "Room1AppBrpBox"
+        Me.Room1AppBrpBox.Size = New System.Drawing.Size(178, 408)
+        Me.Room1AppBrpBox.TabIndex = 6
+        Me.Room1AppBrpBox.TabStop = False
+        Me.Room1AppBrpBox.Text = "Appliances"
         '
         'Room1Pw1Lbl
         '
@@ -913,20 +913,20 @@ Partial Class RoomA
         Me.Lighttab.ResumeLayout(False)
         Me.light3.ResumeLayout(False)
         Me.light3.PerformLayout()
-        CType(Me.brighttrack3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Room1Light3Bri, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Light2.ResumeLayout(False)
         Me.Light2.PerformLayout()
-        CType(Me.brighttrack2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Room1Light2Bri, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Light1.ResumeLayout(False)
         Me.Light1.PerformLayout()
-        CType(Me.brighttrack, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Room1Light1Bri, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MasterTabControl.ResumeLayout(False)
         Me.apptab.ResumeLayout(False)
         Me.apptab.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.Appgrp.ResumeLayout(False)
-        Me.Appgrp.PerformLayout()
+        Me.Room1AppGrpBox2.ResumeLayout(False)
+        Me.Room1AppGrpBox2.PerformLayout()
+        Me.Room1AppBrpBox.ResumeLayout(False)
+        Me.Room1AppBrpBox.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.bulb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -943,36 +943,36 @@ Partial Class RoomA
 	Friend WithEvents MasterBack As Button
 	Friend WithEvents humidtip As ToolTip
 	Friend WithEvents vidtab As TabPage
-	Friend WithEvents BtnStop As MaterialSkin.Controls.MaterialRaisedButton
-	Friend WithEvents BtnStart As MaterialSkin.Controls.MaterialRaisedButton
+	Friend WithEvents Room1BtnStop As MaterialSkin.Controls.MaterialRaisedButton
+	Friend WithEvents Room1VidStart As MaterialSkin.Controls.MaterialRaisedButton
 	Friend WithEvents ImageBox As Emgu.CV.UI.ImageBox
 	Friend WithEvents temptab As TabPage
-	Friend WithEvents Increasebtn As Button
-	Friend WithEvents Decreasebtn As Button
-	Friend WithEvents resetbtn As Button
+	Friend WithEvents Room1TempIncBtn As Button
+	Friend WithEvents Room1TempDecBtn As Button
+	Friend WithEvents Room1TempResetBtn As Button
 	Friend WithEvents humidbtn As Button
 	Friend WithEvents mediumhot As PictureBox
 	Friend WithEvents coldimage As PictureBox
 	Friend WithEvents sunimage As PictureBox
-	Friend WithEvents templabel As Label
-	Friend WithEvents templabel2 As Label
+	Friend WithEvents Room1TempLbl As Label
+	Friend WithEvents Room1TempLbl2 As Label
 	Friend WithEvents PictureBox1 As PictureBox
 	Friend WithEvents Lighttab As TabPage
 	Friend WithEvents light3 As GroupBox
-	Friend WithEvents brightness2 As Label
-	Friend WithEvents lit2on As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents lit2off As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents brighttrack3 As TrackBar
+	Friend WithEvents Room1Light3Lbl As Label
+	Friend WithEvents Room1Light3on As MaterialSkin.Controls.MaterialRadioButton
+	Friend WithEvents Room1Light3off As MaterialSkin.Controls.MaterialRadioButton
+	Friend WithEvents Room1Light3Bri As TrackBar
 	Friend WithEvents Light2 As GroupBox
-	Friend WithEvents lit1on As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents lit1off As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents brightness1 As Label
-	Friend WithEvents brighttrack2 As TrackBar
+	Friend WithEvents Room1Light2on As MaterialSkin.Controls.MaterialRadioButton
+	Friend WithEvents Room1Light2off As MaterialSkin.Controls.MaterialRadioButton
+	Friend WithEvents Room1Light2Lbl As Label
+	Friend WithEvents Room1Light2Bri As TrackBar
 	Friend WithEvents Light1 As GroupBox
-	Friend WithEvents lighton As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents brightness As Label
-	Friend WithEvents lightoff As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents brighttrack As TrackBar
+	Friend WithEvents Room1Light1on As MaterialSkin.Controls.MaterialRadioButton
+	Friend WithEvents Room1Light1Lbl As Label
+	Friend WithEvents Room1Light1off As MaterialSkin.Controls.MaterialRadioButton
+	Friend WithEvents Room1Light1Bri As TrackBar
 	Friend WithEvents MasterTabControl As MaterialSkin.Controls.MaterialTabControl
 	Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
 	Friend WithEvents Panel1 As Panel
@@ -980,18 +980,18 @@ Partial Class RoomA
 	Friend WithEvents apptab As TabPage
 	Friend WithEvents tvBtn As Button
 	Friend WithEvents Room1Pw1Btn As Button
-    Friend WithEvents Appgrp As GroupBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Room1AppBrpBox As GroupBox
+    Friend WithEvents Room1AppGrpBox2 As GroupBox
     Friend WithEvents Room1Pw2Btn As Button
     Friend WithEvents Room1Pw3Btn As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents MasterToDashboard As Button
 	Friend WithEvents DashButtonPanel As Panel
-    Friend WithEvents dhtTemp As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Room1dhtTemp As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents ambientTemp As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents timerLabel As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents timerLabel2 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents timerlabel3 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Room1Light1TimerLbl As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Room1Light2TimerLbl As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Room1Light3TimerLbl As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Room1Pw2Lbl As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Room1Pw3Lbl As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Room1Pw1Lbl As MaterialSkin.Controls.MaterialLabel
