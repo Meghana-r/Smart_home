@@ -241,6 +241,101 @@ Public Class RoomA
     'code for Camera ends here
 
     ' Appliances
+    Dim tvTimer As New Stopwatch
+    Dim Room1Pw1Timer As New Stopwatch
+    Dim Room1Pw2Timer As New Stopwatch
+    Dim Room1Pw3Timer As New Stopwatch
 
+    ' for on/off. on = true off = false
+    Dim Room1Pw1Status As Boolean
+    Dim Room1Pw2Status As Boolean
+    Dim Room1Pw3Status As Boolean
+    Dim tvStatus As Boolean
+
+    Private Sub Room1Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw1Btn.Click
+        If Room1Pw1Status = True Then
+            Room1Pw1Btn.BackgroundImage = My.Resources.poweroff
+            Room1Pw1Timer.Stop()
+            UpdateRoom1Pw1Time()
+            Room1Pw1Status = False
+        ElseIf Room1Pw1Status = False Then
+            Room1Pw1Btn.BackgroundImage = My.Resources.poweron
+            Room1Pw1Timer.Reset()
+            Room1Pw1Timer.Start()
+            Room1Pw1Status = True
+        End If
+    End Sub
+
+    Private Sub Room1Pw2Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw2Btn.Click
+        If Room1Pw2Status = True Then
+            Room1Pw2Btn.BackgroundImage = My.Resources.poweroff
+            Room1Pw2Timer.Stop()
+            UpdateRoom1Pw2Time()
+            Room1Pw2Status = False
+        ElseIf Room1Pw2Status = False Then
+            Room1Pw2Btn.BackgroundImage = My.Resources.poweron
+            Room1Pw2Timer.Reset()
+            Room1Pw2Timer.Start()
+            Room1Pw2Status = True
+        End If
+    End Sub
+
+    Private Sub Room1Pw3Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw3Btn.Click
+        If Room1Pw3Status = True Then
+            Room1Pw3Btn.BackgroundImage = My.Resources.poweroff
+            Room1Pw3Timer.Stop()
+            UpdateRoom1Pw3Time()
+            Room1Pw3Status = False
+        ElseIf Room1Pw3Status = False Then
+            Room1Pw3Btn.BackgroundImage = My.Resources.poweron
+            Room1Pw3Timer.Reset()
+            Room1Pw3Timer.Start()
+            Room1Pw3Status = True
+        End If
+    End Sub
+
+    Private Sub tvBtn_Click(sender As Object, e As EventArgs) Handles tvBtn.Click
+        If tvStatus = True Then
+            tvBtn.BackgroundImage = My.Resources.tvoff
+            tvTimer.Stop()
+            UpdateTvTime()
+            tvStatus = False
+        ElseIf tvStatus = False Then
+            tvBtn.BackgroundImage = My.Resources.tvon
+            tvTimer.Reset()
+            tvTimer.Start()
+            tvStatus = True
+        End If
+    End Sub
+
+    Private Sub UpdateRoom1Pw1Time()
+        Dim ts As TimeSpan = Room1Pw1Timer.Elapsed
+        Room1Pw1Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
+
+    Private Sub UpdateRoom1Pw2Time()
+        Dim ts As TimeSpan = Room1Pw2Timer.Elapsed
+        Room1Pw2Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
+
+    Private Sub UpdateRoom1Pw3Time()
+        Dim ts As TimeSpan = Room1Pw3Timer.Elapsed
+        Room1Pw3Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
+
+    Private Sub UpdateTvTime()
+        Dim ts As TimeSpan = tvTimer.Elapsed
+        tvLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+    End Sub
+
+    Private Sub MasterBack_Click(sender As Object, e As EventArgs) Handles MasterBack.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub MasterToDashboard_Click(sender As Object, e As EventArgs) Handles MasterToDashboard.Click
+        Dashboard.Show()
+        Me.Hide()
+    End Sub
 End Class
 
