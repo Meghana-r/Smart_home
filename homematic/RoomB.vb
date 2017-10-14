@@ -117,18 +117,18 @@ Public Class RoomB
     End Sub
 
     Private Sub Room2UpdtLi1TimeInfo()
-        Dim ts As TimeSpan = Room2light1SW.Elapsed
-        Room2Light1TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room2light1SW.ElapsedMilliseconds
+        writeDb(ts, "Room2Light1")
     End Sub
 
     Private Sub Room2UpdtLi2TimeInfo()
-        Dim ts As TimeSpan = Room2light2SW.Elapsed
-        Room2Light2TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room2light2SW.ElapsedMilliseconds
+        writeDb(ts, "Room2Light2")
     End Sub
 
     Private Sub Room2UpdtLi3TimeInfo()
-        Dim ts As TimeSpan = Room2light3SW.Elapsed
-        Room2Light3TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room2light3SW.ElapsedMilliseconds
+        writeDb(ts, "Room2Light3")
     End Sub
     'code for light settings end here
 
@@ -311,23 +311,23 @@ Public Class RoomB
     End Sub
 
     Private Sub UpdateRoom2Pw1Time()
-        Dim ts As TimeSpan = Room2Pw1Timer.Elapsed
-        Room2Pw1Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room2Pw1Timer.ElapsedMilliseconds
+        'Room2Pw1Lbl.Text = ts.ToString
     End Sub
 
     Private Sub UpdateRoom2Pw2Time()
-        Dim ts As TimeSpan = Room2Pw2Timer.Elapsed
-        Room2Pw2Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room2Pw1Timer.ElapsedMilliseconds
+        'Room2Pw1Lbl.Text = ts.ToString
     End Sub
 
     Private Sub UpdateRoom2Pw3Time()
-        Dim ts As TimeSpan = Room2Pw3Timer.Elapsed
-        Room2Pw3Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room2Pw1Timer.ElapsedMilliseconds
+        'Room2Pw1Lbl.Text = ts.ToString
     End Sub
 
     Private Sub UpdateTvTime()
-        Dim ts As TimeSpan = tvTimer.Elapsed
-        tvLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room2Pw1Timer.ElapsedMilliseconds
+        'Room2Pw1Lbl.Text = ts.ToString
     End Sub
 
     Private Sub Room2Back_Click(sender As Object, e As EventArgs) Handles Room2Back.Click

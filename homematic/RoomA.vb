@@ -318,7 +318,7 @@ Public Class RoomA
     Private Sub UpdateRoom1Pw1Time()
         Dim ts As Long = Room1Pw1Timer.ElapsedMilliseconds
         'Room1Pw1Lbl.Text = ts.ToString
-        writeDb(ts, "Room1Pw1")
+        'writeDb(ts, "Room1Pw1")
     End Sub
 
     Private Sub UpdateRoom1Pw2Time()
