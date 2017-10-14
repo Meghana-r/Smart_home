@@ -326,7 +326,7 @@ Public Class RoomD
     End Sub
 
     Private Sub UpdateTvTime()
-        Dim ts As Long = tvTimer.Elapse
+        Dim ts As Long = tvTimer.ElapsedMilliseconds
         'tvLbl.Text = ts.ToString
     End Sub
 
