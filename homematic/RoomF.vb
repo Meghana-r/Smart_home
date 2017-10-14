@@ -117,18 +117,21 @@ Public Class RoomF
     End Sub
 
     Private Sub Room6UpdtLi1TimeInfo()
-        Dim ts As TimeSpan = Room6light1SW.Elapsed
-        Room6Light1TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room6light1SW.ElapsedMilliseconds
+        Room6Light1TimerLbl.Text = ts.ToString
+        writeDb(ts, "Room6Light1")
     End Sub
 
     Private Sub Room6UpdtLi2TimeInfo()
-        Dim ts As TimeSpan = Room6light2SW.Elapsed
-        Room6Light2TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room6light2SW.ElapsedMilliseconds
+        Room6Light2TimerLbl.Text = ts.ToString
+        writeDb(ts, "Room6Light2")
     End Sub
 
     Private Sub Room6UpdtLi3TimeInfo()
-        Dim ts As TimeSpan = Room6light3SW.Elapsed
-        Room6Light3TimerLbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room6light3SW.ElapsedMilliseconds
+        Room6Light3TimerLbl.Text = ts.ToString
+        writeDb(ts, "Room6Light3")
     End Sub
     'code for light settings end here
 
@@ -253,18 +256,15 @@ Public Class RoomF
     End Sub
 
     Private Sub UpdateRoom6Pw1Time()
-        Dim ts As TimeSpan = Room6Pw1Timer.Elapsed
-        Room6Pw1Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room6Pw1Timer.ElapsedMilliseconds
     End Sub
 
     Private Sub UpdateRoom6Pw2Time()
-        Dim ts As TimeSpan = Room6Pw2Timer.Elapsed
-        Room6Pw2Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room6Pw2Timer.ElapsedMilliseconds
     End Sub
 
     Private Sub UpdateRoom6Pw3Time()
-        Dim ts As TimeSpan = Room6Pw3Timer.Elapsed
-        Room6Pw3Lbl.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        Dim ts As Long = Room6Pw3Timer.ElapsedMilliseconds
     End Sub
 
 
