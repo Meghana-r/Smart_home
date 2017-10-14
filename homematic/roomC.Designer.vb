@@ -1,28 +1,28 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class RoomC
-	Inherits MaterialSkin.Controls.MaterialForm
+    Inherits MaterialSkin.Controls.MaterialForm
 
 
-	'Form overrides dispose to clean up the component list.
-	<System.Diagnostics.DebuggerNonUserCode()>
-	Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-		Try
-			If disposing AndAlso components IsNot Nothing Then
-				components.Dispose()
-			End If
-		Finally
-			MyBase.Dispose(disposing)
-		End Try
-	End Sub
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
 
-	'Required by the Windows Form Designer
-	Private components As System.ComponentModel.IContainer
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
 
-	'NOTE: The following procedure is required by the Windows Form Designer
-	'It can be modified using the Windows Form Designer.  
-	'Do not modify it using the code editor.
-	<System.Diagnostics.DebuggerStepThrough()>
-	Private Sub InitializeComponent()
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.humidtip = New System.Windows.Forms.ToolTip(Me.components)
         Me.humidbtn = New System.Windows.Forms.Button()
@@ -44,19 +44,16 @@ Partial Class RoomC
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Lighttab = New System.Windows.Forms.TabPage()
         Me.Room3light3 = New System.Windows.Forms.GroupBox()
-        Me.Room3Light3TimerLbl = New MaterialSkin.Controls.MaterialLabel()
         Me.Room3Light3Lbl = New System.Windows.Forms.Label()
         Me.Room3Light3on = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Room3Light3off = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Room3Light3Bri = New System.Windows.Forms.TrackBar()
         Me.Room3Light2 = New System.Windows.Forms.GroupBox()
-        Me.Room3Light2TimerLbl = New MaterialSkin.Controls.MaterialLabel()
         Me.Room3Light2on = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Room3Light2off = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Room3Light2Lbl = New System.Windows.Forms.Label()
         Me.Room3Light2Bri = New System.Windows.Forms.TrackBar()
         Me.Room3Light1 = New System.Windows.Forms.GroupBox()
-        Me.Room3Light1TimerLbl = New MaterialSkin.Controls.MaterialLabel()
         Me.Room3Light1on = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Room3Light1Lbl = New System.Windows.Forms.Label()
         Me.Room3Light1off = New MaterialSkin.Controls.MaterialRadioButton()
@@ -65,15 +62,11 @@ Partial Class RoomC
         Me.apptab = New System.Windows.Forms.TabPage()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Room3AppGrpBox2 = New System.Windows.Forms.GroupBox()
-        Me.Room3Pw2Lbl = New MaterialSkin.Controls.MaterialLabel()
-        Me.Room3Pw3Lbl = New MaterialSkin.Controls.MaterialLabel()
         Me.Room3Pw2Btn = New System.Windows.Forms.Button()
         Me.Room3Pw3Btn = New System.Windows.Forms.Button()
         Me.Room3AppBrpBox = New System.Windows.Forms.GroupBox()
-        Me.Room3Pw1Lbl = New MaterialSkin.Controls.MaterialLabel()
         Me.tvBtn = New System.Windows.Forms.Button()
         Me.Room3Pw1Btn = New System.Windows.Forms.Button()
-        Me.tvLbl = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bulb = New System.Windows.Forms.PictureBox()
@@ -358,7 +351,6 @@ Partial Class RoomC
         Me.Room3light3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Room3light3.Controls.Add(Me.Room3Light3TimerLbl)
         Me.Room3light3.Controls.Add(Me.Room3Light3Lbl)
         Me.Room3light3.Controls.Add(Me.Room3Light3on)
         Me.Room3light3.Controls.Add(Me.Room3Light3off)
@@ -369,19 +361,6 @@ Partial Class RoomC
         Me.Room3light3.TabIndex = 20
         Me.Room3light3.TabStop = False
         Me.Room3light3.Text = "light3"
-        '
-        'Room3Light3TimerLbl
-        '
-        Me.Room3Light3TimerLbl.AutoSize = True
-        Me.Room3Light3TimerLbl.Depth = 0
-        Me.Room3Light3TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.Room3Light3TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Room3Light3TimerLbl.Location = New System.Drawing.Point(6, 75)
-        Me.Room3Light3TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Room3Light3TimerLbl.Name = "Room3Light3TimerLbl"
-        Me.Room3Light3TimerLbl.Size = New System.Drawing.Size(39, 19)
-        Me.Room3Light3TimerLbl.TabIndex = 20
-        Me.Room3Light3TimerLbl.Text = "time"
         '
         'Room3Light3Lbl
         '
@@ -443,7 +422,6 @@ Partial Class RoomC
         Me.Room3Light2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Room3Light2.Controls.Add(Me.Room3Light2TimerLbl)
         Me.Room3Light2.Controls.Add(Me.Room3Light2on)
         Me.Room3Light2.Controls.Add(Me.Room3Light2off)
         Me.Room3Light2.Controls.Add(Me.Room3Light2Lbl)
@@ -454,19 +432,6 @@ Partial Class RoomC
         Me.Room3Light2.TabIndex = 20
         Me.Room3Light2.TabStop = False
         Me.Room3Light2.Text = "light2"
-        '
-        'Room3Light2TimerLbl
-        '
-        Me.Room3Light2TimerLbl.AutoSize = True
-        Me.Room3Light2TimerLbl.Depth = 0
-        Me.Room3Light2TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.Room3Light2TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Room3Light2TimerLbl.Location = New System.Drawing.Point(6, 95)
-        Me.Room3Light2TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Room3Light2TimerLbl.Name = "Room3Light2TimerLbl"
-        Me.Room3Light2TimerLbl.Size = New System.Drawing.Size(39, 19)
-        Me.Room3Light2TimerLbl.TabIndex = 19
-        Me.Room3Light2TimerLbl.Text = "time"
         '
         'Room3Light2on
         '
@@ -528,7 +493,6 @@ Partial Class RoomC
         Me.Room3Light1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Room3Light1.Controls.Add(Me.Room3Light1TimerLbl)
         Me.Room3Light1.Controls.Add(Me.Room3Light1on)
         Me.Room3Light1.Controls.Add(Me.Room3Light1Lbl)
         Me.Room3Light1.Controls.Add(Me.Room3Light1off)
@@ -539,19 +503,6 @@ Partial Class RoomC
         Me.Room3Light1.TabIndex = 19
         Me.Room3Light1.TabStop = False
         Me.Room3Light1.Text = "light1"
-        '
-        'Room3Light1TimerLbl
-        '
-        Me.Room3Light1TimerLbl.AutoSize = True
-        Me.Room3Light1TimerLbl.Depth = 0
-        Me.Room3Light1TimerLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.Room3Light1TimerLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Room3Light1TimerLbl.Location = New System.Drawing.Point(6, 105)
-        Me.Room3Light1TimerLbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Room3Light1TimerLbl.Name = "Room3Light1TimerLbl"
-        Me.Room3Light1TimerLbl.Size = New System.Drawing.Size(39, 19)
-        Me.Room3Light1TimerLbl.TabIndex = 18
-        Me.Room3Light1TimerLbl.Text = "time"
         '
         'Room3Light1on
         '
@@ -645,8 +596,6 @@ Partial Class RoomC
         '
         'Room3AppGrpBox2
         '
-        Me.Room3AppGrpBox2.Controls.Add(Me.Room3Pw2Lbl)
-        Me.Room3AppGrpBox2.Controls.Add(Me.Room3Pw3Lbl)
         Me.Room3AppGrpBox2.Controls.Add(Me.Room3Pw2Btn)
         Me.Room3AppGrpBox2.Controls.Add(Me.Room3Pw3Btn)
         Me.Room3AppGrpBox2.Location = New System.Drawing.Point(326, 0)
@@ -655,32 +604,6 @@ Partial Class RoomC
         Me.Room3AppGrpBox2.TabIndex = 7
         Me.Room3AppGrpBox2.TabStop = False
         Me.Room3AppGrpBox2.Text = "Connections"
-        '
-        'Room3Pw2Lbl
-        '
-        Me.Room3Pw2Lbl.AutoSize = True
-        Me.Room3Pw2Lbl.Depth = 0
-        Me.Room3Pw2Lbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.Room3Pw2Lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Room3Pw2Lbl.Location = New System.Drawing.Point(38, 95)
-        Me.Room3Pw2Lbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Room3Pw2Lbl.Name = "Room3Pw2Lbl"
-        Me.Room3Pw2Lbl.Size = New System.Drawing.Size(39, 19)
-        Me.Room3Pw2Lbl.TabIndex = 11
-        Me.Room3Pw2Lbl.Text = "time"
-        '
-        'Room3Pw3Lbl
-        '
-        Me.Room3Pw3Lbl.AutoSize = True
-        Me.Room3Pw3Lbl.Depth = 0
-        Me.Room3Pw3Lbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.Room3Pw3Lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Room3Pw3Lbl.Location = New System.Drawing.Point(38, 246)
-        Me.Room3Pw3Lbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Room3Pw3Lbl.Name = "Room3Pw3Lbl"
-        Me.Room3Pw3Lbl.Size = New System.Drawing.Size(39, 19)
-        Me.Room3Pw3Lbl.TabIndex = 12
-        Me.Room3Pw3Lbl.Text = "time"
         '
         'Room3Pw2Btn
         '
@@ -710,29 +633,14 @@ Partial Class RoomC
         '
         'Room3AppBrpBox
         '
-        Me.Room3AppBrpBox.Controls.Add(Me.Room3Pw1Lbl)
         Me.Room3AppBrpBox.Controls.Add(Me.tvBtn)
         Me.Room3AppBrpBox.Controls.Add(Me.Room3Pw1Btn)
-        Me.Room3AppBrpBox.Controls.Add(Me.tvLbl)
         Me.Room3AppBrpBox.Location = New System.Drawing.Point(28, 3)
         Me.Room3AppBrpBox.Name = "Room3AppBrpBox"
         Me.Room3AppBrpBox.Size = New System.Drawing.Size(178, 408)
         Me.Room3AppBrpBox.TabIndex = 6
         Me.Room3AppBrpBox.TabStop = False
         Me.Room3AppBrpBox.Text = "Appliances"
-        '
-        'Room3Pw1Lbl
-        '
-        Me.Room3Pw1Lbl.AutoSize = True
-        Me.Room3Pw1Lbl.Depth = 0
-        Me.Room3Pw1Lbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.Room3Pw1Lbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Room3Pw1Lbl.Location = New System.Drawing.Point(35, 243)
-        Me.Room3Pw1Lbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Room3Pw1Lbl.Name = "Room3Pw1Lbl"
-        Me.Room3Pw1Lbl.Size = New System.Drawing.Size(39, 19)
-        Me.Room3Pw1Lbl.TabIndex = 10
-        Me.Room3Pw1Lbl.Text = "time"
         '
         'tvBtn
         '
@@ -759,19 +667,6 @@ Partial Class RoomC
         Me.Room3Pw1Btn.Size = New System.Drawing.Size(40, 40)
         Me.Room3Pw1Btn.TabIndex = 4
         Me.Room3Pw1Btn.UseVisualStyleBackColor = False
-        '
-        'tvLbl
-        '
-        Me.tvLbl.AutoSize = True
-        Me.tvLbl.Depth = 0
-        Me.tvLbl.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.tvLbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.tvLbl.Location = New System.Drawing.Point(35, 92)
-        Me.tvLbl.MouseState = MaterialSkin.MouseState.HOVER
-        Me.tvLbl.Name = "tvLbl"
-        Me.tvLbl.Size = New System.Drawing.Size(39, 19)
-        Me.tvLbl.TabIndex = 9
-        Me.tvLbl.Text = "time"
         '
         'MaterialTabSelector1
         '
@@ -924,9 +819,7 @@ Partial Class RoomC
         Me.apptab.ResumeLayout(False)
         Me.apptab.PerformLayout()
         Me.Room3AppGrpBox2.ResumeLayout(False)
-        Me.Room3AppGrpBox2.PerformLayout()
         Me.Room3AppBrpBox.ResumeLayout(False)
-        Me.Room3AppBrpBox.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.bulb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -937,63 +830,56 @@ Partial Class RoomC
 
     End Sub
     Friend WithEvents bulb As PictureBox
-	Friend WithEvents PictureBox2 As PictureBox
-	Friend WithEvents PictureBox3 As PictureBox
-	Friend WithEvents PictureBox4 As PictureBox
-	Friend WithEvents Room3Back As Button
-	Friend WithEvents humidtip As ToolTip
-	Friend WithEvents vidtab As TabPage
-	Friend WithEvents Room3VidStop As MaterialSkin.Controls.MaterialRaisedButton
-	Friend WithEvents Room3VidStart As MaterialSkin.Controls.MaterialRaisedButton
-	Friend WithEvents ImageBox As Emgu.CV.UI.ImageBox
-	Friend WithEvents temptab As TabPage
-	Friend WithEvents Room3TempIncBtn As Button
-	Friend WithEvents Room3TempDecBtn As Button
-	Friend WithEvents Room3TempResetBtn As Button
-	Friend WithEvents humidbtn As Button
-	Friend WithEvents mediumhot As PictureBox
-	Friend WithEvents coldimage As PictureBox
-	Friend WithEvents sunimage As PictureBox
-	Friend WithEvents Room3TempLbl As Label
-	Friend WithEvents Room3TempLbl2 As Label
-	Friend WithEvents PictureBox1 As PictureBox
-	Friend WithEvents Lighttab As TabPage
-	Friend WithEvents Room3light3 As GroupBox
-	Friend WithEvents Room3Light3Lbl As Label
-	Friend WithEvents Room3Light3on As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents Room3Light3off As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents Room3Light3Bri As TrackBar
-	Friend WithEvents Room3Light2 As GroupBox
-	Friend WithEvents Room3Light2on As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents Room3Light2off As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents Room3Light2Lbl As Label
-	Friend WithEvents Room3Light2Bri As TrackBar
-	Friend WithEvents Room3Light1 As GroupBox
-	Friend WithEvents Room3Light1on As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents Room3Light1Lbl As Label
-	Friend WithEvents Room3Light1off As MaterialSkin.Controls.MaterialRadioButton
-	Friend WithEvents Room3Light1Bri As TrackBar
-	Friend WithEvents MasterTabControl As MaterialSkin.Controls.MaterialTabControl
-	Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
-	Friend WithEvents Panel1 As Panel
-	Friend WithEvents Room3SerialPort1 As IO.Ports.SerialPort
-	Friend WithEvents apptab As TabPage
-	Friend WithEvents tvBtn As Button
-	Friend WithEvents Room3Pw1Btn As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Room3Back As Button
+    Friend WithEvents humidtip As ToolTip
+    Friend WithEvents vidtab As TabPage
+    Friend WithEvents Room3VidStop As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Room3VidStart As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents ImageBox As Emgu.CV.UI.ImageBox
+    Friend WithEvents temptab As TabPage
+    Friend WithEvents Room3TempIncBtn As Button
+    Friend WithEvents Room3TempDecBtn As Button
+    Friend WithEvents Room3TempResetBtn As Button
+    Friend WithEvents humidbtn As Button
+    Friend WithEvents mediumhot As PictureBox
+    Friend WithEvents coldimage As PictureBox
+    Friend WithEvents sunimage As PictureBox
+    Friend WithEvents Room3TempLbl As Label
+    Friend WithEvents Room3TempLbl2 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Lighttab As TabPage
+    Friend WithEvents Room3light3 As GroupBox
+    Friend WithEvents Room3Light3Lbl As Label
+    Friend WithEvents Room3Light3on As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Room3Light3off As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Room3Light3Bri As TrackBar
+    Friend WithEvents Room3Light2 As GroupBox
+    Friend WithEvents Room3Light2on As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Room3Light2off As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Room3Light2Lbl As Label
+    Friend WithEvents Room3Light2Bri As TrackBar
+    Friend WithEvents Room3Light1 As GroupBox
+    Friend WithEvents Room3Light1on As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Room3Light1Lbl As Label
+    Friend WithEvents Room3Light1off As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Room3Light1Bri As TrackBar
+    Friend WithEvents MasterTabControl As MaterialSkin.Controls.MaterialTabControl
+    Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Room3SerialPort1 As IO.Ports.SerialPort
+    Friend WithEvents apptab As TabPage
+    Friend WithEvents tvBtn As Button
+    Friend WithEvents Room3Pw1Btn As Button
     Friend WithEvents Room3AppBrpBox As GroupBox
     Friend WithEvents Room3AppGrpBox2 As GroupBox
     Friend WithEvents Room3Pw2Btn As Button
     Friend WithEvents Room3Pw3Btn As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Room3ToDashboard As Button
-	Friend WithEvents DashButtonPanel As Panel
+    Friend WithEvents DashButtonPanel As Panel
     Friend WithEvents Room3dhtTemp As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents ambientTemp As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Room3Light1TimerLbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Room3Light2TimerLbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Room3Light3TimerLbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Room3Pw2Lbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Room3Pw3Lbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Room3Pw1Lbl As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents tvLbl As MaterialSkin.Controls.MaterialLabel
 End Class
