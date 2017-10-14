@@ -118,18 +118,20 @@ Public Class RoomA
 
     Private Sub Room1UpdtLi1TimeInfo()
         Dim ts As Long = Room1light1SW.ElapsedMilliseconds
-        Room1Light1TimerLbl.Text = ts.ToString
+        'Room1Light1TimerLbl.Text = ts.ToString
         writeDb(ts, "Room1Light1")
     End Sub
 
     Private Sub Room1UpdtLi2TimeInfo()
         Dim ts As Long = Room1light2SW.ElapsedMilliseconds
-        Room1Light2TimerLbl.Text = ts.ToString
+        'Room1Light2TimerLbl.Text = ts.ToString
+        writeDb(ts, "Room1Light2")
     End Sub
 
     Private Sub Room1UpdtLi3TimeInfo()
         Dim ts As Long = Room1light3SW.ElapsedMilliseconds
-        Room1Light3TimerLbl.Text = ts.ToString
+        'Room1Light3TimerLbl.Text = ts.ToString
+        writeDb(ts, "Room1Light3")
     End Sub
     'code for light settings end here
 
@@ -315,23 +317,23 @@ Public Class RoomA
 
     Private Sub UpdateRoom1Pw1Time()
         Dim ts As Long = Room1Pw1Timer.ElapsedMilliseconds
-        Room1Pw1Lbl.Text = ts.ToString
-        'writeDb(t)
+        'Room1Pw1Lbl.Text = ts.ToString
+        writeDb(ts, "Room1Pw1")
     End Sub
 
     Private Sub UpdateRoom1Pw2Time()
         Dim ts As Long = Room1Pw2Timer.ElapsedMilliseconds
-        Room1Pw2Lbl.Text = ts.ToString
+        'Room1Pw2Lbl.Text = ts.ToString
     End Sub
 
     Private Sub UpdateRoom1Pw3Time()
         Dim ts As Long = Room1Pw3Timer.ElapsedMilliseconds
-        Room1Pw3Lbl.Text = ts.ToString
+        'Room1Pw3Lbl.Text = ts.ToString
     End Sub
 
     Private Sub UpdateTvTime()
         Dim ts As Long = tvTimer.ElapsedMilliseconds
-        tvLbl.Text = ts.ToString
+        'tvLbl.Text = ts.ToString
     End Sub
 
     Private Sub Room1Back_Click(sender As Object, e As EventArgs) Handles Room1Back.Click
