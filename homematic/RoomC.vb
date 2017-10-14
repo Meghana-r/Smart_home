@@ -321,7 +321,7 @@ Public Class RoomC
     End Sub
 
     Private Sub UpdateRoom3Pw3Time()
-        Dim ts As Long = Room3Pw3Timer.ElapsedMillisecondsasfa
+        Dim ts As Long = Room3Pw3Timer.ElapsedMilliseconds
         'Room3Pw3Lbl.Text = ts.ToString
     End Sub
 
