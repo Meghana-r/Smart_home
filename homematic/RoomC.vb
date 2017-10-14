@@ -118,17 +118,17 @@ Public Class RoomC
 
     Private Sub Room3UpdtLi1TimeInfo()
         Dim ts As Long = Room3light1SW.ElapsedMilliseconds
-        Room3Light1TimerLbl.Text = ts.ToString
+        writeDb(ts, "Room3Light1")
     End Sub
 
     Private Sub Room3UpdtLi2TimeInfo()
         Dim ts As Long = Room3light2SW.ElapsedMilliseconds
-        Room3Light2TimerLbl.Text = ts.ToString
+        writeDb(ts, "Room3Light1")
     End Sub
 
     Private Sub Room3UpdtLi3TimeInfo()
         Dim ts As Long = Room3light3SW.ElapsedMilliseconds
-        Room3Light3TimerLbl.Text = ts.ToString
+        writeDb(ts, "Room3Light1")
     End Sub
     'code for light settings end here
 
