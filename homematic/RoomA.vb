@@ -245,16 +245,13 @@ Public Class RoomA
 		Room1CameraCapture.Dispose()
 		VidStat = False
 	End Sub
-	'code for Camera ends here
+    'code for Camera ends here
 
-	' Appliances
-	Dim tvTimer As New Stopwatch
-    Dim Room1Pw1Timer As New Stopwatch
-    Dim Room1Pw2Timer As New Stopwatch
-    Dim Room1Pw3Timer As New Stopwatch
+    ' Appliances
+    Dim tvTimer As New Stopwatch
 
-	' for on/off. on = true off = false
-	Public Property Room1Pw1Status As Boolean
+    'For on/off. on = true off = false
+    Public Property Room1Pw1Status As Boolean
 	Public Property Room1Pw2Status As Boolean
 	Public Property Room1Pw3Status As Boolean
 	Public Property tvStatus As Boolean
@@ -262,13 +259,9 @@ Public Class RoomA
 	Private Sub Room1Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw1Btn.Click
         If Room1Pw1Status = True Then
             Room1Pw1Btn.BackgroundImage = My.Resources.poweroff
-            Room1Pw1Timer.Stop()
-            UpdateRoom1Pw1Time()
             Room1Pw1Status = False
         ElseIf Room1Pw1Status = False Then
             Room1Pw1Btn.BackgroundImage = My.Resources.poweron
-            Room1Pw1Timer.Reset()
-            Room1Pw1Timer.Start()
             Room1Pw1Status = True
         End If
     End Sub
@@ -276,13 +269,9 @@ Public Class RoomA
     Private Sub Room1Pw2Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw2Btn.Click
         If Room1Pw2Status = True Then
             Room1Pw2Btn.BackgroundImage = My.Resources.poweroff
-            Room1Pw2Timer.Stop()
-            UpdateRoom1Pw2Time()
             Room1Pw2Status = False
         ElseIf Room1Pw2Status = False Then
             Room1Pw2Btn.BackgroundImage = My.Resources.poweron
-            Room1Pw2Timer.Reset()
-            Room1Pw2Timer.Start()
             Room1Pw2Status = True
         End If
     End Sub
@@ -290,13 +279,9 @@ Public Class RoomA
     Private Sub Room1Pw3Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw3Btn.Click
         If Room1Pw3Status = True Then
             Room1Pw3Btn.BackgroundImage = My.Resources.poweroff
-            Room1Pw3Timer.Stop()
-            UpdateRoom1Pw3Time()
             Room1Pw3Status = False
         ElseIf Room1Pw3Status = False Then
             Room1Pw3Btn.BackgroundImage = My.Resources.poweron
-            Room1Pw3Timer.Reset()
-            Room1Pw3Timer.Start()
             Room1Pw3Status = True
         End If
     End Sub
@@ -315,25 +300,9 @@ Public Class RoomA
         End If
     End Sub
 
-    Private Sub UpdateRoom1Pw1Time()
-        Dim ts As Long = Room1Pw1Timer.ElapsedMilliseconds
-        'Room1Pw1Lbl.Text = ts.ToString
-        'writeDb(ts, "Room1Pw1")
-    End Sub
-
-    Private Sub UpdateRoom1Pw2Time()
-        Dim ts As Long = Room1Pw2Timer.ElapsedMilliseconds
-        'Room1Pw2Lbl.Text = ts.ToString
-    End Sub
-
-    Private Sub UpdateRoom1Pw3Time()
-        Dim ts As Long = Room1Pw3Timer.ElapsedMilliseconds
-        'Room1Pw3Lbl.Text = ts.ToString
-    End Sub
-
     Private Sub UpdateTvTime()
         Dim ts As Long = tvTimer.ElapsedMilliseconds
-        'tvLbl.Text = ts.ToString
+        writeDb(ts, "Room1Pw1")
     End Sub
 
     Private Sub Room1Back_Click(sender As Object, e As EventArgs) Handles Room1Back.Click
@@ -343,9 +312,7 @@ Public Class RoomA
 
     Private Sub Room1ToDashboard_Click(sender As Object, e As EventArgs) Handles Room1ToDashboard.Click
         Dashboard.Show()
-		'Me.Hide()
-	End Sub
-
-
+        'Me.Hide()
+    End Sub
 End Class
 

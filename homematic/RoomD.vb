@@ -244,10 +244,6 @@ Public Class RoomD
 
     ' Appliances
     Dim tvTimer As New Stopwatch
-    Dim Room4Pw1Timer As New Stopwatch
-    Dim Room4Pw2Timer As New Stopwatch
-    Dim Room4Pw3Timer As New Stopwatch
-
     ' for on/off. on = true off = false
     Dim Room4Pw1Status As Boolean
     Dim Room4Pw2Status As Boolean
@@ -257,13 +253,9 @@ Public Class RoomD
     Private Sub Room4Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room4Pw1Btn.Click
         If Room4Pw1Status = True Then
             Room4Pw1Btn.BackgroundImage = My.Resources.poweroff
-            Room4Pw1Timer.Stop()
-            UpdateRoom4Pw1Time()
             Room4Pw1Status = False
         ElseIf Room4Pw1Status = False Then
             Room4Pw1Btn.BackgroundImage = My.Resources.poweron
-            Room4Pw1Timer.Reset()
-            Room4Pw1Timer.Start()
             Room4Pw1Status = True
         End If
     End Sub
@@ -271,13 +263,9 @@ Public Class RoomD
     Private Sub Room4Pw2Btn_Click(sender As Object, e As EventArgs) Handles Room4Pw2Btn.Click
         If Room4Pw2Status = True Then
             Room4Pw2Btn.BackgroundImage = My.Resources.poweroff
-            Room4Pw2Timer.Stop()
-            UpdateRoom4Pw2Time()
             Room4Pw2Status = False
         ElseIf Room4Pw2Status = False Then
             Room4Pw2Btn.BackgroundImage = My.Resources.poweron
-            Room4Pw2Timer.Reset()
-            Room4Pw2Timer.Start()
             Room4Pw2Status = True
         End If
     End Sub
@@ -285,13 +273,9 @@ Public Class RoomD
     Private Sub Room4Pw3Btn_Click(sender As Object, e As EventArgs) Handles Room4Pw3Btn.Click
         If Room4Pw3Status = True Then
             Room4Pw3Btn.BackgroundImage = My.Resources.poweroff
-            Room4Pw3Timer.Stop()
-            UpdateRoom4Pw3Time()
             Room4Pw3Status = False
         ElseIf Room4Pw3Status = False Then
             Room4Pw3Btn.BackgroundImage = My.Resources.poweron
-            Room4Pw3Timer.Reset()
-            Room4Pw3Timer.Start()
             Room4Pw3Status = True
         End If
     End Sub
@@ -310,24 +294,8 @@ Public Class RoomD
         End If
     End Sub
 
-    Private Sub UpdateRoom4Pw1Time()
-        Dim ts As Long = Room4Pw1Timer.ElapsedMilliseconds
-        'Room4Pw1Lbl.Text = ts.ToString
-    End Sub
-
-    Private Sub UpdateRoom4Pw2Time()
-        Dim ts As Long = Room4Pw2Timer.ElapsedMilliseconds
-        'Room4Pw2Lbl.Text = ts.ToString
-    End Sub
-
-    Private Sub UpdateRoom4Pw3Time()
-        Dim ts As Long = Room4Pw3Timer.ElapsedMilliseconds
-        'Room4Pw3Lbl.Text = ts.ToString
-    End Sub
-
     Private Sub UpdateTvTime()
         Dim ts As Long = tvTimer.ElapsedMilliseconds
-        'tvLbl.Text = ts.ToString
     End Sub
 
     Private Sub Room4Back_Click(sender As Object, e As EventArgs) Handles Room4Back.Click

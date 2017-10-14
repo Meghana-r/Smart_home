@@ -15,7 +15,7 @@ Module Module1
             sqlCommand.Parameters.Add("@name", SqlDbType.VarChar).Value = elemName
             Dim dataReader As SqlDataReader = sqlCommand.ExecuteReader
             While (dataReader.Read())
-                previousTime = Integer.Parse(dataReader.Item("TIME") + 120)
+                previousTime = Integer.Parse(dataReader.Item("TIME"))
             End While
         Catch ex As Exception
             MsgBox(ex.Message.ToString)

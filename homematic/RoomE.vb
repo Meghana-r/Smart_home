@@ -117,19 +117,16 @@ Public Class RoomE
 
     Private Sub Room5UpdtLi1TimeInfo()
         Dim ts As Long = Room5light1SW.ElapsedMilliseconds
-        Room5Light1TimerLbl.Text = ts.ToString
         writeDb(ts, "Room5Light1")
     End Sub
 
     Private Sub Room5UpdtLi2TimeInfo()
         Dim ts As Long = Room5light2SW.ElapsedMilliseconds
-        Room5Light2TimerLbl.Text = ts.ToString
         writeDb(ts, "Room5Light2")
     End Sub
 
     Private Sub Room5UpdtLi3TimeInfo()
         Dim ts As Long = Room5light3SW.ElapsedMilliseconds
-        Room5Light3TimerLbl.Text = ts.ToString
         writeDb(ts, "Room5Light3")
     End Sub
     'code for light settings end here
@@ -200,12 +197,6 @@ Public Class RoomE
     'code for Climate settings end here
 
 
-    ' Appliances
-    Dim tvTimer As New Stopwatch
-    Dim Room5Pw1Timer As New Stopwatch
-    Dim Room5Pw2Timer As New Stopwatch
-    Dim Room5Pw3Timer As New Stopwatch
-
     ' for on/off. on = true off = false
     Dim Room5Pw1Status As Boolean
     Dim Room5Pw2Status As Boolean
@@ -215,13 +206,9 @@ Public Class RoomE
     Private Sub Room5Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room5Pw1Btn.Click
         If Room5Pw1Status = True Then
             Room5Pw1Btn.BackgroundImage = My.Resources.poweroff
-            Room5Pw1Timer.Stop()
-            UpdateRoom5Pw1Time()
             Room5Pw1Status = False
         ElseIf Room5Pw1Status = False Then
             Room5Pw1Btn.BackgroundImage = My.Resources.poweron
-            Room5Pw1Timer.Reset()
-            Room5Pw1Timer.Start()
             Room5Pw1Status = True
         End If
     End Sub
@@ -229,13 +216,9 @@ Public Class RoomE
     Private Sub Room5Pw2Btn_Click(sender As Object, e As EventArgs) Handles Room5Pw2Btn.Click
         If Room5Pw2Status = True Then
             Room5Pw2Btn.BackgroundImage = My.Resources.poweroff
-            Room5Pw2Timer.Stop()
-            UpdateRoom5Pw2Time()
             Room5Pw2Status = False
         ElseIf Room5Pw2Status = False Then
             Room5Pw2Btn.BackgroundImage = My.Resources.poweron
-            Room5Pw2Timer.Reset()
-            Room5Pw2Timer.Start()
             Room5Pw2Status = True
         End If
     End Sub
@@ -243,27 +226,11 @@ Public Class RoomE
     Private Sub Room5Pw3Btn_Click(sender As Object, e As EventArgs) Handles Room5Pw3Btn.Click
         If Room5Pw3Status = True Then
             Room5Pw3Btn.BackgroundImage = My.Resources.poweroff
-            Room5Pw3Timer.Stop()
-            UpdateRoom5Pw3Time()
             Room5Pw3Status = False
         ElseIf Room5Pw3Status = False Then
             Room5Pw3Btn.BackgroundImage = My.Resources.poweron
-            Room5Pw3Timer.Reset()
-            Room5Pw3Timer.Start()
             Room5Pw3Status = True
         End If
-    End Sub
-
-    Private Sub UpdateRoom5Pw1Time()
-        Dim ts As Long = Room5Pw1Timer.ElapsedMilliseconds
-    End Sub
-
-    Private Sub UpdateRoom5Pw2Time()
-        Dim ts As Long = Room5Pw2Timer.ElapsedMilliseconds
-    End Sub
-
-    Private Sub UpdateRoom5Pw3Time()
-        Dim ts As Long = Room5Pw3Timer.ElapsedMilliseconds
     End Sub
 
     Private Sub Room5Back_Click(sender As Object, e As EventArgs) Handles Room5Back.Click
