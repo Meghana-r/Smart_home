@@ -316,17 +316,17 @@ Public Class RoomB
     End Sub
 
     Private Sub UpdateRoom2Pw2Time()
-        Dim ts As Long = Room2Pw1Timer.ElapsedMilliseconds
+        Dim ts As Long = Room2Pw2Timer.ElapsedMilliseconds
         'Room2Pw1Lbl.Text = ts.ToString
     End Sub
 
     Private Sub UpdateRoom2Pw3Time()
-        Dim ts As Long = Room2Pw1Timer.ElapsedMilliseconds
+        Dim ts As Long = Room2Pw3Timer.ElapsedMilliseconds
         'Room2Pw1Lbl.Text = ts.ToString
     End Sub
 
     Private Sub UpdateTvTime()
-        Dim ts As Long = Room2Pw1Timer.ElapsedMilliseconds
+        Dim ts As Long = tvTimer.ElapsedMilliseconds
         'Room2Pw1Lbl.Text = ts.ToString
     End Sub
 
