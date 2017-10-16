@@ -54,12 +54,14 @@ Public Class RoomB
         If Room2Light1Bri.Value = 0 Then
             Room2Light1off.Checked = True
             Room2light1SW.Stop()
-            Room2UpdtLi1TimeInfo()
-        Else
-            Room2Light1on.Checked = True
+			Room2UpdtLi1TimeInfo()
+
+		Else
+			Room2Light1on.Checked = True
             Room2light1SW.Reset()
-            Room2light1SW.Start()
-        End If
+			Room2light1SW.Start()
+
+		End If
     End Sub
 
     Private Sub Room2Light2Bri_Scroll(sender As Object, e As EventArgs) Handles Room2Light2Bri.ValueChanged
@@ -69,12 +71,14 @@ Public Class RoomB
         If Room2Light2Bri.Value = 0 Then
             Room2Light2off.Checked = True
             Room2light2SW.Stop()
-            Room2UpdtLi2TimeInfo()
-        Else
+			Room2UpdtLi2TimeInfo()
+
+		Else
             Room2Light2on.Checked = True
             Room2light2SW.Reset()
-            Room2light2SW.Start()
-        End If
+			Room2light2SW.Start()
+
+		End If
     End Sub
 
     Private Sub Room2Light3Bri_Scroll(sender As Object, e As EventArgs) Handles Room2Light3Bri.ValueChanged
@@ -84,12 +88,14 @@ Public Class RoomB
         If Room2Light3Bri.Value = 0 Then
             Room2Light3off.Checked = True
             Room2light3SW.Stop()
-            Room2UpdtLi3TimeInfo()
-        Else
+			Room2UpdtLi3TimeInfo()
+
+		Else
             Room2Light3on.Checked = True
             Room2light3SW.Reset()
-            Room2light3SW.Start()
-        End If
+			Room2light3SW.Start()
+
+		End If
     End Sub
 
     Private Sub Room2Light1ChkStatus() Handles Room2Light1off.CheckedChanged, Room2Light1on.CheckedChanged
@@ -204,8 +210,9 @@ Public Class RoomB
 
 
     Private Sub Room2VidStart_Click(sender As Object, e As EventArgs) Handles Room2VidStart.Click
-        Room2StartCam()
-    End Sub
+		Room2StartCam()
+
+	End Sub
 
     Private Sub Room2StartCam()
         Room2CameraCapture = New VideoCapture()
@@ -238,8 +245,9 @@ Public Class RoomB
     Private Sub Room2VidStop_Click(sender As Object, e As EventArgs) Handles Room2VidStop.Click
         Room2VidStop.Hide()
         Room2VidStart.Show()
-        Room2CameraCapture.Dispose()
-    End Sub
+		Room2CameraCapture.Dispose()
+
+	End Sub
     'code for Camera ends here
 
     ' Appliances
