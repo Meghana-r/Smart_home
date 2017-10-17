@@ -9,19 +9,20 @@ Imports System.Diagnostics
 
 
 Public Class RoomA
-	'Public Property Tab As New TabPage
-	Private Sub RoomA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub RoomA_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
-		SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
-        ' disable for debugging purposes only
+        SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
         Room1Light1off.Checked = False
         Room1SetupSerial()
         Room1VidStop.Hide()
     End Sub
 
     Private Sub Room1SetupSerial()
+        ' SUB : Establishes Serial Port Connection with Arduino using proper settings
+        ' INPUT : Takes no arguments
+        ' OUTPUT : Disbales all control interfaces if serial port does not open (i.e. connection establishment fails)
         Room1SerialPort1.Close()
         Room1SerialPort1.PortName = "COM4"
         Room1SerialPort1.BaudRate = 9600
@@ -36,6 +37,7 @@ Public Class RoomA
             MsgBox("Port not opened. All controls are unavailable.")
             Room1Light1.Enabled = False
             Room1AppBrpBox.Enabled = False
+            Room1AppGrpBox2.Enabled = False
             Room2Light2.Enabled = False
             Room1light3.Enabled = False
         End Try
@@ -49,6 +51,11 @@ Public Class RoomA
     Dim Room1light3SW As New Stopwatch
 
     Private Sub Room1Light1Bri_Scroll(sender As Object, e As EventArgs) Handles Room1Light1Bri.ValueChanged
+        ' SUB : Responds to event Room1Light1Bri.ValueChanged
+        ' INPUT : nothing special
+        ' OUTPUT : 1. Writes Room1Light1Bri.Value to Room1Light1Lbl
+        '          2. Sends appropriate control signal to arduino for the light
+        '          3. Starts/Stops stopwatch and invokes the TIME-UPDATE functions
         Room1Light1Lbl.Text = Room1Light1Bri.Value.ToString
         If Room1SerialPort1.IsOpen = True Then
             Room1SerialPort1.Write(Room1Light1Bri.Value)
@@ -97,6 +104,10 @@ Public Class RoomA
     End Sub
 
     Private Sub Room1Light1ChkStatus() Handles Room1Light1off.CheckedChanged, Room1Light1on.CheckedChanged
+        ' SUB : Handles the CheckChanged event for the checkboxes
+        ' INPUT : nothing special
+        ' OUTPUT : Changes the value of the trackbar Room1Light1Bri 
+        '           This is done to ensure that only a single function can write to the serial port for specific device so as to reduce redundancy
         If Room1Light1off.Checked = True And Room1Light1on.Checked = False Then
             Room1Light1Bri.Value = Room1Light1Bri.Minimum
         ElseIf Room1Light1off.Checked = False And Room1Light1on.Checked = True Then
@@ -121,8 +132,10 @@ Public Class RoomA
     End Sub
 
     Private Sub Room1UpdtLi1TimeInfo()
+        ' SUB : Updates the time info by calling a function to update the database
+        ' INPUT : nothing as such
+        ' OUTPUT : calulates the time from the stopwatch instance for this specific item and calls the update method with the appropriate name for the database query
         Dim ts As Long = Room1light1SW.ElapsedMilliseconds
-        'Room1Light1TimerLbl.Text = ts.ToString
         writeDb(ts, "Room1Light1")
     End Sub
 
@@ -143,6 +156,7 @@ Public Class RoomA
     'code for Climate settings start here
 
     Private Sub Room1TempIncBtn_Click(sender As Object, e As EventArgs) Handles Room1TempIncBtn.Click
+        ' SUB : calls another function to manage the climate settings
         Room1ClimateBtnClick(1)
     End Sub
 
@@ -152,6 +166,9 @@ Public Class RoomA
 
 
     Private Sub Room1ClimateBtnClick(ByVal index As Int64)
+        ' SUB : manages the climate settings
+        ' INPUT : accepts an integer 
+        ' OUTPUT : Compares the integer and then either raises or lowers the climate 
         Dim n As Integer
         n = Integer.Parse(Room1TempLbl.Text)
         If index = 1 Then
@@ -180,6 +197,7 @@ Public Class RoomA
 
 
     Private Sub Room1TempResetBtn_Click(sender As Object, e As EventArgs) Handles Room1TempResetBtn.Click
+        ' resets the room temp
         Dim m As Integer
         m = Integer.Parse(Room1TempLbl.Text)
         m = 50
@@ -188,16 +206,26 @@ Public Class RoomA
     End Sub
 
     Private Delegate Sub Room1UpdateLabelDelegate(ByVal myText As String)
+    ' a delegate so that we can call a method from another thread
+
 
     Private Sub Room1DataReceived() Handles Room1SerialPort1.DataReceived
+        ' accepts the DataReceived event handler and calls the Room1UpdateLabel method from the other thread
+        ' with a string read from the serial port (humidity and temp from the arduino)
         Dim reading As String = Room1SerialPort1.ReadLine
         Room1UpdateLabel(reading)
     End Sub
 
     Private Sub Room1UpdateLabel(ByVal text As String)
+        ' SUB : updates the temp and humidity label
+        ' INPUT : string which is the data read from the serial port
+        ' OUTPUT : 1. Check if it is in the other thread
+        '          2. If yes then it calls the delegate with its own address (a recursive call)
+        '          3. If no then it displays the string in the proper label
+        ' Since the delegate gets the address ot itself on ht recursive call; this method gets called a second time but this time from the main thread because of the delegate
         If Me.Room1dhtTemp.InvokeRequired Then
             Dim d As New Room1UpdateLabelDelegate(AddressOf Room1UpdateLabel)
-            Me.Room1dhtTemp.Invoke(d, New Object() {text})
+            Me.Room1dhtTemp.Invoke(d, New Object() {text}) ' this line invokes the desired function from another thread
         Else
             Room1dhtTemp.Text = text
         End If
@@ -205,17 +233,24 @@ Public Class RoomA
     'code for Climate settings end here
 
     'code for camera starts here
-    Dim Room1CameraCapture As VideoCapture
-    Dim Room1ImageFrame As Mat
-    Dim Room1FaceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
-	Public Property VidStat As Boolean
+    Dim Room1CameraCapture As VideoCapture 'VideoCapture object
+    Dim Room1ImageFrame As Mat ' for storing images
+    Dim Room1FaceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml") ' the detector loaded with a xml file
+    Public Property VidStat As Boolean
 
 	Public Sub Room1VidStart_Click(sender As Object, e As EventArgs) Handles Room1VidStart.Click
-		Room1StartCam()
-		VidStat = True
+        ' starts the actual thing
+        Room1StartCam()
+        VidStat = True
 	End Sub
 
-	Private Sub Room1StartCam()
+    Private Sub Room1StartCam()
+        ' SUB : starts the capture process
+        ' INPUT : nothing special
+        ' OUTPUT : checks if camera is opened or not
+        '          1. If yes.. then shows the stop button
+        '          2. If no.. then  notify that camera not found
+        '  there is an event handler that calls a method to process the captures 
         Room1CameraCapture = New VideoCapture()
         If Not Room1CameraCapture.IsOpened Then
             MsgBox("camera not found!")
@@ -227,7 +262,12 @@ Public Class RoomA
     End Sub
 
     Private Sub Room1ProcessCapture(sender As System.Object, e As System.EventArgs)
-        Room1ImageFrame = Room1CameraCapture.QuerySmallFrame
+        ' SUB : this method processes the captures
+        ' INPUT : nothing special
+        ' OUTPUT : 1. takes an image frame
+        '          2. uses haar cascade classifiers to DETECT faces ad draw rectangles around them
+
+        Room1ImageFrame = Room1CameraCapture.QuerySmallFrame ' gets a frame from the capture thread
 
         If Room1ImageFrame IsNot Nothing Then
             For Each face As Rectangle In Room1FaceDetector.DetectMultiScale(
@@ -243,15 +283,16 @@ Public Class RoomA
         ImageBox.Image = Room1ImageFrame
     End Sub
 
-	Public Sub Room1VidStop_Click(sender As Object, e As EventArgs) Handles Room1VidStop.Click
-		Room1VidStop.Hide()
-		Room1VidStart.Show()
-		Room1CameraCapture.Dispose()
-		VidStat = False
-	End Sub
+    Public Sub Room1VidStop_Click(sender As Object, e As EventArgs) Handles Room1VidStop.Click
+        ' Stops the video capture session
+        Room1VidStop.Hide()
+        Room1VidStart.Show()
+        Room1CameraCapture.Dispose()
+        VidStat = False
+    End Sub
     'code for Camera ends here
 
-    ' Appliances
+    ' Appliances on?off code
     Dim tvTimer As New Stopwatch
 
     'For on/off. on = true off = false
@@ -291,6 +332,7 @@ Public Class RoomA
     End Sub
 
     Private Sub tvBtn_Click(sender As Object, e As EventArgs) Handles tvBtn.Click
+        ' switch on the TV and make sure that the time thing is updated
         If tvStatus = True Then
             tvBtn.BackgroundImage = My.Resources.tvoff
             tvTimer.Stop()
