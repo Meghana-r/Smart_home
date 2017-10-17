@@ -3,19 +3,19 @@
 dht DHT;
 int curVal;
 
-#define LIGHT1LEVEL1 3
-#define LIGHT1LEVEL2 4
-#define LIGHT1LEVEL3 5
+#define LIGHT1LEVEL1 2
+#define LIGHT1LEVEL2 3
+#define LIGHT1LEVEL3 4
 
-#define LIGHT2LEVEL1 6
-#define LIGHT2LEVEL2 7
-#define LIGHT2LEVEL3 8
+#define LIGHT2LEVEL1 5
+#define LIGHT2LEVEL2 6
+#define LIGHT2LEVEL3 7
 
-#define LIGHT3LEVEL1 9
-#define LIGHT3LEVEL2 10
-#define LIGHT3LEVEL3 11
+#define LIGHT3LEVEL1 8
+#define LIGHT3LEVEL2 9
+#define LIGHT3LEVEL3 10
 
-#define TV 13
+#define TV 11
 
 #define DHTPIN 12
 
@@ -50,41 +50,41 @@ void loop()
   }
 	switch (curVal) 
 	{	
-		case 0: digitalWrite(LIGHT1LEVEL1, LOW); // ALL LIGHT 1 LOW
+		case 0: digitalWrite(LIGHT1LEVEL1, LOW); // LIGHT 1 OFF
 				digitalWrite(LIGHT1LEVEL2, LOW);
 				digitalWrite(LIGHT1LEVEL3, LOW);
 				break;
-		case 1: digitalWrite(LIGHT2LEVEL1, LOW); // ALL LIGHT 2 LOW
-				digitalWrite(LIGHT2LEVEL2, LOW);
-				digitalWrite(LIGHT2LEVEL3, LOW);
+		case 1: digitalWrite(LIGHT1LEVEL1, HIGH); // LIGHT 1 LEVEL 1
+        digitalWrite(LIGHT1LEVEL2, LOW);
+        digitalWrite(LIGHT1LEVEL3, LOW);
 				break;	
-		case 2: digitalWrite(LIGHT3LEVEL1, LOW); // ALL LIGHT 3 LOW
-				digitalWrite(LIGHT3LEVEL2, LOW);
-				digitalWrite(LIGHT3LEVEL3, LOW);
+		case 2: digitalWrite(LIGHT1LEVEL1, HIGH); // LIGHT 1 LEVEL 2
+        digitalWrite(LIGHT1LEVEL2, HIGH);
+        digitalWrite(LIGHT1LEVEL3, LOW);
 				break;		
-		case 3: digitalWrite(LIGHT1LEVEL1, HIGH); // LIGHT 1 LEVEL 1
-				digitalWrite(LIGHT1LEVEL2, LOW);
-				digitalWrite(LIGHT1LEVEL3, LOW);
+		case 3:  digitalWrite(LIGHT1LEVEL1, HIGH); // LIGHT 1 LEVEL 3
+        digitalWrite(LIGHT1LEVEL2, HIGH);
+        digitalWrite(LIGHT1LEVEL3, HIGH);
 				break;
-		case 4: digitalWrite(LIGHT1LEVEL1, HIGH); // LIGHT 1 LEVEL 2
-				digitalWrite(LIGHT1LEVEL2, HIGH);
-				digitalWrite(LIGHT1LEVEL3, LOW);
-				break;	
-		case 5: digitalWrite(LIGHT1LEVEL1, HIGH); // LIGHT 1 LEVEL 3
-				digitalWrite(LIGHT1LEVEL2, HIGH);
-				digitalWrite(LIGHT1LEVEL3, HIGH);
-				break;			
-		case 6: digitalWrite(LIGHT2LEVEL1, HIGH); // LIGHT 2 LEVEL 1
+		case 4: digitalWrite(LIGHT2LEVEL1, LOW); // LIGHT 2 OFF
 				digitalWrite(LIGHT2LEVEL2, LOW);
 				digitalWrite(LIGHT2LEVEL3, LOW);
-				break;					
-		case 7: digitalWrite(LIGHT2LEVEL1, HIGH); // LIGHT 2 LEVEL 2
-				digitalWrite(LIGHT2LEVEL2, HIGH);
-				digitalWrite(LIGHT2LEVEL3, LOW);
 				break;	
-		case 8: digitalWrite(LIGHT2LEVEL1, HIGH); // LIGHT 2 LEVEL 3
-				digitalWrite(LIGHT2LEVEL2, HIGH);
-				digitalWrite(LIGHT2LEVEL3, HIGH);
+		case 5: digitalWrite(LIGHT2LEVEL1, HIGH); // LIGHT 2 LEVEL 1
+				digitalWrite(LIGHT2LEVEL2, LOW);
+				digitalWrite(LIGHT2LEVEL3, LOW);
+				break;			
+		case 6: digitalWrite(LIGHT2LEVEL1, HIGH); // LIGHT 2 LEVEL 2
+        digitalWrite(LIGHT2LEVEL2, HIGH);
+        digitalWrite(LIGHT2LEVEL3, LOW);
+				break;					
+		case 7: digitalWrite(LIGHT2LEVEL1, HIGH); // LIGHT 2 LEVEL 3
+        digitalWrite(LIGHT2LEVEL2, HIGH);
+        digitalWrite(LIGHT2LEVEL3, HIGH);
+				break;	
+		case 8: digitalWrite(LIGHT3LEVEL1, LOW); // ALL LIGHT 3 LOW
+        digitalWrite(LIGHT3LEVEL2, LOW);
+        digitalWrite(LIGHT3LEVEL3, LOW);;
 				break;			
 		case 9: digitalWrite(LIGHT3LEVEL1, HIGH); // LIGHT 3 LEVEL 1
 				digitalWrite(LIGHT3LEVEL2, LOW);
