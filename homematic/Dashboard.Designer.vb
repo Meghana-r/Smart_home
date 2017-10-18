@@ -55,56 +55,26 @@ Partial Class Dashboard
 		Me.MenuClose = New System.Windows.Forms.Button()
 		Me.MenuOpen = New System.Windows.Forms.Button()
 		Me.ControlPanel2 = New System.Windows.Forms.Panel()
-		Me.DashboardClimateBtn2 = New System.Windows.Forms.Button()
-		Me.DashboardVideoBtn2 = New System.Windows.Forms.Button()
-		Me.DashboardAppBtn2 = New System.Windows.Forms.Button()
 		Me.DashboardLightsBtn2 = New System.Windows.Forms.Button()
+		Me.DashboardAppBtn2 = New System.Windows.Forms.Button()
+		Me.DashboardVideoBtn2 = New System.Windows.Forms.Button()
+		Me.DashboardClimateBtn2 = New System.Windows.Forms.Button()
 		Me.ControlPanel3 = New System.Windows.Forms.Panel()
-		Me.DashboardClimateBtn3 = New System.Windows.Forms.Button()
-		Me.DashboardVideoBtn3 = New System.Windows.Forms.Button()
-		Me.DashboardAppBtn3 = New System.Windows.Forms.Button()
 		Me.DashboardLightsBtn3 = New System.Windows.Forms.Button()
+		Me.DashboardAppBtn3 = New System.Windows.Forms.Button()
+		Me.DashboardVideoBtn3 = New System.Windows.Forms.Button()
+		Me.DashboardClimateBtn3 = New System.Windows.Forms.Button()
 		Me.ControlPanel4 = New System.Windows.Forms.Panel()
-		Me.DashboardClimateBtn4 = New System.Windows.Forms.Button()
-		Me.DashboardVideoBtn4 = New System.Windows.Forms.Button()
-		Me.DashboardAppBtn4 = New System.Windows.Forms.Button()
 		Me.DashboardLightsBtn4 = New System.Windows.Forms.Button()
+		Me.DashboardAppBtn4 = New System.Windows.Forms.Button()
+		Me.DashboardVideoBtn4 = New System.Windows.Forms.Button()
+		Me.DashboardClimateBtn4 = New System.Windows.Forms.Button()
 		Me.ControlPanel5 = New System.Windows.Forms.Panel()
-		Me.DashboardClimateBtn5 = New System.Windows.Forms.Button()
-		Me.DashboardVideoBtn5 = New System.Windows.Forms.Button()
-		Me.DashboardAppBtn5 = New System.Windows.Forms.Button()
 		Me.DashboardLightsBtn5 = New System.Windows.Forms.Button()
-		Me.Panel3 = New System.Windows.Forms.Panel()
-		Me.Button5 = New System.Windows.Forms.Button()
-		Me.Button6 = New System.Windows.Forms.Button()
-		Me.Button7 = New System.Windows.Forms.Button()
-		Me.Button8 = New System.Windows.Forms.Button()
-		Me.Panel4 = New System.Windows.Forms.Panel()
-		Me.Button9 = New System.Windows.Forms.Button()
-		Me.Button10 = New System.Windows.Forms.Button()
-		Me.Button11 = New System.Windows.Forms.Button()
-		Me.Button12 = New System.Windows.Forms.Button()
-		Me.Panel5 = New System.Windows.Forms.Panel()
-		Me.Button13 = New System.Windows.Forms.Button()
-		Me.Button14 = New System.Windows.Forms.Button()
-		Me.Button15 = New System.Windows.Forms.Button()
-		Me.Button16 = New System.Windows.Forms.Button()
-		Me.Panel6 = New System.Windows.Forms.Panel()
-		Me.Label6 = New System.Windows.Forms.Label()
-		Me.Button17 = New System.Windows.Forms.Button()
-		Me.Label7 = New System.Windows.Forms.Label()
-		Me.Label8 = New System.Windows.Forms.Label()
-		Me.Label9 = New System.Windows.Forms.Label()
-		Me.Label10 = New System.Windows.Forms.Label()
-		Me.Label11 = New System.Windows.Forms.Label()
-		Me.Label12 = New System.Windows.Forms.Label()
-		Me.Label13 = New System.Windows.Forms.Label()
-		Me.Label14 = New System.Windows.Forms.Label()
-		Me.Label15 = New System.Windows.Forms.Label()
-		Me.Label16 = New System.Windows.Forms.Label()
+		Me.DashboardAppBtn5 = New System.Windows.Forms.Button()
+		Me.DashboardClimateBtn5 = New System.Windows.Forms.Button()
 		Me.ControlPanel6 = New System.Windows.Forms.Panel()
 		Me.DashboardClimateBtn6 = New System.Windows.Forms.Button()
-		Me.DashboardVideoBtn6 = New System.Windows.Forms.Button()
 		Me.DashboardAppBtn6 = New System.Windows.Forms.Button()
 		Me.DashboardLightsBtn6 = New System.Windows.Forms.Button()
 		Me.Panel1.SuspendLayout()
@@ -116,10 +86,6 @@ Partial Class Dashboard
 		Me.ControlPanel3.SuspendLayout()
 		Me.ControlPanel4.SuspendLayout()
 		Me.ControlPanel5.SuspendLayout()
-		Me.Panel3.SuspendLayout()
-		Me.Panel4.SuspendLayout()
-		Me.Panel5.SuspendLayout()
-		Me.Panel6.SuspendLayout()
 		Me.ControlPanel6.SuspendLayout()
 		Me.SuspendLayout()
 		'
@@ -527,35 +493,20 @@ Partial Class Dashboard
 		Me.ControlPanel2.Size = New System.Drawing.Size(531, 465)
 		Me.ControlPanel2.TabIndex = 4
 		'
-		'DashboardClimateBtn2
+		'DashboardLightsBtn2
 		'
-		Me.DashboardClimateBtn2.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardClimateBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardClimateBtn2.FlatAppearance.BorderSize = 0
-		Me.DashboardClimateBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardClimateBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardClimateBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardClimateBtn2.Location = New System.Drawing.Point(37, 302)
-		Me.DashboardClimateBtn2.Name = "DashboardClimateBtn2"
-		Me.DashboardClimateBtn2.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardClimateBtn2.TabIndex = 3
-		Me.DashboardClimateBtn2.Text = "Climate"
-		Me.DashboardClimateBtn2.UseVisualStyleBackColor = True
-		'
-		'DashboardVideoBtn2
-		'
-		Me.DashboardVideoBtn2.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardVideoBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardVideoBtn2.FlatAppearance.BorderSize = 0
-		Me.DashboardVideoBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardVideoBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardVideoBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardVideoBtn2.Location = New System.Drawing.Point(371, 302)
-		Me.DashboardVideoBtn2.Name = "DashboardVideoBtn2"
-		Me.DashboardVideoBtn2.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardVideoBtn2.TabIndex = 2
-		Me.DashboardVideoBtn2.Text = "Surveillance"
-		Me.DashboardVideoBtn2.UseVisualStyleBackColor = True
+		Me.DashboardLightsBtn2.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardLightsBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardLightsBtn2.FlatAppearance.BorderSize = 0
+		Me.DashboardLightsBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardLightsBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardLightsBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardLightsBtn2.Location = New System.Drawing.Point(37, 41)
+		Me.DashboardLightsBtn2.Name = "DashboardLightsBtn2"
+		Me.DashboardLightsBtn2.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardLightsBtn2.TabIndex = 0
+		Me.DashboardLightsBtn2.Text = "Lights"
+		Me.DashboardLightsBtn2.UseVisualStyleBackColor = True
 		'
 		'DashboardAppBtn2
 		'
@@ -572,20 +523,35 @@ Partial Class Dashboard
 		Me.DashboardAppBtn2.Text = "Appliances"
 		Me.DashboardAppBtn2.UseVisualStyleBackColor = True
 		'
-		'DashboardLightsBtn2
+		'DashboardVideoBtn2
 		'
-		Me.DashboardLightsBtn2.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardLightsBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardLightsBtn2.FlatAppearance.BorderSize = 0
-		Me.DashboardLightsBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardLightsBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardLightsBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardLightsBtn2.Location = New System.Drawing.Point(37, 41)
-		Me.DashboardLightsBtn2.Name = "DashboardLightsBtn2"
-		Me.DashboardLightsBtn2.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardLightsBtn2.TabIndex = 0
-		Me.DashboardLightsBtn2.Text = "Lights"
-		Me.DashboardLightsBtn2.UseVisualStyleBackColor = True
+		Me.DashboardVideoBtn2.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardVideoBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardVideoBtn2.FlatAppearance.BorderSize = 0
+		Me.DashboardVideoBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardVideoBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardVideoBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardVideoBtn2.Location = New System.Drawing.Point(371, 302)
+		Me.DashboardVideoBtn2.Name = "DashboardVideoBtn2"
+		Me.DashboardVideoBtn2.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardVideoBtn2.TabIndex = 2
+		Me.DashboardVideoBtn2.Text = "Surveillance"
+		Me.DashboardVideoBtn2.UseVisualStyleBackColor = True
+		'
+		'DashboardClimateBtn2
+		'
+		Me.DashboardClimateBtn2.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardClimateBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardClimateBtn2.FlatAppearance.BorderSize = 0
+		Me.DashboardClimateBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardClimateBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardClimateBtn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardClimateBtn2.Location = New System.Drawing.Point(37, 302)
+		Me.DashboardClimateBtn2.Name = "DashboardClimateBtn2"
+		Me.DashboardClimateBtn2.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardClimateBtn2.TabIndex = 3
+		Me.DashboardClimateBtn2.Text = "Climate"
+		Me.DashboardClimateBtn2.UseVisualStyleBackColor = True
 		'
 		'ControlPanel3
 		'
@@ -600,51 +566,6 @@ Partial Class Dashboard
 		Me.ControlPanel3.Name = "ControlPanel3"
 		Me.ControlPanel3.Size = New System.Drawing.Size(531, 465)
 		Me.ControlPanel3.TabIndex = 4
-		'
-		'DashboardClimateBtn3
-		'
-		Me.DashboardClimateBtn3.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardClimateBtn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardClimateBtn3.FlatAppearance.BorderSize = 0
-		Me.DashboardClimateBtn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardClimateBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardClimateBtn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardClimateBtn3.Location = New System.Drawing.Point(37, 302)
-		Me.DashboardClimateBtn3.Name = "DashboardClimateBtn3"
-		Me.DashboardClimateBtn3.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardClimateBtn3.TabIndex = 3
-		Me.DashboardClimateBtn3.Text = "Climate"
-		Me.DashboardClimateBtn3.UseVisualStyleBackColor = True
-		'
-		'DashboardVideoBtn3
-		'
-		Me.DashboardVideoBtn3.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardVideoBtn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardVideoBtn3.FlatAppearance.BorderSize = 0
-		Me.DashboardVideoBtn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardVideoBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardVideoBtn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardVideoBtn3.Location = New System.Drawing.Point(371, 302)
-		Me.DashboardVideoBtn3.Name = "DashboardVideoBtn3"
-		Me.DashboardVideoBtn3.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardVideoBtn3.TabIndex = 2
-		Me.DashboardVideoBtn3.Text = "Surveillance"
-		Me.DashboardVideoBtn3.UseVisualStyleBackColor = True
-		'
-		'DashboardAppBtn3
-		'
-		Me.DashboardAppBtn3.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardAppBtn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardAppBtn3.FlatAppearance.BorderSize = 0
-		Me.DashboardAppBtn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardAppBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardAppBtn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardAppBtn3.Location = New System.Drawing.Point(371, 43)
-		Me.DashboardAppBtn3.Name = "DashboardAppBtn3"
-		Me.DashboardAppBtn3.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardAppBtn3.TabIndex = 1
-		Me.DashboardAppBtn3.Text = "Appliances"
-		Me.DashboardAppBtn3.UseVisualStyleBackColor = True
 		'
 		'DashboardLightsBtn3
 		'
@@ -661,68 +582,64 @@ Partial Class Dashboard
 		Me.DashboardLightsBtn3.Text = "Lights"
 		Me.DashboardLightsBtn3.UseVisualStyleBackColor = True
 		'
+		'DashboardAppBtn3
+		'
+		Me.DashboardAppBtn3.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardAppBtn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardAppBtn3.FlatAppearance.BorderSize = 0
+		Me.DashboardAppBtn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardAppBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardAppBtn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardAppBtn3.Location = New System.Drawing.Point(371, 43)
+		Me.DashboardAppBtn3.Name = "DashboardAppBtn3"
+		Me.DashboardAppBtn3.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardAppBtn3.TabIndex = 1
+		Me.DashboardAppBtn3.Text = "Appliances"
+		Me.DashboardAppBtn3.UseVisualStyleBackColor = True
+		'
+		'DashboardVideoBtn3
+		'
+		Me.DashboardVideoBtn3.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardVideoBtn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardVideoBtn3.FlatAppearance.BorderSize = 0
+		Me.DashboardVideoBtn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardVideoBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardVideoBtn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardVideoBtn3.Location = New System.Drawing.Point(371, 302)
+		Me.DashboardVideoBtn3.Name = "DashboardVideoBtn3"
+		Me.DashboardVideoBtn3.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardVideoBtn3.TabIndex = 2
+		Me.DashboardVideoBtn3.Text = "Surveillance"
+		Me.DashboardVideoBtn3.UseVisualStyleBackColor = True
+		'
+		'DashboardClimateBtn3
+		'
+		Me.DashboardClimateBtn3.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardClimateBtn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardClimateBtn3.FlatAppearance.BorderSize = 0
+		Me.DashboardClimateBtn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardClimateBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardClimateBtn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardClimateBtn3.Location = New System.Drawing.Point(37, 302)
+		Me.DashboardClimateBtn3.Name = "DashboardClimateBtn3"
+		Me.DashboardClimateBtn3.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardClimateBtn3.TabIndex = 3
+		Me.DashboardClimateBtn3.Text = "Climate"
+		Me.DashboardClimateBtn3.UseVisualStyleBackColor = True
+		'
 		'ControlPanel4
 		'
 		Me.ControlPanel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.ControlPanel4.Controls.Add(Me.Panel3)
 		Me.ControlPanel4.Controls.Add(Me.DashboardClimateBtn4)
 		Me.ControlPanel4.Controls.Add(Me.DashboardVideoBtn4)
-		Me.ControlPanel4.Controls.Add(Me.Panel4)
 		Me.ControlPanel4.Controls.Add(Me.DashboardAppBtn4)
 		Me.ControlPanel4.Controls.Add(Me.DashboardLightsBtn4)
-		Me.ControlPanel4.Controls.Add(Me.Panel5)
-		Me.ControlPanel4.Controls.Add(Me.Panel6)
 		Me.ControlPanel4.Location = New System.Drawing.Point(240, 63)
 		Me.ControlPanel4.Name = "ControlPanel4"
 		Me.ControlPanel4.Size = New System.Drawing.Size(531, 465)
 		Me.ControlPanel4.TabIndex = 4
-		'
-		'DashboardClimateBtn4
-		'
-		Me.DashboardClimateBtn4.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardClimateBtn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardClimateBtn4.FlatAppearance.BorderSize = 0
-		Me.DashboardClimateBtn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardClimateBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardClimateBtn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardClimateBtn4.Location = New System.Drawing.Point(37, 302)
-		Me.DashboardClimateBtn4.Name = "DashboardClimateBtn4"
-		Me.DashboardClimateBtn4.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardClimateBtn4.TabIndex = 3
-		Me.DashboardClimateBtn4.Text = "Climate"
-		Me.DashboardClimateBtn4.UseVisualStyleBackColor = True
-		'
-		'DashboardVideoBtn4
-		'
-		Me.DashboardVideoBtn4.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardVideoBtn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardVideoBtn4.FlatAppearance.BorderSize = 0
-		Me.DashboardVideoBtn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardVideoBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardVideoBtn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardVideoBtn4.Location = New System.Drawing.Point(371, 302)
-		Me.DashboardVideoBtn4.Name = "DashboardVideoBtn4"
-		Me.DashboardVideoBtn4.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardVideoBtn4.TabIndex = 2
-		Me.DashboardVideoBtn4.Text = "Surveillance"
-		Me.DashboardVideoBtn4.UseVisualStyleBackColor = True
-		'
-		'DashboardAppBtn4
-		'
-		Me.DashboardAppBtn4.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardAppBtn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardAppBtn4.FlatAppearance.BorderSize = 0
-		Me.DashboardAppBtn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardAppBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardAppBtn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardAppBtn4.Location = New System.Drawing.Point(371, 43)
-		Me.DashboardAppBtn4.Name = "DashboardAppBtn4"
-		Me.DashboardAppBtn4.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardAppBtn4.TabIndex = 1
-		Me.DashboardAppBtn4.Text = "Appliances"
-		Me.DashboardAppBtn4.UseVisualStyleBackColor = True
 		'
 		'DashboardLightsBtn4
 		'
@@ -739,65 +656,63 @@ Partial Class Dashboard
 		Me.DashboardLightsBtn4.Text = "Lights"
 		Me.DashboardLightsBtn4.UseVisualStyleBackColor = True
 		'
+		'DashboardAppBtn4
+		'
+		Me.DashboardAppBtn4.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardAppBtn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardAppBtn4.FlatAppearance.BorderSize = 0
+		Me.DashboardAppBtn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardAppBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardAppBtn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardAppBtn4.Location = New System.Drawing.Point(371, 43)
+		Me.DashboardAppBtn4.Name = "DashboardAppBtn4"
+		Me.DashboardAppBtn4.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardAppBtn4.TabIndex = 1
+		Me.DashboardAppBtn4.Text = "Appliances"
+		Me.DashboardAppBtn4.UseVisualStyleBackColor = True
+		'
+		'DashboardVideoBtn4
+		'
+		Me.DashboardVideoBtn4.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardVideoBtn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardVideoBtn4.FlatAppearance.BorderSize = 0
+		Me.DashboardVideoBtn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardVideoBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardVideoBtn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardVideoBtn4.Location = New System.Drawing.Point(371, 302)
+		Me.DashboardVideoBtn4.Name = "DashboardVideoBtn4"
+		Me.DashboardVideoBtn4.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardVideoBtn4.TabIndex = 2
+		Me.DashboardVideoBtn4.Text = "Surveillance"
+		Me.DashboardVideoBtn4.UseVisualStyleBackColor = True
+		'
+		'DashboardClimateBtn4
+		'
+		Me.DashboardClimateBtn4.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardClimateBtn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardClimateBtn4.FlatAppearance.BorderSize = 0
+		Me.DashboardClimateBtn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardClimateBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardClimateBtn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardClimateBtn4.Location = New System.Drawing.Point(37, 302)
+		Me.DashboardClimateBtn4.Name = "DashboardClimateBtn4"
+		Me.DashboardClimateBtn4.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardClimateBtn4.TabIndex = 3
+		Me.DashboardClimateBtn4.Text = "Climate"
+		Me.DashboardClimateBtn4.UseVisualStyleBackColor = True
+		'
 		'ControlPanel5
 		'
 		Me.ControlPanel5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.ControlPanel5.Controls.Add(Me.ControlPanel6)
 		Me.ControlPanel5.Controls.Add(Me.DashboardClimateBtn5)
-		Me.ControlPanel5.Controls.Add(Me.DashboardVideoBtn5)
 		Me.ControlPanel5.Controls.Add(Me.DashboardAppBtn5)
 		Me.ControlPanel5.Controls.Add(Me.DashboardLightsBtn5)
 		Me.ControlPanel5.Location = New System.Drawing.Point(240, 63)
 		Me.ControlPanel5.Name = "ControlPanel5"
 		Me.ControlPanel5.Size = New System.Drawing.Size(531, 465)
 		Me.ControlPanel5.TabIndex = 6
-		'
-		'DashboardClimateBtn5
-		'
-		Me.DashboardClimateBtn5.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardClimateBtn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardClimateBtn5.FlatAppearance.BorderSize = 0
-		Me.DashboardClimateBtn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardClimateBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardClimateBtn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardClimateBtn5.Location = New System.Drawing.Point(37, 302)
-		Me.DashboardClimateBtn5.Name = "DashboardClimateBtn5"
-		Me.DashboardClimateBtn5.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardClimateBtn5.TabIndex = 3
-		Me.DashboardClimateBtn5.Text = "Climate"
-		Me.DashboardClimateBtn5.UseVisualStyleBackColor = True
-		'
-		'DashboardVideoBtn5
-		'
-		Me.DashboardVideoBtn5.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardVideoBtn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardVideoBtn5.FlatAppearance.BorderSize = 0
-		Me.DashboardVideoBtn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardVideoBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardVideoBtn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardVideoBtn5.Location = New System.Drawing.Point(371, 302)
-		Me.DashboardVideoBtn5.Name = "DashboardVideoBtn5"
-		Me.DashboardVideoBtn5.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardVideoBtn5.TabIndex = 2
-		Me.DashboardVideoBtn5.Text = "Surveillance"
-		Me.DashboardVideoBtn5.UseVisualStyleBackColor = True
-		'
-		'DashboardAppBtn5
-		'
-		Me.DashboardAppBtn5.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardAppBtn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardAppBtn5.FlatAppearance.BorderSize = 0
-		Me.DashboardAppBtn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardAppBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardAppBtn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardAppBtn5.Location = New System.Drawing.Point(371, 43)
-		Me.DashboardAppBtn5.Name = "DashboardAppBtn5"
-		Me.DashboardAppBtn5.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardAppBtn5.TabIndex = 1
-		Me.DashboardAppBtn5.Text = "Appliances"
-		Me.DashboardAppBtn5.UseVisualStyleBackColor = True
 		'
 		'DashboardLightsBtn5
 		'
@@ -814,372 +729,35 @@ Partial Class Dashboard
 		Me.DashboardLightsBtn5.Text = "Lights"
 		Me.DashboardLightsBtn5.UseVisualStyleBackColor = True
 		'
-		'Panel3
+		'DashboardAppBtn5
 		'
-		Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-			Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.Panel3.Controls.Add(Me.Button5)
-		Me.Panel3.Controls.Add(Me.Button6)
-		Me.Panel3.Controls.Add(Me.Button7)
-		Me.Panel3.Controls.Add(Me.Button8)
-		Me.Panel3.Location = New System.Drawing.Point(221, 189)
-		Me.Panel3.Name = "Panel3"
-		Me.Panel3.Size = New System.Drawing.Size(531, 465)
-		Me.Panel3.TabIndex = 7
+		Me.DashboardAppBtn5.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardAppBtn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardAppBtn5.FlatAppearance.BorderSize = 0
+		Me.DashboardAppBtn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardAppBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardAppBtn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardAppBtn5.Location = New System.Drawing.Point(371, 43)
+		Me.DashboardAppBtn5.Name = "DashboardAppBtn5"
+		Me.DashboardAppBtn5.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardAppBtn5.TabIndex = 1
+		Me.DashboardAppBtn5.Text = "Appliances"
+		Me.DashboardAppBtn5.UseVisualStyleBackColor = True
 		'
-		'Button5
+		'DashboardClimateBtn5
 		'
-		Me.Button5.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button5.FlatAppearance.BorderSize = 0
-		Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button5.Location = New System.Drawing.Point(37, 302)
-		Me.Button5.Name = "Button5"
-		Me.Button5.Size = New System.Drawing.Size(160, 140)
-		Me.Button5.TabIndex = 3
-		Me.Button5.Text = "Climate"
-		Me.Button5.UseVisualStyleBackColor = True
-		'
-		'Button6
-		'
-		Me.Button6.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button6.FlatAppearance.BorderSize = 0
-		Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button6.Location = New System.Drawing.Point(371, 302)
-		Me.Button6.Name = "Button6"
-		Me.Button6.Size = New System.Drawing.Size(160, 140)
-		Me.Button6.TabIndex = 2
-		Me.Button6.Text = "Surveillance"
-		Me.Button6.UseVisualStyleBackColor = True
-		'
-		'Button7
-		'
-		Me.Button7.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button7.FlatAppearance.BorderSize = 0
-		Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button7.Location = New System.Drawing.Point(371, 43)
-		Me.Button7.Name = "Button7"
-		Me.Button7.Size = New System.Drawing.Size(160, 140)
-		Me.Button7.TabIndex = 1
-		Me.Button7.Text = "Appliances"
-		Me.Button7.UseVisualStyleBackColor = True
-		'
-		'Button8
-		'
-		Me.Button8.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button8.FlatAppearance.BorderSize = 0
-		Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button8.Location = New System.Drawing.Point(37, 41)
-		Me.Button8.Name = "Button8"
-		Me.Button8.Size = New System.Drawing.Size(160, 140)
-		Me.Button8.TabIndex = 0
-		Me.Button8.Text = "Lights"
-		Me.Button8.UseVisualStyleBackColor = True
-		'
-		'Panel4
-		'
-		Me.Panel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-			Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.Panel4.Controls.Add(Me.Button9)
-		Me.Panel4.Controls.Add(Me.Button10)
-		Me.Panel4.Controls.Add(Me.Button11)
-		Me.Panel4.Controls.Add(Me.Button12)
-		Me.Panel4.Location = New System.Drawing.Point(221, 189)
-		Me.Panel4.Name = "Panel4"
-		Me.Panel4.Size = New System.Drawing.Size(531, 465)
-		Me.Panel4.TabIndex = 8
-		'
-		'Button9
-		'
-		Me.Button9.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button9.FlatAppearance.BorderSize = 0
-		Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button9.Location = New System.Drawing.Point(37, 302)
-		Me.Button9.Name = "Button9"
-		Me.Button9.Size = New System.Drawing.Size(160, 140)
-		Me.Button9.TabIndex = 3
-		Me.Button9.Text = "Climate"
-		Me.Button9.UseVisualStyleBackColor = True
-		'
-		'Button10
-		'
-		Me.Button10.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button10.FlatAppearance.BorderSize = 0
-		Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button10.Location = New System.Drawing.Point(371, 302)
-		Me.Button10.Name = "Button10"
-		Me.Button10.Size = New System.Drawing.Size(160, 140)
-		Me.Button10.TabIndex = 2
-		Me.Button10.Text = "Surveillance"
-		Me.Button10.UseVisualStyleBackColor = True
-		'
-		'Button11
-		'
-		Me.Button11.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button11.FlatAppearance.BorderSize = 0
-		Me.Button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button11.Location = New System.Drawing.Point(371, 43)
-		Me.Button11.Name = "Button11"
-		Me.Button11.Size = New System.Drawing.Size(160, 140)
-		Me.Button11.TabIndex = 1
-		Me.Button11.Text = "Appliances"
-		Me.Button11.UseVisualStyleBackColor = True
-		'
-		'Button12
-		'
-		Me.Button12.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button12.FlatAppearance.BorderSize = 0
-		Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button12.Location = New System.Drawing.Point(37, 41)
-		Me.Button12.Name = "Button12"
-		Me.Button12.Size = New System.Drawing.Size(160, 140)
-		Me.Button12.TabIndex = 0
-		Me.Button12.Text = "Lights"
-		Me.Button12.UseVisualStyleBackColor = True
-		'
-		'Panel5
-		'
-		Me.Panel5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-			Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.Panel5.Controls.Add(Me.Button13)
-		Me.Panel5.Controls.Add(Me.Button14)
-		Me.Panel5.Controls.Add(Me.Button15)
-		Me.Panel5.Controls.Add(Me.Button16)
-		Me.Panel5.Location = New System.Drawing.Point(221, 189)
-		Me.Panel5.Name = "Panel5"
-		Me.Panel5.Size = New System.Drawing.Size(531, 465)
-		Me.Panel5.TabIndex = 5
-		'
-		'Button13
-		'
-		Me.Button13.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button13.FlatAppearance.BorderSize = 0
-		Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button13.Location = New System.Drawing.Point(37, 302)
-		Me.Button13.Name = "Button13"
-		Me.Button13.Size = New System.Drawing.Size(160, 140)
-		Me.Button13.TabIndex = 3
-		Me.Button13.Text = "Climate"
-		Me.Button13.UseVisualStyleBackColor = True
-		'
-		'Button14
-		'
-		Me.Button14.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button14.FlatAppearance.BorderSize = 0
-		Me.Button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button14.Location = New System.Drawing.Point(371, 302)
-		Me.Button14.Name = "Button14"
-		Me.Button14.Size = New System.Drawing.Size(160, 140)
-		Me.Button14.TabIndex = 2
-		Me.Button14.Text = "Surveillance"
-		Me.Button14.UseVisualStyleBackColor = True
-		'
-		'Button15
-		'
-		Me.Button15.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button15.FlatAppearance.BorderSize = 0
-		Me.Button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button15.Location = New System.Drawing.Point(371, 43)
-		Me.Button15.Name = "Button15"
-		Me.Button15.Size = New System.Drawing.Size(160, 140)
-		Me.Button15.TabIndex = 1
-		Me.Button15.Text = "Appliances"
-		Me.Button15.UseVisualStyleBackColor = True
-		'
-		'Button16
-		'
-		Me.Button16.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.Button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.Button16.FlatAppearance.BorderSize = 0
-		Me.Button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button16.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Button16.Location = New System.Drawing.Point(37, 41)
-		Me.Button16.Name = "Button16"
-		Me.Button16.Size = New System.Drawing.Size(160, 140)
-		Me.Button16.TabIndex = 0
-		Me.Button16.Text = "Lights"
-		Me.Button16.UseVisualStyleBackColor = True
-		'
-		'Panel6
-		'
-		Me.Panel6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-			Or System.Windows.Forms.AnchorStyles.Left) _
-			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-		Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(66, Byte), Integer))
-		Me.Panel6.Controls.Add(Me.Label6)
-		Me.Panel6.Controls.Add(Me.Button17)
-		Me.Panel6.Controls.Add(Me.Label7)
-		Me.Panel6.Controls.Add(Me.Label8)
-		Me.Panel6.Controls.Add(Me.Label9)
-		Me.Panel6.Controls.Add(Me.Label10)
-		Me.Panel6.Controls.Add(Me.Label11)
-		Me.Panel6.Controls.Add(Me.Label12)
-		Me.Panel6.Controls.Add(Me.Label13)
-		Me.Panel6.Controls.Add(Me.Label14)
-		Me.Panel6.Controls.Add(Me.Label15)
-		Me.Panel6.Controls.Add(Me.Label16)
-		Me.Panel6.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Panel6.ForeColor = System.Drawing.Color.White
-		Me.Panel6.Location = New System.Drawing.Point(221, 189)
-		Me.Panel6.Name = "Panel6"
-		Me.Panel6.Size = New System.Drawing.Size(534, 465)
-		Me.Panel6.TabIndex = 9
-		'
-		'Label6
-		'
-		Me.Label6.Location = New System.Drawing.Point(50, 20)
-		Me.Label6.Name = "Label6"
-		Me.Label6.Size = New System.Drawing.Size(172, 21)
-		Me.Label6.TabIndex = 11
-		'
-		'Button17
-		'
-		Me.Button17.BackColor = System.Drawing.Color.Transparent
-		Me.Button17.BackgroundImage = Global.homematic.My.Resources.Resources.BackButton
-		Me.Button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-		Me.Button17.FlatAppearance.BorderSize = 0
-		Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.Button17.Location = New System.Drawing.Point(19, 20)
-		Me.Button17.Name = "Button17"
-		Me.Button17.Size = New System.Drawing.Size(18, 16)
-		Me.Button17.TabIndex = 10
-		Me.Button17.UseVisualStyleBackColor = False
-		'
-		'Label7
-		'
-		Me.Label7.BackColor = System.Drawing.Color.Transparent
-		Me.Label7.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label7.ForeColor = System.Drawing.Color.White
-		Me.Label7.Location = New System.Drawing.Point(217, 363)
-		Me.Label7.Name = "Label7"
-		Me.Label7.Size = New System.Drawing.Size(100, 45)
-		Me.Label7.TabIndex = 9
-		'
-		'Label8
-		'
-		Me.Label8.BackColor = System.Drawing.Color.Transparent
-		Me.Label8.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label8.ForeColor = System.Drawing.Color.White
-		Me.Label8.Location = New System.Drawing.Point(217, 284)
-		Me.Label8.Name = "Label8"
-		Me.Label8.Size = New System.Drawing.Size(100, 45)
-		Me.Label8.TabIndex = 8
-		'
-		'Label9
-		'
-		Me.Label9.BackColor = System.Drawing.Color.Transparent
-		Me.Label9.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label9.ForeColor = System.Drawing.Color.White
-		Me.Label9.Location = New System.Drawing.Point(217, 213)
-		Me.Label9.Name = "Label9"
-		Me.Label9.Size = New System.Drawing.Size(100, 45)
-		Me.Label9.TabIndex = 7
-		'
-		'Label10
-		'
-		Me.Label10.BackColor = System.Drawing.Color.Transparent
-		Me.Label10.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label10.ForeColor = System.Drawing.Color.White
-		Me.Label10.Location = New System.Drawing.Point(217, 136)
-		Me.Label10.Name = "Label10"
-		Me.Label10.Size = New System.Drawing.Size(100, 45)
-		Me.Label10.TabIndex = 6
-		'
-		'Label11
-		'
-		Me.Label11.BackColor = System.Drawing.Color.Transparent
-		Me.Label11.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label11.ForeColor = System.Drawing.Color.White
-		Me.Label11.Location = New System.Drawing.Point(217, 67)
-		Me.Label11.Name = "Label11"
-		Me.Label11.Size = New System.Drawing.Size(100, 45)
-		Me.Label11.TabIndex = 5
-		'
-		'Label12
-		'
-		Me.Label12.BackColor = System.Drawing.Color.Transparent
-		Me.Label12.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label12.ForeColor = System.Drawing.Color.White
-		Me.Label12.Location = New System.Drawing.Point(52, 363)
-		Me.Label12.Name = "Label12"
-		Me.Label12.Size = New System.Drawing.Size(145, 45)
-		Me.Label12.TabIndex = 4
-		'
-		'Label13
-		'
-		Me.Label13.BackColor = System.Drawing.Color.Transparent
-		Me.Label13.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label13.ForeColor = System.Drawing.Color.White
-		Me.Label13.Location = New System.Drawing.Point(52, 284)
-		Me.Label13.Name = "Label13"
-		Me.Label13.Size = New System.Drawing.Size(145, 45)
-		Me.Label13.TabIndex = 3
-		'
-		'Label14
-		'
-		Me.Label14.BackColor = System.Drawing.Color.Transparent
-		Me.Label14.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label14.ForeColor = System.Drawing.Color.White
-		Me.Label14.Location = New System.Drawing.Point(51, 213)
-		Me.Label14.Name = "Label14"
-		Me.Label14.Size = New System.Drawing.Size(145, 45)
-		Me.Label14.TabIndex = 2
-		'
-		'Label15
-		'
-		Me.Label15.BackColor = System.Drawing.Color.Transparent
-		Me.Label15.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label15.ForeColor = System.Drawing.Color.White
-		Me.Label15.Location = New System.Drawing.Point(52, 136)
-		Me.Label15.Name = "Label15"
-		Me.Label15.Size = New System.Drawing.Size(145, 45)
-		Me.Label15.TabIndex = 1
-		'
-		'Label16
-		'
-		Me.Label16.BackColor = System.Drawing.Color.Transparent
-		Me.Label16.Font = New System.Drawing.Font("Roboto Thin", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label16.ForeColor = System.Drawing.Color.White
-		Me.Label16.Location = New System.Drawing.Point(52, 65)
-		Me.Label16.Name = "Label16"
-		Me.Label16.Size = New System.Drawing.Size(145, 45)
-		Me.Label16.TabIndex = 0
+		Me.DashboardClimateBtn5.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
+		Me.DashboardClimateBtn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.DashboardClimateBtn5.FlatAppearance.BorderSize = 0
+		Me.DashboardClimateBtn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+		Me.DashboardClimateBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.DashboardClimateBtn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.DashboardClimateBtn5.Location = New System.Drawing.Point(221, 301)
+		Me.DashboardClimateBtn5.Name = "DashboardClimateBtn5"
+		Me.DashboardClimateBtn5.Size = New System.Drawing.Size(160, 140)
+		Me.DashboardClimateBtn5.TabIndex = 3
+		Me.DashboardClimateBtn5.Text = "Climate"
+		Me.DashboardClimateBtn5.UseVisualStyleBackColor = True
 		'
 		'ControlPanel6
 		'
@@ -1187,10 +765,9 @@ Partial Class Dashboard
 			Or System.Windows.Forms.AnchorStyles.Left) _
 			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
 		Me.ControlPanel6.Controls.Add(Me.DashboardClimateBtn6)
-		Me.ControlPanel6.Controls.Add(Me.DashboardVideoBtn6)
 		Me.ControlPanel6.Controls.Add(Me.DashboardAppBtn6)
 		Me.ControlPanel6.Controls.Add(Me.DashboardLightsBtn6)
-		Me.ControlPanel6.Location = New System.Drawing.Point(0, 0)
+		Me.ControlPanel6.Location = New System.Drawing.Point(240, 63)
 		Me.ControlPanel6.Name = "ControlPanel6"
 		Me.ControlPanel6.Size = New System.Drawing.Size(531, 465)
 		Me.ControlPanel6.TabIndex = 7
@@ -1203,27 +780,12 @@ Partial Class Dashboard
 		Me.DashboardClimateBtn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
 		Me.DashboardClimateBtn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.DashboardClimateBtn6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardClimateBtn6.Location = New System.Drawing.Point(37, 302)
+		Me.DashboardClimateBtn6.Location = New System.Drawing.Point(203, 284)
 		Me.DashboardClimateBtn6.Name = "DashboardClimateBtn6"
 		Me.DashboardClimateBtn6.Size = New System.Drawing.Size(160, 140)
 		Me.DashboardClimateBtn6.TabIndex = 3
 		Me.DashboardClimateBtn6.Text = "Climate"
 		Me.DashboardClimateBtn6.UseVisualStyleBackColor = True
-		'
-		'DashboardVideoBtn6
-		'
-		Me.DashboardVideoBtn6.BackgroundImage = Global.homematic.My.Resources.Resources.Cards
-		Me.DashboardVideoBtn6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.DashboardVideoBtn6.FlatAppearance.BorderSize = 0
-		Me.DashboardVideoBtn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.DashboardVideoBtn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.DashboardVideoBtn6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.DashboardVideoBtn6.Location = New System.Drawing.Point(371, 302)
-		Me.DashboardVideoBtn6.Name = "DashboardVideoBtn6"
-		Me.DashboardVideoBtn6.Size = New System.Drawing.Size(160, 140)
-		Me.DashboardVideoBtn6.TabIndex = 2
-		Me.DashboardVideoBtn6.Text = "Surveillance"
-		Me.DashboardVideoBtn6.UseVisualStyleBackColor = True
 		'
 		'DashboardAppBtn6
 		'
@@ -1261,6 +823,7 @@ Partial Class Dashboard
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.White
 		Me.ClientSize = New System.Drawing.Size(769, 529)
+		Me.Controls.Add(Me.ControlPanel6)
 		Me.Controls.Add(Me.ControlPanel5)
 		Me.Controls.Add(Me.ControlPanel4)
 		Me.Controls.Add(Me.ControlPanel3)
@@ -1280,10 +843,6 @@ Partial Class Dashboard
 		Me.ControlPanel3.ResumeLayout(False)
 		Me.ControlPanel4.ResumeLayout(False)
 		Me.ControlPanel5.ResumeLayout(False)
-		Me.Panel3.ResumeLayout(False)
-		Me.Panel4.ResumeLayout(False)
-		Me.Panel5.ResumeLayout(False)
-		Me.Panel6.ResumeLayout(False)
 		Me.ControlPanel6.ResumeLayout(False)
 		Me.ResumeLayout(False)
 
@@ -1335,42 +894,12 @@ Partial Class Dashboard
 	Friend WithEvents DashboardVideoBtn4 As Button
 	Friend WithEvents DashboardAppBtn4 As Button
 	Friend WithEvents DashboardLightsBtn4 As Button
-	Friend WithEvents Panel3 As Panel
-	Friend WithEvents Button5 As Button
-	Friend WithEvents Button6 As Button
-	Friend WithEvents Button7 As Button
-	Friend WithEvents Button8 As Button
-	Friend WithEvents Panel4 As Panel
-	Friend WithEvents Button9 As Button
-	Friend WithEvents Button10 As Button
-	Friend WithEvents Button11 As Button
-	Friend WithEvents Button12 As Button
-	Friend WithEvents Panel5 As Panel
-	Friend WithEvents Button13 As Button
-	Friend WithEvents Button14 As Button
-	Friend WithEvents Button15 As Button
-	Friend WithEvents Button16 As Button
-	Friend WithEvents Panel6 As Panel
-	Friend WithEvents Label6 As Label
-	Friend WithEvents Button17 As Button
-	Friend WithEvents Label7 As Label
-	Friend WithEvents Label8 As Label
-	Friend WithEvents Label9 As Label
-	Friend WithEvents Label10 As Label
-	Friend WithEvents Label11 As Label
-	Friend WithEvents Label12 As Label
-	Friend WithEvents Label13 As Label
-	Friend WithEvents Label14 As Label
-	Friend WithEvents Label15 As Label
-	Friend WithEvents Label16 As Label
 	Friend WithEvents ControlPanel5 As Panel
 	Friend WithEvents DashboardClimateBtn5 As Button
-	Friend WithEvents DashboardVideoBtn5 As Button
 	Friend WithEvents DashboardAppBtn5 As Button
 	Friend WithEvents DashboardLightsBtn5 As Button
 	Friend WithEvents ControlPanel6 As Panel
 	Friend WithEvents DashboardClimateBtn6 As Button
-	Friend WithEvents DashboardVideoBtn6 As Button
 	Friend WithEvents DashboardAppBtn6 As Button
 	Friend WithEvents DashboardLightsBtn6 As Button
 End Class

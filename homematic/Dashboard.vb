@@ -407,128 +407,128 @@ Public Class Dashboard
 	'Room3 controls end
 	'LIVING ROOM control begin
 	'/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	'Private Sub DashboardLivingBTN_Click(sender As Object, e As EventArgs) Handles DashboardLivingBTN.Click
-	'	mypanel(3).Show()
-	'	mypanel(4).Hide()
-	'	mypanel(5).Hide()
-	'	For i As Integer = 0 To 2
-	'		mypanel(i).Hide()
-	'	Next
-	'End Sub
-	'Private Sub DashboardLightsBtn4_Click(sender As Object, e As EventArgs) Handles DashboardLightsBtn4.Click
-	'	ControlNameLbl.Text = "Lights"
-	'	Panel1.Show()
-	'	For z As Integer = 0 To 5
-	'		mypanel(z).Hide()
-	'	Next
-	'	For y As Integer = 3 To 4
-	'		presenttxt(y).Hide()
-	'	Next
-	'	For i As Integer = 0 To 2
-	'		presenttxt(i).Text = "Living Room light" & i + 1
+	Private Sub dashboardlivingbtn_click(sender As Object, e As EventArgs) Handles DashboardLivingBTN.Click
+		mypanel(3).Show()
+		mypanel(4).Hide()
+		mypanel(5).Hide()
+		For i As Integer = 0 To 2
+			mypanel(i).Hide()
+		Next
+	End Sub
+	Private Sub DashboardLightsBtn4_click(sender As Object, e As EventArgs) Handles DashboardLightsBtn4.Click
+		ControlNameLbl.Text = "lights"
+		Panel1.Show()
+		For z As Integer = 0 To 5
+			mypanel(z).Hide()
+		Next
+		For y As Integer = 3 To 4
+			presenttxt(y).Hide()
+		Next
+		For i As Integer = 0 To 2
+			presenttxt(i).Text = "living room light" & i + 1
 
-	'	Next
-	'	If RoomD.Room4Light1off.Checked = True Then
-	'		mytext(0).Text = "off "
-	'	Else
-	'		mytext(0).Text = "on"
-	'	End If
-	'	If RoomD.Room4Light2off.Checked = True Then
-	'		mytext(1).Text = "off "
-	'	Else
-	'		mytext(1).Text = "on"
-	'	End If
-	'	If RoomD.Room4Light3off.Checked = True Then
-	'		mytext(2).Text = "off "
-	'	Else
-	'		mytext(2).Text = "on"
-	'	End If
-	'	'loop
+		Next
+		If RoomD.Room4Light1off.Checked = True Then
+			mytext(0).Text = "off "
+		Else
+			mytext(0).Text = "on"
+		End If
+		If RoomD.Room4Light2off.Checked = True Then
+			mytext(1).Text = "off "
+		Else
+			mytext(1).Text = "on"
+		End If
+		If RoomD.Room4Light3off.Checked = True Then
+			mytext(2).Text = "off "
+		Else
+			mytext(2).Text = "on"
+		End If
+		'loop
 
-	'	For x As Integer = 3 To 4
-	'		mytext(x).Hide()
+		For x As Integer = 3 To 4
+			mytext(x).Hide()
 
-	'	Next
-	'End Sub
+		Next
+	End Sub
 
-	'Private Sub DashboardAppBtn4_Click(sender As Object, e As EventArgs) Handles DashboardAppBtn4.Click
-	'	ControlNameLbl.Text = "Appliances"
-	'	Panel1.Show()
-	'	For z As Integer = 0 To 5
-	'		mypanel(z).Hide()
-	'	Next
-	'	mytext(4).Hide()
-	'	presenttxt(4).Hide()
+	Private Sub DashboardAppBtn4_click(sender As Object, e As EventArgs) Handles DashboardAppBtn4.Click
+		ControlNameLbl.Text = "appliances"
+		Panel1.Show()
+		For z As Integer = 0 To 5
+			mypanel(z).Hide()
+		Next
+		mytext(4).Hide()
+		presenttxt(4).Hide()
 
-	'	For i As Integer = 0 To 3
-	'		presenttxt(i).Text = "Appliance" & i + 1
+		For i As Integer = 0 To 3
+			presenttxt(i).Text = "appliance" & i + 1
 
-	'	Next
-	'	If RoomD.tvStatus = True Then
-	'		mytext(0).Text = "ON"
-	'	Else
-	'		mytext(0).Text = "OFF"
-	'	End If
-	'	If RoomD.Room4Pw1Status = True Then
-	'		mytext(1).Text = "ON"
-	'	Else
-	'		mytext(1).Text = "OFF"
-	'	End If
-	'	If RoomD.Room4Pw2Status = True Then
-	'		mytext(2).Text = "on"
-	'	Else
-	'		mytext(2).Text = "off"
-	'	End If
-	'	If RoomD.Room4Pw3Status = True Then
-	'		mytext(3).Text = "ON"
-	'	Else
-	'		mytext(3).Text = "OFF"
-	'	End If
+		Next
+		If RoomD.tvStatus = True Then
+			mytext(0).Text = "on"
+		Else
+			mytext(0).Text = "off"
+		End If
+		If RoomD.Room4Pw1Status = True Then
+			mytext(1).Text = "on"
+		Else
+			mytext(1).Text = "off"
+		End If
+		If RoomD.Room4Pw2Status = True Then
+			mytext(2).Text = "on"
+		Else
+			mytext(2).Text = "off"
+		End If
+		If RoomD.Room4Pw3Status = True Then
+			mytext(3).Text = "on"
+		Else
+			mytext(3).Text = "off"
+		End If
 
-	'End Sub
+	End Sub
 
 
 
-	'Private Sub DashboardClimateBtn4_Click(sender As Object, e As EventArgs) Handles DashboardClimateBtn4.Click
-	'	ControlNameLbl.Text = "Climate"
-	'	Panel1.Show()
-	'	For z As Integer = 0 To 5
-	'		mypanel(z).Hide()
-	'	Next
-	'	presenttxt(0).Text = "the temperature is"
-	'	presenttxt(0).AutoSize = True
-	'	mytext(0).Text = RoomD.Room4TempLbl.Text
-	'	presenttxt(1).Text = "the humidity is "
-	'	presenttxt(1).AutoSize = True
-	'	mytext(1).Text = RoomC.Room3dhtTemp.Text
-	'	For i As Integer = 2 To 4
-	'		presenttxt(i).Hide()
-	'	Next
-	'	For x As Integer = 2 To 4
-	'		mytext(x).Hide()
-	'	Next
-	'End Sub
+	Private Sub DashboardClimateBtn4_click(sender As Object, e As EventArgs) Handles DashboardClimateBtn4.Click
+		ControlNameLbl.Text = "climate"
+		Panel1.Show()
+		For z As Integer = 0 To 5
+			mypanel(z).Hide()
+		Next
+		presenttxt(0).Text = "the temperature is"
+		presenttxt(0).AutoSize = True
+		mytext(0).Text = RoomD.Room4TempLbl.Text
+		presenttxt(1).Text = "the humidity is "
+		presenttxt(1).AutoSize = True
+		mytext(1).Text = RoomC.Room3dhtTemp.Text
+		For i As Integer = 2 To 4
+			presenttxt(i).Hide()
+		Next
+		For x As Integer = 2 To 4
+			mytext(x).Hide()
+		Next
+	End Sub
 
-	'Private Sub DashboardVideoBtn4_Click(sender As Object, e As EventArgs) Handles DashboardVideoBtn4.Click
-	'	ControlNameLbl.Text = "Surveillance"
-	'	Panel1.Show()
-	'	For z As Integer = 0 To 5
-	'		mypanel(z).Hide()
-	'	Next
-	'	If RoomD.Vidstat = True Then
-	'		presenttxt(0).Text = "the video is running"
-	'	Else
-	'		presenttxt(0).Text = "the video is turned off"
-	'	End If
-	'	presenttxt(0).AutoSize = True
-	'	For i As Integer = 1 To 4
-	'		presenttxt(i).Hide()
+	Private Sub DashboardVideoBtn4_click(sender As Object, e As EventArgs) Handles DashboardVideoBtn4.Click
+		ControlNameLbl.Text = "surveillance"
+		Panel1.Show()
+		For z As Integer = 0 To 5
+			mypanel(z).Hide()
+		Next
+		If RoomD.Vidstat = True Then
+			presenttxt(0).Text = "the video is running"
+		Else
+			presenttxt(0).Text = "the video is turned off"
+		End If
+		presenttxt(0).AutoSize = True
+		For i As Integer = 1 To 4
+			presenttxt(i).Hide()
 
-	'	Next
-	'	For x As Integer = 0 To 4
-	'		mytext(x).Hide()
-	'	Next
-	'End Sub
+		Next
+		For x As Integer = 0 To 4
+			mytext(x).Hide()
+		Next
+	End Sub
 	'////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	'Living Roomcontrols end
 	'Kitchen control begin
