@@ -133,11 +133,14 @@
   <data name="kitchenbtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kitchenbtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DashboardBathroomIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DashboardBathroomIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RoomIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-Bed Filled-502.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Snowflake-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fridgeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fridgeon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dashboardMasterIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboardMasterIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,9 +172,6 @@
   <data name="MasterRoom1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MasterRoom1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tvoff" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tvoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Panelnew" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Panelnew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,14 +199,8 @@
   <data name="homelogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homelogo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BathRoomIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-Shower and Tub Filled-501.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="TempIncrease" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Slide Up Filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DashBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rect815.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="panelbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panelbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +208,17 @@
   <data name="DashboardRoom2Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DashboardRoom2Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BathRoom2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BathRoom2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DashboardSingleBedicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DashboardSingleBedicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fridgeoff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fridgeoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kitchen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kitchen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Panel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Panel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +238,8 @@
   <data name="poweron" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\poweron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="VideoIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-Video Call-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LightIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-Light Automation-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cards" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cards.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,8 +247,11 @@
   <data name="DashboardKitchenIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DashboardKitchenIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RoomIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-Bed Filled-502.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Room21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Room21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tvoff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tvoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Living room" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Living room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,8 +259,8 @@
   <data name="TempDecrease" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Down Button Filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LightIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-Light Automation-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fridgeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fridgeon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="RoomTemp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Sun Filled-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,11 +268,11 @@
   <data name="kitchenicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kitchenicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Room21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Room21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BathRoomIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-Shower and Tub Filled-501.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kitchen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kitchen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DashBoardButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rect815.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlueprintFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blueprintnew1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,13 +280,13 @@
   <data name="Bathroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bathroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BathRoom2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BathRoom2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="VideoIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-Video Call-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TempIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Temperature-50 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DashboardBathroomIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DashboardBathroomIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Panelnew1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Panelnew1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

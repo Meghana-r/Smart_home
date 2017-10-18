@@ -276,6 +276,7 @@
     <None Include="Resources\rect815.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Panelnew1.png" />
     <None Include="Resources\DashboardBathroomIcon1.png" />
     <None Include="Resources\dashboardMasterIcon.png" />
     <None Include="Resources\DashboardBathroomIcon.png" />

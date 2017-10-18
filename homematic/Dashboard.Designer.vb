@@ -340,7 +340,7 @@ Partial Class Dashboard
 		Me.DashboardMenu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
 			Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
 		Me.DashboardMenu.BackColor = System.Drawing.Color.Transparent
-		Me.DashboardMenu.BackgroundImage = Global.homematic.My.Resources.Resources.Panelnew
+		Me.DashboardMenu.BackgroundImage = Global.homematic.My.Resources.Resources.Panelnew1
 		Me.DashboardMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 		Me.DashboardMenu.Controls.Add(Me.LogoSmall)
 		Me.DashboardMenu.Controls.Add(Me.LogoBig)
