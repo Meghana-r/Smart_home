@@ -12,12 +12,13 @@ Module Module1
 
         Dim sqlCommand As New SqlCommand(retrieveQuery, connection)
 
+        ' gets the previous value of time
         Try
             connection.Open()
             sqlCommand.Parameters.Add("@name", SqlDbType.VarChar).Value = elemName
             Dim dataReader As SqlDataReader = sqlCommand.ExecuteReader
             While (dataReader.Read())
-                previousTime = Integer.Parse(dataReader.Item("TIME"))
+                previousTime = Double.Parse(dataReader.Item("TIME"))
             End While
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
@@ -26,6 +27,7 @@ Module Module1
         End Try
 
         Dim sqlCommand2 As New SqlCommand(updateQuery, connection)
+        ' updates the time in the db with the previous value + the new value
         Try
             connection.Open()
             sqlCommand2.Parameters.Add("@time", SqlDbType.Float).Value = previousTime + newTime / 1000 ' convert milliseconds to seconds
