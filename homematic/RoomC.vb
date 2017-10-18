@@ -195,17 +195,19 @@ Public Class RoomC
             Room3dhtTemp.Text = text
         End If
     End Sub
-    'code for Climate settings end here
+	'code for Climate settings end here
 
-    'code for camera starts here
-    Dim Room3CameraCapture As VideoCapture
+	'code for camera starts here
+	Public Property Vidstat As Boolean
+	Dim Room3CameraCapture As VideoCapture
     Dim Room3ImageFrame As Mat
     Dim Room3FaceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml")
 
 
     Private Sub Room3VidStart_Click(sender As Object, e As EventArgs) Handles Room3VidStart.Click
-        Room3StartCam()
-    End Sub
+		Room3StartCam()
+		Vidstat = True
+	End Sub
 
     Private Sub Room3StartCam()
         Room3CameraCapture = New VideoCapture()
@@ -238,20 +240,21 @@ Public Class RoomC
     Private Sub Room3VidStop_Click(sender As Object, e As EventArgs) Handles Room3VidStop.Click
         Room3VidStop.Hide()
         Room3VidStart.Show()
-        Room3CameraCapture.Dispose()
-    End Sub
+		Room3CameraCapture.Dispose()
+		Vidstat = False
+	End Sub
     'code for Camera ends here
 
     ' Appliances
     Dim tvTimer As New Stopwatch
 
-    ' for on/off. on = true off = false
-    Dim Room3Pw1Status As Boolean
-    Dim Room3Pw2Status As Boolean
-    Dim Room3Pw3Status As Boolean
-    Dim tvStatus As Boolean
+	' for on/off. on = true off = false
+	Public Property Room3Pw1Status As Boolean
+	Public Property Room3Pw2Status As Boolean
+	Public Property Room3Pw3Status As Boolean
+	Public Property tvStatus As Boolean
 
-    Private Sub Room3Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room3Pw1Btn.Click
+	Private Sub Room3Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room3Pw1Btn.Click
         If Room3Pw1Status = True Then
             Room3Pw1Btn.BackgroundImage = My.Resources.poweroff
             Room3Pw1Status = False

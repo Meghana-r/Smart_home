@@ -194,16 +194,16 @@ Public Class RoomE
             Room5dhtTemp.Text = text
         End If
     End Sub
-    'code for Climate settings end here
+	'code for Climate settings end here
 
 
-    ' for on/off. on = true off = false
-    Dim Room5Pw1Status As Boolean
-    Dim Room5Pw2Status As Boolean
-    Dim Room5Pw3Status As Boolean
-    Dim tvStatus As Boolean
+	' for on/off. on = true off = false
+	Public Property Room5Pw1Status As Boolean
+	Public Property Room5Pw2Status As Boolean
+	Public Property Room5Pw3Status As Boolean
+	Public Property tvStatus As Boolean
 
-    Private Sub Room5Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room5Pw1Btn.Click
+	Private Sub Room5Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room5Pw1Btn.Click
         If Room5Pw1Status = True Then
             Room5Pw1Btn.BackgroundImage = My.Resources.poweroff
             Room5Pw1Status = False
