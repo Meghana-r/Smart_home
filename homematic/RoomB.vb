@@ -15,8 +15,7 @@ Public Class RoomB
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
-        ' disable for debugging purposes only
-        'Room2SetupSerial()
+        Room2SetupSerial()
         Room2VidStop.Hide()
     End Sub
 
@@ -50,47 +49,49 @@ Public Class RoomB
     Private Sub Room2Light1Bri_Scroll(sender As Object, e As EventArgs) Handles Room2Light1Bri.ValueChanged
         Room2Light1Lbl.Text = String.Format("{0} %", arg0:=Room2Light1Bri.Value)
         Room2Light1Lbl.Text = Room2Light1Bri.Value.ToString
-        'SerialPort1.Write(brighttrack.Value) 
+        If Room2SerialPort1.IsOpen Then
+            Room2SerialPort1.Write(Room2Light1Bri.Value)
+        End If
         If Room2Light1Bri.Value = 0 Then
             Room2Light1off.Checked = True
             Room2light1SW.Stop()
-			Room2UpdtLi1TimeInfo()
-
-		Else
+            Room2UpdtLi1TimeInfo()
+        Else
 			Room2Light1on.Checked = True
             Room2light1SW.Reset()
-			Room2light1SW.Start()
-
-		End If
+            Room2light1SW.Start()
+        End If
     End Sub
 
     Private Sub Room2Light2Bri_Scroll(sender As Object, e As EventArgs) Handles Room2Light2Bri.ValueChanged
         Room2Light2Lbl.Text = String.Format("{0} %", arg0:=Room2Light2Bri.Value)
-        Room2Light2Lbl.Text = Room2Light2Bri.Value.ToString
-        'SerialPort1.Write(brighttrack2.Value)
-        If Room2Light2Bri.Value = 0 Then
+        Room2Light2Lbl.Text = Room2Light2Bri.Value.ToString - 4
+        If Room2SerialPort1.IsOpen Then
+            Room2SerialPort1.Write(Room2Light2Bri.Value)
+        End If
+        If Room2Light2Bri.Value = Room2Light2Bri.Minimum Then
             Room2Light2off.Checked = True
             Room2light2SW.Stop()
-			Room2UpdtLi2TimeInfo()
-
-		Else
+            Room2UpdtLi2TimeInfo()
+        Else
             Room2Light2on.Checked = True
             Room2light2SW.Reset()
-			Room2light2SW.Start()
-
-		End If
+            Room2light2SW.Start()
+        End If
     End Sub
 
     Private Sub Room2Light3Bri_Scroll(sender As Object, e As EventArgs) Handles Room2Light3Bri.ValueChanged
         Room2Light3Lbl.Text = String.Format("{0} %", arg0:=Room2Light3Bri.Value)
-        Room2Light3Lbl.Text = Room2Light3Bri.Value.ToString
-        'SerialPort1.Write(brighttrack3.Value)
-        If Room2Light3Bri.Value = 0 Then
+        Room2Light3Lbl.Text = Room2Light3Bri.Value.ToString - 8
+        If Room2SerialPort1.IsOpen Then
+            Room2SerialPort1.Write(Room2Light3Bri.Value)
+        End If
+        If Room2Light3Bri.Value = Room2Light3Bri.Minimum Then
             Room2Light3off.Checked = True
             Room2light3SW.Stop()
-			Room2UpdtLi3TimeInfo()
+            Room2UpdtLi3TimeInfo()
 
-		Else
+        Else
             Room2Light3on.Checked = True
             Room2light3SW.Reset()
 			Room2light3SW.Start()
@@ -100,25 +101,25 @@ Public Class RoomB
 
     Private Sub Room2Light1ChkStatus() Handles Room2Light1off.CheckedChanged, Room2Light1on.CheckedChanged
         If Room2Light1off.Checked = True And Room2Light1on.Checked = False Then
-            Room2Light1Bri.Value = 0
+            Room2Light1Bri.Value = Room2Light1Bri.Minimum
         ElseIf Room2Light1off.Checked = False And Room2Light1on.Checked = True Then
-            Room2Light1Bri.Value = 2
+            Room2Light1Bri.Value = Room2Light1Bri.Maximum
         End If
     End Sub
 
     Private Sub Room2Light2ChkStatus() Handles Room2Light2off.CheckedChanged, Room2Light2on.CheckedChanged
         If Room2Light2off.Checked = True And Room2Light2on.Checked = False Then
-            Room2Light2Bri.Value = 0
+            Room2Light2Bri.Value = Room2Light2Bri.Minimum
         ElseIf Room2Light2off.Checked = False And Room2Light2on.Checked = True Then
-            Room2Light2Bri.Value = 2
+            Room2Light2Bri.Value = Room2Light2Bri.Maximum
         End If
     End Sub
 
     Private Sub Room2Light3Status() Handles Room2Light3off.CheckedChanged, Room2Light3on.CheckedChanged
         If Room2Light3off.Checked = True And Room2Light3on.Checked = False Then
-            Room2Light3Bri.Value = 0
+            Room2Light3Bri.Value = Room2Light3Bri.Minimum
         ElseIf Room2Light3off.Checked = False And Room2Light3on.Checked = True Then
-            Room2Light3Bri.Value = 2
+            Room2Light3Bri.Value = Room2Light3Bri.Maximum
         End If
     End Sub
 
@@ -295,9 +296,15 @@ Public Class RoomB
             tvBtn.BackgroundImage = My.Resources.tvoff
             tvTimer.Stop()
             UpdateTvTime()
+            If Room2SerialPort1.IsOpen = True Then
+                Room2SerialPort1.Write(13)
+            End If
             tvStatus = False
-        ElseIf tvStatus = False Then
+            ElseIf tvStatus = False Then
             tvBtn.BackgroundImage = My.Resources.tvon
+            If Room2SerialPort1.IsOpen = True Then
+                Room2SerialPort1.Write(12)
+            End If
             tvTimer.Reset()
             tvTimer.Start()
             tvStatus = True
@@ -310,6 +317,7 @@ Public Class RoomB
 
     Private Sub Room2Back_Click(sender As Object, e As EventArgs) Handles Room2Back.Click
         Form1.Show()
+        Room2SerialPort1.Close()
         Me.Hide()
     End Sub
 

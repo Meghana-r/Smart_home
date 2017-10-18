@@ -92,7 +92,7 @@ Public Class RoomA
         If Room1SerialPort1.IsOpen = True Then
             Room1SerialPort1.Write(Room1Light3Bri.Value)
         End If
-        If Room1Light3Bri.Value = 8 Then
+        If Room1Light3Bri.Value = Room1Light3Bri.Minimum Then
             Room1Light3off.Checked = True
             Room1light3SW.Stop()
             Room1UpdtLi3TimeInfo()
@@ -359,6 +359,7 @@ Public Class RoomA
 
     Private Sub Room1Back_Click(sender As Object, e As EventArgs) Handles Room1Back.Click
         Form1.Show()
+        Room1SerialPort1.Close()
         Me.Hide()
     End Sub
 
