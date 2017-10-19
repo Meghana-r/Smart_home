@@ -21,7 +21,7 @@ Public Class RoomD
 
     Private Sub Room4SetupSerial()
         Room4SerialPort1.Close()
-        Room4SerialPort1.PortName = "com4"
+        Room4SerialPort1.PortName = Room4SerialPortName
         Room4SerialPort1.BaudRate = 9600
         Room4SerialPort1.DataBits = 8
         Room4SerialPort1.Parity = Parity.None

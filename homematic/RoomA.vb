@@ -24,7 +24,7 @@ Public Class RoomA
         ' INPUT : Takes no arguments
         ' OUTPUT : Disbales all control interfaces if serial port does not open (i.e. connection establishment fails)
         Room1SerialPort1.Close()
-        Room1SerialPort1.PortName = "COM4"
+        Room1SerialPort1.PortName = Room1SerialPortName
         Room1SerialPort1.BaudRate = 9600
         Room1SerialPort1.DataBits = 8
         Room1SerialPort1.Parity = Parity.None

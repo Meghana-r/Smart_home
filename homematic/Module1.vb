@@ -1,6 +1,13 @@
 ﻿Imports System.Data.SqlClient
 
 Module Module1
+    Public Room1SerialPortName As String = "com4"
+    Public Room2SerialPortName As String = "com4"
+    Public Room3SerialPortName As String = "com4"
+    Public Room4SerialPortName As String = "com4"
+    Public Room5SerialPortName As String = "com4"
+    Public Room6SerialPortName As String = "com4"
+
     Public Sub writeDb(ByVal newTime As Double, ByVal elemName As String)
         ' takes a number and the element and adds them to the SQL database 
         ' it takes the previously stored value and addes the new value to the old value
