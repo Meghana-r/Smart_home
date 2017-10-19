@@ -200,11 +200,69 @@ Public Class RoomF
             Room6dhtTemp.Text = text
         End If
     End Sub
-	'code for Climate settings end here
+    'code for Climate settings end here
+    'code for camera starts here
+    Dim Room6CameraCapture As VideoCapture 'VideoCapture object
+    Dim Room6ImageFrame As Mat ' for storing images
+    Dim Room6FaceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml") ' the detector loaded with a xml file
+    Public Property VidStat As Boolean
 
+    Public Sub Room6VidStart_Click(sender As Object, e As EventArgs) Handles Room6VidStart.Click
+        ' starts the actual thing
+        Room6StartCam()
+        VidStat = True
+    End Sub
 
-	' for on/off. on = true off = false
-	Public Property Room6Pw1Status As Boolean
+    Private Sub Room6StartCam()
+        ' SUB : starts the capture process
+        ' INPUT : nothing special
+        ' OUTPUT : checks if camera is opened or not
+        '          1. If yes.. then shows the stop button
+        '          2. If no.. then  notify that camera not found
+        '  there is an event handler that calls a method to process the captures 
+        Room6CameraCapture = New VideoCapture()
+        If Not Room6CameraCapture.IsOpened Then
+            MsgBox("camera not found!")
+        Else
+            Room6VidStart.Hide()
+            Room6VidStop.Show()
+        End If
+        AddHandler Application.Idle, AddressOf Room6ProcessCapture ' call the function when the event is raised.
+    End Sub
+
+    Private Sub Room6ProcessCapture(sender As System.Object, e As System.EventArgs)
+        ' SUB : this method processes the captures
+        ' INPUT : nothing special
+        ' OUTPUT : 1. takes an image frame
+        '          2. uses haar cascade classifiers to DETECT faces ad draw rectangles around them
+
+        Room6ImageFrame = Room6CameraCapture.QuerySmallFrame ' gets a frame from the capture thread
+
+        If Room6ImageFrame IsNot Nothing Then
+            For Each face As Rectangle In Room6FaceDetector.DetectMultiScale(
+                         Room6ImageFrame, 'the frame where it is suposed to detect
+                         1.1,        'the relative size of scanning window for the next pass
+                         10,      ' minimum neighbours to group as a single detected frame
+                         New Size(20, 20), ' size of the window
+                         Size.Empty)      'maximum size of the window
+                CvInvoke.Rectangle(Room6ImageFrame, face, New MCvScalar(255, 255, 255)) ' DRAW a rectangle around the detected area
+            Next
+        End If
+
+        ImageBox.Image = Room6ImageFrame
+    End Sub
+
+    Public Sub Room6VidStop_Click(sender As Object, e As EventArgs) Handles Room6VidStop.Click
+        ' Stops the video capture session
+        Room6VidStop.Hide()
+        Room6VidStart.Show()
+        Room6CameraCapture.Dispose()
+        VidStat = False
+    End Sub
+    'code for Camera ends here
+
+    ' for on/off. on = true off = false
+    Public Property Room6Pw1Status As Boolean
 	Public Property Room6Pw2Status As Boolean
 	Public Property Room6Pw3Status As Boolean
 	Public Property tvStatus As Boolean
@@ -244,14 +302,14 @@ Public Class RoomF
         Room6SerialPort1.Close()
         If Room6CameraCapture.IsOpened Then
             Room6CameraCapture.Dispose()
-        End If        Me.Hide()
+        End If
+        Me.Hide()
     End Sub
 
     Private Sub Room6ToDashboard_Click(sender As Object, e As EventArgs) Handles Room6ToDashboard.Click
         Dashboard.Show()
         Me.Hide()
     End Sub
-
 
 End Class
 
