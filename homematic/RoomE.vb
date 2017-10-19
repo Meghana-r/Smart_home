@@ -15,8 +15,7 @@ Public Class RoomE
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
-        ' disable for debugging purposes only
-        'Room5SetupSerial()
+        Room5SetupSerial()
     End Sub
 
     Private Sub Room5SetupSerial()
@@ -49,8 +48,10 @@ Public Class RoomE
     Private Sub Room5Light1Bri_Scroll(sender As Object, e As EventArgs) Handles Room5Light1Bri.ValueChanged
         Room5Light1Lbl.Text = String.Format("{0} %", arg0:=Room5Light1Bri.Value)
         Room5Light1Lbl.Text = Room5Light1Bri.Value.ToString
-        'SerialPort1.Write(brighttrack.Value) 
-        If Room5Light1Bri.Value = 0 Then
+        If Room5SerialPort1.IsOpen = True Then
+            Room5SerialPort1.Write(Room5Light1Bri.Value)
+        End If
+        If Room5Light1Bri.Value = Room5Light1Bri.Minimum Then
             Room5Light1off.Checked = True
             Room5light1SW.Stop()
             Room5UpdtLi1TimeInfo()
@@ -63,9 +64,11 @@ Public Class RoomE
 
     Private Sub Room5Light2Bri_Scroll(sender As Object, e As EventArgs) Handles Room5Light2Bri.ValueChanged
         Room5Light2Lbl.Text = String.Format("{0} %", arg0:=Room5Light2Bri.Value)
-        Room5Light2Lbl.Text = Room5Light2Bri.Value.ToString
-        'SerialPort1.Write(brighttrack2.Value)
-        If Room5Light2Bri.Value = 0 Then
+        Room5Light2Lbl.Text = Room5Light2Bri.Value.ToString - 4
+        If Room5SerialPort1.IsOpen = True Then
+            Room5SerialPort1.Write(Room5Light2Bri.Value)
+        End If
+        If Room5Light2Bri.Value = Room5Light2Bri.Minimum Then
             Room5Light2off.Checked = True
             Room5light2SW.Stop()
             Room5UpdtLi2TimeInfo()
@@ -78,9 +81,11 @@ Public Class RoomE
 
     Private Sub Room5Light3Bri_Scroll(sender As Object, e As EventArgs) Handles Room5Light3Bri.ValueChanged
         Room5Light3Lbl.Text = String.Format("{0} %", arg0:=Room5Light3Bri.Value)
-        Room5Light3Lbl.Text = Room5Light3Bri.Value.ToString
-        'SerialPort1.Write(brighttrack3.Value)
-        If Room5Light3Bri.Value = 0 Then
+        Room5Light3Lbl.Text = Room5Light3Bri.Value.ToString - 8
+        If Room5SerialPort1.IsOpen = True Then
+            Room5SerialPort1.Write(Room5Light3Bri.Value)
+        End If
+        If Room5Light3Bri.Value = Room5Light3Bri.Minimum Then
             Room5Light3off.Checked = True
             Room5light3SW.Stop()
             Room5UpdtLi3TimeInfo()
@@ -93,25 +98,25 @@ Public Class RoomE
 
     Private Sub Room5Light1ChkStatus() Handles Room5Light1off.CheckedChanged, Room5Light1on.CheckedChanged
         If Room5Light1off.Checked = True And Room5Light1on.Checked = False Then
-            Room5Light1Bri.Value = 0
+            Room5Light1Bri.Value = Room5Light1Bri.Minimum
         ElseIf Room5Light1off.Checked = False And Room5Light1on.Checked = True Then
-            Room5Light1Bri.Value = 2
+            Room5Light1Bri.Value = Room5Light1Bri.Maximum
         End If
     End Sub
 
     Private Sub Room5Light2ChkStatus() Handles Room5Light2off.CheckedChanged, Room5Light2on.CheckedChanged
         If Room5Light2off.Checked = True And Room5Light2on.Checked = False Then
-            Room5Light2Bri.Value = 0
+            Room5Light2Bri.Value = Room5Light2Bri.Minimum
         ElseIf Room5Light2off.Checked = False And Room5Light2on.Checked = True Then
-            Room5Light2Bri.Value = 2
+            Room5Light2Bri.Value = Room5Light2Bri.Maximum
         End If
     End Sub
 
     Private Sub Room5Light3Status() Handles Room5Light3off.CheckedChanged, Room5Light3on.CheckedChanged
         If Room5Light3off.Checked = True And Room5Light3on.Checked = False Then
-            Room5Light3Bri.Value = 0
+            Room5Light3Bri.Value = Room5Light3Bri.Minimum
         ElseIf Room5Light3off.Checked = False And Room5Light3on.Checked = True Then
-            Room5Light3Bri.Value = 2
+            Room5Light3Bri.Value = Room5Light3Bri.Maximum
         End If
     End Sub
 
@@ -206,9 +211,15 @@ Public Class RoomE
 	Private Sub Room5Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room5Pw1Btn.Click
         If Room5Pw1Status = True Then
             Room5Pw1Btn.BackgroundImage = My.Resources.poweroff
+            If Room5SerialPort1.IsOpen = True Then
+                Room5SerialPort1.Write(13)
+            End If
             Room5Pw1Status = False
         ElseIf Room5Pw1Status = False Then
             Room5Pw1Btn.BackgroundImage = My.Resources.poweron
+            If Room5SerialPort1.IsOpen = True Then
+                Room5SerialPort1.Write(12)
+            End If
             Room5Pw1Status = True
         End If
     End Sub
@@ -235,6 +246,7 @@ Public Class RoomE
 
     Private Sub Room5Back_Click(sender As Object, e As EventArgs) Handles Room5Back.Click
         Form1.Show()
+        Room5SerialPort1.Close()
         Me.Hide()
     End Sub
 
