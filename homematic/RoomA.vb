@@ -238,11 +238,11 @@ Public Class RoomA
     Dim Room1FaceDetector As New CascadeClassifier("..\..\Resources\classifiers\haarcascade_frontalface_default.xml") ' the detector loaded with a xml file
     Public Property VidStat As Boolean
 
-	Public Sub Room1VidStart_Click(sender As Object, e As EventArgs) Handles Room1VidStart.Click
+    Public Sub Room1VidStart_Click(sender As Object, e As EventArgs) Handles Room1VidStart.Click
         ' starts the actual thing
         Room1StartCam()
         VidStat = True
-	End Sub
+    End Sub
 
     Private Sub Room1StartCam()
         ' SUB : starts the capture process
@@ -297,11 +297,11 @@ Public Class RoomA
 
     'For on/off. on = true off = false
     Public Property Room1Pw1Status As Boolean
-	Public Property Room1Pw2Status As Boolean
-	Public Property Room1Pw3Status As Boolean
-	Public Property tvStatus As Boolean
+    Public Property Room1Pw2Status As Boolean
+    Public Property Room1Pw3Status As Boolean
+    Public Property tvStatus As Boolean
 
-	Private Sub Room1Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw1Btn.Click
+    Private Sub Room1Pw1Btn_Click(sender As Object, e As EventArgs) Handles Room1Pw1Btn.Click
         If Room1Pw1Status = True Then
             Room1Pw1Btn.BackgroundImage = My.Resources.poweroff
             Room1Pw1Status = False
@@ -360,7 +360,7 @@ Public Class RoomA
     Private Sub Room1Back_Click(sender As Object, e As EventArgs) Handles Room1Back.Click
         Form1.Show()
         Room1SerialPort1.Close()
-        If Room1CameraCapture.IsOpened Then
+        If Not Room1CameraCapture Is Nothing Then
             Room1CameraCapture.Dispose()
         End If
         Me.Hide()

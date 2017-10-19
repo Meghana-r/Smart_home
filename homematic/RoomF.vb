@@ -300,7 +300,7 @@ Public Class RoomF
     Private Sub Room6Back_Click(sender As Object, e As EventArgs) Handles Room6Back.Click
         Form1.Show()
         Room6SerialPort1.Close()
-        If Room6CameraCapture.IsOpened Then
+        If Not Room6CameraCapture Is Nothing Then
             Room6CameraCapture.Dispose()
         End If
         Me.Hide()

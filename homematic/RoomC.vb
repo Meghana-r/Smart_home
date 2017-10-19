@@ -317,7 +317,7 @@ Public Class RoomC
     Private Sub Room3Back_Click(sender As Object, e As EventArgs) Handles Room3Back.Click
         Form1.Show()
         Room3SerialPort1.Close()
-        If Room3CameraCapture.IsOpened Then
+        If Not Room3CameraCapture Is Nothing Then
             Room3CameraCapture.Dispose()
         End If
         Me.Hide()
