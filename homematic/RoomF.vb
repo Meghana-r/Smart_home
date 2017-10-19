@@ -15,8 +15,7 @@ Public Class RoomF
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.Grey800, Primary.Grey900, Primary.Grey700, Accent.Pink200, TextShade.WHITE)
-        ' disable for debugging purposes only
-        'Room6SetupSerial()
+        Room6SetupSerial()
         Room6VidStop.Hide()
     End Sub
 
@@ -50,8 +49,10 @@ Public Class RoomF
     Private Sub Room6Light1Bri_Scroll(sender As Object, e As EventArgs) Handles Room6Light1Bri.ValueChanged
         Room6Light1Lbl.Text = String.Format("{0} %", arg0:=Room6Light1Bri.Value)
         Room6Light1Lbl.Text = Room6Light1Bri.Value.ToString
-        'SerialPort1.Write(brighttrack.Value) 
-        If Room6Light1Bri.Value = 0 Then
+        If Room6SerialPort1.IsOpen = True Then
+            Room6SerialPort1.Write(Room6Light1Bri.Value)
+        End If
+        If Room6Light1Bri.Value = Room6Light1Bri.Minimum Then
             Room6Light1off.Checked = True
             Room6light1SW.Stop()
             Room6UpdtLi1TimeInfo()
@@ -64,9 +65,11 @@ Public Class RoomF
 
     Private Sub Room6Light2Bri_Scroll(sender As Object, e As EventArgs) Handles Room6Light2Bri.ValueChanged
         Room6Light2Lbl.Text = String.Format("{0} %", arg0:=Room6Light2Bri.Value)
-        Room6Light2Lbl.Text = Room6Light2Bri.Value.ToString
-        'SerialPort1.Write(brighttrack2.Value)
-        If Room6Light2Bri.Value = 0 Then
+        Room6Light2Lbl.Text = Room6Light2Bri.Value.ToString - 4
+        If Room6SerialPort1.IsOpen = True Then
+            Room6SerialPort1.Write(Room6Light2Bri.Value)
+        End If
+        If Room6Light2Bri.Value = Room6Light2Bri.Minimum Then
             Room6Light2off.Checked = True
             Room6light2SW.Stop()
             Room6UpdtLi2TimeInfo()
@@ -79,9 +82,11 @@ Public Class RoomF
 
     Private Sub Room6Light3Bri_Scroll(sender As Object, e As EventArgs) Handles Room6Light3Bri.ValueChanged
         Room6Light3Lbl.Text = String.Format("{0} %", arg0:=Room6Light3Bri.Value)
-        Room6Light3Lbl.Text = Room6Light3Bri.Value.ToString
-        'SerialPort1.Write(brighttrack3.Value)
-        If Room6Light3Bri.Value = 0 Then
+        Room6Light3Lbl.Text = Room6Light3Bri.Value.ToString - 8
+        If Room6SerialPort1.IsOpen = True Then
+            Room6SerialPort1.Write(Room6Light3Bri.Value)
+        End If
+        If Room6Light3Bri.Value = Room6Light3Bri.Minimum Then
             Room6Light3off.Checked = True
             Room6light3SW.Stop()
             Room6UpdtLi3TimeInfo()
@@ -94,25 +99,25 @@ Public Class RoomF
 
     Private Sub Room6Light1ChkStatus() Handles Room6Light1off.CheckedChanged, Room6Light1on.CheckedChanged
         If Room6Light1off.Checked = True And Room6Light1on.Checked = False Then
-            Room6Light1Bri.Value = 0
+            Room6Light1Bri.Value = Room6Light1Bri.Minimum
         ElseIf Room6Light1off.Checked = False And Room6Light1on.Checked = True Then
-            Room6Light1Bri.Value = 2
+            Room6Light1Bri.Value = Room6Light1Bri.Maximum
         End If
     End Sub
 
     Private Sub Room6Light2ChkStatus() Handles Room6Light2off.CheckedChanged, Room6Light2on.CheckedChanged
         If Room6Light2off.Checked = True And Room6Light2on.Checked = False Then
-            Room6Light2Bri.Value = 0
+            Room6Light2Bri.Value = Room6Light2Bri.Minimum
         ElseIf Room6Light2off.Checked = False And Room6Light2on.Checked = True Then
-            Room6Light2Bri.Value = 2
+            Room6Light2Bri.Value = Room6Light2Bri.Maximum
         End If
     End Sub
 
     Private Sub Room6Light3Status() Handles Room6Light3off.CheckedChanged, Room6Light3on.CheckedChanged
         If Room6Light3off.Checked = True And Room6Light3on.Checked = False Then
-            Room6Light3Bri.Value = 0
+            Room6Light3Bri.Value = Room6Light3Bri.Minimum
         ElseIf Room6Light3off.Checked = False And Room6Light3on.Checked = True Then
-            Room6Light3Bri.Value = 2
+            Room6Light3Bri.Value = Room6Light3Bri.Maximum
         End If
     End Sub
 
@@ -236,6 +241,7 @@ Public Class RoomF
 
     Private Sub Room6Back_Click(sender As Object, e As EventArgs) Handles Room6Back.Click
         Form1.Show()
+        Room6SerialPort1.Close()
         Me.Hide()
     End Sub
 

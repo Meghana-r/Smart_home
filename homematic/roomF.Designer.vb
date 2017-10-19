@@ -408,13 +408,14 @@ Partial Class RoomF
         '
         Me.Room6Light3Bri.LargeChange = 1
         Me.Room6Light3Bri.Location = New System.Drawing.Point(229, 69)
-        Me.Room6Light3Bri.Maximum = 4
+        Me.Room6Light3Bri.Maximum = 11
+        Me.Room6Light3Bri.Minimum = 8
         Me.Room6Light3Bri.Name = "Room6Light3Bri"
         Me.Room6Light3Bri.Size = New System.Drawing.Size(325, 45)
         Me.Room6Light3Bri.TabIndex = 1
         Me.Room6Light3Bri.TabStop = False
         Me.Room6Light3Bri.TickStyle = System.Windows.Forms.TickStyle.None
-        Me.Room6Light3Bri.Value = 4
+        Me.Room6Light3Bri.Value = 8
         '
         'Room6Light2
         '
@@ -479,7 +480,8 @@ Partial Class RoomF
         '
         Me.Room6Light2Bri.LargeChange = 1
         Me.Room6Light2Bri.Location = New System.Drawing.Point(229, 69)
-        Me.Room6Light2Bri.Maximum = 4
+        Me.Room6Light2Bri.Maximum = 7
+        Me.Room6Light2Bri.Minimum = 4
         Me.Room6Light2Bri.Name = "Room6Light2Bri"
         Me.Room6Light2Bri.Size = New System.Drawing.Size(325, 45)
         Me.Room6Light2Bri.TabIndex = 1
@@ -550,13 +552,12 @@ Partial Class RoomF
         '
         Me.Room6Light1Bri.LargeChange = 1
         Me.Room6Light1Bri.Location = New System.Drawing.Point(229, 56)
-        Me.Room6Light1Bri.Maximum = 4
+        Me.Room6Light1Bri.Maximum = 3
         Me.Room6Light1Bri.Name = "Room6Light1Bri"
         Me.Room6Light1Bri.Size = New System.Drawing.Size(325, 45)
         Me.Room6Light1Bri.TabIndex = 1
         Me.Room6Light1Bri.TabStop = False
         Me.Room6Light1Bri.TickStyle = System.Windows.Forms.TickStyle.None
-        Me.Room6Light1Bri.Value = 4
         '
         'MasterTabControl
         '
