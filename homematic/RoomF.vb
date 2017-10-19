@@ -242,7 +242,9 @@ Public Class RoomF
     Private Sub Room6Back_Click(sender As Object, e As EventArgs) Handles Room6Back.Click
         Form1.Show()
         Room6SerialPort1.Close()
-        Me.Hide()
+        If Room6CameraCapture.IsOpened Then
+            Room6CameraCapture.Dispose()
+        End If        Me.Hide()
     End Sub
 
     Private Sub Room6ToDashboard_Click(sender As Object, e As EventArgs) Handles Room6ToDashboard.Click

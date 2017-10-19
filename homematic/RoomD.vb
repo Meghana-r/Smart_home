@@ -316,6 +316,9 @@ Public Class RoomD
     Private Sub Room4Back_Click(sender As Object, e As EventArgs) Handles Room4Back.Click
         Form1.Show()
         Room4SerialPort1.Close()
+        If Room4CameraCapture.IsOpened Then
+            Room4CameraCapture.Dispose()
+        End If
         Me.Hide()
     End Sub
 

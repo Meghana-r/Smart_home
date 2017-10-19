@@ -360,6 +360,9 @@ Public Class RoomA
     Private Sub Room1Back_Click(sender As Object, e As EventArgs) Handles Room1Back.Click
         Form1.Show()
         Room1SerialPort1.Close()
+        If Room1CameraCapture.IsOpened Then
+            Room1CameraCapture.Dispose()
+        End If
         Me.Hide()
     End Sub
 
