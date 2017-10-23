@@ -25,3 +25,5 @@ Currently it is adviseable NOT to build the project yourself from the Github rep
 - Meghana R (Lead Designer)
 - Rakshita Srinivas (Database)
 - Sohom Bhattacharjee (Arduino and Video backend)
+
+### Icons are taken from Icons8.com
